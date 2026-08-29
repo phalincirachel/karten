@@ -36,3 +36,15 @@ Sagengestalten, Legenden und Märchen aus aller Welt
 - Paläontologie
 - Archäologie
 
+## Verbindliche Qualitätsregeln
+
+- Die zehn zuerst genannten Kategorien enthalten jeweils genau zehn Karten.
+- Jede Karte enthält mindestens ein passendes Bild oder ein passendes Video.
+- Bilder stammen aus nachvollziehbaren Online-Quellen. KI-generierte und eigens angefertigte Bilder bleiben ausgeschlossen.
+- Wo der Gegenstand davon profitiert, zeigt eine Karte zwei bis vier Bilder.
+- YouTube-Videos sind direkt in der Karte eingebettet. Jeder Video-Link wird vor der Übernahme geprüft.
+- Überschriften nennen den Namen, das Werk oder den Gegenstand. Werbesprache, Slogans und künstliche Pointen entfallen.
+- Die Sprache ist einfach, klar, lebhaft und informationsreich. Floskeln, Füllsätze und rhetorische Kontrastformeln entfallen.
+- Eigene Formulierungen werden überarbeitet; der erste Entwurf gilt nie automatisch als Endfassung.
+- Primärquellen, historische Ausgaben, Museumssammlungen und wissenschaftliche Nachschlagewerke haben Vorrang. Kurze Originalpassagen werden als solche gekennzeichnet.
+- Karten zu Märchen, Sagen und Sagengestalten erzählen den notwendigen Handlungsablauf, nennen Varianten und geben den Überlieferungs- oder Aufzeichnungskontext an.
