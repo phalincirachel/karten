@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Kartei</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wood-dark:#21160f; --wood:#302217; --wood-hi:#44301e;
+  --card:#f1e6cf; --card-edge:#d8c69e; --ink:#241f19; --ink-soft:#625541;
+  --stamp:#7d2f27; --brass:#c9a04a; --brass-dim:#876728; --shadow:rgba(0,0,0,.55);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; min-height:100vh; color:var(--ink); font-family:'Source Serif 4',Georgia,serif;
+  background:repeating-linear-gradient(90deg,rgba(0,0,0,.10) 0,rgba(0,0,0,.10) 1px,transparent 1px,transparent 5px),
+  linear-gradient(180deg,var(--wood-dark),var(--wood) 8%,var(--wood-hi) 50%,var(--wood) 92%,var(--wood-dark));
+  -webkit-font-smoothing:antialiased;
+}
+body.modal-open{overflow:hidden}
+header{max-width:680px;margin:0 auto;padding:62px 26px 32px;text-align:center;color:#eadfc6}
+header .eyebrow{font-family:'Special Elite',monospace;letter-spacing:.24em;font-size:11px;color:var(--brass);text-transform:uppercase;margin:0 0 16px}
+header h1{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(48px,10vw,82px);line-height:.95;margin:0;color:#f5ecd7;text-shadow:0 2px 0 rgba(0,0,0,.38)}
+header .sub{margin:18px auto 0;max-width:440px;font-size:15.5px;line-height:1.55;color:#d0c1a2}
+.rod-track{position:relative;max-width:680px;margin:0 auto;padding:0 26px 82px}
+.rod-track::before{content:"";position:absolute;top:0;bottom:62px;left:50%;width:3px;margin-left:-1.5px;background:linear-gradient(180deg,transparent,var(--brass-dim) 3%,var(--brass) 50%,var(--brass-dim) 97%,transparent);box-shadow:0 0 6px rgba(195,153,63,.35);z-index:0}
+.feed{position:relative;display:flex;flex-direction:column;gap:42px;z-index:1}
+.card{position:relative;background:radial-gradient(ellipse at 20% 0%,rgba(255,255,255,.36),transparent 60%),var(--card);border:1px solid var(--card-edge);border-radius:4px;box-shadow:0 18px 30px -14px var(--shadow),0 2px 0 rgba(255,255,255,.38) inset;padding:32px 25px 25px;opacity:0;transform:translateY(30px);transition:opacity .55s ease,transform .55s ease,box-shadow .2s ease;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.card.visible{opacity:1;transform:translateY(0)}
+.card:active{box-shadow:0 10px 20px -12px var(--shadow),0 2px 0 rgba(255,255,255,.38) inset}
+.card::before,.card::after{content:"";position:absolute;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--wood);box-shadow:inset 0 2px 3px rgba(0,0,0,.6)}
+.card::before{top:-7px}.card::after{bottom:-7px}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:14px}
+.call-number{font-family:'Special Elite',monospace;font-size:11.5px;color:var(--ink-soft);letter-spacing:.035em}.call-number .num{color:var(--ink)}
+.stamp{font-family:'Special Elite',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--stamp);border:2px solid var(--stamp);border-radius:4px;padding:4px 8px;transform:rotate(-3deg);opacity:.82;mix-blend-mode:multiply;white-space:nowrap}
+h2.title{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(22px,4.5vw,30px);line-height:1.14;margin:0 0 9px;color:var(--ink)}
+.dek{font-size:15.8px;line-height:1.58;margin:0 0 17px;color:#453d32}
+.media{margin:0 0 17px}
+.frame{background:#fff;padding:8px 8px 31px;box-shadow:0 10px 22px -8px rgba(0,0,0,.42);position:relative}
+.media:nth-of-type(odd) .frame{transform:rotate(-.8deg)}
+.card:nth-child(even) .frame{transform:rotate(.75deg)}
+.frame img{display:block;width:100%;height:auto;max-height:390px;object-fit:cover;cursor:zoom-in}
+.frame figcaption{font-family:'Special Elite',monospace;font-size:10.3px;line-height:1.35;letter-spacing:.02em;color:#81796d;text-align:center;margin-top:9px}
+.video-preview{position:relative;aspect-ratio:16/9;background:#111;overflow:hidden;cursor:pointer}
+.video-preview img{width:100%;height:100%;object-fit:cover;cursor:pointer;filter:saturate(.88) contrast(1.02)}
+.play{position:absolute;left:50%;top:50%;width:66px;height:48px;transform:translate(-50%,-50%);border-radius:13px;background:rgba(24,21,18,.86);box-shadow:0 4px 16px rgba(0,0,0,.32)}
+.play::after{content:"";position:absolute;left:27px;top:14px;border-left:18px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent}
+.body-text{font-size:15.7px;line-height:1.67;margin:0;color:var(--ink)}
+.more-hint{margin-top:16px;padding-top:11px;border-top:1px dashed var(--card-edge);font-family:'Special Elite',monospace;font-size:10.5px;letter-spacing:.035em;color:#897c67;text-align:right}
+footer{text-align:center;padding:0 24px 54px;color:#8b7d63;font-family:'Special Elite',monospace;font-size:10.5px;letter-spacing:.08em}
+
+/* dialogs */
+dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none}
+dialog::backdrop{background:rgba(12,8,5,.78);backdrop-filter:blur(3px)}
+.sheet{width:min(680px,calc(100vw - 22px));max-height:min(88vh,900px);overflow:auto;background:#f3ead8;border:1px solid #dfcfa9;border-radius:7px;box-shadow:0 22px 65px rgba(0,0,0,.55);padding:26px 24px 27px;position:relative;color:var(--ink)}
+.sheet .close{position:sticky;float:right;top:0;z-index:2;border:0;background:#e8dcc5;color:#3d352a;border-radius:50%;width:38px;height:38px;font-size:26px;line-height:36px;cursor:pointer;margin:-8px -7px 4px 12px}
+.sheet .detail-kicker{font-family:'Special Elite',monospace;color:var(--stamp);text-transform:uppercase;letter-spacing:.13em;font-size:10.5px;margin:2px 0 11px}
+.sheet h3{font-family:'Fraunces',serif;font-size:clamp(27px,6vw,39px);line-height:1.08;margin:0 0 17px;font-weight:650}
+.sheet .essay{font-size:16px;line-height:1.7}
+.sheet .essay p{margin:0 0 15px}.sheet .essay p:last-child{margin-bottom:0}
+.sources{border-top:1px dashed #d0bd92;margin-top:20px;padding-top:13px;font-family:'Special Elite',monospace;font-size:10.5px;line-height:1.55;color:#756955}
+.sources a{color:#6f2e28;text-decoration:none;border-bottom:1px solid rgba(111,46,40,.35)}
+.image-sheet{width:min(96vw,1100px);max-height:92vh;position:relative}
+.image-sheet img{display:block;max-width:100%;max-height:88vh;margin:auto;object-fit:contain;border-radius:3px;box-shadow:0 16px 50px rgba(0,0,0,.55)}
+.image-sheet .close,.video-sheet .close{position:absolute;right:8px;top:8px;z-index:3;border:0;background:rgba(20,17,14,.82);color:#fff;width:42px;height:42px;border-radius:50%;font-size:27px;cursor:pointer}
+.video-sheet{width:min(94vw,980px);position:relative;background:#090909;padding:54px 10px 10px;border-radius:8px;box-shadow:0 22px 65px rgba(0,0,0,.6)}
+.video-box{aspect-ratio:16/9;width:100%;background:#000}
+.video-box iframe{display:block;width:100%;height:100%;border:0}
+.protocol-note{display:none;color:#e9dfca;font-family:'Source Serif 4',serif;font-size:13.5px;line-height:1.45;padding:10px 4px 1px}
+.protocol-note.show{display:block}
+@media(max-width:520px){header{padding-top:48px}.rod-track{padding-left:14px;padding-right:14px}.card{padding:29px 18px 22px}.sheet{padding:23px 18px 24px}.stamp{font-size:9.6px}.more-hint{font-size:9.8px}.video-sheet{width:96vw}}
+@media(prefers-reduced-motion:reduce){.card{transition:none;opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header>
+  <p class="eyebrow">Fundstücke · Phänomene · Verfahren · Dinge</p>
+  <h1>Kartei</h1>
+  <p class="sub">Zehn kurze Karten. Antippen öffnet die zweite Ebene; Bilder lassen sich vergrößern.</p>
+</header>
+
+<div class="rod-track"><main class="feed" id="feed">
+
+<article class="card" data-category="Biologie" tabindex="0">
+  <div class="card-top"><span class="call-number">Karte <span class="num">01</span>/10 · BIO 2018</span><span class="stamp">Biologie</span></div>
+  <h2 class="title">Spinnen können das elektrische Feld der Atmosphäre zum Starten benutzen</h2>
+  <p class="dek">Beim „Ballooning“ geben Spinnen Seidenfäden ab und werden über teils große Distanzen getragen. Experimente zeigten, dass schon ein vertikales elektrisches Feld in natürlicher Stärke Startverhalten auslösen kann; feine Sinneshaare reagieren mechanisch darauf.</p>
+  <figure class="media"><div class="frame"><img class="zoomable" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ballooning%20spider.png" alt="Spinne beim Ballooning" loading="lazy"><figcaption>Ballooning: Seidenfäden bilden die aerodynamisch und elektrostatisch wirksame Struktur.</figcaption></div></figure>
+  <p class="body-text">Wind bleibt wichtig, doch die Atmosphäre liefert zusätzlich ein elektrisches Signal und eine Kraftkomponente, die erklären helfen, warum selbst bei sehr schwachem Wind gestartet wird.</p>
+  <div class="more-hint">Karte antippen · zwei Absätze mehr</div>
+  <template class="detail-template"><div class="detail-kicker">Biologie · Sensorik</div><h3>Ein Tier benutzt Wetter, das wir nicht spüren</h3><div class="essay"><p>Ballooning ist wesentlich leistungsfähiger, als die winzige Startszene vermuten lässt: Spinnen wurden in bis zu vier Kilometern Höhe gefunden, und Verdriftung über Hunderte Kilometer ist dokumentiert. Genau hier entstand das physikalische Problem, das die Bristol-Gruppe untersuchte. Reine Aerodynamik erklärt manche Starts bei fast stiller Luft nur schlecht; die elektrische Kraft auf die feinen Seidenfäden liefert eine zusätzliche Größe, die schon im Schönwetterfeld vorhanden ist.</p><p>Bemerkenswert ist außerdem, dass die Forscher Elektrizität als meteorologische Information behandeln. Der atmosphärische Potentialgradient verändert sich mit Wetterlage, Wolken und lokalen Bedingungen. Ein Tier, dessen Sinneshaare darauf reagieren, bekommt damit einen Kanal für Bedingungen, die für den Menschen unsichtbar bleiben. Das macht Ballooning zu einem Fall, in dem ein vertrautes Verhalten auf einer Sinneswelt beruht, die sich von unserer deutlich unterscheidet.</p></div><div class="sources">Quelle: <a href="https://pubmed.ncbi.nlm.nih.gov/29983315/" target="_blank" rel="noopener">Morley &amp; Robert, Current Biology (2018)</a></div></template>
+</article>
+
+<article class="card" data-category="Technikgeschichte" tabindex="0">
+  <div class="card-top"><span class="call-number">Karte <span class="num">02</span>/10 · TECH 1930</span><span class="stamp">Technikgeschichte</span></div>
+  <h2 class="title">Vor dem Radar baute Großbritannien riesige Ohren aus Beton</h2>
+  <p class="dek">Die Schallspiegel von Denge sollten Motorengeräusche anfliegender Flugzeuge bündeln. Eine gekrümmte Betonfläche konzentrierte den Schall auf Mikrofone am Brennpunkt und verschaffte der Luftabwehr einige Minuten Vorwarnzeit.</p>
+  <figure class="media"><div class="frame"><img class="zoomable" src="https://commons.wikimedia.org/wiki/Special:FilePath/Denge%20Sound%20Mirror.jpg" alt="Schallspiegel von Denge in Kent" loading="lazy"><figcaption>Denge, Kent: drei verschiedene Entwicklungsstufen akustischer Flugzeugortung.</figcaption></div></figure>
+  <p class="body-text">Die erhaltenen Anlagen wirken wie Land Art, waren aber eine ernsthafte Zwischenstufe zwischen bloßem Horchen und elektromagnetischer Ortung.</p>
+  <div class="more-hint">Karte antippen · zwei Absätze mehr</div>
+  <template class="detail-template"><div class="detail-kicker">Technikgeschichte · Ortung</div><h3>Ein technischer Seitenast kurz vor dem Radar</h3><div class="essay"><p>Der erste echte britische Schallspiegel wurde 1915 bei Binbury Manor direkt in eine Kreideböschung geschnitten; 1917 folgten operative, verstellbare Reflektoren an der Küste. Denge gehört bereits zu einer späteren Phase. Für den größten Spiegel war eine Reihe von Mikrofonpositionen vorgesehen, weil die Wand kreisförmig gekrümmt war: Geräusche aus verschiedenen Richtungen wurden an unterschiedlichen Punkten konzentriert.</p><p>Geplant war zeitweise ein viel größeres Netz solcher Anlagen rund um die Themsemündung. Damit wäre Landschaft selbst Teil eines Frühwarnsystems geworden. Die Pläne blieben unvollendet. Gerade deshalb sind die erhaltenen Spiegel aufschlussreich: Man sieht an ihnen eine Technologie, die bereits institutionell und baulich groß gedacht wurde, obwohl ihr physikalisches Grundprinzip kurz darauf von einer anderen Ortungsmethode überholt wurde.</p></div><div class="sources">Quelle: <a href="https://historicengland.org.uk/research/results/reports/96-1999" target="_blank" rel="noopener">Historic England, The 200 Foot Sound Mirror</a></div></template>
+</article>
+
+<article class="card" data-category="Musiktechnologie" tabindex="0">
+  <div class="card-top"><span class="call-number">Karte <span class="num">03</span>/10 · MUS 1957</span><span class="stamp">Musiktechnologie</span></div>
+  <h2 class="title">Beim ANS-Synthesizer wird Musik buchstäblich gezeichnet</h2>
+  <p class="dek">Jewgeni Mursin entwickelte in Moskau ein photoelektronisches Instrument, das grafischen Lichtton umkehrte: Statt Klang als Bild auf Film zu speichern, liest der Apparat eine gezeichnete Partitur als Klang. 720 feste Tonspuren verteilen sich über zehn Oktaven.</p>
+  <figure class="media"><div class="frame"><div class="video-preview" data-video="gM4O593Pzm4" aria-label="Video zum ANS-Synthesizer abspielen"><img src="https://i.ytimg.com/vi/gM4O593Pzm4/hqdefault.jpg" alt="ANS-Synthesizer" loading="lazy"><span class="play" aria-hidden="true"></span></div><figcaption>ANS-Synthesizer; das Video wird erst nach Antippen geladen.</figcaption></div></figure>
+  <p class="body-text">Die Partitur ist dabei kein Symbolcode für später auszuführende Töne: Ihre horizontale und vertikale Geometrie steuert unmittelbar Zeit und Frequenz.</p>
+  <div class="more-hint">Karte antippen · zwei Absätze mehr</div>
+  <template class="detail-template"><div class="detail-kicker">Musiktechnologie · optischer Klang</div><h3>Eine Partitur, die schon der Klangkörper ist</h3><div class="essay"><p>Die Frequenzrasterung des Instruments beträgt 1/72 Oktave, also ungefähr 16,7 Cent pro Schritt. Dadurch liegt sie weit unter dem Halbtonabstand der gleichstufigen Stimmung. Die Sinustöne entstehen auf fünf rotierenden Glasscheiben; die eigentliche Kompositionsplatte ist mit einer schwarzen, lichtundurchlässigen Schicht überzogen, aus der Linien und Flächen herausgekratzt werden.</p><p>Der Name ANS verweist auf Alexander Nikolajewitsch Skrjabin, dessen Vorstellung einer Verbindung von Klang und Licht Mursin ausdrücklich beschäftigte. Später arbeitete unter anderem Eduard Artemjew mit dem Instrument. Der Apparat steht damit an einer seltsamen Kreuzung: optische Filmtechnik, Spektralanalyse, mikrotonale Tonerzeugung und eine synästhetisch gedachte Musikästhetik landen in derselben Maschine.</p></div><div class="sources">Weiter: <a href="https://warmplace.ru/soft/ans/" target="_blank" rel="noopener">Virtual ANS</a> · <a href="https://en.wikipedia.org/wiki/ANS_synthesizer" target="_blank" rel="noopener">technischer Überblick</a></div></template>
+</article>
+
+<article class="card" data-category="Chemie" tabindex="0">
+  <div class="card-top"><span class="call-number">Karte <span class="num">04</span>/10 · CHEM 2009</span><span class="stamp">Chemie</span></div>
+  <h2 class="title">Ein neues Blau entstand bei der Suche nach Elektronikmaterialien</h2>
+  <p class="dek">2009 erhitzte Andrew Smith an der Oregon State University Manganverbindungen auf etwa 1200 °C. Eine Probe wurde unerwartet intensiv blau. Das daraus entwickelte YInMn-Blau gilt als erstes neu entdecktes anorganisches Blaupigment seit rund zwei Jahrhunderten.</p>
+  <figure class="media"><div class="frame"><img class="zoomable" src="https://commons.wikimedia.org/wiki/Special:FilePath/Chemical%20configuration%20of%20YInMn%20Blue.jpg" alt="Kristallstruktur von YInMn-Blau" loading="lazy"><figcaption>YInMn: Yttrium, Indium und Mangan in einer Kristallstruktur, die kräftiges Blau erzeugt.</figcaption></div></figure>
+  <p class="body-text">Das Pigment ist licht- und hitzestabil und reflektiert einen beträchtlichen Teil der Infrarotstrahlung – eine Farbe kann dadurch zugleich thermische Funktion bekommen.</p>
+  <div class="more-hint">Karte antippen · zwei Absätze mehr</div>
+  <template class="detail-template"><div class="detail-kicker">Chemie · Farbe</div><h3>Warum ein Kristall plötzlich blau wird</h3><div class="essay"><p>Die chemische Formel wird als YIn<sub>1−x</sub>Mn<sub>x</sub>O<sub>3</sub> angegeben. Entscheidend für den Farbeindruck ist Mn³⁺ in einer trigonal-bipyramidalen Position des Kristallgitters. Diese Umgebung verschiebt die elektronischen Übergänge so, dass rote und grüne Wellenlängen stark absorbiert werden. Das kräftige Blau ist damit eine Eigenschaft einer sehr bestimmten atomaren Geometrie.</p><p>Der Weg vom Laborfund zum gebrauchsfähigen Pigment dauerte Jahre. 2015 lizenzierte die Shepherd Color Company das Material; 2020 erteilte die US-Umweltbehörde EPA die endgültige Zulassung für kommerzielle Anwendungen einschließlich Künstlerfarben. Aus einer Probe, die ursprünglich auf elektrische Eigenschaften untersucht wurde, entstand so tatsächlich ein neuer Eintrag in der Geschichte industrieller Farbstoffe.</p></div><div class="sources">Quelle: <a href="https://chemistry.oregonstate.edu/chemistry-news-events/yinmn-blue" target="_blank" rel="noopener">Oregon State University</a></div></template>
+</article>
+
+<article class="card" data-category="Botanik" tabindex="0">
+  <div class="card-top"><span class="call-number">Karte <span class="num">05</span>/10 · BOT 1860</span><span class="stamp">Botanik</span></div>
+  <h2 class="title">Diese Pflanze bildet ihr ganzes Leben nur zwei Blätter</h2>
+  <p class="dek"><i>Welwitschia mirabilis</i> wächst ausschließlich in der Namib. Nach dem Keimlingsstadium entstehen zwei Blätter, deren Basis jahrhundertelang weiterwächst. Wind und Sand zerreißen sie später in Streifen, weshalb alte Pflanzen wie ein ganzes Bündel von Blättern aussehen.</p>
+  <figure class="media"><div class="frame"><img class="zoomable" src="https://commons.wikimedia.org/wiki/Special:FilePath/Namib%2C%20Welwitschia%20mirabilis.jpg" alt="Welwitschia mirabilis in der Namib" loading="lazy"><figcaption>Die scheinbar vielen Blattbänder gehören botanisch zu zwei kontinuierlich wachsenden Blättern.</figcaption></div></figure>
+  <p class="body-text">Einige Exemplare werden auf weit über tausend Jahre geschätzt; Kew nennt mögliche Alter von mehr als 2000 Jahren.</p>
+  <div class="more-hint">Karte antippen · zwei Absätze mehr</div>
+  <template class="detail-template"><div class="detail-kicker">Botanik · Entwicklung</div><h3>Ein Körperbau, der nach dem Keimen kaum noch neue Teile erfindet</h3><div class="essay"><p><i>Welwitschia</i> ist zweihäusig: männliche und weibliche Zapfen entstehen auf verschiedenen Individuen. Beide produzieren eine zuckerreiche, nektarähnliche Flüssigkeit, die Bestäuber anlockt. In der Wüste werden die Blattbänder zudem von Oryx, Zebras und Spitzmaulnashörnern gefressen und dienen ihnen als Wasserquelle.</p><p>Systematisch gehört die Art zu den Gnetophyten, einer kleinen und eigentümlichen Linie der Samenpflanzen. Ihre heutige Verbreitung ist auf Namibia und Angola beschränkt. Dass eine so isolierte Abstammungslinie ausgerechnet mit einem extrem reduzierten Bauplan überlebt hat, macht sie zu einem botanischen Relikt: viel Evolutionsgeschichte konzentriert sich auf eine einzige lebende Art.</p></div><div class="sources">Quelle: <a href="https://www.kew.org/plants/welwitschia-mirabilis" target="_blank" rel="noopener">Royal Botanic Gardens, Kew</a></div></template>
+</article>
+
+<article class="card" data-category="Ozeanographie" tabindex="0">
+  <div class="card-top"><span class="call-number">Karte <span class="num">06</span>/10 · OZEAN 1970</span><span class="stamp">Ozeanographie</span></div>
+  <h2 class="title">Unter Meereis können hohle Eiszapfen nach unten wachsen</h2>
+  <p class="dek">Beim Gefrieren von Meerwasser wird Salz aus dem entstehenden Eis gedrängt. Sehr kalte, konzentrierte Sole sinkt durch Kanäle nach unten und friert das umgebende Meerwasser zu einer Röhre: einem „Brinicle“.</p>
+  <figure class="media"><div class="frame"><div class="video-preview" data-video="BtQhb8sWJNw" aria-label="BBC-Earth-Video zum Brinicle abspielen"><img src="https://i.ytimg.com/vi/BtQhb8sWJNw/hqdefault.jpg" alt="Brinicle unter antarktischem Meereis" loading="lazy"><span class="play" aria-hidden="true"></span></div><figcaption>BBC Earth über die erste Filmaufnahme des Phänomens.</figcaption></div></figure>
+  <p class="body-text">Die herabsinkende Sole ist kälter und dichter als das Meerwasser. So entsteht ein nach unten wachsender Eismantel um einen flüssigen Kern.</p>
+  <div class="more-hint">Karte antippen · zwei Absätze mehr</div>
+  <template class="detail-template"><div class="detail-kicker">Ozeanographie · Phasenübergang</div><h3>Ein Eiszapfen, dessen „Wasser“ im Inneren weiterfließt</h3><div class="essay"><p>Die frühe Fachliteratur ist erstaunlich konkret. 1970 beschrieb R. A. Paige antarktische Exemplare als hohle, nach unten gerichtete Kegel von ungefähr einem Meter Länge; die Basis maß etwa zehn bis zwanzig Zentimeter. Der Name „Brinicle“ kam später auf und verbindet <i>brine</i> mit <i>icicle</i>.</p><p>Die spektakulären Filmaufnahmen entstanden erst Jahrzehnte danach. 2011 gelang einem Team von <i>Frozen Planet</i> die erste dokumentarische Aufnahme eines wachsenden Exemplars. Am Meeresboden kann die extrem kalte Sole in Vertiefungen weiterfließen und dort ein Gefriernetz erzeugen; langsam bewegliche Seesterne oder Seeigel können dabei eingeschlossen werden. Das eigentliche Phänomen ist also größer als der sichtbare Eiszapfen.</p></div><div class="sources">Quellen: <a href="https://pubmed.ncbi.nlm.nih.gov/17754131/" target="_blank" rel="noopener">Science (1970)</a> · <a href="https://www.youtube.com/watch?v=BtQhb8sWJNw" target="_blank" rel="noopener">BBC Earth</a></div></template>
+</article>
+
+<article class="card" data-category="Architektur" tabindex="0">
+  <div class="card-top"><span class="call-number">Karte <span class="num">07</span>/10 · ARCH 1890</span><span class="stamp">Architektur</span></div>
+  <h2 class="title">Unter New York steckt eine spanische Gewölbetechnik aus hauchdünnen Ziegeln</h2>
+  <p class="dek">Rafael Guastavino übertrug die katalanische Flachziegelwölbung in die USA. Mehrere Lagen dünner Terrakottaplatten wurden mit schnell bindendem Mörtel zu leichten, tragfähigen und feuersicheren Schalen verbunden.</p>
+  <figure class="media"><div class="frame"><img class="zoomable" src="https://commons.wikimedia.org/wiki/Special:FilePath/City%20Hall%20ceiling%20vc.jpg" alt="Guastavino-Gewölbe in der City Hall Station in New York" loading="lazy"><figcaption>Alte City Hall Station, New York: Guastavino-Gewölbe als Konstruktion und Oberfläche zugleich.</figcaption></div></figure>
+  <p class="body-text">Die Firma arbeitete an über tausend amerikanischen Gebäuden; in New York sind noch Hunderte ihrer Gewölbe erhalten.</p>
+  <div class="more-hint">Karte antippen · zwei Absätze mehr</div>
+  <template class="detail-template"><div class="detail-kicker">Architektur · Konstruktion</div><h3>Gewölbe, die fast wie eine gemauerte Haut funktionieren</h3><div class="essay"><p>Guastavino kam 1881 in New York an. Den entscheidenden Durchbruch brachte wenige Jahre später die Boston Public Library von McKim, Mead &amp; White. Danach wurde seine Firma so selbstverständlich als Spezialist hinzugezogen, dass Architekten in Entwürfen offenbar gelegentlich nur noch einen Bereich freiließen, der sinngemäß „Guastavino hier“ bedeutete; Form, Muster und technische Ausarbeitung übernahm dann das Unternehmen.</p><p>Die Firma bestand bis 1962. Ihr Niedergang hatte auch mit dem Aufstieg dünner Betonschalen und einer neuen industriellen Ästhetik zu tun. Das Firmenarchiv wäre beinahe verloren gegangen; der Columbia-Professor George Collins rettete die Unterlagen und überführte sie später in die Avery Library. Deshalb lässt sich heute ungewöhnlich genau rekonstruieren, wie ein Bauverfahren als eigenes Geschäftsmodell organisiert war.</p></div><div class="sources">Quelle: <a href="https://news.columbia.edu/news/exhibit-vaulting-ambition" target="_blank" rel="noopener">Columbia University, Vaulting Ambition</a></div></template>
+</article>
+
+<article class="card" data-category="Zeitmessung" tabindex="0">
+  <div class="card-top"><span class="call-number">Karte <span class="num">08</span>/10 · ZEIT 1833</span><span class="stamp">Zeitmessung</span></div>
+  <h2 class="title">Bevor Funkzeit existierte, fiel um 13 Uhr eine Kugel vom Dach</h2>
+  <p class="dek">Seit 1833 liefert die rote Zeitkugel des Royal Observatory in Greenwich ein öffentlich sichtbares Zeitsignal. Um 12:55 steigt sie halb, um 12:58 ganz nach oben; exakt um 13:00 fällt sie.</p>
+  <figure class="media"><div class="frame"><img class="zoomable" src="https://commons.wikimedia.org/wiki/Special:FilePath/Greenwich%20Time%20Ball.jpg" alt="Zeitkugel am Royal Observatory Greenwich" loading="lazy"><figcaption>Greenwich: ein mechanisches Broadcast-Signal für Chronometer auf der Themse.</figcaption></div></figure>
+  <p class="body-text">Schiffe konnten ihre Chronometer vom Deck aus synchronisieren – entscheidend für die Längengradbestimmung auf See.</p>
+  <div class="more-hint">Karte antippen · zwei Absätze mehr</div>
+  <template class="detail-template"><div class="detail-kicker">Zeitmessung · Infrastruktur</div><h3>Ein Broadcast, der nur aus einem fallenden Körper besteht</h3><div class="essay"><p>Die Kugel war eine frühe Form von „one-to-many“-Kommunikation: Ein einziges mechanisches Ereignis konnte von vielen Schiffen gleichzeitig beobachtet werden. Das gestufte Hochziehen vor dem Fall war funktional wichtig, weil es die Chronometerführer rechtzeitig in Bereitschaft versetzte. Andere Häfen übernahmen das Prinzip und errichteten eigene Zeitbälle.</p><p>Im 19. Jahrhundert verschob sich die Zeitverteilung anschließend vom Sichtsignal in elektrische Netze. Telegraphische Zeitsignale konnten Uhren in größerer Entfernung synchronisieren; später übernahmen Funk und standardisierte Zeitsender diese Aufgabe. Der Ball in Greenwich blieb bestehen und führt bis heute täglich eine ältere Medienform der Zeitübertragung vor: Information wird als präzise terminierte Bewegung eines sichtbaren Körpers ausgestrahlt.</p></div><div class="sources">Quelle: <a href="https://www.rmg.co.uk/royal-observatory/attractions/greenwich-time-ball" target="_blank" rel="noopener">Royal Museums Greenwich</a></div></template>
+</article>
+
+<article class="card" data-category="Paläontologie" tabindex="0">
+  <div class="card-top"><span class="call-number">Karte <span class="num">09</span>/10 · PAL 558M</span><span class="stamp">Paläontologie</span></div>
+  <h2 class="title">Ein 558 Millionen Jahre altes Fossil wurde über seine Fettmoleküle als Tier erkannt</h2>
+  <p class="dek"><i>Dickinsonia</i> sieht wie ein flacher, gerippter Abdruck aus und ließ sich jahrzehntelang keinem heutigen Großtyp sicher zuordnen. Organisch erhaltene Fossilien enthielten Cholesteroide in einer Zusammensetzung, die stark für ein Tier spricht.</p>
+  <figure class="media"><div class="frame"><img class="zoomable" src="https://commons.wikimedia.org/wiki/Special:FilePath/Dickinsonia%20costata.jpg" alt="Dickinsonia-Fossil" loading="lazy"><figcaption><i>Dickinsonia costata</i>: ein Ediacara-Organismus, dessen Verwandtschaft lange offen war.</figcaption></div></figure>
+  <p class="body-text">Damit lieferte Chemie eine taxonomische Information, die aus der Körperform allein kaum zu gewinnen war.</p>
+  <div class="more-hint">Karte antippen · zwei Absätze mehr</div>
+  <template class="detail-template"><div class="detail-kicker">Paläontologie · Biomarker</div><h3>Wenn ein Fossil seine Verwandtschaft chemisch verrät</h3><div class="essay"><p>Die Ediacara-Biota umfasst den Zeitraum ungefähr von 571 bis 541 Millionen Jahren vor heute. Viele ihrer Organismen besitzen Baupläne, die sich nur schwer in moderne Tierstämme einpassen lassen; für <i>Dickinsonia</i> wurden zeitweise sogar Deutungen als Riesenprotist, Flechte oder Angehöriger eines vollständig ausgestorbenen Reichs diskutiert. Einige Exemplare erreichten mehr als einen Meter Länge.</p><p>Für die entscheidende Analyse wurden außergewöhnlich gut organisch erhaltene Fossilien aus der Weißmeerregion untersucht. Wichtig war der Vergleich mit dem umgebenden Sedimentfilm: Dadurch ließ sich unterscheiden, welche Moleküle zum Organismus gehörten und welche aus der damaligen mikrobiellen Umwelt stammten. Die Methode macht aus der Matrix um ein Fossil gewissermaßen eine chemische Kontrollprobe.</p></div><div class="sources">Quelle: <a href="https://openresearch-repository.anu.edu.au/items/4e65a394-fc9d-4cb2-867f-2ca8f424a774" target="_blank" rel="noopener">Bobrovskiy et al., Science (2018)</a></div></template>
+</article>
+
+<article class="card" data-category="Archäologie" tabindex="0">
+  <div class="card-top"><span class="call-number">Karte <span class="num">10</span>/10 · ARCHÄO 0300</span><span class="stamp">Archäologie</span></div>
+  <h2 class="title">Von römischen Dodekaedern kennen wir über hundert Exemplare – und keinen sicheren Zweck</h2>
+  <p class="dek">Die hohlen Bronzeobjekte besitzen zwölf fünfeckige Flächen mit unterschiedlich großen Löchern und kleine Knäufe an den Ecken. Sie wurden vor allem im nordwestlichen Teil des Römischen Reichs gefunden; antike Texte oder Bilder, die ihren Gebrauch erklären, fehlen.</p>
+  <figure class="media"><div class="frame"><img class="zoomable" src="https://commons.wikimedia.org/wiki/Special:FilePath/Roman%20dodecahedron.jpg" alt="Römischer Dodekaeder aus Bronze" loading="lazy"><figcaption>Römischer Bronze-Dodekaeder; die Lochdurchmesser unterscheiden sich von Fläche zu Fläche.</figcaption></div></figure>
+  <p class="body-text">Vorgeschlagen wurden Messinstrument, Spielgerät, Ritualobjekt, Kerzenhalter und Strickhilfe. Bis heute lässt sich keine dieser Funktionen überzeugend für alle Funde belegen.</p>
+  <div class="more-hint">Karte antippen · zwei Absätze mehr</div>
+  <template class="detail-template"><div class="detail-kicker">Archäologie · Objektfunktion</div><h3>Ein Serienprodukt ohne überlieferte Gebrauchsanweisung</h3><div class="essay"><p>Der Fund von Norton Disney in Lincolnshire wurde 2023 bei der Ausgrabung einer römischen Siedlung nahe einer Villa und der Fosse Way entdeckt. Das Exemplar ist etwa acht Zentimeter hoch und wiegt 245 Gramm. Für Großbritannien war es der 33. bekannte Fund; die Universität Nottingham bezifferte die Gesamtzahl 2025 auf rund 130 Exemplare.</p><p>Bemerkenswert ist die geographische Schieflage: Solche Objekte gehören vor allem zum gallo-römischen und nordwestlichen Raum des Reichs. Das erschwert Erklärungen, die einen reichsweit alltäglichen Zweck voraussetzen. Zugleich zeigt der neue Fund, wie viel Kontext entscheidend ist: Erst wenn ein Dodekaeder sauber ausgegraben und zusammen mit seiner Umgebung dokumentiert wird, lassen sich Datierung, Nutzungsspuren und Nachbarschaft zu anderen Objekten genauer prüfen.</p></div><div class="sources">Quelle: <a href="https://www.nottingham.ac.uk/news/norton-disney-dodecahedron" target="_blank" rel="noopener">University of Nottingham</a> · <a href="https://www.britishmuseum.org/collection/object/H_1924-0411-1" target="_blank" rel="noopener">British Museum</a></div></template>
+</article>
+
+</main></div>
+<footer>ZEHN KARTEN · REIHENFOLGE BEI JEDEM LADEN NEU GEMISCHT</footer>
+
+<dialog id="detailDialog"><div class="sheet"><button class="close" aria-label="Schließen">×</button><div id="detailContent"></div></div></dialog>
+<dialog id="imageDialog"><div class="image-sheet"><button class="close" aria-label="Schließen">×</button><img id="largeImage" alt=""></div></dialog>
+<dialog id="videoDialog"><div class="video-sheet"><button class="close" aria-label="Schließen">×</button><div class="video-box" id="videoBox"></div><div class="protocol-note" id="protocolNote">YouTube verlangt für eingebettete Player inzwischen eine HTTP-Herkunftskennung. Direkt als <code>file://</code> geöffnete Dateien können deshalb auf manchen Android-Browsern Fehler 153 zeigen.</div></div></dialog>
+
+<script>
+(() => {
+  const feed = document.getElementById('feed');
+  const cards = [...feed.querySelectorAll('.card')];
+
+  // Fisher-Yates; die Karten werden bei jedem Laden neu gemischt.
+  for (let i = cards.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [cards[i], cards[j]] = [cards[j], cards[i]];
+  }
+  cards.forEach((card, i) => {
+    feed.appendChild(card);
+    const n = card.querySelector('.num');
+    if (n) n.textContent = String(i + 1).padStart(2,'0');
+  });
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); io.unobserve(entry.target); }
+    });
+  }, {threshold:.1, rootMargin:'0px 0px -40px 0px'});
+  cards.forEach(c => io.observe(c));
+
+  const detailDialog = document.getElementById('detailDialog');
+  const detailContent = document.getElementById('detailContent');
+  const imageDialog = document.getElementById('imageDialog');
+  const largeImage = document.getElementById('largeImage');
+  const videoDialog = document.getElementById('videoDialog');
+  const videoBox = document.getElementById('videoBox');
+  const protocolNote = document.getElementById('protocolNote');
+
+  function lock(){ document.body.classList.add('modal-open'); }
+  function unlock(){ if(!detailDialog.open && !imageDialog.open && !videoDialog.open) document.body.classList.remove('modal-open'); }
+
+  function openDetail(card){
+    const tpl = card.querySelector('.detail-template');
+    if (!tpl) return;
+    detailContent.innerHTML = '';
+    detailContent.appendChild(tpl.content.cloneNode(true));
+    detailDialog.showModal(); lock();
+  }
+
+  cards.forEach(card => {
+    card.addEventListener('click', e => {
+      if (e.target.closest('.zoomable,.video-preview,a,button')) return;
+      openDetail(card);
+    });
+    card.addEventListener('keydown', e => {
+      if ((e.key === 'Enter' || e.key === ' ') && !e.target.closest('a,button')) { e.preventDefault(); openDetail(card); }
+    });
+  });
+
+  document.querySelectorAll('.zoomable').forEach(img => {
+    img.addEventListener('click', e => {
+      e.stopPropagation(); largeImage.src = img.currentSrc || img.src; largeImage.alt = img.alt || '';
+      imageDialog.showModal(); lock();
+    });
+  });
+
+  document.querySelectorAll('.video-preview').forEach(preview => {
+    preview.addEventListener('click', e => {
+      e.stopPropagation();
+      const id = preview.dataset.video;
+      // Standardkonforme Einbettung. Bei file:// fehlt dem Browser allerdings eine HTTP-Referer-Herkunft.
+      const src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&playsinline=1&rel=0`;
+      videoBox.innerHTML = `<iframe src="${src}" title="YouTube-Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+      protocolNote.classList.toggle('show', location.protocol === 'file:');
+      videoDialog.showModal(); lock();
+    });
+  });
+
+  function closeDialog(d){ if(d.open) d.close(); }
+  detailDialog.querySelector('.close').onclick = () => closeDialog(detailDialog);
+  imageDialog.querySelector('.close').onclick = () => closeDialog(imageDialog);
+  videoDialog.querySelector('.close').onclick = () => closeDialog(videoDialog);
+  [detailDialog,imageDialog,videoDialog].forEach(d => {
+    d.addEventListener('click', e => { if(e.target === d) closeDialog(d); });
+    d.addEventListener('close', () => {
+      if (d === videoDialog) videoBox.innerHTML = '';
+      unlock();
+    });
+  });
+})();
+</script>
+</body>
+</html>
