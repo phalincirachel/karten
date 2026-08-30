@@ -48,3 +48,12 @@ Sagengestalten, Legenden und Märchen aus aller Welt
 - Eigene Formulierungen werden überarbeitet; der erste Entwurf gilt nie automatisch als Endfassung.
 - Primärquellen, historische Ausgaben, Museumssammlungen und wissenschaftliche Nachschlagewerke haben Vorrang. Kurze Originalpassagen werden als solche gekennzeichnet.
 - Karten zu Märchen, Sagen und Sagengestalten erzählen den notwendigen Handlungsablauf, nennen Varianten und geben den Überlieferungs- oder Aufzeichnungskontext an.
+
+## Ergänzungen vom 30. August 2026
+
+- „Historische Koinzidenzen“ meint historische Anekdoten und Begebenheiten, die erstaunlich, aufschlussreich oder besonders sind. Bloße Gleichzeitigkeit erfüllt die Kategorie nicht.
+- Die Karten verschiedener Kategorien erscheinen in gemischter Reihenfolge. Zusammenhängende Blöcke einer einzigen Kategorie sind ausgeschlossen.
+- Die Detailansicht jeder Komponistenkarte erklärt ausdrücklich, was an der Musik und ihrer Behandlung von Form, Klang oder Besetzung besonders ist und warum das Werk heute mehr Aufmerksamkeit verdient.
+- Karten mit ethnografisch aufgezeichneten Märchen und Sagen zeigen den vollständigen gemeinfreien Originaltext. Die Anwendung lädt dafür eine genau bezeichnete Textdatei. Der Ausschnitt beginnt und endet exakt mit der betreffenden Erzählung. Navigation, OCR-Schmutz, fremde Zusätze und fehlerhafte Zeichen werden entfernt; historische Schreibweisen und der Wortlaut der Quelle bleiben erhalten.
+- Beim Öffnen einer anderen Karte beginnt die Detailansicht immer oben. Eine frühere Scrollposition wird nie übernommen.
+- Die nächste Erweiterung umfasst insgesamt fünfzig neue Karten: fünf neue Karten in jeder der zehn Kategorien.
