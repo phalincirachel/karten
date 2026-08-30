@@ -23,7 +23,7 @@ const originalDateien={
   "Ṣàngó verlässt Ọ̀yọ́ · Yoruba":["texts/shango-ellis.txt","https://archive.org/details/yorubaspeakingp00elligoog"],
   "Raven reist · Haida":["texts/raven-haida.txt","https://www.gutenberg.org/ebooks/74172"],
   "Das Lied des Eulengottes · Ainu":["texts/owl-god-ainu.txt","https://www.aozora.gr.jp/cards/001529/files/44909_29558.html"],
-  "Scarface im Haus der Sonne · Blackfoot":["texts/scarface-blackfoot.txt","https://www.sacred-texts.com/nam/pla/blt/blt07.htm"]
+  "Scarface im Haus der Sonne · Blackfoot":["texts/scarface-blackfoot.txt","https://www.sacred-texts.com/nam/pla/blt/blt15.htm"]
 };
 
 for(const card of window.KARTEN){const entry=originalDateien[card.title];if(entry)card.original={...card.original,file:entry[0],source:entry[1]}}
@@ -137,4 +137,7 @@ const neueKarten=[
     category:"Historische Koinzidenzen",title:"Die Große Bierflut von London · 1814",
     detail:["Am 17. Oktober 1814 brach in der Meux-Brauerei an der Tottenham Court Road ein eiserner Ring an einem großen Porterfass. Das Fass barst, weitere Behälter wurden aufgerissen und eine Welle aus Bier lief in die engen Häuser von St. Giles.","Acht Menschen starben. Ein Gericht wertete das Unglück als unabwendbares Ereignis; die Brauerei erhielt einen Teil der bereits gezahlten Biersteuer zurück. Hinter der seltsamen Bezeichnung steht die Gefahr industrieller Großbehälter mitten in einem armen Wohnviertel."],
     media:[C("Meux Brewery London beer flood","Meux-Brauerei"),C("London Beer Flood illustration 1814","Darstellung der Bierflut")],sources:[S("Museum of London: London Beer Flood","https://www.londonmuseum.org.uk/collections/london-stories/the-london-beer-flood/")]
-  },
+  }
+];
+neueKarten.pop(); // Bierflut: vorbereiteter Überschuss; jede Kategorie bleibt bei 15 Karten.
+window.KARTEN.push(...neueKarten);
