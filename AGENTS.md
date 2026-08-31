@@ -38,7 +38,7 @@ Sagengestalten, Legenden und Märchen aus aller Welt
 
 ## Verbindliche Qualitätsregeln
 
-- Die zehn zuerst genannten Kategorien enthalten jeweils genau zehn Karten.
+- Die zehn zuerst genannten Kategorien wurden mehrfach erweitert; die jeweils aktuelle Sollzahl steht in der jüngsten Ergänzung dieses Dokuments.
 - Jede Karte enthält mindestens ein passendes Bild oder ein passendes Video.
 - Bilder stammen aus nachvollziehbaren Online-Quellen. KI-generierte und eigens angefertigte Bilder bleiben ausgeschlossen.
 - Wo der Gegenstand davon profitiert, zeigt eine Karte zwei bis vier Bilder.
@@ -57,3 +57,21 @@ Sagengestalten, Legenden und Märchen aus aller Welt
 - Karten mit ethnografisch aufgezeichneten Märchen und Sagen zeigen den vollständigen gemeinfreien Originaltext. Die Anwendung lädt dafür eine genau bezeichnete Textdatei. Der Ausschnitt beginnt und endet exakt mit der betreffenden Erzählung. Navigation, OCR-Schmutz, fremde Zusätze und fehlerhafte Zeichen werden entfernt; historische Schreibweisen und der Wortlaut der Quelle bleiben erhalten.
 - Beim Öffnen einer anderen Karte beginnt die Detailansicht immer oben. Eine frühere Scrollposition wird nie übernommen.
 - Die nächste Erweiterung umfasst insgesamt fünfzig neue Karten: fünf neue Karten in jeder der zehn Kategorien.
+
+## Ergänzungen vom 31. August 2026
+
+### Neue Kategorien – Wortlaut der Vorgabe
+
+Literarische/filmische Tropen und Typen: Typenszenen, Tropes, ihre Beispiele im Vorkommen durch die Geschichte oder die Zeit eines Mediums.
+
+Wichtige Akkorde und Chord Changes: mit Beispielen in Songs und Stücken; keine naheliegenden Standardbeispiele wie Tristan-Akkord, Four-Chord-Song oder andalusische Kadenz.
+
+### Verbindliche Regeln dieser Erweiterung
+
+- Bei jedem neuen Laden der Seite werden sämtliche Karten und die Reihenfolge der Kategorien neu gemischt. Die erste Karte ist nicht fest vorgegeben.
+- Jede der zehn bisherigen Kategorien erhält drei weitere Karten und umfasst danach jeweils achtzehn Karten.
+- Die beiden neuen Kategorien beginnen mit jeweils zehn Karten.
+- Die neuen Einträge behandeln kenntnisreiche, weniger bekannte Beispiele. Naheliegende Kanonbeispiele und bloße Wiederholungen bereits genannter Muster entfallen.
+- Vollständige gemeinfreie Texte werden beim Öffnen der Detailkarte von einer genau benannten öffentlichen Onlinequelle geladen. Die produktive HTML-Datei verwendet dafür keine lokale Textkopie.
+- Für jeden extern geladenen Text sind Anfang und Ende der betreffenden Erzählung ausdrücklich festgelegt. Seitennummern, Navigation, Scan-Kopfzeilen, OCR-Schmutz und fremde Zusätze werden entfernt. Der historische Wortlaut bleibt erhalten.
+- Die Quellenadresse des Digitalisats und die tatsächlich geladene Transkription werden in der Detailkarte verlinkt.
