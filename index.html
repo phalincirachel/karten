@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#ede7dc">
-  <meta name="description" content="260 Karten zu Literatur, Philosophie, Geschichte, Kunst, Musik und Erzähltraditionen.">
+  <meta name="description" content="310 Karten zu Literatur, Philosophie, Geschichte, Kunst, Musik, Sprache und Alltagswissen.">
   <title>Kartei</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,11 +35,17 @@
   <script src="cards-new.js"></script>
   <script src="cards-more.js"></script>
   <script src="cards-september.js"></script>
+  <script src="cards-october.js"></script>
   <script src="remote-texts.js"></script>
   <script src="wiki-details.js"></script>
   <script>
     (() => {
       "use strict";
+      if("scrollRestoration" in history)history.scrollRestoration="manual";
+      function resetInitialScroll(){const root=document.documentElement,behavior=root.style.scrollBehavior;root.style.scrollBehavior="auto";window.scrollTo(0,0);root.style.scrollBehavior=behavior}
+      resetInitialScroll();
+      window.addEventListener("pageshow",resetInitialScroll,{once:true});
+      window.addEventListener("load",()=>requestAnimationFrame(()=>requestAnimationFrame(resetInitialScroll)),{once:true});
       const rawCards=Array.isArray(window.KARTEN)?window.KARTEN:[];
       function shuffled(source){const list=[...source];for(let i=list.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[list[i],list[j]]=[list[j],list[i]]}return list}
       function mixedCards(source){const names=shuffled([...new Set(source.map(card=>card.category))]),groups=new Map(names.map(name=>[name,shuffled(source.filter(card=>card.category===name))])),mixed=[];for(let row=0;mixed.length<source.length;row++)shuffled(names.filter(name=>groups.get(name)[row])).forEach(name=>mixed.push(groups.get(name)[row]));return mixed}
@@ -77,8 +83,11 @@
       function originalSection(original){const box=el("section","original");box.append(el("p","original-label",original.label));if(original.remote){const status=el("p","source-status","Der vollständige Originaltext wird aus der Onlinequelle geladen …");box.append(status);fetchOriginalText(original.remote).then(text=>{status.replaceWith(el("div","source-text",text))}).catch(error=>{status.textContent=`Originaltext konnte nicht geladen werden: ${error.message}. Die Quellenadresse steht darunter.`})}else if(original.text){box.append(el("blockquote","",original.text))}if(original.source){const link=el("a","original-source","Digitalisat der Quelle öffnen");link.href=original.source;link.target="_blank";link.rel="noopener noreferrer";box.append(link)}const remote=original.remote,fetchUrl=remote?.url||(remote?.wikiPage?`https://${remote.wikiLanguage||"en"}.wikisource.org/wiki/${encodeURIComponent(remote.wikiPage).replace(/%2F/g,"/")}`:remote?.wikiPages?.length?`https://${remote.wikiLanguage||"en"}.wikisource.org/wiki/${encodeURIComponent(remote.wikiPages[0]).replace(/%2F/g,"/")}`:null);if(fetchUrl){const link=el("a","original-source",`Geladene Transkription öffnen · ${remote.fetchLabel||"Textquelle"}`);link.href=fetchUrl;link.target="_blank";link.rel="noopener noreferrer";box.append(link)}return box}
       function openDetail(card){const sheet=dialog.querySelector(".sheet");dialog.scrollTop=0;sheet.scrollTop=0;detail.replaceChildren();detail.append(el("p","detail-category",card.category));const title=el("h2","",card.title);title.id="detailTitle";detail.append(title);if(card.summary)detail.append(el("p","detail-summary",card.summary));const media=el("div","detail-media");media.append(mediaGrid(card));detail.append(media);if(card.original)detail.append(originalSection(card.original));if(card.wiki)detail.append(wikipediaSection(card.wiki));else{const body=el("div","detail-text");card.detail.forEach(paragraph=>body.append(el("p","",paragraph)));detail.append(body)}if(card.works?.length){const list=el("ol","works");card.works.forEach(work=>list.append(el("li","",work)));detail.append(list)}if(card.sources?.length){const sources=el("section","sources");sources.append(el("h3","","Quellen"));const list=document.createElement("ul");card.sources.forEach(source=>{const li=document.createElement("li");const a=el("a","",source.label);a.href=source.url;a.target="_blank";a.rel="noopener noreferrer";li.append(a);list.append(li)});sources.append(list);detail.append(sources)}dialog.showModal();requestAnimationFrame(()=>{dialog.scrollTop=0;sheet.scrollTop=0});document.body.classList.add("dialog-open")}
       function renderChips(){chips.replaceChildren();["Alle",...categories].forEach(category=>{const button=el("button","chip",category);button.type="button";button.setAttribute("aria-pressed",String(category===state.category));button.addEventListener("click",()=>{state.category=category;state.shown=18;renderChips();render()});chips.append(button)})}
-      function render(){const list=filtered();grid.replaceChildren(...list.slice(0,state.shown).map(cardElement));result.textContent=`${list.length} Karten`;more.hidden=state.shown>=list.length}
-      search.addEventListener("input",()=>{state.query=search.value;state.shown=18;render()});more.addEventListener("click",()=>{state.shown+=18;render()});document.querySelector("#random").addEventListener("click",()=>{const list=filtered();if(list.length)openDetail(list[Math.floor(Math.random()*list.length)])});dialog.querySelector(".close").addEventListener("click",()=>dialog.close());dialog.addEventListener("click",event=>{if(event.target===dialog)dialog.close()});dialog.addEventListener("close",()=>document.body.classList.remove("dialog-open"));renderChips();render();
+      function render(reset=true){const list=filtered();if(reset)grid.replaceChildren();const from=grid.children.length,to=Math.min(state.shown,list.length);if(from<to)grid.append(...list.slice(from,to).map(cardElement));result.textContent=`${list.length} Karten`;more.hidden=to>=list.length}
+      function loadMore(){const total=filtered().length;if(state.shown>=total)return;state.shown=Math.min(state.shown+18,total);render(false)}
+      search.addEventListener("input",()=>{state.query=search.value;state.shown=18;render()});more.addEventListener("click",loadMore);document.querySelector("#random").addEventListener("click",()=>{const list=filtered();if(list.length)openDetail(list[Math.floor(Math.random()*list.length)])});dialog.querySelector(".close").addEventListener("click",()=>dialog.close());dialog.addEventListener("click",event=>{if(event.target===dialog)dialog.close()});dialog.addEventListener("close",()=>document.body.classList.remove("dialog-open"));
+      if("IntersectionObserver" in window){const loader=new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting))loadMore()},{rootMargin:"900px 0px"});loader.observe(more)}else window.addEventListener("scroll",()=>{if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-900)loadMore()},{passive:true});
+      renderChips();render();
     })();
   </script>
 </body>
