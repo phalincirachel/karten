@@ -288,43 +288,26 @@
     ]),
 
     // Gute Gags
-    card("Gute Gags", "Buster Keaton: das drehende Haus in One Week", [
-      "Ein abgewiesener Verehrer vertauscht die Nummern der Bauteile eines Fertighauses. Keaton und Sybil Seely errichten daraus ein schiefes, dennoch bewohnbares Gebilde. Beim Sturm beginnt das ganze Haus um seinen Mittelpunkt zu rotieren; Gäste werden durch Türen hinaus- und wieder hineingeschleudert, während Keaton gegen die Architektur anzulaufen versucht.",
-      "Das Haus war in voller Größe auf einer Drehscheibe gebaut. Der Gag entwickelt eine einzige falsche Konstruktion immer weiter: erst schiefe Wände, dann unbrauchbare Türen, schließlich ein Gebäude als Fahrgeschäft. Die Kamera bleibt weit genug entfernt, um Körper, Ursache und Folgen gleichzeitig sichtbar zu halten."
-    ], [C("Buster Keaton One Week spinning house", "Das drehende Haus in One Week")], [
+    card("Gute Gags", "Buster Keaton: das drehende Haus in One Week", [], [C("Buster Keaton One Week spinning house", "Das drehende Haus in One Week")], [
       src("Wikimedia Commons: One Week, vollständiger gemeinfreier Film", "https://commons.wikimedia.org/wiki/File:One_Week_(1920)_by_Eddie_Cline_and_Buster_Keaton.webm"),
       src("International Buster Keaton Society: One Week", "https://busterkeaton.org/the-films/one-week/")
     ]),
 
-    card("Gute Gags", "Victor Borge: Phonetic Punctuation", [
-      "Victor Borge behauptet, beim Sprechen fehlten die Satzzeichen. Er erfindet für Punkt, Komma, Doppelpunkt, Gedankenstrich und Ausrufezeichen je ein Geräusch und liest anschließend eine kleine Geschichte, in der die Laute den Text zunehmend überwuchern.",
-      "Der Aufbau ist streng: Ein sachlich vorgetragenes Problem, eine einzeln gelernte Zeichensprache, dann ihre praktische Katastrophe. Ab 2:34 beginnt die zusammenhängende Leseprobe; dort hört man, wie die zunächst verständlichen Regeln durch ihre genaue Anwendung komisch werden."
-    ], [Y("TIf3IfHCoiE", "Victor Borge · Phonetic Punctuation · Leseprobe ab 2:34", 154)], [
+    card("Gute Gags", "Victor Borge: Phonetic Punctuation", [], [Y("TIf3IfHCoiE", "Victor Borge · Phonetic Punctuation · ab 2:34", 154)], [
       src("YouTube: Victor Borge – Phonetic Punctuation", "https://www.youtube.com/watch?v=TIf3IfHCoiE")
     ]),
 
-    card("Gute Gags", "Les Luthiers: La tanda", [
-      "La tanda ist eine Folge erfundener Fernsehansagen und Werbespots. Marcos Mundstock kündigt seriös immer absurdere Sendungen und Produkte an; das Ensemble liefert dazu in Sekunden die jeweils passende Erkennungsmusik, vom Nachrichtenjingle bis zum dramatischen Serienvorspann.",
-      "Die Kürze ist das Verfahren: Jeder Block stellt ein vertrautes Fernsehformat her und zerstört es mit einem sprachlichen Detail, bevor der nächste beginnt. Ab 1:03 folgt auf die erste Ankündigung der Übergang in die Werbefolge. Das offizielle Video erhält den Rhythmus zwischen Sprecher, Musik und sofortigem Abbruch."
-    ], [Y("-YtWYotwDHU", "Les Luthiers · La tanda · ab 1:03", 63)], [
+    card("Gute Gags", "Les Luthiers: La tanda", [], [Y("-YtWYotwDHU", "Les Luthiers · La tanda · ab 1:03", 63)], [
       src("Les Luthiers: Werkverzeichnis La tanda", "https://lesluthiers.org/verobra.php?ID=73"),
       src("YouTube: offizieller Künstlerkanal", "https://www.youtube.com/watch?v=-YtWYotwDHU")
     ]),
 
-    card("Gute Gags", "Nasreddin und die gekochten Bohnen", [
-      "Ein Mann soll eine ungeheure Schuld bezahlen, weil er einst ein gekochtes Ei aß: Aus dem Ei hätte ein Huhn, aus dessen Eiern eine ganze Herde werden können. Nasreddin erscheint verspätet vor Gericht. Er habe Bohnen gekocht, erklärt er, und müsse sie noch aussäen. Als der Richter lacht, fragt Nasreddin, wie aus gekochten Bohnen weniger wachsen solle als aus einem gekochten Ei.",
-      "Die Anekdote widerlegt keine Behauptung durch Vortrag, sondern baut ihre Logik als zweite, sichtbare Handlung nach. Der verspätete Auftritt gehört zum Beweis. Fassungen kursieren in türkischen, persischen, arabischen und zentralasiatischen Sammlungen; Rollen und Feldfrucht wechseln, der Vergleich mit dem gekochten Samen bleibt."
-    ], [C("Nasreddin Hodja court illustration boiled seed", "Nasreddin vor dem Richter"), C("Nasreddin Hodja Ottoman miniature", "Nasreddin Hodscha")], [
-      src("Project Gutenberg: The Turkish Jester", "https://www.gutenberg.org/ebooks/16244"),
-      src("UNESCO: Tales of Nasreddin Hodja", "https://ich.unesco.org/en/RL/telling-tradition-of-nasreddin-hodja-molla-ependi-apendi-afendi-01705")
+    card("Gute Gags", "That Mitchell and Webb Look: The Numberwang Code", [], [Y("eP9YeDGAu7U", "The Numberwang Code · BBC", 0)], [
+      src("YouTube: BBC – The Numberwang Code", "https://www.youtube.com/watch?v=eP9YeDGAu7U")
     ]),
 
-    card("Gute Gags", "Zhuangzi: drei am Morgen", [
-      "Ein Affenwärter kündigt an: morgens drei Kastanien, abends vier. Die Affen werden wütend. Er ändert den Plan: morgens vier, abends drei. Alle sind zufrieden. Die Tagesmenge bleibt sieben; verändert wird allein die Verteilung und damit der Augenblick, auf den die Affen reagieren.",
-      "Im zweiten Kapitel des Zhuangzi folgt die Geschichte auf einen Streit über Behauptung und Widerlegung. Der Wärter gewinnt keinen philosophischen Disput. Er bemerkt, welche Form angenommen wird, und behält zugleich seine Gesamtmenge. Der kurze Gag dient so als Modell für Framing, Verhandlung und den Unterschied zwischen rechnerischer Gleichheit und erlebtem Wert."
-    ], [C("Zhuangzi monkey keeper three in morning illustration", "Der Affenwärter und die Kastanien"), C("Zhuangzi butterfly painting", "Zhuangzi")], [
-      src("Chinese Text Project: Zhuangzi, Discussion on Making All Things Equal", "https://ctext.org/zhuangzi/adjustment-of-controversies"),
-      src("Project Gutenberg: Chuang Tzu, gemeinfreie Übersetzung", "https://www.gutenberg.org/ebooks/59709")
+    card("Gute Gags", "Big Train: 43rd World Stare Out Championship Finals", [], [Y("DkI85Kt10e4", "43rd World Stare Out Championship Finals", 0)], [
+      src("YouTube: Big Train – 43rd World Stare Out Championship Finals", "https://www.youtube.com/watch?v=DkI85Kt10e4")
     ]),
 
     // Interessante Listen

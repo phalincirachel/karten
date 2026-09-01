@@ -121,6 +121,8 @@ Gute Gags
 
 Die Kategorie umfasst Witze, Sprüche, Anekdoten und kurze zugängliche Videos. Die Auswahl bevorzugt genaue, gut gebaute oder historisch einflussreiche Gags mit erkennbarem Urheber oder Überlieferungskontext. Videos beginnen am entscheidenden Zeitpunkt.
 
+Gags werden weder erklärt noch gedeutet. Die Karte zeigt nur den Gag oder die Szene sowie Name, Urheber, Quelle und gegebenenfalls den passenden Startzeitpunkt.
+
 Interessante Listen
 
 Eine Karte zeigt eine überraschende, historisch oder sachlich geschlossene Liste. Quelle, Auswahlprinzip, Umfang und Reihenfolge werden angegeben. Die Einträge selbst bleiben sichtbar; die Erklärung zeigt, was erst durch ihre Zusammenstellung erkennbar wird.
@@ -135,4 +137,4 @@ Die Karte zeigt den vollständigen Cartoon und nennt Zeichner, Publikation und D
 - Die Erweiterung umfasst fünfzig Karten; der Gesamtbestand umfasst 310 Karten in 22 Kategorien.
 - Jede neue Karte enthält mindestens ein passendes Onlinebild oder ein direkt eingebettetes, geprüftes Video und nennt die verwendeten Quellen.
 - Beim Scrollen lädt die Anwendung vor dem Seitenende automatisch weitere Karten. Der manuelle Ladebutton bleibt als barrierearme Rückfallebene erhalten.
-- Beim ersten Öffnen und beim Neuladen beginnt die Seite oben. Die vom Browser gespeicherte Scrollposition wird für diesen Fall verworfen.
+- Beim ersten Öffnen und beim Neuladen beginnt die Seite oben. Die Wiederherstellung einer alten Scrollposition wird vor dem Seitenaufbau deaktiviert; ein nachträgliches Hochscrollen ist ausgeschlossen.

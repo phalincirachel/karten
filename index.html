@@ -7,6 +7,7 @@
   <meta name="theme-color" content="#ede7dc">
   <meta name="description" content="310 Karten zu Literatur, Philosophie, Geschichte, Kunst, Musik, Sprache und Alltagswissen.">
   <title>Kartei</title>
+  <script>if("scrollRestoration" in history)history.scrollRestoration="manual";</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://upload.wikimedia.org">
@@ -41,11 +42,6 @@
   <script>
     (() => {
       "use strict";
-      if("scrollRestoration" in history)history.scrollRestoration="manual";
-      function resetInitialScroll(){const root=document.documentElement,behavior=root.style.scrollBehavior;root.style.scrollBehavior="auto";window.scrollTo(0,0);root.style.scrollBehavior=behavior}
-      resetInitialScroll();
-      window.addEventListener("pageshow",resetInitialScroll,{once:true});
-      window.addEventListener("load",()=>requestAnimationFrame(()=>requestAnimationFrame(resetInitialScroll)),{once:true});
       const rawCards=Array.isArray(window.KARTEN)?window.KARTEN:[];
       function shuffled(source){const list=[...source];for(let i=list.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[list[i],list[j]]=[list[j],list[i]]}return list}
       function mixedCards(source){const names=shuffled([...new Set(source.map(card=>card.category))]),groups=new Map(names.map(name=>[name,shuffled(source.filter(card=>card.category===name))])),mixed=[];for(let row=0;mixed.length<source.length;row++)shuffled(names.filter(name=>groups.get(name)[row])).forEach(name=>mixed.push(groups.get(name)[row]));return mixed}
