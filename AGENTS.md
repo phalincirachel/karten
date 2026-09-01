@@ -75,3 +75,12 @@ Wichtige Akkorde und Chord Changes: mit Beispielen in Songs und Stücken; keine 
 - Vollständige gemeinfreie Texte werden beim Öffnen der Detailkarte von einer genau benannten öffentlichen Onlinequelle geladen. Die produktive HTML-Datei verwendet dafür keine lokale Textkopie.
 - Für jeden extern geladenen Text sind Anfang und Ende der betreffenden Erzählung ausdrücklich festgelegt. Seitennummern, Navigation, Scan-Kopfzeilen, OCR-Schmutz und fremde Zusätze werden entfernt. Der historische Wortlaut bleibt erhalten.
 - Die Quellenadresse des Digitalisats und die tatsächlich geladene Transkription werden in der Detailkarte verlinkt.
+
+## Ergänzungen vom 1. September 2026
+
+- Aphorismenkarten enthalten ausschließlich den Aphorismus, die Zuschreibung und gegebenenfalls ein Bild. Erklärung, Deutung, Zusammenfassung und zusätzlicher Originaltext entfallen.
+- Bei den ersten Sätzen großer Romane steht außen ausschließlich der erste Satz. Die Detailansicht lädt den vollständigen ersten Absatz des Wikipedia-Artikels zum Roman.
+- Die Detailansicht philosophischer Begriffe verwendet genaue Absätze des zugehörigen Wikipedia-Artikels. Vage Modalformulierungen mit „kann“, artikellose Nomenreihen und unpräzise Aufzählungen entfallen.
+- Karten zu Sagengestalten laden den ersten Absatz und weitere zusammenhängende Absätze des zugehörigen Wikipedia-Artikels. Die Anwendung kündigt dieses Verfahren im Kartentext nicht eigens an.
+- Musikkarten nennen den zu hörenden Satz oder Abschnitt. Ein überprüfter Zeitpunkt wird als Startmarke des eingebetteten YouTube-Videos gesetzt.
+- Jede der zwölf Kategorien erhält fünf weitere Karten. Die zehn älteren Kategorien umfassen danach jeweils 23 Karten; die beiden am 31. August ergänzten Kategorien jeweils 15 Karten. Der Gesamtbestand umfasst 260 Karten.

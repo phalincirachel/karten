@@ -2,7 +2,7 @@ const mappedMedia=(key)=>window.MEDIA_FILES?.[key];
 const C=(query,caption)=>{const mapped=mappedMedia(query);return{type:"commons",query,file:typeof mapped==="string"?mapped:mapped?.file,remote:typeof mapped==="object"?mapped:undefined,caption}};
 const F=(file,caption)=>{const mapped=mappedMedia(file);return{type:"commons",query:file,file,remote:typeof mapped==="object"?mapped:undefined,caption}};
 const I=(src,href,caption,credit)=>({type:"image",src,href,caption,credit});
-const Y=(id,caption)=>({type:"youtube",id,caption});
+const Y=(id,caption,start)=>({type:"youtube",id,caption,...(Number.isFinite(start)?{start}: {})});
 const S=(label,url)=>({label,url});
 
 window.KARTEN=[
