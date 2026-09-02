@@ -6,7 +6,7 @@ global.S = (label, url) => ({ label, url });
 global.C = (query, caption = "") => ({ type: "commons", query, caption });
 global.F = (file, caption = "") => ({ type: "commons", query: file, file, caption });
 global.I = (src, href = src, caption = "", credit = "") => ({ type: "image", src, href, caption, credit });
-global.Y = (id, caption = "", start = 0) => ({ type: "youtube", id, caption, start });
+global.Y = (id, caption = "") => ({ type: "youtube", id, caption });
 vm.runInThisContext(fs.readFileSync("cards.js", "utf8"), { filename: "cards.js" });
 
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));

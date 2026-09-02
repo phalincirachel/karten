@@ -2,7 +2,7 @@ const mappedMedia=(key)=>window.MEDIA_FILES?.[key];
 const C=(query,caption)=>{const mapped=mappedMedia(query);return{type:"commons",query,file:typeof mapped==="string"?mapped:mapped?.file,remote:typeof mapped==="object"?mapped:undefined,caption}};
 const F=(file,caption)=>{const mapped=mappedMedia(file);return{type:"commons",query:file,file,remote:typeof mapped==="object"?mapped:undefined,caption}};
 const I=(src,href,caption,credit)=>({type:"image",src,href,caption,credit});
-const Y=(id,caption,start)=>({type:"youtube",id,caption,...(Number.isFinite(start)?{start}: {})});
+const Y=(id,caption)=>({type:"youtube",id,caption});
 const S=(label,url)=>({label,url});
 
 window.KARTEN=[
@@ -1284,44 +1284,44 @@ window.KARTEN.push(
     card("Seltene Musikstile","Tumba Francesa · Kuba",[
       "Tumba Francesa entstand in den östlichen Städten Kubas aus den Musik- und Tanzpraktiken haitianischer Einwanderer. Ein Vorsänger setzt den Text, ein Chor antwortet; die Trommeln premier, bulá und segón tragen verschiedene Aufgaben.",
       "Im Video beginnt ab 0:42 der Wechsel zwischen Vorsängerin und Chor. Die Antwort bleibt rhythmisch knapp, während die Trommeln den Tanz in mehreren Schichten gliedern."
-    ],[Y("wJlzsXOsg6A","Tumba Francesa · Wechselgesang und Trommelensemble",42)],[src("UNESCO: La Tumba Francesa","https://ich.unesco.org/en/RL/la-tumba-francesa-00052")]),
+    ],[Y("wJlzsXOsg6A","Tumba Francesa · Wechselgesang und Trommelensemble")],[src("UNESCO: La Tumba Francesa","https://ich.unesco.org/en/RL/la-tumba-francesa-00052")]),
     card("Seltene Musikstile","Shashmaqom · Tadschikistan und Usbekistan",[
       "Shashmaqom verbindet sechs modale Zyklen mit instrumentalen Vorspielen, Gesang und rhythmisch gebundenen Abschnitten. Tanbur, Dutar, Sato und Rahmentrommel tragen lange melodische Linien.",
       "Ab 1:08 führt die Stimme eine verzierte Phrase über dem gehaltenen Instrumentalsatz. Die Melodie kehrt zu Gerüsttönen zurück und erweitert den Ambitus schrittweise."
-    ],[Y("ZagFXO6uVXE","Shashmaqom · vokaler Abschnitt",68)],[src("UNESCO: Shashmaqom music","https://ich.unesco.org/en/RL/shashmaqom-music-00089")]),
+    ],[Y("ZagFXO6uVXE","Shashmaqom · vokaler Abschnitt")],[src("UNESCO: Shashmaqom music","https://ich.unesco.org/en/RL/shashmaqom-music-00089")]),
     card("Seltene Musikstile","Bigwala · Busoga, Uganda",[
       "Bigwala bezeichnet ein Ensemble aus fünf oder mehr Eintontrompeten aus Kalebassen. Jede Trompete liefert einzelne Töne; erst das ineinandergreifende Spiel erzeugt die Melodie. Trommeln, Gesang und Tanz ergänzen das Ensemble.",
       "Ab 0:36 ist das Hocket deutlich hörbar: kurze Trompetentöne wandern durch die Gruppe und ergeben gemeinsam eine Linie."
-    ],[Y("ymWBjb1VzBc","Bigwala · ineinandergreifende Kalebassentrompeten",36)],[src("UNESCO: Bigwala","https://ich.unesco.org/en/USL/bigwala-gourd-trumpet-music-and-dance-of-the-busoga-kingdom-in-uganda-00749")]),
+    ],[Y("ymWBjb1VzBc","Bigwala · ineinandergreifende Kalebassentrompeten")],[src("UNESCO: Bigwala","https://ich.unesco.org/en/USL/bigwala-gourd-trumpet-music-and-dance-of-the-busoga-kingdom-in-uganda-00749")]),
     card("Seltene Musikstile","Gbofe · Afounkaha, Côte d’Ivoire",[
       "Gbofe ist die Musik der Tagbana mit sechs quer geblasenen Naturtrompeten. Jede Größe besitzt einen Tonbereich und eine eigene rhythmische Figur; Stimmen und Tanz beantworten das Trompetenensemble.",
       "Ab 0:47 treten die Trompeten nacheinander in das Muster ein. Der musikalische Satz entsteht aus ihren versetzten Rufen."
-    ],[Y("C8-Y6HdnQlk","Gbofe · Einsatz der sechs Naturtrompeten",47)],[src("UNESCO: Gbofe of Afounkaha","https://ich.unesco.org/en/RL/gbofe-of-afounkaha-the-music-of-the-transverse-trumps-of-the-tagbana-community-00005")]),
+    ],[Y("C8-Y6HdnQlk","Gbofe · Einsatz der sechs Naturtrompeten")],[src("UNESCO: Gbofe of Afounkaha","https://ich.unesco.org/en/RL/gbofe-of-afounkaha-the-music-of-the-transverse-trumps-of-the-tagbana-community-00005")]),
     card("Seltene Musikstile","Hudhud · Ifugao, Philippinen",[
       "Die Hudhud-Gesänge erzählen in langen Episoden von Ahnen, Recht, Reisanbau und Bündnissen. Eine erfahrene Sängerin führt den Text; eine Gruppe antwortet auf einer wiederkehrenden Melodie.",
       "Ab 1:00 hört man die klare Rollenverteilung zwischen Erzählerin und Chor. Die Wiederholung trägt den umfangreichen Text und hält die Gruppe zusammen."
-    ],[Y("qDImhwTKMOk","Hudhud · Erzählerin und antwortender Chor",60)],[src("UNESCO: Hudhud chants of the Ifugao","https://ich.unesco.org/en/RL/hudhud-chants-of-the-ifugao-00015")]),
+    ],[Y("qDImhwTKMOk","Hudhud · Erzählerin und antwortender Chor")],[src("UNESCO: Hudhud chants of the Ifugao","https://ich.unesco.org/en/RL/hudhud-chants-of-the-ifugao-00015")]),
 
     card("Vergessene Komponisten","Elfrida Andrée · Orgelsinfonie Nr. 2 Es-Dur, II. Andante cantabile",[
       "Der zweite Satz beginnt bei 6:20. Die Orgel führt eine weit gespannte Gesangslinie; Hörner und tiefes Blech antworten in getrennten Registern. Die Besetzung erzeugt einen kammermusikalischen Dialog, obwohl Orgel und Bläser große Klangreserven besitzen.",
       "Andrée schrieb das Werk 1892 für Orgel und Blechbläser. Die genaue Balance zwischen getragenem Orgelklang und atmenden Bläserphrasen zeigt eine eigenständige Behandlung dieser seltenen Besetzung und verdient regelmäßige Konzertaufführungen."
-    ],[Y("5w_BfXxmnIc","II. Andante cantabile · ab 6:20",380)],[src("Swedish Musical Heritage: Elfrida Andrée","https://www.swedishmusicalheritage.com/composers/andree-elfrida/")]),
+    ],[Y("5w_BfXxmnIc","II. Andante cantabile")],[src("Swedish Musical Heritage: Elfrida Andrée","https://www.swedishmusicalheritage.com/composers/andree-elfrida/")]),
     card("Vergessene Komponisten","Ernst Mielck · Sinfonie f-Moll op. 4, III. Andante cantabile",[
       "Der dritte Satz beginnt bei 20:03. Ein ruhiges Streicherthema wird von Holzbläserfarben übernommen und in immer dichtere Gegenstimmen geführt. Die Harmonik bleibt spätromantisch, doch die Linienführung ist knapp und klar.",
       "Mielck vollendete die Sinfonie 1897 und starb zwei Jahre später mit einundzwanzig Jahren. Das Andante zeigt bereits eine sichere Großform und eine persönliche finnische Orchesterfarbe; das Werk gehört deshalb neben die frühen Sinfonien seiner bekannteren Zeitgenossen."
-    ],[Y("sXKjLkrQQzM","III. Andante cantabile · ab 20:03",1203)],[src("IMSLP: Symphony in F minor, Op. 4","https://imslp.org/wiki/Symphony_in_F_minor%2C_Op.4_(Mielck%2C_Ernst)")]),
+    ],[Y("sXKjLkrQQzM","III. Andante cantabile")],[src("IMSLP: Symphony in F minor, Op. 4","https://imslp.org/wiki/Symphony_in_F_minor%2C_Op.4_(Mielck%2C_Ernst)")]),
     card("Vergessene Komponisten","Augusta Holmès · Andromède",[
       "Das einsätzige symphonische Gedicht beginnt mit einer dunklen, eng geführten Orchesterschicht. Fanfaren und aufsteigende Linien treiben die Befreiungsszene voran; das lyrische Thema erhält seine Wirkung aus dem Gegensatz zu den harten rhythmischen Blöcken.",
       "Holmès schrieb Textprogramme und Musik selbst und behandelte das Orchester mit kräftigen Blechfarben und langen dramatischen Bögen. Andromède zeigt ihre Fähigkeit, eine mythologische Handlung ohne Bühne verständlich zu gliedern."
-    ],[Y("HzfWfYBEbrU","Andromède · vollständiges symphonisches Gedicht",0)],[src("Bibliothèque nationale de France: Augusta Holmès","https://data.bnf.fr/en/ark:/12148/cb13895273p")]),
+    ],[Y("HzfWfYBEbrU","Andromède · vollständiges symphonisches Gedicht")],[src("Bibliothèque nationale de France: Augusta Holmès","https://data.bnf.fr/en/ark:/12148/cb13895273p")]),
     card("Vergessene Komponisten","Charlotte Sohy · Symphonie „Grande Guerre“, I. Lent – Vif",[
       "Der erste Satz beginnt bei 0:00. Eine langsame Einleitung sammelt kurze Motive in tiefen Streichern und Holzbläsern; der schnelle Hauptteil verwandelt sie in scharf akzentuierte Bewegung. Die Übergänge tragen die Spannung stärker als ein einzelnes Hauptthema.",
       "Sohy schrieb die Sinfonie während und nach dem Ersten Weltkrieg und signierte zeitweise mit dem männlich lesbaren Namen Charles Sohy. Die konzentrierte Motivarbeit und die dunkle Orchesterfarbe machen das Werk zu einer wichtigen französischen Sinfonie dieser Jahre."
-    ],[Y("ZaLdxbQoqMk","I. Lent – Vif · ab 0:00",0)],[src("Présence Compositrices: Charlotte Sohy","https://presencecompositrices.com/compositrice/sohy-charlotte/")]),
+    ],[Y("ZaLdxbQoqMk","I. Lent – Vif")],[src("Présence Compositrices: Charlotte Sohy","https://presencecompositrices.com/compositrice/sohy-charlotte/")]),
     card("Vergessene Komponisten","Leokadija Kaschperowa · Sinfonie h-Moll op. 4, I. Andante – Allegro risoluto",[
       "Der erste Satz trägt die Bezeichnung Andante – Allegro risoluto. Die langsame Einleitung stellt melodische Wendungen vor, die das Allegro in energische Rhythmen überführt. Holzbläser und Streicher teilen das Material; das Blech markiert formale Wendepunkte und lässt die übrigen Linien durchsichtig.",
       "Kaschperowa war als Pianistin international anerkannt; nach 1917 verschwanden ihre Werke aus dem Konzertleben. Die Sinfonie zeigt eine ausgereifte russische Spätromantik mit eigenständiger motivischer Arbeit und erweitert das Repertoire über die vertrauten Petersburger Namen hinaus."
-    ],[Y("fFPLqZY4ns8","Orchesterproben und Ausschnitte aus der Sinfonie",0)],[src("Boosey & Hawkes: Leokadiya Kashperova","https://www.boosey.com/composer/Leokadiya+Kashperova")]),
+    ],[Y("fFPLqZY4ns8","Orchesterproben und Ausschnitte aus der Sinfonie")],[src("Boosey & Hawkes: Leokadiya Kashperova","https://www.boosey.com/composer/Leokadiya+Kashperova")]),
 
     card("Großartige Bilder und Design","Archibald Knox · Tudric-Zinnarbeiten",[
       "Knox legte Silber- oder Kupfereinlagen in gehämmertes Zinn und führte die Linien ohne sichtbaren Anfang über Deckel, Henkel und Füße. Die Uhr Modell 0252 spannt ein türkisfarbenes Emailzifferblatt zwischen zwei breite Seitenwangen. Die Teekanne Modell 0231 übersetzt denselben Linienfluss in Griff und Ausguss.",
@@ -1401,7 +1401,7 @@ window.KARTEN.push(
     card("Wichtige Akkorde und Akkordfolgen","Elektra-Akkord",[
       "Strauss schichtet E-Dur und Cis-Dur zu E–Gis–H–Cis–Eis. In Elektra erscheint der Akkord als Signatur der Titelfigur: zuerst als gespannte Verbindung mit dem Agamemnon-Motiv, später in anderer Lage und Tonhöhe bei der Wiedererkennung Orests.",
       "Im Video werden Partiturstellen und Lagen direkt vorgespielt. Entscheidend ist der Abstand zwischen dem gemeinsamen E-Klangraum und dem Eis des zweiten Dreiklangs; die Reibung gehört zur Figur und kehrt motivisch wieder."
-    ],[Y("EqSpq7wWvSI","Elektra-Akkord · Partiturbeispiele",0),F("Elektra chord.png","Elektra-Akkord")],[src("Lyric Opera of Chicago: The Elektra Chord","https://www.lyricopera.org/learn-engage/learning-resources/elektra/")]),
+    ],[Y("EqSpq7wWvSI","Elektra-Akkord · Partiturbeispiele"),F("Elektra chord.png","Elektra-Akkord")],[src("Lyric Opera of Chicago: The Elektra Chord","https://www.lyricopera.org/learn-engage/learning-resources/elektra/")]),
     card("Wichtige Akkorde und Akkordfolgen","Psalm-Akkord",[
       "Strawinskys Psalmensinfonie beginnt mit einem weit auseinandergezogenen e-Moll-Dreiklang. Das G, die Terz, liegt in vier Oktavlagen; Grundton und Quinte stehen an den Rändern. Der Akkord wirkt deshalb zugleich elementar und fremd.",
       "Im ersten Satz trennt der kurze Akkordschlag Abschnitte, die sich auf e-phrygisches und oktatonisches Material stützen. Gehört werden soll der Beginn des ersten Satzes und jedes spätere Wiederkehren dieses isolierten Schlages."
@@ -1417,8 +1417,281 @@ window.KARTEN.push(
     card("Wichtige Akkorde und Akkordfolgen","Ōdō shinkō · 王道進行",[
       "Die japanische Royal-Road-Folge lautet IV–V–iii–vi, in C-Dur also F–G–Em–Am. Der Leitton H steigt auf C, während der Bass von G nach E springt; die erwartete Tonika erscheint als Bestandteil der folgenden Mollstufe statt als eigener Grundakkord.",
       "Ab 0:45 führt das Video Beispiele aus japanischer Popmusik vor. Ab 4:33 wird die Stimmführung am Klavier zerlegt. Gehört werden soll besonders der Übergang V–iii: Die Dominante löst ihre Spannung in einen Mollklang mit zwei Tonikatönen."
-    ],[Y("6aezSL_GvZA","Ōdō shinkō · Beispiele ab 0:45",45),C("Odo shinko chord progression notation","IV–V–iii–vi")],[src("Hooktheory: Royal Road progression","https://www.hooktheory.com/theorytab/common-chord-progressions/royal-road")])
+    ],[Y("6aezSL_GvZA","Ōdō shinkō · Beispiele"),C("Odo shinko chord progression notation","IV–V–iii–vi")],[src("Hooktheory: Royal Road progression","https://www.hooktheory.com/theorytab/common-chord-progressions/royal-road")])
   );
+})();
+
+// Erweiterung vom 3. September 2026: je eine Karte pro aktiver Kategorie und fünf eigene GIFs.
+(() => {
+  "use strict";
+
+  window.KARTEN.push(
+    {
+      category:"Aphorismen",kind:"quote",
+      title:"„Die Sonne und der Tod lassen sich nicht fest ansehen.“",
+      byline:"François de La Rochefoucauld · Maxime 26",
+      detail:[],
+      media:[C("François de La Rochefoucauld portrait","François de La Rochefoucauld")],
+      sources:[S("La Rochefoucauld: Maximes, Nr. 26 · Wikisource","https://fr.wikisource.org/wiki/Page:La_Rochefoucauld_-_Maximes_et_R%C3%A9flexions_morales,_M%C3%A9nard,_1817.djvu/43")]
+    },
+    {
+      category:"Philosophische Begriffe",title:"Clinamen",
+      summary:"Die kleinste unbestimmte Abweichung eines fallenden Atoms von seiner geraden Bahn.",
+      detail:[],wiki:{page:"Clinamen",language:"de",count:2},
+      media:[C("Lucretius De rerum natura manuscript","Handschrift von Lukrez’ De rerum natura")],
+      sources:[S("Wikipedia: Clinamen","https://de.wikipedia.org/wiki/Clinamen"),S("Lukrez: De rerum natura, Buch II · Perseus","https://www.perseus.tufts.edu/hopper/text?doc=Lucr.%202.216")]
+    },
+    {
+      category:"Künstler und drei Werke",title:"Fernand Khnopff",
+      summary:"Memories · I Lock My Door Upon Myself · Des Caresses",
+      detail:[
+        "Memories (1889) reiht sieben Frauen auf einem Tennisplatz nebeneinander; jede Figur geht auf dieselbe Schwester des Malers zurück. Haltung, Blickrichtung und Abstand zerlegen eine Gruppenaufnahme in sieben voneinander getrennte Zustände.",
+        "I Lock My Door Upon Myself (1891) stellt eine unbewegte Frau hinter Lilien, Mohn und einem abgetrennten Hypnoskopf vor einen verschlossenen Innenraum. Des Caresses (1896) setzt einen androgynen Ödipus an den Körper einer Sphinx mit Leopardenfell. Khnopff behandelt Nähe in allen drei Bildern als streng gebaute Distanz."
+      ],
+      works:["Memories (Lawn Tennis), 1889","I Lock My Door Upon Myself, 1891","Des Caresses, 1896"],
+      media:[C("Fernand Khnopff Memories Lawn Tennis","Memories"),C("Fernand Khnopff I Lock My Door Upon Myself","I Lock My Door Upon Myself"),C("Fernand Khnopff The Caresses 1896","Des Caresses")],
+      sources:[S("Petit Palais: Fernand Khnopff","https://www.petitpalais.paris.fr/en/node/1252"),S("Neue Pinakothek: I Lock My Door Upon Myself","https://www.sammlung.pinakothek.de/en/artwork/7yxYJQb4Ym/fernand-khnopff/i-lock-my-door-upon-myself")]
+    },
+    {
+      category:"Erste Sätze großer Romane",kind:"quote",
+      title:"Ships at a distance have every man's wish on board.",
+      detail:[],wiki:{page:"Their Eyes Were Watching God",language:"en",count:1},
+      media:[C("Zora Neale Hurston portrait 1938","Zora Neale Hurston")],
+      sources:[S("Wikipedia: Their Eyes Were Watching God","https://en.wikipedia.org/wiki/Their_Eyes_Were_Watching_God"),S("Internet Archive: Their Eyes Were Watching God","https://archive.org/details/their-eyes-were-watching-god-zora-neale-hurston")]
+    },
+    {
+      category:"Seltene Musikstile",title:"Iso-Polyphonie · Südalbanien",
+      detail:[
+        "Eine führende Stimme eröffnet den Text, eine zweite antwortet oder umspielt sie, während die Gruppe den Iso hält. Bei den Tosken liegt dieser Bordun als durchgehendes e unter den Solostimmen; versetztes Atmen hält ihn ohne hörbare Lücke. In labischen Formen trägt der Chor den Bordun rhythmisch und mit Textsilben.",
+        "Ab 0:33 trennt das UNESCO-Video die beweglichen Oberstimmen deutlich vom tiefen Gruppenklang. Hochzeiten, Begräbnisse, Erntefeste und religiöse Feiern bilden die überlieferten Aufführungssituationen."
+      ],
+      media:[Y("G4V2cE-LmBU","UNESCO · Albanian Folk Iso-polyphony")],
+      sources:[S("UNESCO: Albanian folk iso-polyphony","https://ich.unesco.org/en/RL/albanian-folk-iso-polyphony-00155"),S("YouTube: UNESCO-Aufnahme","https://www.youtube.com/watch?v=G4V2cE-LmBU")]
+    },
+    {
+      category:"Vergessene Komponisten",title:"Morfydd Llwyn Owen · Nocturne Des-Dur",
+      detail:[
+        "Das Nocturne von 1913 beginnt mit einer einsamen Klarinette. Aus ihren tastenden Intervallen wächst eine breite Melodie; eine leichtere, bewegte Fassung unterbricht sie, bevor das Orchester den Hauptgedanken in einen harten Höhepunkt treibt und wieder beruhigt.",
+        "Owen verteilt die melodische Linie durch Holzbläser, Harfe und geteilte Streicher, ohne den nächtlichen Grundklang zu verdicken. Sie starb 1918 mit 26 Jahren; viele ihrer rund 250 Kompositionen blieben im Archiv. Das Nocturne besitzt eine geschlossene Orchesterform und gehört regelmäßig neben britische und französische Partituren derselben Jahre."
+      ],
+      media:[Y("sfa81rpgUGE","Morfydd Llwyn Owen · Nocturne Des-Dur")],
+      sources:[S("IMSLP: A Nocturne","https://imslp.org/wiki/A_Nocturne_%28Owen%2C_Morfydd_Llwyn%29"),S("YouTube: BBC National Orchestra of Wales","https://www.youtube.com/watch?v=sfa81rpgUGE"),S("Tŷ Cerdd: Morfydd Owen","https://www.tycerdd.org/morfydd-owen")]
+    },
+    {
+      category:"Großartige Bilder und Design",title:"Margarete Heymann-Loebenstein · Scheibenhenkel-Teekanne",
+      detail:[
+        "Die Teekanne von 1929/30 besteht aus einer niedrigen, fast kugelförmigen Kanne, einer flachen Tülle und einem kreisrunden Henkel. Der Henkel wiederholt den Querschnitt des Gefäßes als leere Scheibe; schwarze Linien und farbige Ringe legen sich um den hellen Scherben.",
+        "Heymann-Loebenstein gründete 1923 mit Gustav und Daniel Loebenstein die Haël-Werkstätten. Dort entstanden einfache Grundformen mit asymmetrischen Griffen, kräftigen Farben und präzisen Spritzdekoren. Form 76 verbindet eine gut greifbare Kanne mit einem Henkel, der als eigenes grafisches Zeichen lesbar bleibt."
+      ],
+      media:[F("Margarete heymann-löbenstein-marks per hael werkstätten, teiera, marwitz D 1930 ca.jpg","Scheibenhenkel-Teekanne, um 1930")],
+      sources:[S("MoMA: Scheibenhenkel Teapot","https://www.moma.org/collection/works/400431"),S("RISD Museum: Teapot, ca. 1930","https://risdmuseum.org/art-design/collection/teapot-2008282"),S("Jüdisches Museum Berlin: Haël-Werkstätten","https://objekte.jmberlin.de/gobject/jmb-obj-109173/Teekanne%2Bmit%2BDeckel%2Baus%2Bder%2BProduktion%2Bder%2BHa%C3%ABl-Werkst%C3%A4tten")]
+    },
+    {
+      category:"Märchen und Sagen in ethnografischen Quellen",title:"Die Frau bei den Papageitauchern · Tlingit",
+      summary:"Nach einem Bootsunglück retten die Vögel eine Frau, die sich früher gewünscht hatte, unter ihnen zu sitzen.",
+      detail:[
+        "Beim Muschelsammeln schlägt eine Brandungswelle das Kanu mehrerer Frauen um. Nur eine überlebt. Papageitaucher nehmen sie am Kliff auf; ihr Häuptling lässt ihr Haar flechten, und sie erhält eine Vogelnase. Im Dorf beginnt bereits das Totenfest.",
+        "Der Vater bringt Felle als Sitzplätze für die Vögel. Erst das weiße Haar eines Vorfahren lockt sie hervor: Jeder Vogel steckt sich ein Haar an den Kopf, und der Häuptling gibt die Frau frei. John R. Swanton zeichnete die Erzählung 1904 in Sitka oder Wrangell auf und veröffentlichte sie 1909 als Nummer 25 der Tlingit Myths and Texts."
+      ],
+      media:[C("Tufted puffin Alaska cliff","Papageitaucher an der Küste Alaskas"),C("Tlingit canoe historical photograph","Historisches Tlingit-Kanu")],
+      sources:[S("Wikisource: Story of the Puffin","https://en.wikisource.org/wiki/Tlingit_Myths_and_Texts/25"),S("Project Gutenberg: Tlingit Myths and Texts","https://www.gutenberg.org/ebooks/78871")],
+      original:{label:"Vollständiger Originaltext · John R. Swanton, 1909",source:"https://en.wikisource.org/wiki/Tlingit_Myths_and_Texts/Story_of_the_Puffin",remote:{wikiPage:"Tlingit_Myths_and_Texts/Story_of_the_Puffin",wikiLanguage:"en",start:"25. STORY OF THE PUFFIN",fetchLabel:"Wikisource-Transkription"}}
+    },
+    {
+      category:"Sagengestalten, Legenden und Märchen weltweit",title:"Huldra · Skandinavien",
+      detail:[],wiki:{page:"Huldra",language:"de",count:3},
+      media:[C("Theodor Kittelsen Huldra","Huldra in einer Illustration von Theodor Kittelsen"),C("Huldra Norwegian folklore tail","Huldra mit Kuhschwanz")],
+      sources:[S("Wikipedia: Huldra","https://de.wikipedia.org/wiki/Huldra")]
+    },
+    {
+      category:"Historische Anekdoten",title:"Shizō Kanakuri · Marathon in 54 Jahren",
+      summary:"Ein abgebrochener olympischer Lauf erhielt 1967 ein förmliches Ende.",
+      detail:[
+        "Shizō Kanakuri startete 1912 als einer der ersten beiden japanischen Olympiateilnehmer beim Marathon in Stockholm. Nach etwa 30 Kilometern brach er bei großer Hitze zusammen, erholte sich bei einer Familie am Streckenrand und reiste ab, ohne seinen Ausstieg bei der Wettkampfleitung zu melden.",
+        "Das schwedische Fernsehen lud ihn 1967 zurück. Der 76-Jährige setzte den Lauf am damaligen Abbruchort fort und überquerte im Stadion die Ziellinie. Die nachträglich verkündete Zeit lautete 54 Jahre, 8 Monate, 6 Tage, 5 Stunden, 32 Minuten und 20,3 Sekunden."
+      ],
+      media:[C("Shizo Kanakuri 1912 Olympics","Shizō Kanakuri"),C("Stockholm Olympic Stadium 1912 marathon","Olympiastadion Stockholm, 1912")],
+      sources:[S("International Society of Olympic Historians: Kanakuri","https://library.olympics.com/digitalCollection/DigitalCollectionAttachmentDownloadHandler.ashx?documentId=3156826&parentDocumentId=848882&skipCopyright=true&skipWatermark=true"),S("Olympedia: Shizō Kanakuri","https://www.olympedia.org/athletes/72487")]
+    },
+    {
+      category:"Literarische und filmische Tropen und Typenszenen",title:"Irisblende",
+      summary:"Ein schwarzer Kreis schließt oder öffnet sich um den entscheidenden Teil des Bildes.",
+      detail:[
+        "Im Stummfilm ersetzte eine Blende vor dem Objektiv den späteren Schnitt oder die Abblende. Als iris in öffnete sie eine Szene aus einem Punkt; als iris out schloss sie den Raum auf ein Gesicht, einen Gegenstand oder den letzten Gag. Der verbleibende Kreis legte fest, was der Zuschauer im Augenblick des Verschwindens behalten sollte.",
+        "Buster Keatons Cops endet mit einer Iris um Keatons Grabstein. The Lodger lässt sie um Ivor Novellos Gesicht schließen. Warner-Bros.-Cartoons übernahmen die Form als festes Schlusszeichen und ließen Figuren gelegentlich gegen den kleiner werdenden Kreis kämpfen. Aus einer Kameratechnik wurde eine sichtbare Zeichensetzung."
+      ],
+      media:[C("silent film iris shot","Irisblende im Stummfilm"),F("Ptp p66 img01.png","Irisblende einer Kamera, 1937")],
+      sources:[S("Columbia Film Language Glossary: Iris","https://filmglossary.ccnmtl.columbia.edu/term/iris/"),S("Wikipedia: Iris shot","https://en.wikipedia.org/wiki/Iris_shot")]
+    },
+    {
+      category:"Wichtige Akkorde und Akkordfolgen",title:"Line Cliché in Moll",
+      summary:"Über einem gehaltenen Mollklang sinkt eine Stimme chromatisch: 1–7–♭7–6.",
+      detail:[
+        "In c-Moll lautet die Linie C–H–B–A. Der Grundklang bleibt hörbar, während die bewegte Stimme die Akkordbezeichnungen Cm–Cm/H–Cm/B–Cm/A erzeugt. Liegt die Linie im Bass, wechseln die Umkehrungen; in einer Mittelstimme bleibt der Bass als Orgelpunkt stehen.",
+        "My Funny Valentine eröffnet mit genau dieser Folge. Ab 1:23 hört man zuerst das ruhende Mollfeld und darunter die vier Basstöne. Richard Rodgers führt die Linie anschließend bis As weiter, wo die nächste Phrase beginnt."
+      ],
+      media:[Y("9orOU6YQfOQ","My Funny Valentine · C–H–B–A"),C("line cliche minor music notation","Line Cliché in c-Moll")],
+      sources:[S("My Funny Valentine · Harmonieanalyse","https://nielsdalgaard.com/jazz-standards/my-funny-valentine/"),S("Wikipedia: Line Cliché","https://de.wikipedia.org/wiki/Line_Clich%C3%A9"),S("YouTube: My Funny Valentine","https://www.youtube.com/watch?v=9orOU6YQfOQ")]
+    },
+    {
+      category:"Falsche Modelle mit großer Erklärungskraft",title:"Kelvins Wirbelatom",
+      summary:"Atome galten als stabile, verknotete Wirbelringe in einem allgegenwärtigen Äther.",
+      detail:[
+        "William Thomson schlug 1867 vor, jedes chemische Element als eigene Knotenform eines Wirbelfadens zu behandeln. Ein idealer Wirbel bleibt in einer reibungsfreien Flüssigkeit erhalten; Stabilität, feste Zahl der Elemente und unterschiedliche Atomarten erhielten damit eine gemeinsame mechanische Erklärung. Peter Guthrie Tait begann Knoten systematisch zu tabellieren.",
+        "Das Modell lieferte weder die beobachteten Spektrallinien noch brauchbare quantitative Gesetze für chemische Bindungen. Michelsons und Morleys Interferenzversuch stützte den ruhenden Lichtäther nicht; Elektron, Kern und Quantenmechanik ersetzten die mechanischen Ätheratome. Die Knotentabellen überlebten als eigenständige Mathematik."
+      ],
+      media:[C("Kelvin vortex atom knot diagram Tait","Taits Knotentafel für die Wirbelatomtheorie"),C("vortex ring experiment 19th century","Wirbelringversuch")],
+      sources:[S("The Vortex Atom: A Victorian Theory of Everything","https://arxiv.org/abs/1906.00453"),S("Wikipedia: Vortex theory of the atom","https://en.wikipedia.org/wiki/Vortex_theory_of_the_atom")]
+    },
+    {
+      category:"Entzifferte Schriften",title:"𐱅𐰭𐰼𐰃 : 𐱅𐰏 : 𐱅𐰭𐰼𐰃𐰓𐰀",
+      summary:"teŋri : teg : teŋride · die ersten drei Wörter der Südseite des Kül-Tigin-Steins.",
+      detail:[
+        "Vilhelm Thomsen trennte zuerst Vokal- von Konsonantenzeichen. Die chinesische Inschrift auf der Westseite nannte Kül Tigin und den türkischen Herrscher; wiederkehrende Gruppen im unbekannten Text ließen sich damit als kül tigin und türk lesen. Das häufige 𐱅𐰭𐰼𐰃 ergab teŋri, ‚Himmel‘. Am 15. Dezember 1893 stellte Thomsen die Entzifferung in Kopenhagen vor.",
+        "Die Zeile läuft von rechts nach links und benutzt Doppelpunkte als Worttrenner. Transliteration des gezeigten Anfangs: teŋri teg teŋride. Vollständige Übersetzung des ersten Satzes: „Ich, der himmelgleiche und im Himmel geborene türkische Bilge Qaghan, bestieg zu dieser Zeit den Thron.“"
+      ],
+      media:[C("Kultegin monument Orkhon inscription close up","Südseite der Kül-Tigin-Inschrift"),C("Old Turkic alphabet Thomsen","Thomsens Lautwerte der alttürkischen Zeichen")],
+      sources:[S("Vilhelm Thomsen: Inscriptions de l'Orkhon déchiffrées · Wikisource","https://fr.wikisource.org/wiki/Inscriptions_de_l%27Orkhon_d%C3%A9chiffr%C3%A9es/I._L%27alphabet"),S("Talât Tekin: A Grammar of Orkhon Turkic","https://altaica.ru/LIBRARY/Tekin%20Talat/Tekin_A%20Grammar%20of%20Orkhon%20Turkic%201968.pdf"),S("Vikisource: Kül-Tigin-Inschrift","https://tr.wikisource.org/wiki/Orhun_Abideleri_(K%C3%BCl_Tigin)")]
+    },
+    {
+      category:"Rhetorische und poetische Verfahren",title:"“I will do such things— / What they are yet I know not.”",
+      summary:"Anakoluth · William Shakespeare, King Lear, II,4",
+      detail:[
+        "Lear beginnt eine Drohung, bricht ihre Grammatik nach „such things“ ab und setzt mit einem vollständigen Fragesatz neu an. Der Anakoluth legt den Abstand zwischen seiner behaupteten Gewalt und seinem fehlenden Plan offen. Die Pause gehört zum Sinn: Wut liefert den Satzanfang, Ohnmacht verhindert den Abschluss.",
+        "Vergleich: In Laurence Sternes Tristram Shandy zerreißen Gedankenstriche fortlaufend angefangene Konstruktionen; dort bildet der Abbruch das sprunghafte Erzählen. Bei Lear ereignet sich derselbe grammatische Bruch einmalig unter unmittelbarem Druck."
+      ],
+      media:[C("King Lear storm painting Benjamin West","King Lear im Sturm"),C("King Lear manuscript early edition page","King Lear in einer frühen Druckausgabe")],
+      sources:[S("Folger Shakespeare Library: King Lear, 2.4","https://www.folger.edu/explore/shakespeares-works/king-lear/read/2/4/"),S("Library of Congress: Glossary of Rhetorical Terms","https://tile.loc.gov/storage-services/master/gdc/gdcebookspublic/20/19/45/27/13/2019452713/2019452713.pdf")]
+    },
+    {
+      category:"Etymologien und Begriffsgeschichten",title:"Alkohol",
+      summary:"Ein Wort für feines Antimonpulver wurde zum Namen des Weingeists und schließlich einer Stoffklasse.",
+      detail:[
+        "Arabisch al-kuḥl bezeichnete das fein geriebene Pulver, mit dem die Lider geschminkt wurden. Mittelalterliches Latein übernahm alcohol für besonders fein verteilte Stoffe. Paracelsus schrieb im 16. Jahrhundert alcohol vini für das durch Destillation gewonnene Feinste oder Wesentliche des Weins.",
+        "Im 18. Jahrhundert verkürzte sich alcohol vini zu alcohol und bezeichnete Weingeist. Die Chemie weitete das Wort im 19. Jahrhundert auf eine Stoffklasse mit Hydroxygruppe aus; Ethanol ist seitdem nur ein Alkohol unter vielen. Englisches kohl behielt den älteren Sinn des Augenschminkpulvers."
+      ],
+      media:[C("ancient kohl vessel museum","Historisches Gefäß für Kohl"),C("alembic distillation historical engraving","Historischer Destillierapparat"),C("ethanol molecule ball and stick","Ethanolmolekül")],
+      sources:[S("Online Etymology Dictionary: alcohol","https://www.etymonline.com/word/alcohol"),S("Encyclopaedia Britannica 1911: Alcohol · Wikisource","https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Alcohol")]
+    },
+    {
+      category:"Urban Legends",title:"Das vergiftete Ballkleid",
+      summary:"Ein gebrauchtes Kleid soll beim Tanz Formaldehyd freigesetzt und seine neue Trägerin getötet haben.",
+      detail:[
+        "Amerikanische Folklorezeitschriften zeichneten die Geschichte in den 1940er und 1950er Jahren auf. Eine junge Frau kauft ein günstiges Abendkleid, erkrankt während eines Tanzes und stirbt. Später heißt es, das Kleid habe zuvor an einer Toten gelegen und sei mit Einbalsamierungsflüssigkeit getränkt zurück in den Verkauf gelangt.",
+        "Spätere Fassungen nennen wechselnde Kaufhäuser, eine Leihgabe oder den Diebstahl aus einem Bestattungsinstitut; ‚Einbalsamierungsflüssigkeit‘ ersetzt oft das frühere Formaldehyd. Ein belegter Todesfall fehlt. Die Erzählung bündelte Misstrauen gegen gebrauchte Kleidung, anonyme Warenwege und neue chemische Konservierungsmittel."
+      ],
+      media:[C("evening dress dance 1940 photograph","Abendkleid bei einem Tanz in den 1940er Jahren"),C("formaldehyde bottle historical","Historische Formaldehydflasche")],
+      sources:[S("University of Detroit Mercy: The Poisoned Dress","https://libraries.udmercy.edu/archives/special-collections/cfa/index.php?field=keyword&term=DRESS"),S("Contemporary Legend: A Folklore Bibliography","https://dai.mun.ca/PDFs/cns/ContemporaryLegendAFolkloreBibliography.pdf"),S("Wikipedia: Poison dress","https://en.wikipedia.org/wiki/Poison_dress")]
+    },
+    {
+      category:"Interessante Sprachen und Sprachmerkmale",title:"Kayardild: drei Kasus an einem Wort",
+      summary:"Kasusendungen bezeichnen zugleich die Rolle im Satz, die Zeitlage und die Zugehörigkeit zu einem Nebensatz.",
+      detail:[
+        "Im Kayardild von Bentinck Island erhält jedes Wort einer Nominalgruppe dieselben syntaktischen Markierungen. mijil-nguni-naa-ntha zerfällt in mijil ‚Netz‘, -nguni Instrumental, -naa modaler Ablativ für Vergangenheit und -ntha obliquer Nebensatzkasus. Drei Kasusendungen stehen hinter demselben Stamm.",
+        "Im Satz Ngada mungurru, maku-ntha … mijil-nguni-naa-ntha bedeutet die Form: ‚Ich weiß, dass die Frau den Fisch mit dem Netz des Bruders fing.‘ Fallstapelung verteilt die Struktur des eingebetteten Satzes über seine Wörter; Tempus erscheint dabei auch an Nomen."
+      ],
+      media:[C("Bentinck Island Australia map Kayardild","Bentinck Island, Heimat des Kayardild"),C("Kayardild people Mornington Island","Kayardild-Sprachgemeinschaft")],
+      sources:[S("University of Essex: Kayardild case and agreement","https://repository.essex.ac.uk/11816/"),S("Evans/Nordlinger: Extreme morphological shift","https://www.researchgate.net/publication/283018203_Extreme_morphological_shift_verbal_case_in_Kayardild")]
+    },
+    {
+      category:"Interessante Listen",title:"Abraham Lincolns Tascheninhalt · 14. April 1865",
+      summary:"Alles, was Lincoln am Abend des Attentats im Ford’s Theatre bei sich trug.",
+      detail:[
+        "Nach Lincolns Tod übergab man die Gegenstände seinem Sohn Robert Todd Lincoln. Dessen Tochter Mary Lincoln Isham schenkte sie 1937 der Library of Congress. Die Zusammenstellung ist keine nachträgliche Auswahl persönlicher Andenken, sondern der erhaltene Inhalt seiner Manteltaschen.",
+        "Zwischen den alltäglichen Dingen lag ein konföderierter Fünf-Dollar-Schein, vermutlich ein Andenken an Lincolns Besuch im eroberten Richmond. Die Zeitungsausschnitte berichteten unter anderem über Emanzipation in Missouri, Unruhe unter konföderierten Soldaten und zustimmende Urteile über seine Präsidentschaft."
+      ],
+      works:["zwei Brillen und zwei Etuis","ein Brillenputzer aus Sämischleder","ein Taschenmesser","ein goldener Uhrenanhänger ohne Uhr","ein Manschettenknopf mit dem Buchstaben L","ein besticktes Leinentaschentuch","eine braune, violett gefütterte Brieftasche","ein Bleistift","ein konföderierter Fünf-Dollar-Schein von 1864","acht Zeitungsausschnitte"],
+      media:[C("Abraham Lincoln pocket contents Library of Congress","Lincolns Tascheninhalt in der Library of Congress"),C("Abraham Lincoln wallet Confederate five dollar bill","Brieftasche und konföderierter Fünf-Dollar-Schein")],
+      sources:[S("Library of Congress: What Was in Abraham Lincoln’s Pockets?","https://blogs.loc.gov/loc/2017/04/what-was-in-abraham-lincolns-pockets-on-april-14-1865/"),S("Library of Congress: Contents of Lincoln's pockets","https://www.loc.gov/item/2014655007/")]
+    },
+    {
+      category:"Gute einfache Cartoons",title:"Winsor McCay: Dream of the Rarebit Fiend · 7. Januar 1905",
+      summary:"Ein Mann wird im Traum mit jedem Schritt größer; beim Erwachen liegt nur sein Fuß außerhalb des Betts.",
+      detail:[
+        "Die neun Bilder verändern nur eine Regel: Jeder Schritt vergrößert den Spaziergänger, bis seine Schuhe Straßen und Häuser überdecken. Das letzte Bild setzt die riesige Traumbewegung in einen kleinen körperlichen Anlass zurück. Der Mann schiebt den herausragenden Fuß unter die Decke und schwört dem Welsh Rarebit ab.",
+        "McCay veröffentlichte die Serie unter dem Namen Silas in der New York Evening Telegram. Die ganze Seite ist gemeinfrei; McCay starb 1934."
+      ],
+      media:[F("Dream of the Rarebit Fiend 1905-01-07.jpg","Vollständiger Cartoon · New York Evening Telegram, 7. Januar 1905")],
+      sources:[S("Wikimedia Commons: Dream of the Rarebit Fiend, 7 January 1905","https://commons.wikimedia.org/wiki/File:Dream_of_the_Rarebit_Fiend_1905-01-07.jpg"),S("Library of Congress: Winsor McCay","https://www.loc.gov/pictures/collection/acd/item/2016678678/")]
+    },
+    {
+      category:"Grenzfälle",title:"Bathochordaeus stygius · Körper oder Haus",
+      summary:"Ein vier Zentimeter langes Tier lebt in einer selbst ausgeschiedenen Filteranlage von bis zu einem Meter Durchmesser.",
+      detail:[
+        "Der Riesen-Appendikular scheidet Schleim aus und pumpt ihn zu einem inneren und einem äußeren Filterkörper auf. Das äußere Netz hält große Teilchen fern; feinere Partikel gelangen zum inneren Nahrungsfilter. Schwanzschläge treiben Wasser durch die Anlage und lösen gefangene Nahrung zum Mund.",
+        "Das Tier baut durchschnittlich zwei solcher Häuser pro Tag und verlässt sie, sobald die Filter verstopfen. Das Haus ist weder Haut noch dauerhaftes Organ. Es entsteht aus Körpersekret, übernimmt Atmung und Nahrungssuche und wird anschließend als sinkendes Partikel Teil des Tiefsee-Nahrungsstroms."
+      ],
+      media:[F("Bathochordaeus charon compared to B. stygius.gif","Bathochordaeus charon und Bathochordaeus stygius im Größenvergleich")],
+      sources:[S("Smithsonian Ocean: Mucus Home","https://ocean.si.edu/holding-tank/images-hide/mucus-home"),S("PLOS One: Mucous-mesh grazing in the deep pelagic ocean","https://pmc.ncbi.nlm.nih.gov/articles/PMC5966591/")]
+    },
+    {
+      category:"UnsichtbareKonventionen",title:"Der Blick über den Schnitt",
+      summary:"Ein Blick aus dem Bild wird durch den nächsten Schnitt einem Gegenstand oder einer Person zugeordnet.",
+      detail:[
+        "Die erste Einstellung zeigt eine Figur, die nach rechts oben blickt. Die nächste zeigt einen Gegenstand aus einer dazu passenden Richtung. Obwohl beide Aufnahmen getrennt entstanden, liest der Zuschauer sie als Blick und Gesehenes im selben Raum. Höhe, Winkel und Bildschirmrichtung müssen aufeinander reagieren.",
+        "In The Third Man verbindet der Schnitt bei der Beerdigung Gesichter mit dem beobachteten Geschehen. Vertauscht man die zweite Einstellung oder spiegelt den Blick, erscheint der Gegenstand am falschen Ort. Der eyeline match trägt daher räumliche Information, ohne den gesamten Raum zu zeigen."
+      ],
+      media:[Y("y_1H6V7uyYc","Eyeline Match · Aufnahme und Schnitt")],
+      sources:[S("Columbia Film Language Glossary: Eye-Line Match","https://filmglossary.ccnmtl.columbia.edu/term/eye-line-match/"),S("YouTube: The eyeline match","https://www.youtube.com/watch?v=y_1H6V7uyYc"),S("Wikipedia: Eyeline match","https://en.wikipedia.org/wiki/Eyeline_match")]
+    },
+    {
+      category:"VerloreneTechniken",title:"Räder abklopfen",
+      summary:"Bahnarbeiter erkannten Risse am Klang eines angeschlagenen Rades.",
+      detail:[
+        "Ein wheel tapper ging an haltenden Zügen entlang und schlug jedes Rad mit einem langstieligen Hammer an. Ein unbeschädigter Radreifen antwortete mit hellem, nachklingendem Ton; ein Riss dämpfte die Schwingung. Die Rückseite der Hand prüfte zugleich, ob ein Achslager heiß lief.",
+        "Der Arbeiter musste Tonhöhe, Ausschwingen und Nebengeräusche im Bahnhof gegen viele bekannte Räder vergleichen. Heutige Ultraschallprüfungen, planmäßige Wartung und streckenseitige Heißläuferortung erledigen dieselben Aufgaben mit Messwerten."
+      ],
+      media:[F("Wheel tapper.jpg","Räderprüfer mit langstieligem Hammer")],
+      sources:[S("Science Museum Group: Wheeltapper's hammer","https://collection.sciencemuseumgroup.org.uk/objects/co222818/wheeltappers-hammer"),S("Railway Work, Life & Death: From wheel-tappers to porters","https://www.railwayarchive.org.uk/from-wheel-tappers-to-porters")]
+    },
+    {
+      category:"InternetArchäologie",title:"wwwwwwwww.jodi.org",
+      summary:"Eine Netzkunstarbeit von 1995 behandelt Browserfehler, Quellcode und Navigation als Material.",
+      detail:[
+        "Joan Heemskerk und Dirk Paesmans stellten 1995 unter jodi.org eine Startseite ins Netz, deren grüne Zeichen wie eine Störung wirken. Im HTML-Quelltext ergibt dieselbe Zeichenmenge ein Diagramm. Links führen ohne Menübezeichnungen durch wechselnde Fenster, falsche Fehlermeldungen, rohe Dateipfade und Seiten, die sich gegen gewöhnliche Bedienung sperren.",
+        "Die Arbeit ist weiterhin unter ihrer ursprünglichen Domain aufrufbar. Sie bewahrt keine alte Website als Dokument; ihre Unsicherheit entsteht jedes Mal neu im aktuellen Browser."
+      ],
+      media:[I("https://www.upstreamgallery.nl/images/artist/slider/large/46/0340311001635507493.jpg","https://www.upstreamgallery.nl/artists/46/jodi","JODI · digitale Installation","Upstream Gallery")],
+      sources:[S("JODI","https://wwwwwwwww.jodi.org/"),S("Upstream Gallery: JODI","https://www.upstreamgallery.nl/artists/46/jodi"),S("Rhizome ArtBase: JODI","https://artbase.rhizome.org/wiki/Q949"),S("Electronic Arts Intermix: JODI","https://www.eai.org/artists/jodi/bibliography-links")]
+    },
+    {
+      category:"SchlechtesWritingSeziert",title:"Solo: A Star Wars Story · der Nachname",
+      summary:"Ein Beamter erfindet „Solo“, damit eine bekannte Figur ihren bekannten Namen vor laufender Kamera erhält.",
+      detail:[
+        "Bei der Musterung fragt ein imperialer Beamter Han nach seinem Familiennamen. Han antwortet, er habe keine Leute und sei allein. Der Beamte trägt daraufhin „Solo“ ein. Die Fluchtsequenz hält für eine Erklärung an, die weder Hans Ziel noch sein Verhältnis zum Imperium verändert. Ein alltäglicher Verwaltungsakt produziert dabei exakt den Namen, den das Publikum bereits als Markenzeichen kennt.",
+        "Die Szene verkleinert Hans unbekannte Herkunft zu einem Wortspiel des ersten Beamten, dem er begegnet. Zugleich bleibt offen, warum Han den zugewiesenen Namen nach seiner Desertion freiwillig weiterführt."
+      ],
+      works:["Han nennt den Nachnamen ohne Erklärung; die Lücke bleibt Teil seiner unbekannten Herkunft.","Han wählt „Solo“ selbst als Decknamen und benutzt ihn, um Qi’ra bei einer späteren Suche zu schützen.","Der Beamte übernimmt einen bereits benutzten Alias aus Hans gefälschten Papieren; die Szene erzählt dann seine Erfahrung mit Betrug statt die Herkunft eines Namens."],
+      media:[Y("YpmjseSy4HU","Solo: A Star Wars Story · Musterungsszene")],
+      sources:[S("YouTube: How Han Got His Name","https://www.youtube.com/watch?v=YpmjseSy4HU"),S("StarWars.com: Solo: A Star Wars Story","https://www.starwars.com/films/solo")]
+    },
+    {
+      category:"DasIstHierGanzInDerNähe",title:"Sammlung Prinzhorn",
+      summary:"Heidelberg · 40.000 Werke von Menschen mit Psychiatrie-Erfahrung.",
+      detail:[
+        "Hans Prinzhorn erweiterte nach dem Ersten Weltkrieg eine Heidelberger Lehrsammlung um Zeichnungen, Hefte, Textilien, Skulpturen und Briefe aus psychiatrischen Anstalten. Sein Buch Bildnerei der Geisteskranken von 1922 wirkte auf Künstler der Moderne. In der NS-Zeit wurden Werke als pathologisches Vergleichsmaterial missbraucht; Harald Szeemann machte den Bestand 1963 wieder öffentlich bekannt.",
+        "Heute umfasst die Sammlung etwa 40.000 Werke und wächst durch Gegenwartskunst von Psychiatrie-Erfahrenen weiter. Sie liegt rund 20 Kilometer von Mannheim entfernt. Adresse: Voßstraße 2, 69115 Heidelberg. Geöffnet Dienstag und Donnerstag bis Sonntag 11–17 Uhr, Mittwoch 11–20 Uhr; Montag geschlossen."
+      ],
+      media:[C("Sammlung Prinzhorn Heidelberg museum building","Museum Sammlung Prinzhorn"),C("August Natterer Prinzhorn collection","Werk von August Natterer aus der Sammlung")],
+      sources:[S("Universität Heidelberg: Sammlung Prinzhorn","https://www.heicollections.uni-heidelberg.de/de/museen-sammlungen/sammlung-prinzhorn"),S("Sammlung Prinzhorn: Besuch","https://www.sammlung-prinzhorn.de/besucherinfo")]
+    },
+    {
+      category:"VisuelleIdeenDieIchKlauenWill",title:"Xanti Schawinsky · Spectodrama",
+      summary:"Körper, Papier, Licht und Klang werden als gleichrangige Bühnenelemente geprüft.",
+      detail:[
+        "Schawinsky entwickelte ab 1936 am Black Mountain College kurze Bühnenstudien. Darsteller trugen gerollte Papierkörper, geometrische Masken oder farbige Flächen und bewegten sich zwischen ähnlichen Formen im Raum. Lichtprojektion veränderte ihre Konturen; Musik und Geräusch gaben dem Bild eine zweite zeitliche Ordnung.",
+        "Die brauchbare Idee liegt im Versuch: Eine Szene setzt jeweils eine einzige Beziehung unter Druck – Körper gegen Fläche, Farbe gegen Bewegung, Figur gegen Hintergrund. Kostüm und Bühnenbild bestehen aus demselben Material, sodass eine kleine Positionsänderung die Figur hervorhebt oder im Raum verschwinden lässt."
+      ],
+      media:[F("Xanti Schawinsky Räuberballett Die beiden Veroneser 1925.jpg","Räuberballett, 1925"),F("XantiSchawinsky.jpg","Xanti Schawinsky, um 1925")],
+      sources:[S("Bauhaus Kooperation: Xanti Schawinsky","https://bauhauskooperation.de/en/wissen/das-bauhaus/koepfe/biografien/biografie-detail/person-1105"),S("Xanti Schawinsky Estate: Black Mountain College","https://www.schawinsky.ch/blank-2"),S("Kunsthalle Bielefeld: Play, Life, Illusion","https://kunsthalle-bielefeld.de/en/exhibitions/play-life-illusion-xanti-schawinsky/")]
+    },
+    {category:"Eigene GIFs",kind:"gif",title:"Moiréatmung",detail:[],media:[I("assets/gifs/moireatmung.gif","assets/gifs/moireatmung.gif","Moiréatmung","Eigene Animation")],sources:[]},
+    {category:"Eigene GIFs",kind:"gif",title:"Kippkörper",detail:[],media:[I("assets/gifs/kippkoerper.gif","assets/gifs/kippkoerper.gif","Kippkörper","Eigene Animation")],sources:[]},
+    {category:"Eigene GIFs",kind:"gif",title:"Farbfenster",detail:[],media:[I("assets/gifs/farbfenster.gif","assets/gifs/farbfenster.gif","Farbfenster","Eigene Animation")],sources:[]},
+    {category:"Eigene GIFs",kind:"gif",title:"Faltendes Raster",detail:[],media:[I("assets/gifs/faltendes-raster.gif","assets/gifs/faltendes-raster.gif","Faltendes Raster","Eigene Animation")],sources:[]},
+    {category:"Eigene GIFs",kind:"gif",title:"Pendelspur",detail:[],media:[I("assets/gifs/pendelspur.gif","assets/gifs/pendelspur.gif","Pendelspur","Eigene Animation")],sources:[]}
+  );
+
 })();
 
 (() => {
@@ -1715,20 +1988,20 @@ window.KARTEN.push(
       src("International Buster Keaton Society: One Week", "https://busterkeaton.org/the-films/one-week/")
     ]),
 
-    card("Gute Gags", "Victor Borge: Phonetic Punctuation", [], [Y("TIf3IfHCoiE", "Victor Borge · Phonetic Punctuation · ab 2:34", 154)], [
+    card("Gute Gags", "Victor Borge: Phonetic Punctuation", [], [Y("TIf3IfHCoiE", "Victor Borge · Phonetic Punctuation")], [
       src("YouTube: Victor Borge – Phonetic Punctuation", "https://www.youtube.com/watch?v=TIf3IfHCoiE")
     ]),
 
-    card("Gute Gags", "Les Luthiers: La tanda", [], [Y("-YtWYotwDHU", "Les Luthiers · La tanda · ab 1:03", 63)], [
+    card("Gute Gags", "Les Luthiers: La tanda", [], [Y("-YtWYotwDHU", "Les Luthiers · La tanda")], [
       src("Les Luthiers: Werkverzeichnis La tanda", "https://lesluthiers.org/verobra.php?ID=73"),
       src("YouTube: offizieller Künstlerkanal", "https://www.youtube.com/watch?v=-YtWYotwDHU")
     ]),
 
-    card("Gute Gags", "That Mitchell and Webb Look: The Numberwang Code", [], [Y("eP9YeDGAu7U", "The Numberwang Code · BBC", 0)], [
+    card("Gute Gags", "That Mitchell and Webb Look: The Numberwang Code", [], [Y("eP9YeDGAu7U", "The Numberwang Code · BBC")], [
       src("YouTube: BBC – The Numberwang Code", "https://www.youtube.com/watch?v=eP9YeDGAu7U")
     ]),
 
-    card("Gute Gags", "Big Train: 43rd World Stare Out Championship Finals", [], [Y("DkI85Kt10e4", "43rd World Stare Out Championship Finals", 0)], [
+    card("Gute Gags", "Big Train: 43rd World Stare Out Championship Finals", [], [Y("DkI85Kt10e4", "43rd World Stare Out Championship Finals")], [
       src("YouTube: Big Train – 43rd World Stare Out Championship Finals", "https://www.youtube.com/watch?v=DkI85Kt10e4")
     ]),
 
@@ -2022,7 +2295,7 @@ window.KARTEN.push(
     // SchlechtesWritingSeziert
     card("SchlechtesWritingSeziert", "Star Trek Into Darkness · „My name is Khan“", [
       "John Harrison nennt Kirk und Spock seinen wirklichen Namen: Khan. Die Kamera, die Pause und die Musik behandeln das Wort als Enthüllung. Für die Figuren besitzt der Name zu diesem Zeitpunkt jedoch keine bekannte Geschichte; nur ein Teil des Publikums erkennt ihn aus dem älteren Star-Trek-Kanon. Die Reaktion der Szene gehört deshalb dem Zuschauer und wird den Figuren geliehen."
-    ], [Y("OvdQYzRHlO0", "Star Trek Into Darkness · My Name is Khan", 0)], [
+    ], [Y("OvdQYzRHlO0", "Star Trek Into Darkness · My Name is Khan")], [
       src("YouTube: lizenzierter Movieclips-Ausschnitt", "https://www.youtube.com/watch?v=OvdQYzRHlO0")
     ], {summary:"Eine Enthüllung verlangt von den Figuren ein Wissen, das nur das Publikum besitzt.",works:[
       "Kirk findet den Namen Khan vor der Begegnung in einer gesperrten Akte; die Szene enthüllt dann, dass Harrison zu dieser Akte gehört.",
@@ -2032,7 +2305,7 @@ window.KARTEN.push(
 
     card("SchlechtesWritingSeziert", "The Matrix Reloaded · der Architekt", [
       "Der Architekt hält Neo in einem weißen Raum an und erklärt in einem langen Monolog die früheren Versionen der Matrix, die Rolle des Auserwählten und die zyklische Zerstörung Zions. Abstrakte Begriffe, verschachtelte Sätze und Monitorbilder liefern entscheidende Handlungstatsachen auf einmal. Neo handelt erst am Ende; während der Erklärung besitzt er kaum Mittel, eine Behauptung zu prüfen oder das Gespräch zu verändern."
-    ], [Y("9WXQnDtcCWM", "The Matrix Reloaded · The Architect", 0)], [
+    ], [Y("9WXQnDtcCWM", "The Matrix Reloaded · The Architect")], [
       src("YouTube: lizenzierter Movieclips-Ausschnitt", "https://www.youtube.com/watch?v=9WXQnDtcCWM")
     ], {summary:"Der Wendepunkt wird als Vortrag übermittelt, während die Hauptfigur stillsteht.",works:[
       "Neo durchläuft kurze Überreste der früheren Zyklen und setzt die Wahrheit selbst aus widersprüchlichen Bildern zusammen.",
@@ -2042,7 +2315,7 @@ window.KARTEN.push(
 
     card("SchlechtesWritingSeziert", "Doctor Who · The Timeless Children", [
       "Der Master fesselt die Doctor in der Matrix und führt sie durch projizierte Archivbilder. Er erklärt Herkunft, Division, verlorene Leben und die Umformung der Time Lords. Die Doctor empfängt ihre eigene Biografie als Vortrag ihres Gegners. Eine große Veränderung der Seriengeschichte entsteht dadurch ohne eine gegenwärtige Entscheidung, Untersuchung oder verlässliche Gegenstimme."
-    ], [Y("4KR4cLOdIeQ", "Doctor Who · The Timeless Children", 0)], [
+    ], [Y("4KR4cLOdIeQ", "Doctor Who · The Timeless Children")], [
       src("YouTube: Doctor Who / BBC Studios", "https://www.youtube.com/watch?v=4KR4cLOdIeQ")
     ], {summary:"Eine Figur erfährt ihre neue Lebensgeschichte gefesselt aus der Präsentation ihres Gegners.",works:[
       "Die Doctor entdeckt über mehrere Folgen beschädigte Division-Akten und entscheidet selbst, welchen Zugang sie öffnet.",
@@ -2053,7 +2326,7 @@ window.KARTEN.push(
     card("SchlechtesWritingSeziert", "Spectre · Blofeld als Pflegebruder", [
       "Franz Oberhauser erklärt Bond, er habe nach dem Tod seiner Eltern bei Oberhausers Vater gelebt. Aus Eifersucht tötete Franz den Vater, nahm den Namen Blofeld an und bezeichnet sich als Urheber von Bonds gesamtem Schmerz. Die Szene bindet mehrere frühere Gegner rückwirkend an ein Kindheitsmotiv, für das diese Filme keine Ursache oder Spur gelegt haben.",
       "Der persönliche Zusammenhang verkleinert zugleich SPECTRE: Aus einem eigenständigen Machtapparat wird die verlängerte Kränkung eines Pflegebruders. Blofelds Behauptung ersetzt den sichtbaren Nachweis, wie er Le Chiffre, Quantum, Silva und ihre verschiedenen Ziele tatsächlich gesteuert hätte."
-    ], [Y("k6BOO2bhmOs", "Spectre · Ernst Stavro Blofeld", 0)], [
+    ], [Y("k6BOO2bhmOs", "Spectre · Ernst Stavro Blofeld")], [
       src("YouTube: lizenzierter Movieclips-Ausschnitt", "https://www.youtube.com/watch?v=k6BOO2bhmOs"),
       src("007.com: Spectre", "https://www.007.com/the-films/spectre/")
     ], {summary:"Eine späte Verwandtschaft soll vier Filme nachträglich zu einem Plan verbinden.",works:[
@@ -2065,7 +2338,7 @@ window.KARTEN.push(
     card("SchlechtesWritingSeziert", "Skyfall · die Dusche auf der Chimera", [
       "Bond erkennt an Sévérines Tätowierung, dass sie als Kind in den Sexhandel geriet und heute unter Silvas Kontrolle steht. Er verspricht, ihren Bewachern zu entkommen und Silva zu töten. Kurz darauf betritt er unangekündigt ihre Dusche; die Inszenierung springt von ihrer beschriebenen Abhängigkeit unmittelbar zu Sex und lässt ihre Entscheidung außerhalb der Szene.",
       "Damit arbeitet der Dialog gegen das Bild: Bond benennt Zwang sehr genau, doch die folgende Handlung gibt Sévérine weder einen klaren Wunsch noch einen Plan. Ihr späterer Tod erhält zusätzliches Gewicht, weil die versprochene Befreiung nie als ihr eigener Versuch begonnen hat."
-    ], [Y("HYDbThcr2z4", "Skyfall · Bond und Sévérine auf der Chimera", 0)], [
+    ], [Y("HYDbThcr2z4", "Skyfall · Bond und Sévérine auf der Chimera")], [
       src("YouTube: Szenenausschnitt", "https://www.youtube.com/watch?v=HYDbThcr2z4"),
       src("007.com: Skyfall", "https://www.007.com/the-films/skyfall/")
     ], {summary:"Die Szene erkennt die Vorgeschichte einer ausgebeuteten Figur und übergeht sie im nächsten Schritt.",works:[
@@ -2156,3 +2429,8 @@ window.KARTEN.push(
     ], {summary:"Grafik überspringt Wände und Decken und wird selbst zur Raumform."})
   );
 })();
+
+// Die alte Bezeichnung bleibt nur in den archivierten Rohdaten erhalten.
+for (const card of window.KARTEN) {
+  if (card.category === "Historische Koinzidenzen") card.category = "Historische Anekdoten";
+}

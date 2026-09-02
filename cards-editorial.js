@@ -163,4 +163,80 @@
       for (const [index, text] of Object.entries(overrides)) card.detail[Number(index)] = text;
     }
   }
+
+  // Website-Aufnahmen mit Cookie- oder Navigationsfenstern sowie sachfremde Buchumschläge.
+  const commons = (query, caption) => ({ type: "commons", query, caption });
+  const openingPortraits = new Map([
+    ["Jemand musste Josef K. verleumdet haben, denn ohne dass er etwas Böses getan hätte, wurde er eines Morgens verhaftet.", ["Franz Kafka portrait 1923", "Franz Kafka"]],
+    ["Mein Vater war ein Kaufmann.", ["Adalbert Stifter portrait", "Adalbert Stifter"]],
+    ["Call me Ishmael.", ["Herman Melville portrait", "Herman Melville"]],
+    ["Alle glücklichen Familien gleichen einander, jede unglückliche Familie ist auf ihre eigene Weise unglücklich.", ["Leo Tolstoy portrait 1908", "Lew Tolstoi"]],
+    ["It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.", ["Jane Austen portrait", "Jane Austen"]],
+    ["Miss Brooke had that kind of beauty which seems to be thrown into relief by poor dress.", ["George Eliot portrait", "George Eliot"]],
+    ["Wir waren im Studiersaal, als der Direktor eintrat, gefolgt von einem Neuen in bürgerlicher Kleidung und einem Schuldiener, der ein großes Pult trug.", ["Gustave Flaubert portrait", "Gustave Flaubert"]],
+    ["Eduard – so nennen wir einen reichen Baron im besten Mannesalter – Eduard hatte in seiner Baumschule die schönste Stunde eines Aprilnachmittags zugebracht, um frisch erhaltene Pfropfreiser auf junge Stämme zu bringen.", ["Johann Wolfgang von Goethe portrait Stieler", "Johann Wolfgang Goethe"]],
+    ["It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness …", ["Charles Dickens portrait photograph", "Charles Dickens"]],
+    ["Mrs Dalloway said she would buy the flowers herself.", ["Virginia Woolf portrait 1927", "Virginia Woolf"]],
+    ["Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.", ["James Joyce portrait 1915", "James Joyce"]],
+    ["This is the saddest story I have ever heard.", ["Ford Madox Ford portrait", "Ford Madox Ford"]],
+    ["Ich bin ein kranker Mensch … Ich bin ein böser Mensch.", ["Fyodor Dostoevsky portrait 1879", "Fjodor Dostojewski"]]
+  ]);
+
+  const selectedCoverPatterns = new Map([
+    ["Sonne, Mond und ihre Kinder · Visayas", /Philippine Folk Tales/i],
+    ["Das arme Truthahnmädchen · Zuni", /Turkey Girl illustration Cushing/i],
+    ["Die alte Frau und ihr Bärenpflegesohn · Inughuit (Smith Sound)", /Rasmussen Eskimo Folk-Tales/i],
+    ["Die Sarsagun-Braut und der Bonga · Santal", /Folklore of the Santal Parganas/i],
+    ["Gefundenes Manuskript", /Castle of Otranto first edition/i],
+    ["Tarnhelm-Folge", /Final Fantasy VII 1997 cover/i],
+    ["Blitz und Donner · Efik", /Folk Stories Southern Nigeria Dayrell cover/i],
+    ["Verzögertes Verstehen", /Heart of Darkness 1902 cover/i],
+    ["Zeugma", /Rape of the Lock 1714 title page/i],
+    ["Erlebte Rede", /Jane Austen Emma first edition title page/i],
+    ["Roboter", /Karel Capek RUR first edition/i]
+  ]);
+
+  const mediaReplacements = new Map([
+    ["Sonne, Mond und ihre Kinder · Visayas", [["Visayan people Philippines historical photograph", "Visayische Gemeinschaft zu Beginn des 20. Jahrhunderts"]]],
+    ["The Clock · Film oder Uhr", [["Christian Marclay portrait", "Christian Marclay"]]],
+    ["Warum zwischen den Sätzen Stille herrscht", [["symphony orchestra conductor audience concert hall", "Dirigent und Orchester am Ende eines Satzes"]]],
+    ["Warum eine neue Stimme einen neuen Absatz erhält", [["Charles Dickens manuscript dialogue page", "Dialog in einer Manuskriptseite"]]],
+    ["Gis oder As: derselbe Ton, eine andere Aufgabe", [["circle of fifths enharmonic keys diagram", "Enharmonisch benachbarte Tonarten"]]],
+    ["Letterlocking", [["locked letter historical letterlocking", "Historisch gefalteter und versiegelter Brief"]]],
+    ["Schriftpunzen von Hand schneiden", [["type punchcutting steel punches", "Schriftpunzen und Gegenpunzen"]]],
+    ["Superbad.com", [["Ben Benjamin Superbad net artist", "Ben Benjamin"]]],
+    ["TEXTFILES.COM", [["Jason Scott archivist portrait", "Jason Scott, Gründer von TEXTFILES.COM"]]],
+    ["ACME Laboratories", [["Jef Poskanzer portrait", "Jef Poskanzer"]]],
+    ["The Infinite Cat Project", [["cat looking at computer monitor", "Katze vor einem Bildschirm"]]],
+    ["One Terabyte of Kilobyte Age", [["Olia Lialina Dragan Espenschied", "Olia Lialina und Dragan Espenschied"]]],
+    ["Deutsches Musikautomaten-Museum", [["Deutsches Musikautomaten Museum Bruchsal Phonoliszt Violina", "Phonoliszt-Violina im Musikautomaten-Museum"]]],
+    ["Schau- und Sichtungsgarten Hermannshof", [["Schau und Sichtungsgarten Hermannshof Weinheim", "Staudenpflanzung im Hermannshof"]]],
+    ["Trullo auf dem Adelberg", [["Flonheimer Trullo Adelberg", "Trullo auf dem Adelberg"]]],
+    ["Josef Svoboda · Polyekran", [["Josef Svoboda Polyekran Expo 58", "Polyekran auf der Expo 58"]]],
+    ["Karel Zeman · Invention for Destruction", []],
+    ["April Greiman · Design Quarterly 133", [["April Greiman designer portrait", "April Greiman"]]]
+  ]);
+
+  for (const card of window.KARTEN) {
+    const selectedPattern = selectedCoverPatterns.get(card.title);
+    card.media = (card.media || []).filter(item => {
+      if (/image\.thum\.io/i.test(item.src || "")) return false;
+      const description = `${item.query || ""} ${item.file || ""} ${item.caption || ""}`;
+      if (card.category === "Erste Sätze großer Romane" && /(?:cover|edition|title page|Titelseite|Umschlag|Ausgabe|Erstausgabe)/i.test(description)) return false;
+      return !selectedPattern?.test(description);
+    });
+
+    if (card.category === "Erste Sätze großer Romane" && !card.media.length && openingPortraits.has(card.title)) {
+      const [query, caption] = openingPortraits.get(card.title);
+      card.media.push(commons(query, caption));
+    }
+
+    if (!card.media.length && mediaReplacements.has(card.title)) {
+      card.media.push(...mediaReplacements.get(card.title).map(([query, caption]) => commons(query, caption)));
+    }
+
+    if (card.title === "Karel Zeman · Invention for Destruction" && !card.media.length) {
+      card.media.push({ type: "youtube", id: "G0t3pB0D7SQ", caption: "Trailer der digital restaurierten Fassung" });
+    }
+  }
 })();

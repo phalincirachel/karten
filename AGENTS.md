@@ -4,7 +4,7 @@
 
 Aphorismen (nur kluge, nur solche die in der aphorismenforschung als wirklich großartige gelten)
 
-Krasse historische koinzidenzen - interessante historische geschichten, besonders, gute geschichten, mit einsicht. 
+Historische Anekdoten - interessante historische Geschichten, besonders gute Geschichten mit Einsicht.
 
 Philosophische Begriffe erklärt : wie ein philosophisches wörterbuch. erst eine einfache definition, dann wenn man draufklick eine genauere erklärung.
 sowohl für begriffe die durch verschiedenen genutzt wurden und dadurch unterschiedlich beuracht wurden als auch für einzelne begriffe die mit einem bestimmten denker verbunden sind. keine blabla sachen sondern direkt die komplexität des konzepts erfassen. 
@@ -51,7 +51,7 @@ Sagengestalten, Legenden und Märchen aus aller Welt
 
 ## Ergänzungen vom 30. August 2026
 
-- „Historische Koinzidenzen“ meint historische Anekdoten und Begebenheiten, die erstaunlich, aufschlussreich oder besonders sind. Bloße Gleichzeitigkeit erfüllt die Kategorie nicht.
+- „Historische Anekdoten“ meint historische Begebenheiten, die erstaunlich, aufschlussreich oder besonders sind. Bloße Gleichzeitigkeit erfüllt die Kategorie nicht.
 - Die Karten verschiedener Kategorien erscheinen in gemischter Reihenfolge. Zusammenhängende Blöcke einer einzigen Kategorie sind ausgeschlossen.
 - Die Detailansicht jeder Komponistenkarte erklärt ausdrücklich, was an der Musik und ihrer Behandlung von Form, Klang oder Besetzung besonders ist und warum das Werk heute mehr Aufmerksamkeit verdient.
 - Karten mit ethnografisch aufgezeichneten Märchen und Sagen zeigen den vollständigen gemeinfreien Originaltext. Die Anwendung lädt dafür eine genau bezeichnete Textdatei. Der Ausschnitt beginnt und endet exakt mit der betreffenden Erzählung. Navigation, OCR-Schmutz, fremde Zusätze und fehlerhafte Zeichen werden entfernt; historische Schreibweisen und der Wortlaut der Quelle bleiben erhalten.
@@ -82,7 +82,7 @@ Wichtige Akkorde und Chord Changes: mit Beispielen in Songs und Stücken; keine 
 - Bei den ersten Sätzen großer Romane steht außen ausschließlich der erste Satz. Die Detailansicht lädt den vollständigen ersten Absatz des Wikipedia-Artikels zum Roman.
 - Die Detailansicht philosophischer Begriffe verwendet genaue Absätze des zugehörigen Wikipedia-Artikels. Vage Modalformulierungen mit „kann“, artikellose Nomenreihen und unpräzise Aufzählungen entfallen.
 - Karten zu Sagengestalten laden den ersten Absatz und weitere zusammenhängende Absätze des zugehörigen Wikipedia-Artikels. Die Anwendung kündigt dieses Verfahren im Kartentext nicht eigens an.
-- Musikkarten nennen den zu hörenden Satz oder Abschnitt. Ein überprüfter Zeitpunkt wird als Startmarke des eingebetteten YouTube-Videos gesetzt.
+- Musikkarten nennen den zu hörenden Satz oder Abschnitt. Eingebettete YouTube-Videos und ihre externen Links beginnen immer bei 0:00; Startmarken, Zeitparameter und automatische Sprünge werden nicht verwendet.
 - Jede der zwölf Kategorien erhält fünf weitere Karten. Die zehn älteren Kategorien umfassen danach jeweils 23 Karten; die beiden am 31. August ergänzten Kategorien jeweils 15 Karten. Der Gesamtbestand umfasst 260 Karten.
 
 ## Ergänzungen vom 2. September 2026
@@ -173,3 +173,22 @@ Keine „schönen Bilder“, sondern ungewöhnliche Bildideen: Perspektiven, Rä
 - Jede Karte enthält ein passendes Onlinebild oder ein geprüftes, eingebettetes Video und nennt ihre Quellen.
 - „SchlechtesWritingSeziert“ benennt die konkrete Szene, untersucht den einzelnen Fehler und gibt mindestens drei eigenständige bessere Lösungen.
 - „DasIstHierGanzInDerNähe“ verwendet Mannheim als Mittelpunkt, nennt den Ort genau und berücksichtigt einen ungefähren Radius von 100 Kilometern.
+
+## Ergänzungen vom 3. September 2026
+
+### Umbenennung
+
+Die aktive Kategorie heißt „Historische Anekdoten“. Die alte Bezeichnung „Historische Koinzidenzen“ wird in der Oberfläche nicht mehr verwendet.
+
+### Neue Kategorie
+
+Eigene GIFs
+
+Fünf kurze, eigens erstellte abstrakte Animationen erscheinen als selbstständige Karten. Diese Kategorie bildet die einzige Ausnahme von der Regel, ausschließlich vorhandene Onlinebilder zu verwenden. Die GIF-Karten enthalten weder Erklärung noch Detailansicht.
+
+### Umfang und Bildregeln
+
+- Jede der zuvor aktiven 27 Kategorien erhält eine weitere Karte. Zusammen mit fünf GIF-Karten umfasst der aktive Bestand 367 Karten in 28 Kategorien.
+- Schlägt das Laden eines Bildes endgültig fehl, verschwindet das gesamte Bildelement samt Beschriftung. Es bleibt weder Fehlermeldung noch Platzhalter oder leere Bildzelle. Verbleibende Bilder füllen das Raster neu; ohne Bild verschwindet der Medienbereich.
+- Buchumschläge dienen nur dort als Bild, wo die Gestaltung des Umschlags selbst Gegenstand der Karte ist. Bei Romananfängen werden Autorenporträts, Schauplätze oder sachlich passende Abbildungen verwendet.
+- Screenshots von Webseiten mit Cookie-Fenstern, Navigation oder anderen überlagernden Seitenelementen werden nicht verwendet.
