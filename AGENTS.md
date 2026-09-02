@@ -113,16 +113,6 @@ Interessante Sprachen und Sprachmerkmale
 
 Jede Karte erklärt ein Merkmal, das im Deutschen anders oder ohne grammatische Entsprechung organisiert ist. Ein oder zwei glossierte Beispiele zeigen die Form im Gebrauch. Hinzu kommen Sprachgemeinschaft, Situation und der nötige grammatische Kontext; exotisierende Kuriositätenlisten entfallen.
 
-Seltene und geniale Lifehacks
-
-Jede Karte enthält eine kurze, ausführbare Anleitung, den genauen Nutzen und die Grenze des Verfahrens. Sicherheitsangaben und belastbare Quellen gehören dazu. Allgemeine Haushaltstipps, riskante Experimente und bloße Internetbehauptungen entfallen.
-
-Gute Gags
-
-Die Kategorie umfasst Witze, Sprüche, Anekdoten und kurze zugängliche Videos. Die Auswahl bevorzugt genaue, gut gebaute oder historisch einflussreiche Gags mit erkennbarem Urheber oder Überlieferungskontext. Videos beginnen am entscheidenden Zeitpunkt.
-
-Gags werden weder erklärt noch gedeutet. Die Karte zeigt nur den Gag oder die Szene sowie Name, Urheber, Quelle und gegebenenfalls den passenden Startzeitpunkt.
-
 Interessante Listen
 
 Eine Karte zeigt eine überraschende, historisch oder sachlich geschlossene Liste. Quelle, Auswahlprinzip, Umfang und Reihenfolge werden angegeben. Die Einträge selbst bleiben sichtbar; die Erklärung zeigt, was erst durch ihre Zusammenstellung erkennbar wird.
@@ -138,3 +128,48 @@ Die Karte zeigt den vollständigen Cartoon und nennt Zeichner, Publikation und D
 - Jede neue Karte enthält mindestens ein passendes Onlinebild oder ein direkt eingebettetes, geprüftes Video und nennt die verwendeten Quellen.
 - Beim Scrollen lädt die Anwendung vor dem Seitenende automatisch weitere Karten. Der manuelle Ladebutton bleibt als barrierearme Rückfallebene erhalten.
 - Beim ersten Öffnen und beim Neuladen beginnt die Seite oben. Die Wiederherstellung einer alten Scrollposition wird vor dem Seitenaufbau deaktiviert; ein nachträgliches Hochscrollen ist ausgeschlossen.
+
+## Ergänzungen vom 2. September 2026 – zweite Erweiterung
+
+### Archivierte, nicht angezeigte Kartengruppen
+
+- „Gute Gags“ und „Seltene und geniale Lifehacks“ sind keine aktiven Kategorien mehr. Ihre vorhandenen Kartendaten bleiben im Projekt erhalten, werden aber weder angezeigt noch durchsucht oder gezählt.
+- Erste Sätze in einer anderen Sprache als Deutsch oder Englisch erscheinen außen in deutscher Übersetzung. Englische und deutsche Sätze bleiben unverändert.
+
+### Neue Kategorien – Wortlaut der Vorgabe
+
+Grenzfälle
+
+Dinge, bei denen eine scheinbar klare Kategorie versagt: ein Film fast ohne Handlung, eine Sprache fast ohne Verben, ein Tier zwischen zwei Verhaltensklassen, ein Bauwerk zwischen Gebäude und Maschine. Der Reiz läge jeweils darin, was der Grenzfall über die Kategorie verrät.
+
+UnsichtbareKonventionen
+
+Regeln, die man erst bemerkt, wenn jemand sie verletzt: Warum Filmschnitte normalerweise funktionieren, warum Türen bestimmte Formen haben, warum Gesprächspausen bestimmte Längen besitzen, warum Romane Figuren auf bestimmte Weise einführen.
+
+VerloreneTechniken
+
+Hochentwickelte Fähigkeiten, die einmal alltäglich waren und heute fast niemand mehr beherrscht: spezielle Hörfähigkeiten, Gedächtnistechniken, Handwerk, Navigation, historische Aufführungspraxis, mechanische Diagnoseverfahren.
+
+InternetArchäologie
+
+Großartige, bizarre oder extrem spezifische Webseiten, YouTube-Kanäle, alte Foren, Flash-Projekte und persönliche Homepages, die irgendwo seit 2004 unverändert herumliegen.
+
+SchlechtesWritingSeziert
+
+Keine allgemeinen Verrisse. Jeweils eine ganz konkrete Szene aus Film oder Serie und die Frage: Warum wirkt diese Pointe billig, diese Exposition künstlich oder diese Figur plötzlich dumm? Danach mehrere bessere Lösungen.
+
+DasIstHierGanzInDerNähe
+
+Seltsame oder schöne Dinge im Umkreis von vielleicht 100 Kilometern: ein ungewöhnliches Kino, ein bemerkenswerter Bau, ein winziges Konzert, ein historischer Tunnel, ein absurd spezialisiertes Geschäft, ein kaum bekannter Aussichtspunkt. Wir befinden uns hier in Mannheim.
+
+VisuelleIdeenDieIchKlauenWill
+
+Keine „schönen Bilder“, sondern ungewöhnliche Bildideen: Perspektiven, Räume, Lichtkonzepte, Bühnenbilder, Filmsets, Plattencover, alte Werbegrafik, Interfaces. Ein Feed, der ständig Lust macht, selbst etwas daraus zu bauen.
+
+### Umfang und Regeln dieser Erweiterung
+
+- Jede der sieben neuen Kategorien enthält fünf Karten.
+- Genannte Beispiele aus der Vorgabe werden nicht als Karten übernommen. Die Auswahl geht über naheliegende Standardbeispiele hinaus.
+- Jede Karte enthält ein passendes Onlinebild oder ein geprüftes, eingebettetes Video und nennt ihre Quellen.
+- „SchlechtesWritingSeziert“ benennt die konkrete Szene, untersucht den einzelnen Fehler und gibt mindestens drei eigenständige bessere Lösungen.
+- „DasIstHierGanzInDerNähe“ verwendet Mannheim als Mittelpunkt, nennt den Ort genau und berücksichtigt einen ungefähren Radius von 100 Kilometern.

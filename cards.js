@@ -422,7 +422,7 @@ window.KARTEN=[
     sources:[S("Moby-Dick · Project Gutenberg","https://www.gutenberg.org/ebooks/2701")]
   },
   {
-    category:"Erste Sätze großer Romane",kind:"quote",title:"Все счастливые семьи похожи друг на друга, каждая несчастливая семья несчастлива по-своему.",
+    category:"Erste Sätze großer Romane",kind:"quote",title:"Alle glücklichen Familien gleichen einander, jede unglückliche Familie ist auf ihre eigene Weise unglücklich.",
     detail:[
       "Lew Tolstoi, „Anna Karenina“, 1877/78. Wörtlich: „Alle glücklichen Familien ähneln einander; jede unglückliche Familie ist auf ihre eigene Weise unglücklich.“ Der Roman beginnt im Haus der Oblonskis. Stiwa hat seine Frau Dolly betrogen, das Personal wartet, die Kinder laufen durch die Zimmer, und Anna reist an, um zu vermitteln.",
       "Aus dieser Familienkrise entwickeln sich zwei große Linien. Anna beginnt eine Beziehung mit Wronski und gerät unter den Druck einer Gesellschaft, die männliche Untreue duldet und weibliche öffentlich bestraft. Lewin sucht mit Kitty eine gemeinsame Lebensform und ringt mit Landwirtschaft, Glaube, Arbeit und Tod. Der erste Satz bietet eine Formel, die der Roman an vielen sehr verschiedenen Haushalten prüft."
@@ -450,7 +450,7 @@ window.KARTEN=[
     sources:[S("Middlemarch · Project Gutenberg","https://www.gutenberg.org/ebooks/145")]
   },
   {
-    category:"Erste Sätze großer Romane",kind:"quote",title:"Nous étions à l’Étude, quand le Proviseur entra, suivi d’un nouveau habillé en bourgeois et d’un garçon de classe qui portait un grand pupitre.",
+    category:"Erste Sätze großer Romane",kind:"quote",title:"Wir waren im Studiersaal, als der Direktor eintrat, gefolgt von einem Neuen in bürgerlicher Kleidung und einem Schuldiener, der ein großes Pult trug.",
     detail:[
       "Gustave Flaubert, „Madame Bovary“, 1857. Ein schulisches „Wir“ beobachtet, wie Charles Bovary als unbeholfener neuer Schüler den Raum betritt. Der Roman beginnt mit Charles und einer Gruppe, danach löst sich der Erzähler von diesem Standpunkt. Emma erscheint erst später.",
       "Emma heiratet Charles und erwartet vom Leben die Intensität ihrer Lektüre. Provinzieller Alltag, Konsumwünsche und romantische Bilder verbinden sich mit ihren Beziehungen zu Rodolphe und Léon. Der Händler Lheureux verwandelt Wünsche in Schulden. Flauberts freie indirekte Rede lässt Emmas Sprache in die Erzählung gleiten und hält zugleich Abstand zu ihr. Der Roman untersucht deshalb auch, wie gelesene Formeln Gefühle und Entscheidungen prägen."
