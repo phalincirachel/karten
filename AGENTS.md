@@ -297,3 +297,37 @@ Die fortlaufenden Karten erschließen die ersten beiden Druckseiten von James Jo
 - Seite 1 beruht auf der vom Nutzer bereitgestellten Datei. Der Wortlaut von Seite 2 wird beim Öffnen aus einer öffentlichen Textquelle geladen, anhand geprüfter Anfangs- und Endmarken in zwanzig Einheiten zerlegt und niemals durch eine eigene Fassung ersetzt.
 - Die Exegese wird gegen FWEET, Finwake und die verlinkten Stellen der *Annotated Finnegans Wake* geprüft. Unsichere Wortspiele werden als Möglichkeit bezeichnet und nicht als einzige Auflösung ausgegeben.
 - In allen Karten steht die Kategorie in der bisherigen Bewertungszeile. Der positive und der negative Pfeil stehen rechts daneben; der Satz „Diese Karte bewerten“ entfällt.
+
+## Ergänzungen vom 4. September 2026 – Auswertung des Kartenfeedbacks
+
+Die folgenden Regeln gelten für alle künftig angelegten oder überarbeiteten Karten. Ein beanstandeter Einzelfall wird nicht nur ausgetauscht; die Ursache des Fehlers wird bei allen späteren Karten derselben Art geprüft.
+
+### Auswahl und Medienprüfung
+
+- Eine Karte wird erst freigegeben, nachdem ihre Medien in der tatsächlich gerenderten Anwendung geprüft wurden. Ein erreichbarer Link genügt nicht. Sichtbar kontrolliert werden Motiv, Bildausschnitt, Auflösung und sachliche Beziehung zum Text.
+- Buchumschläge, Titelseiten, PDF-Vorschaubilder und Bildschirmaufnahmen von Webseiten gelten als Fehler, sofern genau dieses Objekt nicht Gegenstand der Karte ist. Diese Prüfung gilt ausdrücklich auch für Karten über Literatur, Listen und Schreibkonventionen.
+- Das Bild muss eine Information liefern, die zum Gegenstand gehört. Fehlt eine geeignete vorhandene Abbildung, entsteht eine klar als eigene Darstellung bezeichnete Abbildung, Skizze oder Rekonstruktion. Ein allgemein passendes oder dekoratives Ersatzbild wird nicht verwendet.
+- Für geografische Karten ist eine lesbare Karte Pflicht. Sie zeigt die behandelte Region zusammen mit heutigen Staatsgrenzen, einem bekannten Nachbarraum und den im Text genannten Orten. Landschaftsbilder ergänzen diese Orientierung, ersetzen sie aber nicht.
+- Die Abbildung einer Liste bezieht sich auf ihren Urheber, ihre Überlieferung oder einen konkreten Eintrag. Ein beliebiger Buchumschlag erfüllt diese Aufgabe nicht.
+- Eigene GIFs brauchen jeweils eine erkennbare formale Idee, einen genau gesetzten zeitlichen Ablauf und eine von den übrigen GIFs verschiedene Bewegung. Eine bloße Folge wechselnder Farbflächen wird verworfen.
+- Für Werke, deren Originalbilder nicht zuverlässig verfügbar sind, wird vor der Veröffentlichung entschieden, ob eine eigene erklärende Darstellung sachlich sinnvoller ist. Das gilt besonders für Filmaufbauten, Montagen und räumliche Grenzfälle.
+- Ausgewählte Medien werden nach der Veröffentlichung erneut geprüft. Ein Bild, das nur lokal oder in der Vorschau funktionierte, gilt als defekt und wird bei der nächsten Bearbeitung ersetzt.
+
+### Fachliche Mindestangaben
+
+- Ethnografisch aufgezeichnete Erzählungen nennen vor dem Text die genaue Region, den heutigen Staat, die betreffende Gemeinschaft, deren gebräuchliche Eigen- oder Fremdbezeichnung sowie Aufzeichner und Erscheinungsjahr. Bei wenig bekannten Regionen kommt die Lage gegenüber einer bekannten Stadt, Insel oder Landschaft hinzu.
+- Karten über Sprachen enthalten mindestens zwei vollständige Originalbeispiele mit idiomatischer deutscher Übersetzung. Wo einzelne Formen erklärt werden, stehen Morphemgrenzen und Glossen in einer übersichtlichen Tabelle oder in klar getrennten Zeilen; Fettdruck und Kursivschrift markieren die gerade behandelte Form.
+- Karten über entzifferte Schriften erklären zuerst, wann und wo die Schrift gebraucht wurde, welche Sprache sie wiedergibt, welche Textsorten erhalten sind und wer sie schrieb. Erst danach folgen Zeichenwerte, Vergleichstexte und der Weg der Entzifferung.
+- Akkorde und Tonfolgen werden vor der Freigabe in der genannten Tonart und an der zitierten Stelle überprüft. Die Schreibweise der Töne folgt ihrer harmonischen Funktion; E und Es sowie andere enharmonisch verschiedene Schreibungen werden nicht vereinheitlicht. Die Karte zeigt die vollständigen Akkordtöne oder die genaue Stimmführung, sodass die Benennung kontrollierbar bleibt.
+- Bei seltenen Musikformen haben Einträge des UNESCO-Verzeichnisses des immateriellen Kulturerbes und Dokumentationen der jeweiligen Kulturinstitutionen Vorrang. Ein geprüftes Ton- oder Videobeispiel gehört dazu und beginnt bei 0:00.
+- Kurze Fachkarten beginnen mit dem notwendigen Grundwissen. Namen einzelner Verfahren, Zeichen oder Forscher erscheinen erst, nachdem Ort, Zeitraum, Gegenstand und Ausgangsproblem verständlich sind.
+
+### Umschrift deutscher Sprichwörter
+
+- Für jede Schrift gilt eine feste, innerhalb sämtlicher Karten einheitliche Lautzuordnung. Jede fertige Zeile wird Wort für Wort mit dem deutschen Ausgangssatz verglichen.
+- In den Karten mit griechischen Buchstaben steht deutsches /d/ nach der für dieses Projekt gewählten Buchstabenumschrift als δ. Die Folge ντ wird dafür nicht verwendet. Die Karte behauptet nicht, damit die heutige griechische Aussprache wiederzugeben.
+- In den Karten mit kyrillischen Buchstaben steht deutsches /d/ als д. Digraphen werden nur bei deutschen Lauten verwendet, für die kein einzelnes geeignetes Zeichen festgelegt ist.
+
+### Folgerung aus positivem Feedback
+
+- Die Karte über Ojkanje dient als Qualitätsmaßstab für neue Karten zu seltenen Musikstilen: genaue regionale Einordnung, zuständige Primärinstitution, verständliche Beschreibung der musikalischen Praxis und ein funktionierendes Beispiel. Das Thema selbst wird nicht wiederholt.
