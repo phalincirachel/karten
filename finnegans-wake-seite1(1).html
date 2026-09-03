@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finnegans Wake — die erste Seite</title>
+<style>
+  :root{
+    --paper:#f1e7d4;
+    --paper-2:#ece0c9;
+    --ink:#2b2620;
+    --ink-soft:#5c5346;
+    --ox:#8a3324;          /* oxblood accent */
+    --ochre:#9c6a2e;
+    --glow:#f6ecd2;        /* lit text */
+    --scrim:rgba(18,14,9,0.90);
+    --card:#efe4cd;
+    --card-edge:#d8c7a4;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(1200px 700px at 50% -10%, #f6eedd 0%, var(--paper) 55%, var(--paper-2) 100%);
+    color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+    line-height:1.7;
+  }
+
+  /* ---------- layout ---------- */
+  .wrap{
+    max-width:560px;
+    margin:0 auto;
+    padding:clamp(2rem,5vh,4rem) 1.4rem 5rem;
+    position:relative;
+    z-index:1;
+  }
+  header.head{ text-align:center; margin-bottom:2.4rem; }
+  .head .work{
+    font-size:0.72rem; letter-spacing:0.32em; text-transform:uppercase;
+    color:var(--ox); margin:0 0 0.5rem;
+  }
+  .head h1{
+    font-size:clamp(2rem,6vw,2.9rem); font-weight:600; margin:0 0 0.45rem;
+    letter-spacing:0.01em;
+  }
+  .head .sub{
+    font-size:0.86rem; color:var(--ink-soft); font-style:italic; margin:0 0 1.1rem;
+  }
+  .head .howto{
+    font-size:0.78rem; color:var(--ink-soft); line-height:1.55;
+    max-width:30rem; margin:0 auto; border-top:1px solid var(--card-edge);
+    border-bottom:1px solid var(--card-edge); padding:0.7rem 0;
+  }
+  .head .howto b{ color:var(--ink); font-weight:600; }
+
+  /* ---------- the text ---------- */
+  .text{
+    font-size:1.22rem;
+    overflow-wrap:break-word;
+    word-break:break-word;
+    hyphens:none;
+  }
+  .text p{ margin:0 0 1.35rem; text-indent:0; }
+  .text p + p{ text-indent:1.6em; }   /* prose indent from 2nd para */
+
+  .u{
+    cursor:pointer;
+    border-radius:2px;
+    transition:color .18s ease, text-shadow .18s ease, background-color .18s ease;
+    background-image:linear-gradient(to right, rgba(138,51,36,.28), rgba(138,51,36,.28));
+    background-position:0 1.18em;
+    background-size:0% 1px;
+    background-repeat:no-repeat;
+  }
+  .u:hover{ background-size:100% 1px; }
+
+  /* active (preview or pinned) sentence floats above the scrim */
+  body.focusing .u.active{
+    position:relative;
+    z-index:60;
+    color:var(--glow);
+    text-shadow:0 0 1px rgba(0,0,0,.4), 0 0 22px rgba(214,178,122,.35);
+    background-image:none;
+  }
+  body.pinned .u.active{
+    text-shadow:0 0 1px rgba(0,0,0,.4), 0 0 26px rgba(214,178,122,.5);
+  }
+
+  /* ---------- scrim ---------- */
+  #scrim{
+    position:fixed; inset:0; z-index:50;
+    background:var(--scrim);
+    opacity:0; pointer-events:none;
+    transition:opacity .22s ease;
+  }
+  body.focusing #scrim{ opacity:1; }
+  body.pinned   #scrim{ pointer-events:auto; }
+
+  /* ---------- panels ---------- */
+  .panel{
+    position:fixed; top:50%; transform:translateY(-50%) translateY(8px);
+    width:min(26vw,330px); max-height:86vh; overflow-y:auto; overflow-x:hidden;
+    z-index:70; pointer-events:none;
+    opacity:0; transition:opacity .22s ease, transform .22s ease;
+  }
+  #leftPanel{ left:2.4vw; }
+  #rightPanel{ right:2.4vw; }
+  body.focusing .panel{ opacity:1; transform:translateY(-50%) translateY(0); }
+  body.pinned   .panel{ pointer-events:auto; }
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--card-edge);
+    border-left:3px solid var(--ox);
+    border-radius:4px;
+    padding:0.85rem 1rem 0.95rem;
+    margin-bottom:0.85rem;
+    box-shadow:0 10px 30px rgba(20,12,4,.45);
+  }
+  .card:last-child{ margin-bottom:0; }
+  .card .label{
+    font-size:0.64rem; letter-spacing:0.2em; text-transform:uppercase;
+    color:var(--ox); margin:0 0 0.45rem; font-weight:700;
+  }
+  #leftPanel .card{ border-left-color:var(--ochre); }
+  #leftPanel .card .label{ color:var(--ochre); }
+  .card .body{ font-size:0.92rem; line-height:1.5; color:var(--ink); }
+  .card .body em{ font-style:italic; color:var(--ox); }
+  #leftPanel .card .body{ font-size:0.98rem; }
+  #leftPanel .card .body{ font-style:italic; }
+
+  /* custom scrollbar for panels */
+  .panel::-webkit-scrollbar{ width:8px; }
+  .panel::-webkit-scrollbar-thumb{ background:rgba(138,51,36,.4); border-radius:8px; }
+
+  /* pinned hint */
+  #hint{
+    position:fixed; left:50%; bottom:1rem; transform:translateX(-50%);
+    z-index:80; opacity:0; pointer-events:none; transition:opacity .2s ease;
+    font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--glow); background:rgba(40,28,16,.7);
+    border:1px solid rgba(214,178,122,.35); border-radius:999px;
+    padding:0.4rem 0.95rem;
+  }
+  body.pinned #hint{ opacity:1; }
+
+  .colophon{
+    position:relative; z-index:1;
+    text-align:center; font-size:0.72rem; color:var(--ink-soft);
+    max-width:38rem; margin:1rem auto 2.5rem; line-height:1.55; font-style:italic;
+  }
+
+  /* ---------- responsive: panels drop to bottom ---------- */
+  @media (max-width:1199px){
+    .panel{
+      top:auto; bottom:1rem; transform:translateY(8px);
+      width:min(46vw,440px); max-height:44vh;
+    }
+    #leftPanel{ left:1rem; }
+    #rightPanel{ right:1rem; }
+    body.focusing .panel{ transform:translateY(0); }
+  }
+  @media (max-width:720px){
+    .text{ font-size:1.12rem; }
+    .panel{ width:calc(100vw - 1.5rem); left:0.75rem; right:0.75rem; }
+    #leftPanel{ bottom:calc(40vh + 1.1rem); max-height:36vh; }
+    #rightPanel{ bottom:0.75rem; max-height:40vh; }
+  }
+</style>
+</head>
+<body>
+
+<div id="scrim"></div>
+
+<div class="wrap">
+  <header class="head">
+    <p class="work">James Joyce</p>
+    <h1>Finnegans Wake</h1>
+    <p class="sub">I.1 · die erste Seite (S.&nbsp;3) — die fünf Eröffnungsabsätze</p>
+    <p class="howto">
+      Fahre mit der Maus über einen Satz: der übrige Text verdunkelt sich, der Satz
+      wird <b>sinngemäß ins heutige Englisch</b> übertragen und am Rand kommentiert.
+      <b>Klick</b> fixiert die Lesung (zum Scrollen der Notizen) · <b>Esc</b> oder Klick ins Dunkle löst sie.
+    </p>
+  </header>
+
+  <div class="text" id="text">
+    <p><span class="u" data-id="1">riverrun, past Eve and Adam's, from swerve of shore to bend of bay, brings us by a commodius vicus of recirculation back to Howth Castle and Environs.</span></p>
+
+    <p><span class="u" data-id="2">Sir Tristram, violer d'amores, fr'over the short sea, had passencore rearrived from North Armorica on this side the scraggy isthmus of Europe Minor to wielderfight his penisolate war:</span> <span class="u" data-id="3">nor had topsawyer's rocks by the stream Oconee exaggerated themselse to Laurens County's gorgios while they went doublin their mumper all the time:</span> <span class="u" data-id="4">nor avoice from afire bellowsed mishe mishe to tauftauf thuartpeatrick:</span> <span class="u" data-id="5">not yet, though venissoon after, had a kidscad buttended a bland old isaac:</span> <span class="u" data-id="6">not yet, though all's fair in vanessy, were sosie sesthers wroth with twone nathandjoe.</span></p>
+
+    <p><span class="u" data-id="7">Rot a peck of pa's malt had Jhem or Shen brewed by arclight and rory end to the regginbrow was to be seen ringsome on the aquaface.</span></p>
+
+    <p><span class="u" data-id="8">The fall (bababadalgharaghtakamminarronnkonnbronntonnerronntuonnthunntrovarrhounawnskawntoohoohoordenenthurnuk!) of a once wallstrait oldparr is retaled early in bed and later on life down through all christian minstrelsy.</span></p>
+
+    <p><span class="u" data-id="9">The great fall of the offwall entailed at such short notice the pftjschute of Finnegan, erse solid man, that the humptyhillhead of humself prumptly sends an unquiring one well to the west in quest of his tumptytumtoes:</span> <span class="u" data-id="10">and their upturnpikepointandplace is at the knock out in the park where oranges have been laid to rust upon the green since devlinsfirst loved livvy.</span></p>
+  </div>
+
+  <p class="colophon">
+    Wiedergegeben sind die fünf Eröffnungsabsätze (das „Vorspiel“ von S.&nbsp;3, bis „…&nbsp;loved livvy“).
+    Der physische Seitenumbruch der Druckausgaben fällt mitten in den anschließenden Frosch-Kriegsabschnitt;
+    weitere Seiten folgen später. — Joyce † 1941, gemeinfrei in der EU.
+  </p>
+</div>
+
+<aside id="leftPanel" class="panel" aria-live="polite"></aside>
+<aside id="rightPanel" class="panel" aria-live="polite"></aside>
+<div id="hint">fixiert · Esc zum Lösen</div>
+
+<script>
+const DATA = {
+  1: {
+    en: `The river keeps running — past the church of Adam-and-Eve, from the curve of the shore to the sweep of the bay — and carries us, by a roomy, recurring loop of history, all the way back round to Howth Castle and its surroundings.`,
+    boxes: [
+      ['Worum geht\u2019s', `Das Buch beginnt mitten im Satz und mit Kleinbuchstabe: <em>riverrun</em> ist die zweite H\u00e4lfte des allerletzten Satzes (\u201eA way a lone a last a loved a long the\u201c). Das Werk ist ein geschlossener Kreis \u2014 Ende und Anfang greifen ineinander. Der Fluss ist die Liffey und zugleich Anna Livia Plurabelle (ALP), das weibliche Lebensprinzip.`],
+      ['Motive & Wortspiele', `<em>Eve and Adam\u2019s</em>: reale Franziskanerkirche am Liffey-Quai (in Dublin \u201eAdam and Eve\u2019s\u201c), hier umgedreht zu Eva-vor-Adam \u2192 S\u00fcndenfall. <em>commodius vicus of recirculation</em>: Vicos zyklische Geschichte (corsi e ricorsi) + Kaiser Commodus + \u201ecommodious\u201c (ger\u00e4umig) + lat. <em>vicus</em> (Gasse), das wie \u201eVico\u201c klingt.`],
+      ['Querverweise', `<em>Howth Castle and Environs</em> = <em>HCE</em>, die Initialen des Protagonisten Humphrey Chimpden Earwicker (\u201eHere Comes Everybody\u201c). Howth, die Halbinsel n\u00f6rdlich von Dublin, ist der Kopf des schlafenden Riesen \u2014 sein Leib wird in U9\u2013U10 zur Landschaft.`]
+    ]
+  },
+  2: {
+    en: `Sir Tristan — lover-musician, \u201cviolator of loves,\u201d player of the viola d\u2019amore — had not yet arrived back again from across the narrow sea, come from North Armorica (Brittany doubling as North America) on this side of Europe\u2019s scrawny little isthmus, to fight all over again his peninsular, pen-isolated, phallic war.`,
+    boxes: [
+      ['Worum geht\u2019s', `Eine Kette von \u201enoch-nicht\u201c (<em>passencore</em> = frz. pas encore) und \u201ewieder\u201c (<em>wielder</em> = wieder): Vicos Wiederkehr. Der zur\u00fcckkehrende Liebhaber/Eroberer ist noch nicht da \u2014 die Welt steht vor ihrem Neubeginn.`],
+      ['Motive & Wortspiele', `Tristan & Isolde (Liebe + Verrat). <em>violer d\u2019amores</em>: viola d\u2019amore (Instrument) + violator (Sch\u00e4nder) \u2014 Liebe und Gewalt in einem Wort. <em>penisolate war</em>: Peninsular War (Wellington) + pen-isolate (der vereinsamte Schreibgriffel des Autors) + penis \u2014 Schreiben, Krieg, Sexualit\u00e4t verschmolzen.`],
+      ['Querverweise', `<em>North Armorica</em> \u00fcberblendet die bretonische Alte Welt mit Nordamerika \u2014 die Doppelung Alt-/Neuwelt, die U3 (Dublin / Georgia) entfaltet. <em>Europe Minor</em> macht Geographie zum K\u00f6rper (vgl. den Riesenleib in U9).`]
+    ]
+  },
+  3: {
+    en: `…nor had a certain top-sawyer\u2019s rocks beside the Oconee river yet heaped themselves up into the gentry of Laurens County, all the while steadily Dublin-ing — doubling — their numbers…`,
+    boxes: [
+      ['Worum geht\u2019s', `Die zweite \u201eNoch-nicht\u201c-Strophe. Es gibt ein zweites Dublin: Dublin, Laurens County, Georgia (USA), gegr\u00fcndet von einem Auswanderer (Peter Sawyer). Die Alte Welt verdoppelt sich in der Neuen \u2014 Wiederholung als Strukturgesetz des Buches.`],
+      ['Motive & Wortspiele', `<em>doublin their mumper</em> = Dublin + doubling (verdoppeln) + \u201enumber\u201c / Bettler (mumper). <em>topsawyer</em> = Obers\u00e4ger + Tom Sawyer (Mississippi \u2192 Amerika). <em>gorgios</em> = Romani f\u00fcr Nicht-Roma + \u201egorgeous\u201c + Georgia.`],
+      ['Querverweise', `Setzt das Alt/Neuwelt-Thema aus U2 fort. <em>exaggerated</em> (lat. ex-aggerare = anh\u00e4ufen) spielt mit dem Aufsch\u00fctten von Land \u2014 pr\u00e4ludiert den aufgeh\u00e4uften, gest\u00fcrzten K\u00f6rper in U8\u2013U10.`]
+    ]
+  },
+  4: {
+    en: `…nor had a voice out of a fire yet bellowed \u201cIt is I, it is I\u201d (mishe, mishe — Irish for \u201cI am\u201d) to a baptizing \u201ctaufen, taufen\u201d — thou art Peter, thou art Patrick, thou art peat…`,
+    boxes: [
+      ['Worum geht\u2019s', `Die Christianisierung Irlands \u2014 noch nicht geschehen. Eine Stimme aus dem Feuer (brennender Dornbusch, Moses; Gottesstimme) tauft die Insel.`],
+      ['Motive & Wortspiele', `<em>mishe mishe</em> = ir. \u201emise\u201c (ich bin / ich selbst) \u2192 Identit\u00e4tsbehauptung Irlands. <em>tauftauf</em> = dt. taufen. <em>thuartpeatrick</em> = \u201eThou art Peter\u201c (Tu es Petrus, Mt 16,18) + St.&nbsp;Patrick + peat (Torf \u2014 die irische Erde selbst).`],
+      ['Querverweise', `Religionsstiftung ist einer der Vico-Anl\u00e4sse (Donner \u2192 Gottesfurcht \u2192 Institution) und bereitet den Donnerschlag in U8 vor.`]
+    ]
+  },
+  5: {
+    en: `…not yet — though very soon after — had a young goat-kid (Jacob) butted, bettered and put an end to a bland, blind old Isaac…`,
+    boxes: [
+      ['Worum geht\u2019s', `Jakob und Esau (Gen 27): der j\u00fcngere Sohn betr\u00fcgt den blinden Vater Isaak und raubt dem Erstgeborenen den Segen. Der verdr\u00e4ngende Bruder \u2014 Keim des Shem/Shaun-Zwists, der das ganze Buch durchzieht.`],
+      ['Motive & Wortspiele', `<em>kidscad</em> = kid (Z\u00fccklein \u2192 Jakob im Ziegenfell) + cad (Schuft). <em>buttended</em> = butted (Ziegenstoss) + bettered + put an end. <em>venissoon</em> = venison (Esaus Wildbret) + \u201every soon\u201c. <em>bland old isaac</em> = blind old Isaac.`],
+      ['Querverweise', `Historisch zugleich Isaac <em>Butt</em>, der von Parnell verdr\u00e4ngte irische F\u00fchrer (\u201ebutt-ended\u201c). Br\u00fcderstreit und politische Abl\u00f6sung in einem.`]
+    ]
+  },
+  6: {
+    en: `…not yet — though all\u2019s fair in love, war and Vanessa — were the two saucy Esther-sisters (look-alike doubles) furious with a split, two-in-one Jonathan(-Nathan-Joe).`,
+    boxes: [
+      ['Worum geht\u2019s', `Jonathan Swift und seine zwei Geliebten, beide Esther: Esther Johnson (\u201eStella\u201c) und Esther Vanhomrigh (\u201eVanessa\u201c). Ein Mann zwischen zwei (Schwester-)Frauen \u2014 das Versuchungs-/M\u00e4dchenmotiv (sp\u00e4ter Issy).`],
+      ['Motive & Wortspiele', `<em>vanessy</em> = Vanessa + \u201eall\u2019s fair in love and war\u201c. <em>sosie sesthers</em> = zwei Esthers + \u201esaucy sisters\u201c + frz. <em>sosie</em> (Doppelg\u00e4nger). <em>twone nathandjoe</em> = two-one + Jonathan zerlegt in Nathan + Joe.`],
+      ['Querverweise', `Swift ist eine wiederkehrende Vaterfigur des Wake. Die \u201ezwei M\u00e4dchen / drei Soldaten\u201c im Phoenix Park (HCEs S\u00fcnde) klingen hier vor \u2014 Park und S\u00fcnde kehren in U10 wieder.`]
+    ]
+  },
+  7: {
+    en: `Not a peck of the old man\u2019s malt had Shem-or-Shaun (Jameson; Ham-and-Shem) yet brewed by arc-light / ark-light, when the red end (rory) of the rainbow was seen ringing round upon the face of the waters.`,
+    boxes: [
+      ['Worum geht\u2019s', `Noah, Sintflut und Regenbogen-Bund (Gen 9). Zugleich das Brauen \u2014 Dublin, Guinness, Whiskey: das Lebenswasser (uisce beatha). Sch\u00f6pfung und Neuanfang aus dem Wasser.`],
+      ['Motive & Wortspiele', `<em>Jhem or Shen</em> = Shem & Shaun (die Zwillinge) + Jameson + Sem & Ham (Noahs S\u00f6hne). <em>arclight</em> = arc-light + ark (Arche). <em>regginbrow</em> = Regenbogen / rainbow + brow (Stirn). <em>ringsome on the aquaface</em> = Ring auf dem \u201eAntlitz der Wasser\u201c (Gen 1,2).`],
+      ['Querverweise', `<em>rory</em> (ir. ruair\u00ed, rot) + roar \u2192 der rote Bogen leitet zum Donner (U8) \u00fcber. Das Wasser-Antlitz spiegelt den <em>riverrun</em>-Beginn (U1).`]
+    ]
+  },
+  8: {
+    en: `The fall — [a 100-letter thunderclap stitched together from the word for \u201cthunder\u201d in a dozen languages, plus the crash of a body hitting the ground] — of a once Wall-Street-straight old man (Old Parr, who supposedly lived 152 years) is retold and re-tailed, early in bed and later in life, all the way down through Christian song and story.`,
+    boxes: [
+      ['Worum geht\u2019s', `DER Fall \u2014 Adams S\u00fcndenfall, Luzifers Sturz, Humpty Dumptys Mauersturz, Finnegans Leiterfall, der B\u00f6rsenkrach: alle St\u00fcrze in einem. Das erste der zehn hundertbuchstabigen Donnerw\u00f6rter.`],
+      ['Motive & Wortspiele', `Das Donnerwort enth\u00e4lt \u201eDonner\u201c in vielen Sprachen (jap. kaminari, gr. bront\u0113, frz. tonnerre, ital. tuono, port. trov\u00e3o \u2026). Bei Vico ist der Donner der Urknall der Geschichte: er treibt die Urmenschen in Furcht, Religion, Gesellschaft. <em>wallstrait oldparr</em> = Wall Street + wall (Humptys Mauer) + Old Parr (Thomas Parr, angeblich 152 J.) + par/parr. <em>retaled</em> = retold + re-tailed.`],
+      ['Querverweise', `Der Fall ist der Generator des ganzen Buches: aus dem Sturz folgt die Totenwache (<em>wake</em>) und die Auferstehung \u2014 der Kreislauf von U1. \u201eearly in bed and later on life\u201c: Geburt und Tod als Rahmen.`]
+    ]
+  },
+  9: {
+    en: `The great fall off the wall meant, at such short notice, the headlong plunge (pftjschute = French chute) of Finnegan — that bold, \u201cerse\u201d/Irish, once-solid man — so that the Humpty-Dumpty-hill-head of himself promptly sends an enquiring something off westward in search of his Humpty toes.`,
+    boxes: [
+      ['Worum geht\u2019s', `Tim Finnegan aus der irischen Ballade \u201eFinnegan\u2019s Wake\u201c: der Maurer, der betrunken von der Leiter st\u00fcrzt, stirbt \u2014 und auf seiner Totenwache wieder aufersteht, als Whiskey auf ihn spritzt. Tod und Wiederbelebung: der Buchtitel.`],
+      ['Motive & Wortspiele', `<em>pftjschute</em> = frz. chute (Sturz) + parachute + Aufprall-Lautmalerei. <em>erse solid man</em> = Erse (Irisch) + \u201eerst solid\u201c + \u201ethe bold/solid man\u201c (aus der Ballade) + arse. <em>humptyhillhead of humself</em> = Humpty Dumpty + Howth Hill (Kopf des Riesen) + himself.`],
+      ['Querverweise', `Hier wird HCE zur Landschaft: der gest\u00fcrzte Leib liegt ausgestreckt, der Kopf als H\u00fcgel von Howth im Osten. Die Initialen H-C-E klingen durch (<em>h</em>umptyhillhead \u2026 hum<em>self</em>). Fortsetzung in U10.`]
+    ]
+  },
+  10: {
+    en: `…and the up-turned turnpike-point-and-place where they lie is out at the Knock in the Park (Castleknock / Phoenix Park — the giant\u2019s feet), where oranges have been left to rot and rust on the green ever since the devil-of-Dublin first loved Livia (the Liffey / Eve).`,
+    boxes: [
+      ['Worum geht\u2019s', `Der Riesenleib ist vollst\u00e4ndig: Kopf in Howth (U9, Osten), F\u00fc\u00dfe im Phoenix Park (Westen) \u2014 HCE als ganze Dubliner Landschaft. ALP, der Fluss Liffey (<em>livvy</em>), liegt als seine Frau bei ihm. Das Urpaar in seinem Eden.`],
+      ['Motive & Wortspiele', `<em>oranges \u2026 laid to rust upon the green</em> = Orange vs. Green: protestantisch/katholisch, die Farben Irlands; verrottende Orangen im Gras \u2192 Edens verbotene Frucht und Irlands Konfessionskonflikt zugleich. <em>the knock \u2026 in the park</em> = Castleknock + Phoenix Park (Ort von HCEs S\u00fcnde, vgl. U6).`],
+      ['Querverweise', `<em>since devlinsfirst loved livvy</em> = Dublin (Devlin) + Teufel (devil) + \u201eseit der Teufel zuerst Eva/Livia liebte\u201c. <em>livvy</em> = Liffey + Livia + Anna Livia Plurabelle (ALP) \u2014 schlie\u00dft den Kreis zur\u00fcck zum <em>riverrun</em>-Fluss von U1.`]
+    ]
+  }
+};
+
+const body = document.body;
+const left = document.getElementById('leftPanel');
+const right = document.getElementById('rightPanel');
+const units = Array.from(document.querySelectorAll('.u'));
+let pinned = null;
+let current = null;
+
+function render(id){
+  const d = DATA[id];
+  if(!d) return;
+  left.innerHTML = '<div class="card"><p class="label">Sinn-\u00dcbersetzung \u00b7 heutiges Englisch</p><div class="body">'+d.en+'</div></div>';
+  right.innerHTML = d.boxes.map(b =>
+    '<div class="card"><p class="label">'+b[0]+'</p><div class="body">'+b[1]+'</div></div>'
+  ).join('');
+  left.scrollTop = 0; right.scrollTop = 0;
+}
+
+function activate(el){
+  if(current === el) return;
+  if(current) current.classList.remove('active');
+  current = el;
+  el.classList.add('active');
+  body.classList.add('focusing');
+  render(el.dataset.id);
+}
+function deactivate(){
+  if(current) current.classList.remove('active');
+  current = null;
+  body.classList.remove('focusing');
+}
+
+units.forEach(el => {
+  el.addEventListener('mouseenter', () => { if(pinned === null) activate(el); });
+  el.addEventListener('mouseleave', () => { if(pinned === null) deactivate(); });
+  el.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if(pinned === el){            // unpin
+      pinned = null; body.classList.remove('pinned'); deactivate();
+    } else {                      // pin (or switch pin)
+      pinned = el; body.classList.add('pinned'); activate(el);
+    }
+  });
+});
+
+// click into the dark / on scrim -> unpin
+document.getElementById('scrim').addEventListener('click', () => {
+  if(pinned){ pinned = null; body.classList.remove('pinned'); deactivate(); }
+});
+// Esc -> unpin
+document.addEventListener('keydown', (e) => {
+  if(e.key === 'Escape' && pinned){
+    pinned = null; body.classList.remove('pinned'); deactivate();
+  }
+});
+</script>
+</body>
+</html>

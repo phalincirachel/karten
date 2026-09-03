@@ -279,3 +279,21 @@ Außen steht zuerst das deutsche Sprichwort in lateinischen Buchstaben, darunter
 - Negatives Feedback erfasst feste Kritikgründe und einen freien Kommentar. Jeder Eintrag speichert Kartentitel, Kategorie, Zeitpunkt, Bewertung und Quellenadressen im Browser.
 - Die Anwendung stellt das gesammelte Feedback jederzeit als Markdown zum Kopieren, Herunterladen oder über die systemeigene Teilen-Funktion bereit. Sie behauptet nicht, Daten ohne einen eingerichteten Server an den Autor oder an ein Sprachmodell zu senden.
 - Die Kategorieauswahl ist zusätzlich als vollständiges Auswahlfeld sichtbar. Versionsparameter an den Datendateien verhindern, dass ein älterer Browsercache neu hochgeladene Karten verdeckt.
+
+## Ergänzungen vom 4. September 2026 – Finnegan Exegese
+
+### Neue Kategorie
+
+Finnegan Exegese
+
+Die fortlaufenden Karten erschließen die ersten beiden Druckseiten von James Joyces *Finnegans Wake*. Jede Karte enthält genau vier nummerierte Untersuchungseinheiten. Beim Anklicken einer Einheit steht der unveränderte Wortlaut oben; darunter erscheinen drei Vergleichsfenster für eine sinngemäße Übertragung ins heutige Englisch, die sachliche Lesart sowie Wörter und Querverweise.
+
+### Darstellung und Quellen
+
+- Die Kategorie umfasst acht fortlaufend benannte Karten von „Finnegans Wake 1“ bis „Finnegans Wake 8“.
+- Der aktive Bestand umfasst damit 435 Karten in 35 Kategorien.
+- Pfeile am Ende der Detailansicht führen zur unmittelbar vorigen oder nächsten Folge. Die Reihenfolge bleibt innerhalb der Exegese fest, auch wenn der allgemeine Kartenstrom gemischt wird.
+- Das besondere Lesefenster übernimmt Farben, Typografie und Kartenaufbau aus `finnegans-wake-seite1(1).html`.
+- Seite 1 beruht auf der vom Nutzer bereitgestellten Datei. Der Wortlaut von Seite 2 wird beim Öffnen aus einer öffentlichen Textquelle geladen, anhand geprüfter Anfangs- und Endmarken in zwanzig Einheiten zerlegt und niemals durch eine eigene Fassung ersetzt.
+- Die Exegese wird gegen FWEET, Finwake und die verlinkten Stellen der *Annotated Finnegans Wake* geprüft. Unsichere Wortspiele werden als Möglichkeit bezeichnet und nicht als einzige Auflösung ausgegeben.
+- In allen Karten steht die Kategorie in der bisherigen Bewertungszeile. Der positive und der negative Pfeil stehen rechts daneben; der Satz „Diese Karte bewerten“ entfällt.
