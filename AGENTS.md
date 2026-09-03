@@ -192,3 +192,25 @@ Fünf kurze, eigens erstellte abstrakte Animationen erscheinen als selbstständi
 - Schlägt das Laden eines Bildes endgültig fehl, verschwindet das gesamte Bildelement samt Beschriftung. Es bleibt weder Fehlermeldung noch Platzhalter oder leere Bildzelle. Verbleibende Bilder füllen das Raster neu; ohne Bild verschwindet der Medienbereich.
 - Buchumschläge dienen nur dort als Bild, wo die Gestaltung des Umschlags selbst Gegenstand der Karte ist. Bei Romananfängen werden Autorenporträts, Schauplätze oder sachlich passende Abbildungen verwendet.
 - Screenshots von Webseiten mit Cookie-Fenstern, Navigation oder anderen überlagernden Seitenelementen werden nicht verwendet.
+
+## Ergänzungen vom 3. September 2026 – dritte Erweiterung
+
+### Neue Kategorien – Wortlaut der Vorgabe
+
+Trends in Art
+
+Alle Kunstrichtungen, der neueste Scheiß. Das Allerbeste und Allerniceste, das auffindbar ist. Keine etablierten Künstler. Alle Kunstsparten werden berücksichtigt. Die Auswahl bleibt so frei wie möglich. Jede Arbeit erhält die mediale Ausstattung, die zu ihrer Kunstform passt. Die in der Vorgabe genannten Beispiele werden nicht übernommen.
+
+Writing Tipps
+
+Good Writing für Spezialisten. Einfache Schemata wie Hero’s Journey oder Dreiaktstruktur entfallen. Jede Karte behandelt einen genauen handwerklichen Eingriff. Eine eigene Ladefunktion holt den exakt abgegrenzten Wortlaut der jeweils genannten öffentlichen Quellenseite in die Detailansicht.
+
+### Umfang und Regeln dieser Erweiterung
+
+- Beide neuen Kategorien erhalten zunächst fünf Karten.
+- Nach Abschluss dieser Erweiterung erhält jede der nun dreißig aktiven Kategorien eine weitere Karte. „Trends in Art“ und „Writing Tipps“ umfassen deshalb im fertigen Bestand jeweils sechs Karten.
+- Der aktive Bestand umfasst danach 407 Karten in 30 Kategorien.
+- „Trends in Art“ zeigt konkrete Arbeiten junger oder am Anfang ihrer Laufbahn stehender Künstler aus aktuellen Abschlussausstellungen und Nachwuchsprogrammen. Eine einzelne Arbeit wird genau beschrieben; pauschale Trendbehauptungen entfallen.
+- Die mediale Form folgt der Arbeit: Werkfotografie für räumliche und materielle Arbeiten, bewegtes Bild oder Ton für zeitbasierte Arbeiten, mehrere Ansichten bei Arbeiten mit wichtigen Details.
+- Die Schreibkarten trennen die knappe deutsche Arbeitsanweisung vom historischen Quellenwortlaut. Der Wortlaut wird erst beim Öffnen der Karte aus Wikisource oder Project Gutenberg geladen und zwischen ausdrücklich geprüften Anfangs- und Endmarken ausgeschnitten.
+- Die geladenen Schreibpassagen bleiben in der Sprache und Schreibweise der Quelle. Navigation, Kopfzeilen und fremde Kapitel werden nicht übernommen. Jede Karte verlinkt Digitalisat und geladene Transkription.

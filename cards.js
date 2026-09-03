@@ -2430,6 +2430,279 @@ window.KARTEN.push(
   );
 })();
 
+// Erweiterung vom 3. September 2026: Trends in Art und Writing Tipps.
+// Danach folgt je eine zusätzliche Karte für alle aktiven Kategorien.
+(() => {
+  "use strict";
+  const src = (label, url) => S(label, url);
+  const card = (category, title, detail, media, sources = [], extra = {}) => ({
+    category, title, detail, media, sources, ...extra
+  });
+  const WHARTON = "https://raw.githubusercontent.com/GITenberg/The-writing-of-fiction_72446/master/72446-0.txt";
+  const LUBBOCK = "https://raw.githubusercontent.com/GITenberg/The-Craft-of-Fiction_18961/master/18961.txt";
+
+  window.KARTEN.push(
+    // Trends in Art: fünf Karten der neuen Kategorie.
+    card("Trends in Art", "AnneMarie Torresen · 1, 2, 2, 1, 1, 2 …", [
+      "Torresen übersetzt die selbstbeschreibende Kolakoski-Folge in Draht. Mehrere Hände falten und verbinden die Zahlenfolge als räumliche Arbeit. Die Regel wird über Widerstand, Wiederholung und Zusammenarbeit erfahrbar.",
+      "Die Arbeit gehört zum RISD-Abschlussjahrgang 2026. Sie behandelt einen Algorithmus als Handlungsanweisung und Materialrhythmus. Mathematik erscheint als gemeinsam gebauter Gegenstand."
+    ], [I("https://publications.risd.edu/sites/default/files/2026-05/annemarie-torresen-digital-media-mfa-2026-2.png", "https://publications.risd.edu/grad-show-2026/digital-media", "1, 2, 2, 1, 1, 2 …", "RISD Grad Show 2026")], [
+      src("RISD Grad Show 2026: Digital + Media", "https://publications.risd.edu/grad-show-2026/digital-media")
+    ], {summary:"Eine Zahlenfolge wird mit Draht und vielen Händen gebaut."}),
+
+    card("Trends in Art", "Hanyi Wang · Prion", [
+      "Prion verbindet eine mechanische Installation, eine offene Umgebung in Unreal Engine 5 und zwei Live-Videokanäle. Eine weiche Schnittstelle mit fingerartigen Formen liegt zwischen Bildschirm, Holzkörper und Maschine. Bewegung am Objekt verändert die digitale Situation.",
+      "Wang behandelt Interface und Spielfigur als Körperteile desselben Systems. Die Arbeit verschiebt das Computerspiel aus dem Monitor in einen Raum, in dem Bedienung, Beobachtung und mechanische Reaktion gleichzeitig sichtbar bleiben."
+    ], [I("https://publications.risd.edu/sites/default/files/2026-05/hanyi-wang-digital-meda-mfa-2026-5.jpg", "https://publications.risd.edu/grad-show-2026/digital-media", "Prion, 2025", "RISD Grad Show 2026")], [
+      src("RISD Grad Show 2026: Hanyi Wang", "https://publications.risd.edu/grad-show-2026/digital-media")
+    ], {summary:"Mechanik, Livebild und offene Spielwelt teilen sich eine körperliche Schnittstelle."}),
+
+    card("Trends in Art", "Dahlia Aggarwal · Wild Grass", [
+      "Aggarwal konstruiert einen Jacquardstoff so, dass seine aufgerichteten und verfilzten Fäden wie ungleich gewachsenes Gras stehen. Das Gewebe liegt als Teppich im Raum, verhält sich optisch jedoch wie eine kleine Landschaft.",
+      "Das Muster liefert keine aufgedruckte Grasdarstellung. Bindung, Florlänge und Nachbearbeitung erzeugen die räumliche Oberfläche direkt. Digitale Websteuerung und Handfilzen greifen in denselben Herstellungsprozess ein."
+    ], [I("https://publications.risd.edu/sites/default/files/2026-05/dahlia-aggarwal-mfa-cr-2.jpg", "https://publications.risd.edu/grad-show-2026/textiles", "Wild Grass, 2025", "RISD Grad Show 2026")], [
+      src("RISD Grad Show 2026: Textiles", "https://publications.risd.edu/grad-show-2026/textiles")
+    ], {summary:"Ein Jacquardgewebe erhält die Wuchsform einer Grasfläche."}),
+
+    card("Trends in Art", "Andrew Goulet · Noren Speakers and Stereo Cabinet", [
+      "Zwei Lautsprecher und ein Stereoschrank stehen als zusammengehörige Möbelgruppe im Raum. Vor den Schallöffnungen hängen Bahnen aus akustisch durchlässigem Textil. Sperrholz, Aluminium, Delrin, Elektronik und Stoff bleiben als verschiedene Funktionsschichten ablesbar.",
+      "Goulets Arbeit löst Audiotechnik aus der schwarzen Gerätebox. Position, textile Front und Proportion gehören zur akustischen Anlage ebenso wie Chassis und Verstärker. Das Hörgerät wird Teil der Einrichtung und bestimmt den Raum schon im ausgeschalteten Zustand."
+    ], [I("https://publications.risd.edu/sites/default/files/2026-05/Andrew-Goulet-fd-1.jpg", "https://publications.risd.edu/grad-show-2026/furniture-design", "Noren Speakers and Stereo Cabinet", "RISD Grad Show 2026")], [
+      src("RISD Grad Show 2026: Furniture Design", "https://publications.risd.edu/grad-show-2026/furniture-design")
+    ], {summary:"Lautsprecher und Stereotechnik werden als vollständige Möbelgruppe entworfen."}),
+
+    card("Trends in Art", "Xinyi Joanna Li · Swell", [
+      "Swell ist eine große Armschiene aus violett und rosa schimmerndem PLA. Rechnerisch erzeugte Volumen wachsen zu einem Band zusammen; der 3D-Druck macht jede Rundung als geschichtete Spur sichtbar.",
+      "Li bezeichnet die Reihe als Specific Randomness. Ein begrenztes Regelsystem erzeugt Varianten, anschließend entscheidet die Arbeit am Körper über Maßstab, Lage und tragbare Form. Zufall, Rechenregel und Anpassung bilden drei aufeinanderfolgende Entwurfsschritte."
+    ], [I("https://publications.risd.edu/sites/default/files/2026-05/xinyi-li-jm-mfa-2026-5.JPG", "https://publications.risd.edu/grad-show-2026/xinyi-joanna-li", "Swell, 2026", "RISD Grad Show 2026")], [
+      src("RISD Grad Show 2026: Jewelry + Metalsmithing", "https://publications.risd.edu/grad-show-2026/jewelry-metalsmithing"),
+      src("RISD Grad Show 2026: Xinyi Joanna Li", "https://publications.risd.edu/grad-show-2026/xinyi-joanna-li")
+    ], {summary:"Rechnerisch erzeugte Volumen werden als große, körperbezogene Form gedruckt."}),
+
+    // Writing Tipps: fünf Karten der neuen Kategorie.
+    card("Writing Tipps", "Proserhythmus auf drei Ebenen", [
+      "Lies einen Absatz dreimal: zuerst nach Wortklang, dann nach Länge und Spannung der Satzteile, zuletzt nach dem Wechsel ganzer Sätze. Wiederholt sich auf einer Ebene dieselbe Bewegung, ändere dort das Maß. Zwei ähnlich lange Sätze hintereinander sind unauffällig; eine ganze Folge nimmt den Takt eines schlechten Blankverses an.",
+      "Robert Louis Stevenson trennt den Klang einzelner Wörter, das Knüpfen und Lösen der Satzphrase und den größeren Rhythmus der Prosa. Sein entscheidender Prüfpunkt lautet: Prosa braucht Rhythmus und vermeidet ein hörbar durchlaufendes Metrum."
+    ], [C("Robert Louis Stevenson portrait 1893", "Robert Louis Stevenson")], [
+      src("Wikisource: On Some Technical Elements of Style in Literature", "https://en.wikisource.org/wiki/Essays_in_the_Art_of_Writing/On_Some_Technical_Elements_of_Style_in_Literature")
+    ], {summary:"Wortklang, Satzphrase und Absatzbewegung werden getrennt geprüft.", writingSource:{label:"Wortlaut · Robert Louis Stevenson, On Some Technical Elements of Style in Literature",source:"https://archive.org/details/essaysinartofwri00stev",remote:{wikiPage:"Essays_in_the_Art_of_Writing/On_Some_Technical_Elements_of_Style_in_Literature",wikiLanguage:"en",start:"Music and literature, the two temporal arts",end:"The conjurer juggles with two oranges",flexibleMarkers:true,reflow:true,fetchLabel:"Wikisource-Transkription"}}}),
+
+    card("Writing Tipps", "Den Winkel einer kurzen Erzählung bestimmen", [
+      "Schreibe vor dem Entwurf drei mögliche Fassungen derselben Situation auf: Wer nimmt sie wahr, welcher Augenblick trägt sie, welche Tatsache bleibt bis zuletzt außerhalb des Blickfelds? Wähle danach eine Fassung und richte jedes Detail auf diesen Winkel aus.",
+      "Edith Wharton beschreibt die kurze Erzählung als Form, deren Wirkung stark von Präsentation und Perspektive abhängt. Sobald der Text zwischen mehreren möglichen Brennpunkten tastet, verliert auch der Leser seine sichere Wahrnehmung der Situation."
+    ], [C("Edith Wharton portrait 1905", "Edith Wharton")], [
+      src("Project Gutenberg: The Writing of Fiction", "https://www.gutenberg.org/ebooks/72446")
+    ], {summary:"Eine kurze Erzählung braucht vor dem ersten Absatz einen festgelegten Wahrnehmungswinkel.", writingSource:{label:"Wortlaut · Edith Wharton, The Writing of Fiction, Kapitel II",source:"https://archive.org/details/writingoffiction00whar",remote:{url:WHARTON,start:"The chief technical difference between the short story and the novel",end:"Nietzsche said that it took genius to",flexibleMarkers:true,reflow:true,fetchLabel:"GITenberg-Transkription"}}}),
+
+    card("Writing Tipps", "Jede Figur erhält eine Aufgabe", [
+      "Verfolge jede Nebenfigur bis zum Ende des Entwurfs. Benenne die Stelle, die ohne sie ärmer, unverständlicher oder weniger gespannt wäre. Fehlt eine solche Stelle, verteile ihre Information auf vorhandene Figuren oder streiche sie.",
+      "Wharton verbindet dieselbe Prüfung mit Beschreibungen. Eine Landschaft gehört zur Handlung, sobald sie als Ereignis im Bewusstsein einer Figur erscheint. Wortwahl und Beobachtungsgenauigkeit bleiben innerhalb ihres Wahrnehmungsregisters."
+    ], [F("Edith Wharton 03.jpg", "Edith Wharton")], [
+      src("Project Gutenberg: The Writing of Fiction", "https://www.gutenberg.org/ebooks/72446")
+    ], {summary:"Figuren und Schauplätze bleiben, wenn sie eine genau benennbare Arbeit im Entwurf leisten.", writingSource:{label:"Wortlaut · Edith Wharton, The Writing of Fiction, Kapitel III",source:"https://archive.org/details/writingoffiction00whar",remote:{url:WHARTON,start:"Neither novelist nor playwright should ever venture on creating a character",end:"The two central difficulties of the novel",flexibleMarkers:true,reflow:true,fetchLabel:"GITenberg-Transkription"}}}),
+
+    card("Writing Tipps", "Perspektivwechsel als Formwechsel behandeln", [
+      "Markiere nach dem Entwurf jeden Absatz mit der Instanz, die auswählt, benennt und urteilt. Wechselt der Text zwischen Erzähler und Figur, prüfe den Grund und die neue Reichweite. Ein einzelner Wechsel verändert das Zentrum des Romans; eine unbemerkte Folge erzeugt zwei konkurrierende Baupläne.",
+      "Percy Lubbock untersucht diesen Fehler an Krieg und Frieden. Tolstoi erzählt historische Partien aus eigener Übersicht und die Familienhandlung überwiegend durch ausgewählte Figuren. Die Größe einzelner Teile verdeckt die formale Trennung; der Roman behält zwei konkurrierende Zentren."
+    ], [C("Leo Tolstoy portrait 1908", "Lew Tolstoi, Lubbocks Beispiel für wechselnde Perspektiven")], [
+      src("Project Gutenberg: The Craft of Fiction", "https://www.gutenberg.org/ebooks/18961")
+    ], {summary:"Jeder Wechsel der wahrnehmenden Instanz verändert den Bauplan des Textes.", writingSource:{label:"Wortlaut · Percy Lubbock, The Craft of Fiction",source:"https://archive.org/details/craftoffiction00lubb",remote:{url:LUBBOCK,start:"The predominant point of view is simply his own",end:"We have a magnificent novel without it.",flexibleMarkers:true,reflow:true,fetchLabel:"GITenberg-Transkription"}}}),
+
+    card("Writing Tipps", "Den Leser die Figur zusammensetzen lassen", [
+      "Verteile die Figur auf wenige Details, die der Leser miteinander verbinden muss: eine Handlung unter Druck, ein sprachlicher Reflex, eine falsche Einschätzung, eine körperliche Gewohnheit. Wiederhole die fertige Charakteraussage anschließend nirgends.",
+      "Lubbock beschreibt Lesen als formende Arbeit. Aus verstreuten Angaben baut der Leser einen Körper und ein Bewusstsein. Die Figur wirkt vollständig, weil dieser Aufbau ohne sichtbare Anstrengung geschieht und jedes neue Detail an die bereits entstandene Form anschließt."
+    ], [C("Samuel Richardson portrait", "Samuel Richardson")], [
+      src("Project Gutenberg: The Craft of Fiction", "https://www.gutenberg.org/ebooks/18961")
+    ], {summary:"Wenige anschlussfähige Einzelheiten aktivieren die Vorstellung stärker als ein fertiges Urteil.", writingSource:{label:"Wortlaut · Percy Lubbock, The Craft of Fiction",source:"https://archive.org/details/craftoffiction00lubb",remote:{url:LUBBOCK,start:"As soon as he begins to hear of Clarissa",end:"A novel is a picture, a portrait",flexibleMarkers:true,reflow:true,fetchLabel:"GITenberg-Transkription"}}}),
+
+    // Je eine weitere Karte für die 28 bisherigen Kategorien.
+    {category:"Aphorismen",kind:"quote",title:"„Man muß etwas Neues machen, um etwas Neues zu sehen.“",byline:"Georg Christoph Lichtenberg · Sudelbücher",detail:[],media:[C("Georg Christoph Lichtenberg engraving portrait","Georg Christoph Lichtenberg")],sources:[src("Lichtenberg: Sudelbücher · Zeno.org","http://www.zeno.org/Literatur/M/Lichtenberg,+Georg+Christoph/Aphorismen/Sudelbücher")]},
+
+    card("Philosophische Begriffe", "Haecceitas", [], [C("Duns Scotus portrait engraving", "Johannes Duns Scotus")], [src("Wikipedia: Haecceitas", "https://de.wikipedia.org/wiki/Haecceitas")], {summary:"Das individuelle Diessein, durch das dieses einzelne Wesen genau dieses Wesen ist.",wiki:{page:"Haecceitas",language:"de",count:3}}),
+
+    card("Künstler und drei Werke", "Mikalojus Konstantinas Čiurlionis", [
+      "Rex ordnet Stadt, Wasser, Berge und Himmel als konzentrische Herrschaftsräume. In der Sonate der Sterne erscheinen zwei Bilder wie Sätze einer kosmischen Musik. Das Märchen der Könige setzt zwei gekrönte Figuren vor eine leuchtende kleine Landschaft, die sie mit ihren Körpern schützen.",
+      "Čiurlionis war Komponist und Maler. Seine Bildfolgen übernehmen Begriffe wie Sonate, Fuge und Präludium, ohne Musik abzubilden. Wiederkehrende Horizonte, Himmelskörper und kleine Architekturen erzeugen Entwicklung zwischen den Tafeln."
+    ], [C("Mikalojus Konstantinas Ciurlionis Rex 1909", "Rex"),C("Ciurlionis Sonata of the Stars Allegro", "Sonate der Sterne: Allegro"),C("Ciurlionis Fairy Tale of Kings", "Das Märchen der Könige")], [src("National M. K. Čiurlionis Museum of Art", "https://ciurlionis.lt/activities/m-k-ciurlionis/")], {summary:"Rex · Sonate der Sterne · Das Märchen der Könige",works:["Rex, 1909","Sonate der Sterne, 1908","Das Märchen der Könige, 1909"]}),
+
+    {category:"Erste Sätze großer Romane",kind:"quote",title:"The past is a foreign country: they do things differently there.",detail:[],wiki:{page:"The Go-Between",language:"en",count:1},media:[C("L. P. Hartley portrait", "L. P. Hartley")],sources:[src("Wikipedia: The Go-Between", "https://en.wikipedia.org/wiki/The_Go-Between"),src("Internet Archive: The Go-Between", "https://archive.org/search?query=title%3A%28The+Go-Between%29+AND+creator%3A%28Hartley%29")]},
+
+    card("Seltene Musikstile", "Ojkanje · Dalmatinisches Hinterland", [
+      "Zwei oder mehr Stimmen singen in engem Tonraum. Der führende Sänger hält die Phrase in einem kräftigen, im Hals erzeugten Zittern; eine zweite Stimme bleibt in reibender Nähe. Das Ende fällt häufig in einen langen gemeinsamen Atemzug.",
+      "Der Text behandelt Liebe, Dorfereignisse oder Politik. Die Aufnahme der UNESCO zeigt verschiedene lokale Zweistimmigkeitsformen. Entscheidend sind das stark pulsierende Timbre und die Dauer einer Phrase, die vom Atem des Vorsängers begrenzt wird."
+    ], [Y("fjm9QXUVYLA", "UNESCO · Ojkanje singing")], [src("UNESCO: Ojkanje singing", "https://ich.unesco.org/en/USL/ojkanje-singing-00320"),src("YouTube: UNESCO-Aufnahme", "https://www.youtube.com/watch?v=fjm9QXUVYLA")]),
+
+    card("Vergessene Komponisten", "Alice Mary Smith · Sinfonie c-Moll", [
+      "Die langsame Einleitung setzt eine knappe rhythmische Figur gegen dunkle Holzbläser. Im Allegro kehrt dieselbe Spannung in einer beweglichen, dicht gearbeiteten Sonatenform wieder. Das Allegretto führt eine singende Linie durch wechselnde Instrumentengruppen; das Finale bündelt Blech und Streicher in klaren Gegenbewegungen.",
+      "Smith vollendete die Sinfonie 1863 oder 1864 und schrieb später eine zweite. Ihre Orchesterbehandlung verbindet kräftige motivische Arbeit mit transparenten Mittelstimmen. Das Werk erweitert das schmale Bild britischer Sinfonik vor Parry und Stanford um eine vollständig beherrschte Großform."
+    ], [Y("dAHwGeDrs9c", "Alice Mary Smith · Sinfonie c-Moll"),C("Alice Mary Smith composer portrait", "Alice Mary Smith")], [src("YouTube: London Mozart Players, Howard Shelley", "https://www.youtube.com/watch?v=dAHwGeDrs9c"),src("Oxford Dictionary of National Biography: Alice Mary Smith", "https://www.oxforddnb.com/display/10.1093/ref:odnb/9780198614128.001.0001/odnb-9780198614128-e-25817")]),
+
+    card("Großartige Bilder und Design", "Carlo Bugatti · Schneckenstuhl", [
+      "Der Stuhl von etwa 1902 wickelt Sitz, Rücken und Armlehne in eine spiralförmige Silhouette. Pergament, ebonisiertes Holz, gehämmertes Kupfer, Zinnintarsien und Quasten bilden keine aufgesetzte Dekoration; jedes Material betont eine Krümmung oder Verbindung.",
+      "Bugatti entwarf das Möbel als räumliche Grafik. Der große Kreis im Rücken hält die Figur zusammen, während asymmetrische Stützen und kleine Metallflächen die Last sichtbar verteilen. Der Stuhl wirkt zugleich wie Sitzgerät, Musikinstrument und Schriftzeichen."
+    ], [C("Carlo Bugatti Cobra chair 1902", "Carlo Bugattis Schneckenstuhl"),C("Carlo Bugatti chair detail parchment copper", "Pergament, Kupfer und Intarsien")], [src("Brooklyn Museum: Cobra Chair", "https://www.brooklynmuseum.org/opencollection/objects/3886"),src("Musée d'Orsay: Carlo Bugatti furniture", "https://www.musee-orsay.fr/en/artworks/fauteuil-9097")]),
+
+    card("Märchen und Sagen in ethnografischen Quellen", "Warum Buschkühe und Elefanten Feinde sind · Efik", [
+      "Buschkuh und Elefant streiten über ihre Stärke. Der Häuptling setzt einen öffentlichen Kampf auf dem Marktplatz an. Beide beginnen bereits auf der Straße und sperren den Weg; ein leicht ablenkbarer Affe gelingt es erst nach vielen Umwegen, dem Häuptling davon zu berichten.",
+      "Der Häuptling erschießt beide Tiere mit vergifteten Pfeilen. Seitdem kämpfen wilde Tiere im Busch. Elphinstone Dayrell veröffentlichte die Efik-Erzählung 1910 in Folk Stories from Southern Nigeria."
+    ], [C("African forest buffalo illustration", "Afrikanische Buschkuh"),C("African forest elephant illustration", "Afrikanischer Waldelefant")], [src("Project Gutenberg: Folk Stories from Southern Nigeria", "https://www.gutenberg.org/ebooks/34655")], {original:{label:"Vollständiger Originaltext · Elphinstone Dayrell, 1910",source:"https://archive.org/details/folkstoriesfroms00dayr",remote:{url:"https://raw.githubusercontent.com/GITenberg/Folk-Stories-from-Southern-Nigeria-West-Africa_34655/master/34655-8.txt",encoding:"windows-1252",start:"_Why the Bush Cow and the Elephant are bad Friends_",end:"XXI\n\n_The Cock who caused a Fight between two Towns_",reflow:true,fetchLabel:"GITenberg-Transkription"}}}),
+
+    card("Sagengestalten, Legenden und Märchen weltweit", "Mami Wata · West- und Zentralafrika", [], [C("Mami Wata chromolithograph", "Mami-Wata-Darstellung"),C("Mami Wata shrine Togo", "Mami-Wata-Schrein")], [src("Wikipedia: Mami Wata", "https://de.wikipedia.org/wiki/Mami_Wata")], {wiki:{page:"Mami_Wata",language:"de",count:4}}),
+
+    card("Historische Anekdoten", "Der große Diamantenschwindel · 1872", [
+      "Philip Arnold und John Slack zeigten Investoren Rohdiamanten, die angeblich aus einer geheimen Lagerstätte im amerikanischen Westen stammten. Sie führten Gutachter zu einem abgelegenen Feld in Wyoming, das sie zuvor mit gekauften Edelsteinen präpariert hatten. Bankiers und Politiker gründeten eine Gesellschaft mit Millionenbewertung.",
+      "Der Geologe Clarence King untersuchte das Feld unabhängig. Er fand Diamanten gemeinsam mit Rubinen, Saphiren und Smaragden in einer geologisch unmöglichen Mischung; einige Steine zeigten sogar Spuren vom Schleifrad. King meldete den Betrug, bevor weitere Aktien verkauft wurden. Arnold setzte sich mit seinem Anteil nach Kentucky ab."
+    ], [C("Great Diamond Hoax 1872 illustration", "Das präparierte Diamantenfeld"),C("Clarence King geologist portrait", "Clarence King")], [src("USGS: Clarence King and the Diamond Hoax", "https://www.usgs.gov/programs/geology-energy-and-minerals-science-center/science/great-diamond-hoax-1872"),src("Smithsonian Magazine: The Great Diamond Hoax", "https://www.smithsonianmag.com/history/the-great-diamond-hoax-of-1872-2630188/")]),
+
+    card("Literarische und filmische Tropen und Typenszenen", "Der verdeckte Schnitt hinter einem vorbeiziehenden Körper", [
+      "Eine dunkle Jacke, eine Säule oder ein Fahrzeug füllt für wenige Bilder die ganze Leinwand. In diesem Moment wechselt die Aufnahme. Bewegung und Klang laufen über die Grenze weiter, deshalb liest das Auge den Wechsel als dieselbe Kamerafahrt.",
+      "Alfred Hitchcock versteckte in Rope die Rollenwechsel der damaligen Filmkassetten häufig im Rücken einer Figur. Birdman und 1917 benutzen denselben Übergang digital und verteilen ihn auf Türen, Wände, Dunkelheit und schnelle Schwenks. Die Szene wirkt fortlaufend, obwohl Ort, Zeit oder Technik einen Schnitt verlangen."
+    ], [C("Rope 1948 film James Stewart still", "Rope, 1948"),C("motion picture film editing splice", "Filmschnitt")], [src("BFI: How they shot Rope", "https://www.bfi.org.uk/features/rope-alfred-hitchcock-long-takes"),src("American Cinematographer: 1917 and the illusion of one shot", "https://theasc.com/articles/mission-impossible-1917")]),
+
+    card("Wichtige Akkorde und Akkordfolgen", "Omnibus-Folge", [
+      "Über zwei gehaltenen Tönen bewegen sich Bass und Oberstimme chromatisch in Gegenrichtung. In c-Moll führt etwa C im Bass abwärts über H und B, während Es aufwärts über E und F steigt. Die wechselnden Lagen lassen Dominantseptakkorde und übermäßige Sextakkorde ineinander umkippen.",
+      "Die Folge erscheint in Beethovens 32 Variationen c-Moll WoO 80 und in Schuberts Musik als Mittel für lange Steigerungen. Gehört werden soll die entgegengesetzte Chromatik: Jeder Schritt verändert die harmonische Deutung, während zwei gemeinsame Töne den Zusammenhang sichern."
+    ], [C("omnibus progression music notation", "Stimmführung der Omnibus-Folge"),C("Beethoven 32 Variations WoO 80 score", "Beethovens 32 Variationen")], [src("Open Music Theory: The Omnibus Progression", "https://viva.pressbooks.pub/openmusictheory/chapter/omnibus-progression/"),src("IMSLP: 32 Variations in C minor, WoO 80", "https://imslp.org/wiki/32_Variations_in_C_minor%2C_WoO_80_(Beethoven%2C_Ludwig_van)")]),
+
+    card("Falsche Modelle mit großer Erklärungskraft", "Versunkene Landbrücken", [
+      "Biogeografen des 19. und frühen 20. Jahrhunderts verbanden getrennte Kontinente durch ehemalige Landstreifen. Lemuria erklärte verwandte Lemuren in Madagaskar und Indien; weitere Brücken sollten ähnliche Fossilien, Pflanzen und Süßwassertiere auf beiden Seiten eines Ozeans ordnen.",
+      "Das Modell passte zu einer festen Erdkruste und erlaubte Wanderung über trockenes Land. Ozeanbodenkarten, Paläomagnetismus und die Altersfolge der Gesteine zeigten später bewegliche Platten und junge Ozeanbecken. Kontinentaldrift erklärte dieselben Verteilungen mit einem messbaren Mechanismus."
+    ], [C("Lemuria map land bridge", "Karte einer angenommenen Landbrücke"),C("continental drift fossil distribution map", "Fossilverteilungen auf verbundenen Kontinenten")], [src("UC Museum of Paleontology: Plate tectonics and biogeography", "https://ucmp.berkeley.edu/geology/tectonics.html"),src("Encyclopaedia Britannica: land bridge", "https://www.britannica.com/science/land-bridge-geology")]),
+
+    card("Entzifferte Schriften", "Maharajasa tratarasa Menamdrasa", [
+      "Indo-griechische Münzen trugen dieselbe Herrscherangabe in zwei Schriften. Auf der Vorderseite steht griechisch ΒΑΣΙΛΕΩΣ ΣΩΤΗΡΟΣ ΜΕΝΑΝΔΡΟΥ. Die Rückseite gibt in Kharosthi maharajasa tratarasa Menamdrasa. Wiederkehrende Königsnamen und Titel lieferten James Prinsep und anderen Forschern Lautwerte für die von rechts nach links geschriebene Schrift.",
+      "Die Formen sind Genitive. Vollständige Übersetzung beider Legenden: „Des großen Königs, des Retters Menander.“ Die Münze bildet damit einen kurzen, verlässlichen Paralleltext, bei dem Name, Titel und grammatische Endungen getrennt verglichen werden."
+    ], [C("Menander I Soter silver drachm Kharosthi", "Zweisprachige Drachme Menanders I"),C("Kharosthi script chart", "Kharosthi-Zeichen")], [src("British Museum: coin of Menander I", "https://www.britishmuseum.org/collection/term/BIOG112083"),src("Encyclopaedia Iranica: Kharosthi", "https://iranicaonline.org/articles/kharosthi-script")]),
+
+    card("Rhetorische und poetische Verfahren", "“The love of wicked men converts to fear, / That fear to hate, and hate turns one or both …”", [
+      "Anadiplose · William Shakespeare, Richard II, V,1. Das letzte tragende Wort eines Satzteils eröffnet den nächsten: love führt zu fear, fear zu hate. Die Wiederaufnahme verwandelt eine Behauptung in eine Kette, in der jede Folge bereits sprachlich aus ihrer Ursache hervorgeht.",
+      "Die Reihe endet bei danger und death. Der Vers beschreibt damit keinen plötzlichen Umschlag. Jede Stufe wird aus dem vorigen Wort geboren und engt den möglichen Ausgang weiter ein."
+    ], [C("Richard II Shakespeare engraving", "Richard II"),C("Richard II first quarto page", "Früher Druck von Richard II")], [src("Folger Shakespeare Library: Richard II 5.1", "https://www.folger.edu/explore/shakespeares-works/richard-ii/read/5/1/")], {summary:"Anadiplose · William Shakespeare, Richard II, V,1"}),
+
+    card("Etymologien und Begriffsgeschichten", "Check, Schach und Scheck", [
+      "Persisch šāh bezeichnet den König. Über Arabisch šāh gelangte das Wort mit dem Schachspiel in europäische Sprachen. Altfranzösisch eschec benannte die Bedrohung des Königs und außerdem Niederlage oder Hindernis; daraus entstand englisch check als Hemmung, Prüfung und Kontrolle.",
+      "Im Zahlungsverkehr bezeichnete check eine Gegenkontrolle der Rechnung und später die schriftliche Zahlungsanweisung. Deutsch entlehnte Scheck aus diesem englischen Gebrauch, während Schach den älteren Spielnamen bewahrte. Eine Königsbedrohung führte so über Kontrolle und Gegenprüfung zum Bankformular."
+    ], [C("Persian shah chess manuscript", "Schach in einer persischen Handschrift"),C("historic bank cheque", "Historischer Scheck")], [src("Oxford English Dictionary: check, n.1", "https://www.oed.com/dictionary/check_n1"),src("DWDS: Scheck", "https://www.dwds.de/wb/Scheck"),src("CNRTL: échec", "https://www.cnrtl.fr/etymologie/%C3%A9chec")]),
+
+    card("Urban Legends", "Das verschwundene Hotelzimmer", [
+      "Die Erzählung spielt meist während der Pariser Weltausstellung von 1889 oder 1900. Eine junge Frau holt Medizin für ihre kranke Mutter. Bei ihrer Rückkehr leugnen Hotelangestellte, die Mutter je gesehen zu haben; Zimmernummer und Einrichtung haben sich verändert. Spätere Fassungen erklären die Vertuschung mit Pest und der Angst vor einer Quarantäne.",
+      "Die Geschichte erschien zu Beginn des 20. Jahrhunderts in Zeitungen und Sammlungen als angeblich wahrer Fall. Alexander Woollcott verbreitete 1929 eine Fassung in While Rome Burns; der Film So Long at the Fair von 1950 machte daraus einen geschlossenen Mysteryplot. Belegt ist die Zirkulation der Erzählung, kein entsprechendes Pariser Hotelereignis."
+    ], [C("Paris Exposition 1900 hotel postcard", "Paris während der Weltausstellung 1900"),C("So Long at the Fair 1950 film poster", "So Long at the Fair, 1950")], [src("Snopes: The Vanishing Hotel Room", "https://www.snopes.com/fact-check/the-vanishing-hotel-room/"),src("British Film Institute: So Long at the Fair", "https://www2.bfi.org.uk/films-tv-people/4ce2b6b6b596a")]),
+
+    card("Interessante Sprachen und Sprachmerkmale", "Koreanisch -te-: erinnerte Wahrnehmung", [
+      "비가 오더라 · pi-ka o-te-ra · Regen-NOM kommen-ERINNERT-DECL. Der Sprecher berichtet eine früher selbst wahrgenommene Situation: „Ich sah, dass es regnete.“ Die Form -te- markiert den zurückblickenden Zugang zur Information. Vergangenheitszeit und Informationszugang bleiben getrennt.",
+      "Bei willentlichen Handlungen der ersten Person entstehen besondere Beschränkungen, weil Handelnder und damaliger Beobachter zusammenfallen. In Erzählungen trennt -te- daher eine erinnerte Szene von einer nachträglichen Schlussfolgerung oder einem Bericht aus zweiter Hand."
+    ], [C("Korean conversation Seoul", "Gespräch auf Koreanisch"),C("Hangul calligraphy rain", "Koreanische Schrift")], [src("National Institute of Korean Language: Korean grammar", "https://korean.go.kr/front_eng/roman/roman_01.do"),src("Sohn: The Korean Language · Cambridge", "https://www.cambridge.org/core/books/korean-language/DBF36E40F8033C25A0C04E7705CBE557")]),
+
+    card("Interessante Listen", "Ötzis Ausrüstung", [
+      "Kupferbeil; Feuersteindolch mit Scheide; unfertiger Eibenbogen; Köcher mit vierzehn Pfeilen, davon zwei schussbereit; Retuscheur aus Lindenholz und Geweih; Gürtel mit Tasche; Zunderschwamm und Pyrit; zwei Birkenrindengefäße; Rückentrage; Netz; Feuersteinwerkzeuge; Birkenporlinge an Lederriemen.",
+      "Die geschlossene Fundgruppe stammt aus dem Moment seines Todes um 3250 v. Chr. Unfertige Pfeile stehen neben reparierbaren Werkzeugen, Glutbehälter neben Pilzen für Feuer und Medizin. Erst die Zusammenstellung zeigt Reisevorbereitung, Wartung und Transport als zusammenhängendes technisches System."
+    ], [C("Otzi equipment reconstruction", "Rekonstruktion von Ötzis Ausrüstung"),C("Otzi copper axe", "Ötzis Kupferbeil"),C("Otzi quiver arrows", "Köcher und Pfeile")], [src("South Tyrol Museum of Archaeology: Equipment", "https://www.iceman.it/en/equipment/"),src("Nature: The Iceman's equipment", "https://www.nature.com/articles/35025005")], {summary:"Werkzeug, Waffen, Feuerzeug, Behälter und Reparaturmaterial einer einzelnen Alpenquerung."}),
+
+    card("Gute einfache Cartoons", "George du Maurier · True Humility · 9. November 1895", [
+      "Ein Bischof bemerkt beim Frühstück, das Ei seines jungen Geistlichen sei schlecht. Der Geistliche antwortet: „Oh no, my Lord, I assure you! Parts of it are excellent!“ Das Bild zeigt seinen angespannten Versuch, Höflichkeit gegen die eigene Wahrnehmung durchzuhalten.",
+      "Du Maurier veröffentlichte den Cartoon in Punch. Pointe und Zeichnung brauchen nur zwei Sätze: Rangunterschied, verdorbenes Ei und die absurde Teilrettung eines unteilbaren Urteils."
+    ], [F("True humility.png", "Vollständiger Cartoon · Punch, 9. November 1895")], [src("Wikimedia Commons: True Humility", "https://commons.wikimedia.org/wiki/File:True_humility.png"),src("Punch, 9 November 1895 · Internet Archive", "https://archive.org/details/punchvol108a109lemouoft")]),
+
+    card("Grenzfälle", "Dictyostelium discoideum · Einzelzelle oder Körper", [
+      "Bei reichlicher Nahrung leben die Amöben einzeln und teilen sich. Fehlen Bakterien, senden sie periodische cAMP-Signale aus, strömen zusammen und bilden einen wandernden Zellverband. Dieser besitzt Vorder- und Hinterende und reagiert als Ganzes auf Licht, Wärme und Feuchtigkeit.",
+      "Am Ziel entsteht ein Fruchtkörper. Rund ein Fünftel der Zellen bildet den toten Stiel; die übrigen werden zu Sporen. Genetisch verschiedene Einzelzellen kooperieren, konkurrieren und spezialisieren sich vorübergehend. Der Lebenszyklus verteilt Individualität auf Zelle, Verband und Spore."
+    ], [C("Dictyostelium discoideum life cycle", "Lebenszyklus von Dictyostelium"),C("Dictyostelium fruiting bodies microscope", "Fruchtkörper")], [src("DictyBase: Dictyostelium life cycle", "https://dictybase.org/Multimedia/lifecycle/index.html"),src("Nature Education: Social amoebae", "https://www.nature.com/scitable/topicpage/cooperation-and-conflict-in-the-social-amoeba-15769490/")]),
+
+    card("UnsichtbareKonventionen", "Wo eine Untertitelzeile umbricht", [
+      "Untertitel stehen meist in höchstens zwei Zeilen. Der Umbruch folgt einer syntaktischen Fuge: nach Satzzeichen, vor einer neuen Phrase oder zwischen Haupt- und Nebensatz. Artikel und Substantiv, Präposition und Ergänzung sowie Vorname und Nachname bleiben zusammen.",
+      "Ein Umbruch nach „der“ zwingt das Auge, das erwartete Substantiv in der nächsten Zeile erneut zu suchen. Ein Umbruch nach einer abgeschlossenen Phrase nutzt dieselbe kurze Pause, die auch der gesprochene Satz anbietet. Erst eine falsche Trennung macht die stille Grammatik des Untertitels sichtbar."
+    ], [C("film subtitles two lines example", "Zweizeiliger Untertitel"),C("subtitle editing workstation", "Untertitelbearbeitung")], [src("Netflix Timed Text Style Guide: line treatment", "https://partnerhelp.netflixstudios.com/hc/en-us/articles/215274938-English-Timed-Text-Style-Guide"),src("BBC Subtitle Guidelines", "https://bbc.github.io/subtitle-guidelines/")]),
+
+    card("VerloreneTechniken", "Zündkerzenbilder lesen", [
+      "Nach einer Fahrt wurde die Zündkerze herausgeschraubt und an Isolator, Elektroden und Ablagerungen gelesen. Hellbraune oder graue Flächen zeigten eine passende Verbrennung; trockener Ruß deutete auf ein fettes Gemisch oder schwache Zündung, ölige Beläge auf Öl im Brennraum, geschmolzene Elektroden auf starke Überhitzung.",
+      "Vergaser, Zündzeitpunkt, Wärmewert der Kerze und Motorzustand hinterließen gemeinsam ein Farbbild. Die Diagnose verlangte eine Fahrt unter bekannter Last und den Vergleich mehrerer Zylinder. Einspritzsteuergeräte, Lambdasonden und Fehlerspeicher liefern heute getrennte Messwerte für viele derselben Ursachen."
+    ], [C("spark plug reading chart", "Historische Zündkerzenbilder"),C("mechanic inspecting spark plug", "Prüfung einer Zündkerze")], [src("NGK: Spark plug troubleshooting", "https://ngksparkplugs.com/en/resources/read-spark-plug"),src("Champion: How to read spark plugs", "https://www.championautoparts.com/Technical/Tech-Tips/How-to-Read-Spark-Plugs.html")]),
+
+    card("InternetArchäologie", "Zombo.com", [
+      "Die Seite begrüßt Besucher seit 1999 mit einer kreisenden Scheibe und einer Stimme, die unbegrenzte Möglichkeiten verspricht. Die Ansage führt zu keiner Anwendung; ihr einziger Inhalt ist die endlose Vorbereitung auf das, was angeblich gleich möglich wird.",
+      "Zombo.com parodierte Flash-Intros, Ladebildschirme und überzogene Versprechen der Dotcom-Zeit. Die heutige HTML5-Fassung bewahrt Timing, Stimme und minimale Grafik. Aus einer technischen Warteschleife wurde ein eigenständiges Stück Netzkomik."
+    ], [C("Zombo com website screenshot", "Zombo.com"),C("Macromedia Flash Player logo", "Flash als ursprüngliche Laufzeit")], [src("Zombo.com", "https://zombo.com/"),src("Know Your Meme: Zombo.com", "https://knowyourmeme.com/memes/sites/zombo-com")]),
+
+    card("SchlechtesWritingSeziert", "Wonder Woman 1984 · Steve im Körper eines Fremden", [
+      "Diana wünscht Steve Trevor zurück. Er erwacht im Körper eines namenlosen Mannes; für Diana und das Publikum erscheint er als Steve. Beide benutzen den fremden Körper für Reisen, Kämpfe und Sex. Die Inszenierung behandelt den Besitzer als optischen Scherz und kehrt erst am Schluss kurz zu seinem Gesicht zurück.",
+      "Der Fehler liegt im Regelbruch der eigenen Prämisse. Die Geschichte benennt ausdrücklich einen zweiten Menschen und schreibt ihm anschließend weder Bewusstsein noch Zustimmung noch Folgen zu. Dadurch beschädigt die romantische Handlung Dianas Urteilskraft, ohne diesen Konflikt erzählen zu wollen."
+    ], [C("Wonder Woman 1984 Steve Trevor Diana still", "Diana und Steve in Wonder Woman 1984")], [src("Warner Bros.: Wonder Woman 1984", "https://www.warnerbros.com/movies/wonder-woman-1984"),src("Wonder Woman 1984 screenplay", "https://deadline.com/wp-content/uploads/2021/01/Wonder-Woman-1984-Screenplay.pdf")], {works:["Steve erhält für die Dauer des Wunsches einen eigenen neu gebildeten Körper; die Romanze behält ihre Handlung ohne fremden Besitzer.","Der fremde Mann bleibt bei Bewusstsein und teilt den Körper mit Steve; Zustimmung und Gefahr werden zum offenen Konflikt jeder Szene.","Diana erkennt den Preis sofort und beendet den Wunsch, bevor sie handelt; die Versuchung besteht dann in einer klaren Entscheidung statt in verdrängten Folgen."]}),
+
+    card("DasIstHierGanzInDerNähe", "Museum AUTOVISION · Altlußheim", [
+      "Das Museum liegt rund 25 Kilometer von Mannheim entfernt. Seine Wankel-Dauerausstellung versammelt mehr als achtzig Rotationskolbenmotoren, Prüfstände, Serienfahrzeuge und Prototypen. Dazu kommen frühe Fahrräder, NSU-Fahrzeuge, Elektro-, Hybrid- und Wasserstoffantriebe sowie über achtzig Funktionsmodelle in der Technologie-Arena.",
+      "Adresse: Hauptstraße 154, 68804 Altlußheim. Geöffnet Donnerstag, Freitag und Sonntag 10–17 Uhr, Samstag 13–17 Uhr. Die Sammlung eignet sich besonders für den direkten Vergleich verschiedener Lösungen desselben Motorprinzips."
+    ], [C("Museum Autovision Altlußheim", "Museum AUTOVISION"),C("NSU Ro 80 Wankel engine", "NSU Ro 80 und Wankelmotor")], [src("Museum AUTOVISION", "https://www.museum-autovision.de/"),src("Museum AUTOVISION: Öffnungszeiten", "https://www.museum-autovision.de/oeffnungszeiten.html"),src("Gemeinde Altlußheim: Stiftung Museum Autovision", "https://www.altlussheim.de/freizeit-erholung/sehenswertes-im-ort/stiftung-museum-autovision")], {summary:"Altlußheim · mehr als achtzig Wankelmotoren, Prüfstände und seltene Fahrzeuge."}),
+
+    card("VisuelleIdeenDieIchKlauenWill", "Jewgeni Bauer · Vordergrund als zweite Bühne", [
+      "Bauer stellte in seinen Filmen der 1910er Jahre Pflanzen, Vorhänge, Treppengeländer und Möbel dicht vor die Kamera. Figuren erscheinen zwischen diesen dunklen Formen, verschwinden kurz dahinter und betreten erst danach den helleren Handlungsraum.",
+      "Die übertragbare Idee ist eine doppelte Raumtiefe: Ein unscharfer Vordergrund gibt der Kamera einen Standort und setzt bewegliche Rahmen ins Bild. Eine Figur verändert ihre Bedeutung schon dadurch, ob sie vor, hinter oder innerhalb dieses Rahmens steht."
+    ], [C("Yevgeni Bauer After Death 1915 film still", "After Death, 1915"),C("Yevgeni Bauer The Dying Swan film still", "The Dying Swan, 1917")], [src("BFI: Yevgeni Bauer", "https://www.bfi.org.uk/features/yevgeni-bauer-russian-cinema-stylist"),src("Internet Archive: After Death, 1915", "https://archive.org/search?query=creator%3A%22Yevgeni+Bauer%22")]),
+
+    {category:"Eigene GIFs",kind:"gif",title:"Membranlauf",detail:[],media:[I("assets/gifs/membranlauf.gif","assets/gifs/membranlauf.gif","Membranlauf","Eigene Animation")],sources:[]},
+
+    // Schlussrunde: je eine sechste Karte für die beiden neuen Kategorien.
+    card("Trends in Art", "Anne Kim · Sensation and Memory", [
+      "Kim stellt schmale, durchscheinende Bahnen senkrecht in den Raum. Blau, Orange und Rot wandern als Lichtverläufe über ihre Flächen. Vorder- und Rückseite verändern sich mit Blickrichtung, Abstand und Umgebungslicht.",
+      "Die Arbeit verbindet Textilwissen mit Lichtinstallation. Farbe sitzt teilweise im Material und entsteht teilweise durch Projektion und Überlagerung. Mit jedem Standort entsteht eine neue räumliche Mischung."
+    ], [I("https://publications.risd.edu/sites/default/files/2026-05/anne-kim-tx-26-2.jpg", "https://publications.risd.edu/grad-show-2026/textiles", "Sensation and Memory, 2026", "RISD Grad Show 2026")], [src("RISD Grad Show 2026: Textiles", "https://publications.risd.edu/grad-show-2026/textiles")], {summary:"Transluzente Textilbahnen mischen Materialfarbe, Projektion und Umgebungslicht."}),
+
+    card("Writing Tipps", "Den Höhepunkt zuerst kalibrieren", [
+      "Schreibe die entscheidende Wendung oder den letzten starken Austausch als Probe vor den vorhergehenden Szenen. Lege darin Ton, größtes Gewicht und Rhythmus fest. Baue dann rückwärts und gib jeder früheren Wiederholung weniger Endgültigkeit, damit keine Vorstufe den vorgesehenen Höhepunkt verbraucht.",
+      "Edgar Allan Poe beschreibt dieses Verfahren an der vorletzten Strophe von The Raven. Der vorab geschriebene Höhepunkt bestimmte Versmaß, Strophenlänge und die Steigerung der Fragen. Eine später entstandene stärkere Strophe hätte er bewusst abgeschwächt."
+    ], [C("Edgar Allan Poe portrait 1849", "Edgar Allan Poe"),C("The Raven manuscript Poe", "The Raven")], [src("Wikisource: The Philosophy of Composition", "https://en.wikisource.org/wiki/The_Philosophy_of_Composition")], {summary:"Eine vorab geschriebene Schlüsselszene setzt die Obergrenze für alle früheren Steigerungen.",writingSource:{label:"Wortlaut · Edgar Allan Poe, The Philosophy of Composition",source:"https://archive.org/details/philosophyofcomp00poee",remote:{wikiPage:"The_Philosophy_of_Composition",wikiLanguage:"en",start:"Here then the poem may be said to have had its beginning",end:"And here I may as well say a few words of the versification",flexibleMarkers:true,reflow:true,fetchLabel:"Wikisource-Transkription"}}})
+  );
+})();
+
+// Doppelte Themen aus älteren Erweiterungen werden unten gezielt ersetzt.
+(() => {
+  "use strict";
+  const replaceLast = (matches, replacement) => {
+    const target = [...window.KARTEN].reverse().find(matches);
+    if (!target) return;
+    for (const key of Object.keys(target)) if (key !== "category") delete target[key];
+    Object.assign(target, replacement);
+    return target;
+  };
+  const opening = replaceLast(card => card.title.startsWith("The past"), {});
+  opening.kind = "quote";
+  opening.detail = [];
+  opening.title = "Mr Verloc, going out in the morning, left his shop nominally in charge of his brother-in-law.";
+  opening.wiki = {page:"The Secret Agent", language:"en", count:1};
+  opening.media = [C("Joseph Conrad portrait 1904", "Joseph Conrad")];
+  opening.sources = [S("Wikipedia: The Secret Agent", "https://en.wikipedia.org/wiki/The_Secret_Agent"), S("Project Gutenberg: The Secret Agent", "https://www.gutenberg.org/ebooks/974")];
+  const menehune = replaceLast(card => card.title.startsWith("Mami Wata"), {});
+  menehune.title = "Menehune " + String.fromCharCode(183) + " Hawaii";
+  menehune.detail = [];
+  menehune.wiki = {page:"Menehune", language:"de", count:3};
+  menehune.media = [C("Menehune Alekoko fishpond Hawaii", "Alekoko-Fischteich"), C("Menehune statue Hawaii", "Menehune-Darstellung")];
+  menehune.sources = [S("Wikipedia: Menehune", "https://de.wikipedia.org/wiki/Menehune"), S("Hawaii State Parks: Alekoko Fishpond", "https://dlnr.hawaii.gov/dsp/parks/kauai/huleia-national-wildlife-refuge/")];
+  const ladyBird = replaceLast(card => card.title === "Omnibus-Folge", {});
+  ladyBird.title = "Lady-Bird-Turnaround";
+  ladyBird.summary = "Vier Durseptakkorde teilen die Oktave in kleinen Terzen: Imaj7, bIIImaj7, bVImaj7, bIImaj7.";
+  ladyBird.detail = [];
+  ladyBird.detail.push("In C-Dur lautet die Folge Cmaj7, Esmaj7, Asmaj7, Desmaj7. Jeder Grundton fällt um eine große Terz; zusammen teilen die vier Stationen die Oktave symmetrisch. Gemeinsame Töne und Halbtonschritte in den Oberstimmen halten die entfernten Tonarten zusammen.");
+  ladyBird.detail.push("Tadd Dameron verwendet die Folge im letzten Teil von Lady Bird. Miles Davis übernimmt ihre Logik in Half Nelson. Gehört werden soll der Rückweg zur Tonika: Desmaj7 liegt einen Halbton über Cmaj7 und schließt den symmetrischen Umlauf mit der kleinsten Bassbewegung.");
+  ladyBird.media = [C("Tadd Dameron portrait piano", "Tadd Dameron"), C("Lady Bird Tadd Dameron lead sheet", "Lady-Bird-Turnaround")];
+  ladyBird.sources = [S("Tadd Dameron: Lady Bird harmonic analysis", "https://jazzomat.hfm-weimar.de/dbformat/dboverview/solo_info.mhtml?solo_id=18862"), S("Jazz Library: Tadd Dameron Turnaround", "https://www.jazz-library.com/articles/tadd-dameron-turnaround/")];
+  const blackboard = replaceLast(card => card.title === "Das verschwundene Hotelzimmer", {});
+  blackboard.title = "Die Aufgabe an der Tafel";
+  blackboard.summary = "Ein Student hielt zwei offene Forschungsprobleme für Hausaufgaben und löste sie.";
+  blackboard.detail = [];
+  blackboard.detail.push("George Dantzig kam 1939 zu spät in eine Statistikvorlesung. Zwei Aufgaben standen an der Tafel. Er hielt sie für die Hausaufgabe, löste beide in den folgenden Tagen und erfuhr erst später, dass es offene Probleme der Statistik gewesen waren.");
+  blackboard.detail.push("Spätere Fassungen lassen einen namenlosen Studenten ein einziges unlösbares Problem in einer Nacht bewältigen; Lehrer und Universität wechseln. Dantzig selbst bestätigte den Kern. Zeitungsartikel, Predigten und der Film Good Will Hunting verwandelten den belegten Vorfall in eine Parabel über Erwartungen.");
+  blackboard.media = [C("George Dantzig mathematician portrait", "George Dantzig"), C("statistics equations blackboard", "Statistische Aufgaben an einer Tafel")];
+  blackboard.sources = [S("Stanford: George Dantzig interview", "https://web.stanford.edu/group/SOL/dantzig-sample/dantzigstory.htm"), S("Snopes: The Unsolvable Math Problem", "https://www.snopes.com/fact-check/the-unsolvable-math-problem/")];
+  const marriage = replaceLast(card => card.title.includes("tzis Ausr"), {});
+  marriage.title = "Darwins Heiratsliste "+ String.fromCharCode(183) + " 1838";
+  marriage.summary = "Zwei Spalten ordnen Kinder, Gesellschaft, Zeitverlust, Geld und Freiheit.";
+  marriage.detail = [];
+  marriage.detail.push("Heiraten: Kinder; eine ständige Gefährtin und Freundin im Alter; Musik und weibliches Geplauder; ein Haus; jemand, der sich um das Haus kümmert. Folgen: weniger Geld für Bücher; schrecklicher Zeitverlust; Besuche bei Verwandten; Sorge und Verantwortung für Kinder; mögliche Streitigkeiten.");
+  marriage.detail.push("Unverheiratet bleiben: Freiheit, hinzugehen wohin man will; Gespräche kluger Männer in Clubs; Arbeit, so viel man will. Folgen: fehlendes Spiel mit Kindern; Einsamkeit im Alter. Darwin schrieb am Ende: Marry, Marry, Marry. Q.E.D. Am 29. Januar 1839 heiratete er Emma Wedgwood.");
+  marriage.media = [C("Charles Darwin marriage pros cons note", "Darwins Heiratsnotiz"), C("Emma Darwin portrait", "Emma Darwin")];
+  marriage.sources = [S("Darwin Correspondence Project: To marry or not to marry", "https://www.darwinproject.ac.uk/commentary/life-sciences/darwin-marriage"), S("Cambridge Digital Library: Darwin's journal", "https://cudl.lib.cam.ac.uk/view/MS-DAR-00210-00002/50")];
+})();
+
 // Die alte Bezeichnung bleibt nur in den archivierten Rohdaten erhalten.
 for (const card of window.KARTEN) {
   if (card.category === "Historische Koinzidenzen") card.category = "Historische Anekdoten";
