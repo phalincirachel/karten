@@ -2707,3 +2707,176 @@ window.KARTEN.push(
 for (const card of window.KARTEN) {
   if (card.category === "Historische Koinzidenzen") card.category = "Historische Anekdoten";
 }
+
+// Erweiterung vom 3. September 2026: vier neue Kategorien mit je fünf Karten.
+(() => {
+  "use strict";
+  const src = (label, url) => S(label, url);
+  const card = (category, title, detail, media, sources = [], extra = {}) => ({
+    category, title, detail, media, sources, ...extra
+  });
+  const proverbSources = (term, alphabet) => [
+    src("Wikiquote: Deutsche Sprichwörter", "https://de.wikiquote.org/wiki/Deutsche_Sprichw%C3%B6rter"),
+    src(`Wikipedia: ${alphabet}`, alphabet === "Kyrillisches Alphabet" ? "https://de.wikipedia.org/wiki/Kyrillisches_Alphabet" : "https://de.wikipedia.org/wiki/Griechisches_Alphabet"),
+    src(`Duden-Suche: ${term}`, `https://www.duden.de/suchen/dudenonline/${encodeURIComponent(term)}`)
+  ];
+
+  window.KARTEN.push(
+    card("Englisch Vokabular", "faff", [], [
+      F("Tangled leads.JPG", "Eine umständlich verkabelte Arbeitsstelle")
+    ], [src("Cambridge Dictionary: faff", "https://dictionary.cambridge.org/dictionary/english/faff")], {
+      summary:"lästiger Aufwand; unnötiges Herumtun",
+      searchTerm:"faff British English meaning usage examples",
+      vocabulary:{pronunciation:"/fæf/",register:"britisch, informell",meaning:"Als Substantiv bezeichnet faff eine Arbeit, die gemessen am Ergebnis zu viel Mühe macht. Faff about oder faff around heißt, Zeit mit Nebensachen zu verlieren.",examples:[
+        {english:"Getting the printer onto the new Wi-Fi was a faff.",german:"Den Drucker ins neue WLAN zu bringen, war ein nerviges Gefummel."},
+        {english:"Stop faffing about with the margins and send the invoice.",german:"Hör auf, an den Seitenrändern herumzubasteln, und schick die Rechnung ab."},
+        {english:"The recipe is simple; cleaning the grinder is the faff.",german:"Das Rezept ist einfach. Lästig ist das Saubermachen der Mühle."}
+      ]}
+    }),
+
+    card("Englisch Vokabular", "wonky", [], [
+      F("BrokenChair.jpg", "Ein beschädigter, unsicher stehender Stuhl"),
+      F("Carottes ayant poussé de façon bizarre 20101102.jpg", "Unregelmäßig gewachsene Karotten")
+    ], [src("Cambridge Dictionary: wonky", "https://dictionary.cambridge.org/dictionary/english/wonky")], {
+      summary:"schief oder unzuverlässig; in den USA auch sehr fachlich",
+      searchTerm:"wonky adjective UK US meanings examples",
+      vocabulary:{pronunciation:"UK /ˈwɒŋ.ki/, US /ˈwɑːŋ.ki/",register:"informell",meaning:"Im britischen Englisch beschreibt wonky eine sichtbare Schieflage oder eine unzuverlässige Funktion. Im amerikanischen Englisch bezeichnet es außerdem eine Darstellung, die tief in fachliche Einzelheiten geht.",examples:[
+        {english:"The shelf looks wonky because the left bracket sits lower.",german:"Das Regal hängt schief, weil der linke Winkel tiefer sitzt."},
+        {english:"After the update, the payment screen went wonky.",german:"Nach dem Update funktionierte die Bezahlseite nur noch unzuverlässig."},
+        {english:"The interview gets wonky when they start discussing municipal bonds.",german:"Sobald es um Kommunalanleihen geht, wird das Interview sehr fachlich."}
+      ]}
+    }),
+
+    card("Englisch Vokabular", "miffed", [], [
+      F("Annoyed Face.jpg", "Ein deutlich verärgerter Gesichtsausdruck")
+    ], [src("Cambridge Dictionary: miffed", "https://dictionary.cambridge.org/dictionary/english/miffed")], {
+      summary:"verärgert oder gekränkt über das Verhalten eines anderen",
+      searchTerm:"miffed meaning usage register examples",
+      vocabulary:{pronunciation:"/mɪft/",register:"informell",meaning:"Miffed bezeichnet einen eher leichten persönlichen Ärger. Häufig fühlt sich jemand übergangen oder geringgeschätzt.",examples:[
+        {english:"I was miffed that they changed the date without telling me.",german:"Ich war verärgert, weil sie das Datum änderten, ohne mir Bescheid zu geben."},
+        {english:"He looked slightly miffed when his name was left off the list.",german:"Er wirkte etwas gekränkt, als sein Name auf der Liste fehlte."},
+        {english:"The neighbours are miffed about the bins blocking the gate.",german:"Die Nachbarn sind ungehalten, weil die Mülltonnen das Tor versperren."}
+      ]}
+    }),
+
+    card("Englisch Vokabular", "clobber", [], [
+      F("BagGloves.JPG", "Handschuhe für das Training am Sandsack"),
+      F("Ryszard Szurkowski equipment.jpg", "Sportkleidung und Ausrüstung")
+    ], [src("Cambridge Dictionary: clobber", "https://dictionary.cambridge.org/dictionary/english/clobber")], {
+      summary:"hart treffen oder schwer schädigen; britisch auch Kleidung und Ausrüstung",
+      searchTerm:"clobber verb noun British English meanings",
+      vocabulary:{pronunciation:"UK /ˈklɒb.ə/, US /ˈklɑː.bɚ/",register:"informell",meaning:"Als Verb heißt clobber, jemanden oder etwas hart zu treffen, deutlich zu besiegen oder finanziell schwer zu belasten. Das britische Substantiv clobber bezeichnet mitgeführte Sachen, besonders Kleidung oder Sportausrüstung.",examples:[
+        {english:"A falling branch clobbered the shed roof.",german:"Ein herabfallender Ast traf das Schuppendach mit voller Wucht."},
+        {english:"The extra fee will clobber anyone booking at short notice.",german:"Die Zusatzgebühr trifft alle hart, die kurzfristig buchen."},
+        {english:"Leave your cycling clobber by the door.",german:"Lass deine Radsachen an der Tür liegen."}
+      ]}
+    }),
+
+    card("Englisch Vokabular", "skint", [], [
+      F("Empty tank empty wallet.jpg", "Ein leerer Geldbeutel")
+    ], [src("Cambridge Dictionary: skint", "https://dictionary.cambridge.org/dictionary/english/skint")], {
+      summary:"vorübergehend pleite oder knapp bei Kasse",
+      searchTerm:"skint British English meaning examples",
+      vocabulary:{pronunciation:"/skɪnt/",register:"britisch, informell; meist nach dem Verb",meaning:"Skint beschreibt einen vorübergehenden Geldmangel. Das Wort steht gewöhnlich nach be oder feel und klingt alltäglicher als penniless oder destitute.",examples:[
+        {english:"I'm skint until Friday, so dinner has to be cheap.",german:"Bis Freitag bin ich pleite, deshalb muss das Abendessen billig sein."},
+        {english:"The club was skint after replacing the roof.",german:"Nach der Erneuerung des Dachs hatte der Verein kein Geld mehr."},
+        {english:"We weren't poor; we were simply skint at the end of every month.",german:"Wir waren nicht arm. Am Monatsende war das Geld nur regelmäßig aufgebraucht."}
+      ]}
+    }),
+
+    card("Geo Atlas", "Wachankorridor", [
+      "Der rund 300 Kilometer lange Landstreifen gehört zur afghanischen Provinz Badachschan. Tadschikistan liegt nördlich davon, Pakistan südlich; am östlichen Ende erreicht Afghanistan auf wenigen Kilometern die chinesische Grenze. Seine Form entstand durch Grenzabkommen des späten 19. Jahrhunderts. Als Puffer hielt der Korridor das russisch beherrschte Zentralasien vom damaligen Britisch-Indien getrennt.",
+      "Die dauerhaft bewohnten Orte liegen vor allem am Wachandarja. Dort leben überwiegend Wakhi, deren Sprache zum ostiranischen Zweig gehört. Kirgisische Viehhalter nutzen die höheren Täler des Großen und Kleinen Pamir. Alte Karawanenwege führen bis zum Wakhjir-Pass auf fast 5.000 Metern Höhe."
+    ], [
+      F("Vakhan (Wakhan) Corridor.jpg", "Lage des Wachankorridors"),
+      F("Wakhan, Badakhshan.jpg", "Eine Siedlung im Wachan")
+    ], [
+      src("Wikipedia: Wachankorridor", "https://de.wikipedia.org/wiki/Wachankorridor"),
+      src("UNEP: Wakhan Conservation Report", "https://postconflict.unep.ch/publications/WCR.pdf")
+    ], {summary:"Der afghanische Hochgebirgskorridor liegt zwischen Tadschikistan, Pakistan und China.",wiki:{page:"Wachankorridor",language:"de"},searchTerm:"Wachankorridor Geschichte Great Game Wakhi Kirgisen Karte"}),
+
+    card("Geo Atlas", "Ferghanatal", [
+      "Das Ferghanatal ist eine dicht besiedelte Senke zwischen dem Tian Shan und dem Alaigebirge. Der Syrdarja durchquert ein Bewässerungsgebiet, das heute auf Usbekistan, Kirgisistan und Tadschikistan verteilt ist. Die sowjetischen Verwaltungsgrenzen wurden 1991 zu Staatsgrenzen. Straßen, Wasserleitungen und Siedlungsräume liegen seither mehrfach auf verschiedenen Seiten der Grenze; hinzu kommen mehrere Exklaven.",
+      "In der Antike lag hier das für seine Pferde bekannte Dayuan. Später gehörte das Tal zu den großen Siedlungsgebieten an den Wegen zwischen dem Tarimbecken und Transoxanien. Babur wurde 1483 in Andischan geboren und machte sich von hier aus auf den Weg, der schließlich zur Gründung des Mogulreichs in Indien führte."
+    ], [
+      F("Fergana Valley map-de.svg", "Das Ferghanatal und die heutigen Staatsgrenzen"),
+      F("Ferghana Valley UZB.JPG", "Der usbekische Teil des Ferghanatals")
+    ], [
+      src("Wikipedia: Ferghanatal", "https://de.wikipedia.org/wiki/Ferghanatal"),
+      src("Encyclopaedia Iranica: Ferghana", "https://www.iranicaonline.org/articles/ferghana")
+    ], {summary:"Das Ferghanatal ist ein zentralasiatisches Bewässerungsgebiet, das heute zu drei Staaten gehört.",wiki:{page:"Ferghanatal",language:"de"},searchTerm:"Ferghanatal Grenzen Exklaven Geschichte Dayuan Babur Karte"}),
+
+    card("Geo Atlas", "Musandam", [
+      "Musandam ist ein omanisches Gouvernement auf einer Halbinsel an der Straße von Hormus. Das Staatsgebiet der Vereinigten Arabischen Emirate trennt Musandam vom übrigen Oman. Von der Küste aus ragen lange Meeresarme zwischen steile Kalkberge. Al-Chasab ist der Verwaltungssitz und der wichtigste Hafen.",
+      "Die Lage am südlichen Ufer der Meerenge gibt Musandam seine politische Bedeutung. Durch die Straße von Hormus läuft ein großer Teil der weltweiten Öl- und Flüssiggasexporte. Im abgelegenen Dorf Kumzar an der Nordspitze wird Kumzari gesprochen, eine iranische Sprache, deren Wortschatz den jahrhundertelangen Seeverkehr am Golf erkennen lässt."
+    ], [
+      F("Strait of Hormuz and Musandam Peninsula (MODIS 2018-12-10).jpg", "Musandam an der Straße von Hormus"),
+      F("Musandam from Sea.jpg", "Musandams Berge von der See aus")
+    ], [
+      src("Wikipedia: Musandam", "https://de.wikipedia.org/wiki/Musandam"),
+      src("U.S. Energy Information Administration: Strait of Hormuz", "https://www.eia.gov/international/content/analysis/special_topics/World_Oil_Transit_Chokepoints/")
+    ], {summary:"Die omanische Exklave liegt am südlichen Ufer der Straße von Hormus.",wiki:{page:"Musandam",language:"de"},searchTerm:"Musandam Oman Exklave Straße von Hormus Kumzari Karte"}),
+
+    card("Geo Atlas", "Halbinsel Kola", [
+      "Die Halbinsel Kola liegt im äußersten Nordwesten Russlands zwischen der Barentssee und dem Weißen Meer. Sie gehört zur Oblast Murmansk und zum traditionellen Siedlungsgebiet der Samen. Der Einfluss des Nordatlantikstroms hält die Küste bei Murmansk im Winter eisfrei. Deshalb wurden der Hafen und die Stützpunkte der russischen Nordflotte hier ausgebaut.",
+      "Die sowjetische Industrialisierung stützte sich auf den Abbau zahlreicher Erze, vor allem auf Nickel und Apatit. Rund um einzelne Hüttenwerke entstanden stark belastete Böden, während große Teile des Inneren dünn besiedelte Tundra blieben. Bei Sapoljarny erreichte die Kola-Bohrung 1989 eine senkrechte Tiefe von 12.262 Metern; keine andere Bohrung drang tiefer in die Erdkruste ein."
+    ], [
+      F("Kola peninsula.png", "Lage der Halbinsel Kola"),
+      F("Khibiny.jpg", "Die Chibinen im Inneren der Halbinsel")
+    ], [
+      src("Wikipedia: Halbinsel Kola", "https://de.wikipedia.org/wiki/Halbinsel_Kola"),
+      src("Encyclopaedia Britannica: Kola Peninsula", "https://www.britannica.com/place/Kola-Peninsula")
+    ], {summary:"Die russische Arktishalbinsel gehört zum Siedlungsgebiet der Samen. Dort liegen große Bergwerke und Stützpunkte der Nordflotte.",wiki:{page:"Halbinsel_Kola",language:"de"},searchTerm:"Halbinsel Kola Samen Murmansk Nordflotte Bergbau Karte"}),
+
+    card("Geo Atlas", "Darién Gap", [
+      "Der Darién Gap liegt im Grenzgebiet von Panama und Kolumbien. Hier endet die Panamericana in Yaviza; auf der südamerikanischen Seite setzt das Straßennetz bei Turbo wieder ein. Dazwischen liegt schwer zugänglicher Regenwald, der von Gebirgszügen und zahlreichen Flüssen durchzogen wird. Der Straßenbau blieb wegen der hohen Kosten und der absehbaren Folgen für Schutzgebiete und örtliche Gemeinschaften aus.",
+      "Zum Gebiet gehören die Siedlungsräume der Emberá-Wounaan und der Guna sowie zwei große Nationalparks. Seit den 2010er Jahren wurde der Darién außerdem zu einer viel benutzten und lebensgefährlichen Migrationsroute nach Norden. Die fehlende Straße schützt einen ökologisch bedeutenden Raum. Zugleich bildet sie eine Lücke im kontinentalen Verkehrsnetz, durch die heute eine der wichtigsten amerikanischen Migrationsrouten führt."
+    ], [
+      F("Map of Darién Gap-en.svg", "Die Unterbrechung der Panamericana"),
+      F("Bosque Tapón del Darién Triganá - Chocó.jpg", "Regenwald im kolumbianischen Darién")
+    ], [
+      src("Wikipedia: Darién Gap", "https://de.wikipedia.org/wiki/Dari%C3%A9n_Gap"),
+      src("UNESCO: Darién National Park", "https://whc.unesco.org/en/list/159/")
+    ], {summary:"Das straßenlose Grenzgebiet liegt zwischen Panama und Kolumbien.",wiki:{page:"Darién_Gap",language:"de"},searchTerm:"Darién Gap Panamericana Emberá Guna Migration Karte"}),
+
+    card("Deutsche Sprichwörter in kyrillischen Buchstaben", "Morgenstund hat Gold im Mund.", [
+      "Lautwert: /ˈmɔʁɡn̩ˌʃtʊnt hat ɡɔlt ɪm mʊnt/. Die Folge шт gibt das deutsche st am Anfang von Stund wieder. Am Wortende stehen т für das stimmlos gesprochene d in Gold und Mund."
+    ], [F("Sunrise in germany.jpg", "Früher Morgen")], proverbSources("Morgenstund hat Gold im Mund", "Kyrillisches Alphabet"), {summary:"Моргенштунт хат Голт им Мунт.",searchTerm:"Morgenstund hat Gold im Mund Herkunft Bedeutung"}),
+
+    card("Deutsche Sprichwörter in kyrillischen Buchstaben", "Viele Köche verderben den Brei.", [
+      "Lautwert: /ˈfiːlə ˈkœçə fɛɐ̯ˈdɛɐ̯bn̩ deːn bʁaɪ̯/. Das kyrillische ө steht hier für das deutsche ö. Für den ich-Laut in Köche steht die Folge хь; ай gibt den Diphthong in Brei wieder."
+    ], [F("Cookers in the White House kitchen.jpg", "Mehrere Köche bei der Arbeit")], proverbSources("Viele Köche verderben den Brei", "Kyrillisches Alphabet"), {summary:"Филе Көхье фердербен ден Брай.",searchTerm:"Viele Köche verderben den Brei Herkunft Bedeutung"}),
+
+    card("Deutsche Sprichwörter in kyrillischen Buchstaben", "Wo gehobelt wird, fallen Späne.", [
+      "Lautwert: /voː ɡəˈhoːbl̩t vɪʁt ˈfalən ˈʃpɛːnə/. Das deutsche w erscheint als в. Шп gibt das am Wortanfang gesprochene sp wieder, э den langen ä-Laut in Späne."
+    ], [F("Germany Plane-with-wood-shavings-01.jpg", "Hobel und Holzspäne")], proverbSources("Wo gehobelt wird, fallen Späne", "Kyrillisches Alphabet"), {summary:"Во гехобельт вирт, фаллен Шпэне.",searchTerm:"Wo gehobelt wird fallen Späne Herkunft Bedeutung"}),
+
+    card("Deutsche Sprichwörter in kyrillischen Buchstaben", "Übung macht den Meister.", [
+      "Lautwert: /ˈyːbʊŋ maxt deːn ˈmaɪ̯stɐ/. Das in mehreren kyrillisch geschriebenen Sprachen gebrauchte ү steht für den gerundeten Vokal ü. Х entspricht dem ach-Laut; ай dem deutschen ei."
+    ], [F("Student Violin.jpg", "Eine Geigenübung")], proverbSources("Übung macht den Meister", "Kyrillisches Alphabet"), {summary:"Үбунг махт ден Майстер.",searchTerm:"Übung macht den Meister Herkunft Bedeutung"}),
+
+    card("Deutsche Sprichwörter in kyrillischen Buchstaben", "Wer anderen eine Grube gräbt, fällt selbst hinein.", [
+      "Lautwert: /veːɐ̯ ˈandəʁən ˈaɪnə ˈɡʁuːbə ɡʁɛːpt fɛlt zɛlpst hɪˈnaɪ̯n/. Э gibt den ä-Laut wieder. Das b in gräbt und selbst wird stimmlos gesprochen und erscheint deshalb als п."
+    ], [F("Photograph of a group of young men digging a hole, Clarkesville, Habersham County, Georgia, 1950 - DPLA - 7e96e659223f35d83d95b94fb71422573300.jpeg", "Das Ausheben einer Grube, 1950")], proverbSources("Wer anderen eine Grube gräbt fällt selbst hinein", "Kyrillisches Alphabet"), {summary:"Вер андерен айне Грубе грэпт, фэльт зэльпст хинайн.",searchTerm:"Wer anderen eine Grube gräbt Herkunft Bedeutung"}),
+
+    card("Deutsche Sprichwörter in griechischen Buchstaben", "Wer rastet, der rostet.", [
+      "Lautwert: /veːɐ̯ ˈʁastət deːɐ̯ ˈʁɔstət/. Das moderne griechische β hat den Lautwert /v/ und steht deshalb für das deutsche w. Für das deutsche d steht die Folge ντ."
+    ], [F("Rusted bicycle (Unsplash).jpg", "Ein verrostetes Fahrrad")], proverbSources("Wer rastet der rostet", "Griechisches Alphabet"), {summary:"Βερ ράστετ, ντερ ρόστετ.",searchTerm:"Wer rastet der rostet Herkunft Bedeutung"}),
+
+    card("Deutsche Sprichwörter in griechischen Buchstaben", "Eile mit Weile.", [
+      "Lautwert: /ˈaɪ̯lə mɪt ˈvaɪ̯lə/. Άϊ gibt das deutsche ei als Folge von a und i wieder; die Trema trennt die beiden griechischen Vokalzeichen. Β steht für den Laut /v/ des deutschen w."
+    ], [F("Garden snail crossing the sidewalk (cropped).jpg", "Eine Schnecke auf einem Gehweg")], proverbSources("Eile mit Weile", "Griechisches Alphabet"), {summary:"Άϊλε μιτ Βάϊλε.",searchTerm:"Eile mit Weile Herkunft Bedeutung"}),
+
+    card("Deutsche Sprichwörter in griechischen Buchstaben", "Kleider machen Leute.", [
+      "Lautwert: /ˈklaɪ̯dɐ ˈmaxn̩ ˈlɔɪ̯tə/. Ντ vertritt das deutsche d, χ den ach-Laut. Die getrennte Folge όϊ nähert den Diphthong eu in Leute an."
+    ], [F("A tailor fitting a customer (Belgrade, 1937).jpg", "Anprobe bei einem Schneider, Belgrad 1937")], proverbSources("Kleider machen Leute", "Griechisches Alphabet"), {summary:"Κλάϊντερ μάχεν Λόϊτε.",searchTerm:"Kleider machen Leute Sprichwort Herkunft Bedeutung"}),
+
+    card("Deutsche Sprichwörter in griechischen Buchstaben", "Jeder Topf findet seinen Deckel.", [
+      "Lautwert: /ˈjeːdɐ tɔpf ˈfɪndət ˈzaɪ̯nən ˈdɛkl̩/. Für das deutsche j steht Γι vor einem Vokal. Φ steht für f, ζ für das stimmhafte s am Anfang von seinen und ντ für d."
+    ], [F("A lid for a pot.jpg", "Ein Topf mit passendem Deckel")], proverbSources("Jeder Topf findet seinen Deckel", "Griechisches Alphabet"), {summary:"Γιέντερ Τοπφ φίντετ ζάϊνεν Ντέκελ.",searchTerm:"Jeder Topf findet seinen Deckel Herkunft Bedeutung"}),
+
+    card("Deutsche Sprichwörter in griechischen Buchstaben", "Ein Unglück kommt selten allein.", [
+      "Lautwert: /aɪ̯n ˈʊnɡlʏk kɔmt ˈzɛltn̩ aˈlaɪ̯n/. Γκ steht für g. Das griechische υ hatte in älteren Sprachstufen einen gerundeten Lautwert und übernimmt hier das deutsche ü; das heutige Griechisch spricht es anders aus."
+    ], [F("Broken umbrella (30312884283).jpg", "Ein zerbrochener Regenschirm")], proverbSources("Ein Unglück kommt selten allein", "Griechisches Alphabet"), {summary:"Άϊν Ούνγκλυκ κομτ ζέλτεν αλάϊν.",searchTerm:"Ein Unglück kommt selten allein Herkunft Bedeutung"})
+  );
+})();

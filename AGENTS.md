@@ -214,3 +214,61 @@ Good Writing für Spezialisten. Einfache Schemata wie Hero’s Journey oder Drei
 - Die mediale Form folgt der Arbeit: Werkfotografie für räumliche und materielle Arbeiten, bewegtes Bild oder Ton für zeitbasierte Arbeiten, mehrere Ansichten bei Arbeiten mit wichtigen Details.
 - Die Schreibkarten trennen die knappe deutsche Arbeitsanweisung vom historischen Quellenwortlaut. Der Wortlaut wird erst beim Öffnen der Karte aus Wikisource oder Project Gutenberg geladen und zwischen ausdrücklich geprüften Anfangs- und Endmarken ausgeschnitten.
 - Die geladenen Schreibpassagen bleiben in der Sprache und Schreibweise der Quelle. Navigation, Kopfzeilen und fremde Kapitel werden nicht übernommen. Jede Karte verlinkt Digitalisat und geladene Transkription.
+
+## Ergänzungen vom 3. September 2026 – vierte Erweiterung
+
+### Neue Kategorien – Wortlaut der Vorgabe
+
+Englisch Vokabular
+
+Seltene englische Wörter, vorzugsweise aus dem alltäglichen Gebrauch. Jede Karte gibt eine genaue deutsche Übersetzung und zwei oder drei kurze englische Beispielsätze mit deutscher Übersetzung. Die Beispiele zeigen unterschiedliche, aber zusammengehörige Verwendungen des Wortes. Register und Aussprache werden genannt.
+
+Geo Atlas
+
+Eine Karte behandelt ein Land oder eine Region der Erde. Sie wählt aus Geschichte, Politik, strategischer Lage und Kultur genau die Gesichtspunkte aus, die diesen Raum verständlich machen. Lagekarten, Landschaftsbilder und sachlich wichtige Ansichten ergänzen den Text. Wikipedia und weitere geeignete Nachschlagewerke liefern die überprüfbaren Grundangaben.
+
+Deutsche Sprichwörter in kyrillischen Buchstaben
+
+Außen steht zuerst das deutsche Sprichwort in lateinischen Buchstaben, darunter dasselbe Deutsch nach dem Lautwert in kyrillischen Buchstaben. Die Umschrift folgt der deutschen Standardaussprache. Wo das Russische keinen passenden Laut besitzt, dürfen Zeichen anderer kyrillisch geschriebener Sprachen verwendet werden. Die Detailansicht erklärt nur die jeweils schwierigen Lautzuordnungen.
+
+Deutsche Sprichwörter in griechischen Buchstaben
+
+Außen steht zuerst das deutsche Sprichwort in lateinischen Buchstaben, darunter dasselbe Deutsch nach dem Lautwert in griechischen Buchstaben. Digraphen und diakritische Zeichen dürfen deutsche Laute annähern, für die das moderne griechische Alphabet kein einzelnes Zeichen hat. Die Detailansicht nennt die zugrunde gelegte Standardaussprache und erklärt die nötigen Zuordnungen.
+
+### Umfang dieser Erweiterung
+
+- Jede der vier neuen Kategorien enthält fünf Karten.
+- Die Erweiterung umfasst zwanzig Karten. Der aktive Bestand umfasst danach 427 Karten in 34 Kategorien.
+- Jede neue Karte hat einen eigens gewählten Google-Suchbegriff. Das Suchfeld steht am Ende der Detailansicht, bleibt editierbar und öffnet die Suche in einem neuen Tab.
+
+### Wikipedia und andere nachgeladene Texte
+
+- „Wikipedia-Einleitung“ bezeichnet die vollständige Einleitung des Artikels: alle zusammengehörigen Absätze vor der ersten Abschnittsüberschrift. Eine Angabe wie `count: 1` darf diese Einleitung nicht mehr auf den ersten Absatz kürzen.
+- Wenn ein Begriff keinen eigenen deutschsprachigen Wikipedia-Artikel besitzt, wird zuerst nach einem erklärenden Abschnitt in einem übergeordneten deutschen Artikel gesucht. Als zweite Möglichkeit dient der passende englische Artikel. Eine eigene Kurzfassung ersetzt eine vorhandene brauchbare Erklärung nicht.
+- Extern übernommene Absätze bleiben als Quellenwortlaut erkennbar. Eigene Sätze werden davon getrennt und nicht als Zitat ausgegeben.
+
+### Regeln für deutsches Sachprosa
+
+- Jeder Satz wird zunächst auf seinen wirklichen Gegenstand geprüft. Ein Material, eine Farbe oder ein Text steht nur dann als grammatisches Subjekt, wenn das Verb einen wirklichen Vorgang dieses Gegenstands bezeichnet. Farben „wandern“ nicht, Textilien „mischen“ nichts und Werke „erzählen“ nichts, wenn damit nur eine vage Wirkung gemeint ist.
+- Beschreibungen nennen die beobachtbare Anordnung, den Herstellungsvorgang, eine belegte Entscheidung oder eine Wirkung mit klarer Ursache. Der Name eines Künstlers wird nicht zum mechanischen Satzanfang für Handlungen, die lediglich im fertigen Werk sichtbar sind.
+- Artikel, Pronomen, Hilfsverben und Präpositionen bleiben erhalten, wenn die deutsche Grammatik sie verlangt. Kürze rechtfertigt weder Telegrammstil noch bloße Reihen von Substantiven.
+- Das Verb „verbinden“ und seine Ableitungen werden in selbst geschriebenen Erklärungen nicht als Deutungsformel verwendet. Statt eines Ersatzwortes wird der konkrete Sachverhalt beschrieben.
+- Neue Komposita und analytisch klingende Etiketten werden nicht erfunden. Wörter wie „Fallstapelung“ oder „Kreuzseen“ bleiben ausgeschlossen. Ein ungebräuchlicher Fachausdruck wird nur mit einer überprüfbaren Quelle und einer Erklärung verwendet.
+- Englische Wörter werden nicht automatisch durch ähnlich aussehende deutsche Wörter ersetzt. Vor der Verwendung eines seltenen Fremdworts wird geprüft, ob es in deutschem Sachtext dieselbe Bedeutung und denselben Gebrauch besitzt. „Transluzent“ steht nur dort, wo die technische Unterscheidung von transparent und opak erforderlich ist.
+- Dreierreihen sind nur erlaubt, wenn der Gegenstand tatsächlich aus drei Teilen besteht und diese drei vollständig gemeint sind. Aufzählungen erhalten einen erkennbaren Umfang; beiläufige Dreiergruppen als Rhythmusmittel entfallen.
+- Eine Überarbeitung darf die Sätze nicht zu einer Folge gleich kurzer Hauptsätze machen. Nebensätze, Rückbezüge und wechselnde Satzlängen bilden die tatsächlichen logischen Beziehungen ab.
+- Vor der Freigabe entstehen intern mindestens drei ernsthafte Formulierungen für jeden selbst geschriebenen Absatz. Gewählt wird die idiomatischste und genaueste Fassung. Anschließend folgt eine Leseprobe: Würde ein guter deutschsprachiger Sachbuchautor diesen Satz ohne Übersetzung aus dem Englischen schreiben?
+- Ausstellungssprache, Produkttexte und Werbung sind kein Vorbild. Allgemeine Aussagen über eine „Mischung“, „Verbindung“, „Spannung“, „Erfahrung“ oder „Transformation“ werden durch beobachtbare Einzelheiten ersetzt oder gestrichen.
+- Jede Zeitangabe und jeder Raumbegriff erhält den nötigen Maßstab. Völker, Reiche, Regionen und Techniken werden mit Zeitraum, heutigem Staat oder einem bekannten Nachbarort verortet, sobald der Name allein zu wenig erklärt.
+
+### Regeln für einzelne Kategorien
+
+- Karten über seltene Sprachen nennen die Sprechergruppe, das heutige Land und die Lage gegenüber einer bekannten Stadt oder Region. Wenn verlässliche Zahlen vorliegen, werden Sprecherzahl und Erhebungsjahr genannt. Beispiele erscheinen mit Hervorhebungen, Glossen, kleinen Tabellen oder einfachen Diagrammen, sobald dadurch die grammatische Beziehung deutlicher wird.
+- Karten über rhetorische und poetische Verfahren enthalten nach Möglichkeit einen genauen Satz eines frühen Theoretikers oder Künstlers. Die Karte erklärt, welche Wirkung man dem Verfahren damals zuschrieb und wie diese historische Deutung heute einzuordnen ist.
+- „UnsichtbareKonventionen“ verlangt eine tatsächlich wirksame, meist unbemerkte Regel und einen verständlichen Fall ihrer Verletzung. Die bloße Gleichsetzung von Gis und As oder eine allgemeine Erklärung der enharmonischen Verwechslung erfüllt diese Aufgabe nicht und wird nicht erneut verwendet.
+- Karten der „InternetArchäologie“ sagen ohne Rätselton, was die Seite ist, aus welcher Zeit sie stammt und was beim Öffnen zu sehen oder zu benutzen ist. Der Link wird geprüft; technische Voraussetzungen oder ausgefallene Bestandteile werden ausdrücklich genannt.
+
+### Bilder
+
+- Ein Buchumschlag ist nur brauchbar, wenn der Umschlag selbst Gegenstand der Karte ist. Die Bildsuche wird vor der Übernahme auf Umschläge, Titelblätter, gescannte Buchseiten und Webseiten-Screenshots geprüft.
+- Ein sachlich falsches oder bloß dekoratives Bild ist schlechter als eine Karte ohne Bild. Wenn kein geeignetes vorhandenes Bild auffindbar ist, bleibt der Medienbereich leer. Alternativ darf eine eigene Abbildung entstehen; ihr Stil richtet sich nach dem Gegenstand und vermeidet die naheliegendste Symbolidee. Eigene Bilder werden als solche gekennzeichnet.
