@@ -272,3 +272,10 @@ Außen steht zuerst das deutsche Sprichwort in lateinischen Buchstaben, darunter
 
 - Ein Buchumschlag ist nur brauchbar, wenn der Umschlag selbst Gegenstand der Karte ist. Die Bildsuche wird vor der Übernahme auf Umschläge, Titelblätter, gescannte Buchseiten und Webseiten-Screenshots geprüft.
 - Ein sachlich falsches oder bloß dekoratives Bild ist schlechter als eine Karte ohne Bild. Wenn kein geeignetes vorhandenes Bild auffindbar ist, bleibt der Medienbereich leer. Alternativ darf eine eigene Abbildung entstehen; ihr Stil richtet sich nach dem Gegenstand und vermeidet die naheliegendste Symbolidee. Eigene Bilder werden als solche gekennzeichnet.
+
+## Ergänzungen vom 4. September 2026
+
+- Jede Detailkarte besitzt eine positive und eine negative Bewertungsmöglichkeit.
+- Negatives Feedback erfasst feste Kritikgründe und einen freien Kommentar. Jeder Eintrag speichert Kartentitel, Kategorie, Zeitpunkt, Bewertung und Quellenadressen im Browser.
+- Die Anwendung stellt das gesammelte Feedback jederzeit als Markdown zum Kopieren, Herunterladen oder über die systemeigene Teilen-Funktion bereit. Sie behauptet nicht, Daten ohne einen eingerichteten Server an den Autor oder an ein Sprachmodell zu senden.
+- Die Kategorieauswahl ist zusätzlich als vollständiges Auswahlfeld sichtbar. Versionsparameter an den Datendateien verhindern, dass ein älterer Browsercache neu hochgeladene Karten verdeckt.
