@@ -1,356 +1,286 @@
 # Projektanweisungen
 
-## Kategorien – exakter Wortlaut der Vorgabe
+## Zweck
 
-Aphorismen (nur kluge, nur solche die in der aphorismenforschung als wirklich großartige gelten)
+Diese Datei ist das dauerhafte Regelblatt für Auswahl, Recherche, Text, Medien und technische Umsetzung der Kartei. Sie enthält keine Arbeitschronik, keine Zwischenstände, keine Kartenzahlen und keine erledigten Einzelaufträge. Neue Hinweise werden in die passende bestehende Regel eingearbeitet; doppelte oder nur anders formulierte Fassungen derselben Regel entfallen.
 
-Historische Anekdoten - interessante historische Geschichten, besonders gute Geschichten mit Einsicht.
+## Grundsätze
 
-Philosophische Begriffe erklärt : wie ein philosophisches wörterbuch. erst eine einfache definition, dann wenn man draufklick eine genauere erklärung.
-sowohl für begriffe die durch verschiedenen genutzt wurden und dadurch unterschiedlich beuracht wurden als auch für einzelne begriffe die mit einem bestimmten denker verbunden sind. keine blabla sachen sondern direkt die komplexität des konzepts erfassen. 
+- Die Auswahl ist kenntnisreich, überraschend und abseits naheliegender Kanonbeispiele. Der erstbeste Einfall reicht nicht.
+- Jede Karte vermittelt einen klar bestimmten Gegenstand. Überschrift, Außentext, Detailtext und Medien behandeln denselben Gegenstand.
+- Namen, Daten, Orte, Übersetzungen, Noten, Zitate und Medien werden vor der Freigabe geprüft.
+- Primärquellen, historische Ausgaben, wissenschaftliche Nachschlagewerke, Museen und zuständige Kulturinstitutionen haben Vorrang.
+- Jede Karte nennt ihre Quellen und erhält einen eigens gewählten, editierbaren Google-Suchbegriff.
+- Genannte Beispiele aus einem Nutzerauftrag zeigen die gewünschte Spannweite. Sie werden nur übernommen, wenn der Nutzer dies ausdrücklich verlangt.
+- „Gute Gags“ und „Seltene und geniale Lifehacks“ bleiben archiviert. Ihre Daten werden weder angezeigt noch durchsucht oder gezählt.
 
-Ein Künstler und seine drei wichtigsten Werke 
+## Sprache
 
-Erste Sätze großer romane: NUR der satz auf der außenseite. wenn man draufklickt, gibt es etwas kontext und worum es in dem roman geht. 
+- Die Sprache ist einfach, idiomatisch, genau und informationsreich. Floskeln, Slogans, Werbesprache, Ausstellungssprache und künstliche Pointen entfallen.
+- Überschriften nennen den Namen, das Werk, den Ort oder den Begriff. Sie formulieren keine Werbezeile und keine vorweggenommene Pointe.
+- Jeder Absatz beantwortet konkrete Fragen: Was ist zu sehen oder zu hören? Was geschah? Wo und wann? Was unterscheidet den Gegenstand von ähnlichen Fällen?
+- Artikel, Pronomen, Hilfsverben und Präpositionen bleiben stehen, wenn die deutsche Grammatik sie verlangt. Kürze rechtfertigt keinen Telegrammstil.
+- Materialien, Farben, Texte und Werke erhalten nur Verben, die einen wirklichen Vorgang bezeichnen. Farben „wandern“ nicht, Textilien „mischen“ nichts und Werke „erzählen“ nichts, wenn lediglich eine unbestimmte Wirkung gemeint ist.
+- Der Name eines Künstlers dient nicht als mechanischer Satzanfang für alles, was im fertigen Werk sichtbar ist. Beschrieben werden Anordnung, Material, Herstellungsweise und belegte Entscheidungen.
+- Das Verb „verbinden“ und seine Ableitungen dienen nicht als Deutungsformel. Der Satz nennt stattdessen den konkreten Sachverhalt.
+- Unbelegte Neologismen und analytisch klingende Etiketten wie „Fallstapelung“ oder „Kreuzseen“ sind ausgeschlossen. Ein seltener Fachausdruck braucht eine Quelle und eine Erklärung.
+- Englische Wörter werden nicht durch ähnlich aussehende deutsche Wörter ersetzt, ohne Bedeutung und Gebrauch zu prüfen. „Transluzent“ erscheint nur, wenn die technische Abgrenzung zu transparent und opak nötig ist.
+- Dreierreihen stehen nur dort, wo genau drei Teile vollständig gemeint sind. Beiläufige Dreiergruppen als Rhythmusmittel entfallen.
+- Der Text besteht nicht aus einer Folge gleich kurzer Hauptsätze. Nebensätze, Rückbezüge und wechselnde Satzlängen bilden die sachlichen Beziehungen ab.
+- Vage Vorsicht mit „kann“, „könnte“ oder „lässt sich“ wird durch eine genaue Aussage ersetzt. Unsicherheit bleibt nur bei tatsächlich unsicherer Forschung sichtbar und wird dann benannt.
+- Eigene Absätze werden in mindestens drei ernsthaften Fassungen durchdacht. Verwendet wird die idiomatischste und genaueste Fassung, nicht der erste Entwurf.
+- Zeit- und Raumangaben erhalten einen verständlichen Maßstab. Wenig bekannte Völker, Reiche, Regionen und Techniken werden mit Zeitraum, heutigem Staat oder bekanntem Nachbarort eingeordnet.
 
-Seltene musikstile : mit video (bei videos immer prüfen ob sie auchw riklich zugänglich sind)
+## Medien
 
-Vergessene Komponisten die aber großartig waren und ein besonders gutes Stück von ihnen 
+- Eine neue Karte erhält nach Möglichkeit ein sachlich passendes Bild oder Video. Wo der Gegenstand davon profitiert, werden zwei bis vier unterschiedliche Ansichten gezeigt. Ist weder ein geeignetes vorhandenes Medium noch eine sinnvolle eigene Darstellung verfügbar, bleibt der Medienbereich leer; ein falsches Bild ist keine Ersatzlösung.
+- Ein Bild muss eine konkrete Information liefern. Allgemein passende Dekoration gilt nicht als Bebilderung.
+- Onlinebilder stammen aus nachvollziehbaren Quellen. Eigens erstellte Abbildungen sind erlaubt, wenn kein brauchbares vorhandenes Bild verfügbar ist oder wenn eine erklärende Darstellung dem Gegenstand besser entspricht; sie werden als eigene Darstellung gekennzeichnet.
+- „Eigene GIFs“ bildet eine eigene Medienkategorie. Jedes GIF hat eine erkennbare formale Idee, einen genau gesetzten zeitlichen Ablauf und eine von den übrigen GIFs verschiedene Bewegung. Reine Farbwechsel werden verworfen. GIF-Karten enthalten keinen Erklärungs- oder Detailtext.
+- Buchumschläge, Titelseiten und gescannte Buchseiten erscheinen nur, wenn genau ihre Gestaltung Gegenstand der Karte ist. Bei Romananfängen werden Autorenporträts, Schauplätze oder sachlich passende Abbildungen verwendet.
+- Screenshots von Webseiten, Cookie-Fenster, Navigationsleisten, PDF-Vorschaubilder und überlagerte Seitenelemente sind ausgeschlossen.
+- Für geografische Karten ist eine lesbare Karte Pflicht. Sie zeigt die Region zusammen mit heutigen Staatsgrenzen, einem bekannten Nachbarraum und den im Text genannten Orten. Landschaftsbilder ergänzen die Karte.
+- Die Abbildung einer Liste bezieht sich auf den Urheber, die Überlieferung oder einen konkreten Eintrag der Liste.
+- Bei Filmaufbauten, Montagen und räumlichen Grenzfällen ist eine eigene erklärende Skizze oft geeigneter als ein beliebiges Standbild.
+- Vor der Freigabe wird jedes Medium in der tatsächlich gerenderten Anwendung angesehen. Geprüft werden Motiv, Ausschnitt, Auflösung, sachliche Beziehung, Erreichbarkeit und Einbettung.
+- Bereits veröffentlichte Medien werden bei späteren Arbeiten stichprobenartig erneut geprüft. Ein Bild, das nur lokal oder in einer Vorschau funktionierte, gilt als defekt.
+- Schlägt ein Bild endgültig fehl, verschwindet das vollständige Bildelement einschließlich Beschriftung. Übrige Bilder füllen das Raster neu; ohne verbleibendes Medium verschwindet der Medienbereich. Eine Fehlermeldung oder ein Platzhalter bleibt nicht stehen.
+- YouTube-Videos werden direkt eingebettet und vor der Übernahme auf Verfügbarkeit geprüft. Video und externer Link beginnen bei 0:00; Zeitparameter und automatische Sprünge sind ausgeschlossen.
 
-Großartige Bilder, großartiges Design (sowohl aus kunst als auch aus design; keine alltime hits. sondern geheimtipps und das was KENNER wissen. also auf keinen fall mona lisa oder der schrei. 
+## Quellen und nachgeladene Texte
 
-Märchen und Sagen in originale anthropologischer ethnographische transkription 
+- Übernommener Wortlaut bleibt als Quelle erkennbar. Eigene Sätze stehen getrennt davon und werden nicht als Zitat ausgegeben.
+- „Wikipedia-Einleitung“ bezeichnet alle zusammengehörigen Absätze vor der ersten Abschnittsüberschrift. Sie wird nicht auf den ersten Absatz gekürzt.
+- Fehlt ein eigener deutscher Wikipedia-Artikel, wird zuerst ein passender Abschnitt eines übergeordneten deutschen Artikels gesucht, danach der englische Artikel. Eine eigene Kurzfassung ersetzt keine vorhandene brauchbare Erklärung.
+- Längere gemeinfreie Texte und andere vorgesehene Originaltexte lädt der Browser unmittelbar aus einer genau benannten öffentlichen Quelle. Die produktive Anwendung hält keine unnötige lokale Textkopie vor.
+- Für jeden nachgeladenen Ausschnitt sind Anfangs- und Endmarke geprüft. Navigation, Seitenköpfe, Seitennummern, Scan-Artefakte, OCR-Schmutz und fremde Abschnitte werden entfernt. Historische Schreibweise und Wortlaut bleiben unverändert.
+- Digitalisat und tatsächlich geladene Transkription werden beide verlinkt.
+- Filteranfällige oder längere urheberrechtlich geschützte Originaltexte werden weder in Antworten noch in umfangreichen Werkzeugausgaben wiederholt. Im Code stehen Quelle, Abschnittsmarken und Bereinigungsregeln; der Browser lädt den Wortlaut.
+- Liegt ein Originaltext in einer vom Nutzer bereitgestellten Datei, bleiben Änderungen auf genau begrenzte Stellen außerhalb dieses Wortlauts beschränkt. Die ganze Datei wird nicht zur Kontrolle in die Unterhaltung ausgegeben.
 
-Sagengestalten, Legenden und Märchen aus aller Welt
+## Kategorieprofile
 
-## Bereits in `kartei_verbessert.html` enthaltene Kategorien
+### Aphorismen
 
-- Biologie
-- Technikgeschichte
-- Musiktechnologie
-- Chemie
-- Botanik
-- Ozeanographie
-- Architektur
-- Zeitmessung
-- Paläontologie
-- Archäologie
+> Aphorismen (nur kluge, nur solche die in der aphorismenforschung als wirklich großartige gelten)
 
-## Verbindliche Qualitätsregeln
+- Außen stehen ausschließlich Aphorismus und Zuschreibung, gegebenenfalls mit Bild. Erklärung, Deutung, Zusammenfassung und zusätzlicher Originaltext entfallen.
+- Verwendet werden philologisch gesicherte Sätze von hohem Rang, keine bloß motivierenden Sprüche oder Internetzitate.
 
-- Die zehn zuerst genannten Kategorien wurden mehrfach erweitert; die jeweils aktuelle Sollzahl steht in der jüngsten Ergänzung dieses Dokuments.
-- Jede Karte enthält mindestens ein passendes Bild oder ein passendes Video.
-- Bilder stammen aus nachvollziehbaren Online-Quellen. KI-generierte und eigens angefertigte Bilder bleiben ausgeschlossen.
-- Wo der Gegenstand davon profitiert, zeigt eine Karte zwei bis vier Bilder.
-- YouTube-Videos sind direkt in der Karte eingebettet. Jeder Video-Link wird vor der Übernahme geprüft.
-- Überschriften nennen den Namen, das Werk oder den Gegenstand. Werbesprache, Slogans und künstliche Pointen entfallen.
-- Die Sprache ist einfach, klar, lebhaft und informationsreich. Floskeln, Füllsätze und rhetorische Kontrastformeln entfallen.
-- Eigene Formulierungen werden überarbeitet; der erste Entwurf gilt nie automatisch als Endfassung.
-- Primärquellen, historische Ausgaben, Museumssammlungen und wissenschaftliche Nachschlagewerke haben Vorrang. Kurze Originalpassagen werden als solche gekennzeichnet.
-- Karten zu Märchen, Sagen und Sagengestalten erzählen den notwendigen Handlungsablauf, nennen Varianten und geben den Überlieferungs- oder Aufzeichnungskontext an.
+### Historische Anekdoten
 
-## Ergänzungen vom 30. August 2026
+> Krasse historische koinzidenzen - interessante historische geschichten, besonders, gute geschichten, mit einsicht.
 
-- „Historische Anekdoten“ meint historische Begebenheiten, die erstaunlich, aufschlussreich oder besonders sind. Bloße Gleichzeitigkeit erfüllt die Kategorie nicht.
-- Die Karten verschiedener Kategorien erscheinen in gemischter Reihenfolge. Zusammenhängende Blöcke einer einzigen Kategorie sind ausgeschlossen.
-- Die Detailansicht jeder Komponistenkarte erklärt ausdrücklich, was an der Musik und ihrer Behandlung von Form, Klang oder Besetzung besonders ist und warum das Werk heute mehr Aufmerksamkeit verdient.
-- Karten mit ethnografisch aufgezeichneten Märchen und Sagen zeigen den vollständigen gemeinfreien Originaltext. Die Anwendung lädt dafür eine genau bezeichnete Textdatei. Der Ausschnitt beginnt und endet exakt mit der betreffenden Erzählung. Navigation, OCR-Schmutz, fremde Zusätze und fehlerhafte Zeichen werden entfernt; historische Schreibweisen und der Wortlaut der Quelle bleiben erhalten.
-- Beim Öffnen einer anderen Karte beginnt die Detailansicht immer oben. Eine frühere Scrollposition wird nie übernommen.
-- Die nächste Erweiterung umfasst insgesamt fünfzig neue Karten: fünf neue Karten in jeder der zehn Kategorien.
+- Gemeint sind erstaunliche, aufschlussreiche oder besonders gut erzählbare historische Begebenheiten. Bloße Gleichzeitigkeit erfüllt die Kategorie nicht.
+- Ablauf, Beteiligte, Ort, Zeitraum und Quellenlage müssen verständlich sein. Die Pointe ergibt sich aus der Begebenheit und wird nicht als Slogan vorgeschaltet.
 
-## Ergänzungen vom 31. August 2026
+### Philosophische Begriffe
 
-### Neue Kategorien – Wortlaut der Vorgabe
+> Philosophische Begriffe erklärt : wie ein philosophisches wörterbuch. erst eine einfache definition, dann wenn man draufklick eine genauere erklärung.
+>
+> sowohl für begriffe die durch verschiedenen genutzt wurden und dadurch unterschiedlich beuracht wurden als auch für einzelne begriffe die mit einem bestimmten denker verbunden sind. keine blabla sachen sondern direkt die komplexität des konzepts erfassen.
 
-Literarische/filmische Tropen und Typen: Typenszenen, Tropes, ihre Beispiele im Vorkommen durch die Geschichte oder die Zeit eines Mediums.
+- Außen steht eine einfache, genaue Definition. Die Detailansicht lädt die vollständige passende Wikipedia-Einleitung oder einen genau gewählten Ersatzabschnitt.
+- Bei mehreren philosophischen Verwendungen werden Denker, Zeitraum und Bedeutungsunterschiede getrennt. Vage Nomenreihen und bloße Schlagwörter entfallen.
 
-Wichtige Akkorde und Chord Changes: mit Beispielen in Songs und Stücken; keine naheliegenden Standardbeispiele wie Tristan-Akkord, Four-Chord-Song oder andalusische Kadenz.
+### Künstler und drei Werke
 
-### Verbindliche Regeln dieser Erweiterung
+> Ein Künstler und seine drei wichtigsten Werke
 
-- Bei jedem neuen Laden der Seite werden sämtliche Karten und die Reihenfolge der Kategorien neu gemischt. Die erste Karte ist nicht fest vorgegeben.
-- Jede der zehn bisherigen Kategorien erhält drei weitere Karten und umfasst danach jeweils achtzehn Karten.
-- Die beiden neuen Kategorien beginnen mit jeweils zehn Karten.
-- Die neuen Einträge behandeln kenntnisreiche, weniger bekannte Beispiele. Naheliegende Kanonbeispiele und bloße Wiederholungen bereits genannter Muster entfallen.
-- Vollständige gemeinfreie Texte werden beim Öffnen der Detailkarte von einer genau benannten öffentlichen Onlinequelle geladen. Die produktive HTML-Datei verwendet dafür keine lokale Textkopie.
-- Für jeden extern geladenen Text sind Anfang und Ende der betreffenden Erzählung ausdrücklich festgelegt. Seitennummern, Navigation, Scan-Kopfzeilen, OCR-Schmutz und fremde Zusätze werden entfernt. Der historische Wortlaut bleibt erhalten.
-- Die Quellenadresse des Digitalisats und die tatsächlich geladene Transkription werden in der Detailkarte verlinkt.
+- Die Auswahl nennt genau drei zentrale Werke. Alle drei werden gezeigt und einzeln benannt.
+- Der Detailtext erklärt, weshalb gerade diese Arbeiten das Verfahren, die Entwicklung oder die Eigenart des Künstlers sichtbar machen.
 
-## Ergänzungen vom 1. September 2026
+### Erste Sätze großer Romane
 
-- Aphorismenkarten enthalten ausschließlich den Aphorismus, die Zuschreibung und gegebenenfalls ein Bild. Erklärung, Deutung, Zusammenfassung und zusätzlicher Originaltext entfallen.
-- Bei den ersten Sätzen großer Romane steht außen ausschließlich der erste Satz. Die Detailansicht lädt den vollständigen ersten Absatz des Wikipedia-Artikels zum Roman.
-- Die Detailansicht philosophischer Begriffe verwendet genaue Absätze des zugehörigen Wikipedia-Artikels. Vage Modalformulierungen mit „kann“, artikellose Nomenreihen und unpräzise Aufzählungen entfallen.
-- Karten zu Sagengestalten laden den ersten Absatz und weitere zusammenhängende Absätze des zugehörigen Wikipedia-Artikels. Die Anwendung kündigt dieses Verfahren im Kartentext nicht eigens an.
-- Musikkarten nennen den zu hörenden Satz oder Abschnitt. Eingebettete YouTube-Videos und ihre externen Links beginnen immer bei 0:00; Startmarken, Zeitparameter und automatische Sprünge werden nicht verwendet.
-- Jede der zwölf Kategorien erhält fünf weitere Karten. Die zehn älteren Kategorien umfassen danach jeweils 23 Karten; die beiden am 31. August ergänzten Kategorien jeweils 15 Karten. Der Gesamtbestand umfasst 260 Karten.
+> Erste Sätze großer romane: NUR der satz auf der außenseite. wenn man draufklickt, gibt es etwas kontext und worum es in dem roman geht.
 
-## Ergänzungen vom 2. September 2026
+- Außen steht nur der erste Satz mit Autor und Titel. Sätze aus anderen Sprachen als Deutsch oder Englisch erscheinen in deutscher Übersetzung; deutsche und englische Originale bleiben unverändert.
+- Innen wird die vollständige Wikipedia-Einleitung zum Roman geladen. Ein Buchumschlag dient nicht als Ersatzbild.
 
-### Neue Kategorien
+### Seltene Musikstile
 
-Falsche Modelle mit großer Erklärungskraft
+> Seltene musikstile : mit video (bei videos immer prüfen ob sie auchw riklich zugänglich sind)
 
-Die Karten behandeln überholte Modelle, die bestimmte Beobachtungen erstaunlich gut ordneten. Außen stehen Name und historische Abbildung. Innen wird präzise getrennt: Welche Phänomene erklärte das Modell? Wo scheiterte es? Welche Messung oder welches Argument ersetzte es? Die Darstellung vermeidet Spott und zeigt die damalige Beweislage.
+- Die Karte nennt Region, Gemeinschaft, Aufführungssituation, Besetzung und musikalischen Ablauf. Zuständige Kulturinstitutionen und das UNESCO-Verzeichnis des immateriellen Kulturerbes haben Vorrang.
+- Ein geprüftes Video oder Tonbeispiel gehört dazu. Der zu hörende Satz oder Abschnitt wird benannt, doch das Video beginnt bei 0:00.
 
-Entzifferte Schriften
+### Vergessene Komponisten
 
-Außen steht eine kurze Zeichenfolge mit einem Bild des Originals. Die Detailansicht zeigt Lautwerte oder Wortwerte, die entscheidenden Vergleichstexte und den tatsächlichen Weg der Entzifferung. Unsichere Zeichen bleiben sichtbar als unsicher markiert. Jede Karte endet mit einer vollständigen Übersetzung des gezeigten Ausschnitts.
+> Vergessene Komponisten die aber großartig waren und ein besonders gutes Stück von ihnen
 
-Etymologien und Begriffsgeschichten
+- Jede Karte enthält ein geprüftes vollständiges Werk oder einen klar benannten Satz.
+- Die Detailansicht erklärt konkret, was an Form, Harmonik, Klang, Besetzung oder Satztechnik besonders ist und weshalb das Werk heute mehr Aufmerksamkeit verdient.
 
-Die Karte zeigt ein Wort, dessen Form, Bedeutung oder Gebrauch sich durch Entlehnung, Übersetzung, Streit, technische Entwicklung oder fachlichen Gebrauch verändert hat. Die Detailansicht verfolgt die Entwicklung über klar bestimmte Belege und erklärt, wohin sie geführt hat. Die Auswahl reicht über indogermanische Wortstämme hinaus und verteilt sich auf verschiedene Sprachfamilien, Wanderungswege und Arten des Bedeutungswandels. Lose Wortassoziationen und reine Wörterlisten entfallen.
+### Großartige Bilder und Design
 
-Rhetorische und poetische Verfahren
+> Großartige Bilder, großartiges Design (sowohl aus kunst als auch aus design; keine alltime hits. sondern geheimtipps und das was KENNER wissen. also auf keinen fall mona lisa oder der schrei.
 
-Außen steht eine kurze Passage. Die Detailansicht markiert genau ein Verfahren, etwa erlebte Rede, Apophasis, Zeugma, Chiasmus oder metrische Verschiebung. Danach wird gezeigt, wie dieses Verfahren die betreffende Stelle organisiert. Weitere historische Beispiele dienen dem genauen Vergleich.
+- Die Auswahl reicht über Kunst und Design und meidet die üblichen Kanonbilder. Das Werk selbst wird in brauchbarer Auflösung gezeigt.
+- Der Text beschreibt sichtbare Entscheidungen und den historischen oder technischen Zusammenhang, nicht bloß eine angebliche Wirkung.
 
-Urban Legends
+### Märchen und Sagen in ethnografischen Quellen
 
-Jede Karte trennt die frühesten auffindbaren Berichte, spätere Varianten und den historischen Kontext. Belegte Vorfälle werden von den Ausschmückungen der Legende unterschieden. Die Darstellung erklärt, durch welche Medien, Orte oder gesellschaftlichen Ängste eine Erzählung ihre Form erhielt.
+> Märchen und Sagen in originale anthropologischer ethnographische transkription
 
-Interessante Sprachen und Sprachmerkmale
+- Vor dem Text stehen genaue Region, heutiger Staat, Gemeinschaft, gebräuchliche Eigen- oder Fremdbezeichnung, Aufzeichner, Gewährsperson und Aufzeichnungs- oder Erscheinungsjahr, soweit die Quelle diese Angaben liefert.
+- Bei wenig bekannten Regionen wird die Lage gegenüber einer bekannten Stadt, Insel oder Landschaft erklärt.
+- Der vollständige gemeinfreie Originaltext wird beim Öffnen aus der öffentlichen Transkription geladen und exakt auf die betreffende Erzählung begrenzt.
 
-Jede Karte erklärt ein Merkmal, das im Deutschen anders oder ohne grammatische Entsprechung organisiert ist. Ein oder zwei glossierte Beispiele zeigen die Form im Gebrauch. Hinzu kommen Sprachgemeinschaft, Situation und der nötige grammatische Kontext; exotisierende Kuriositätenlisten entfallen.
+### Sagengestalten, Legenden und Märchen weltweit
 
-Interessante Listen
+> Sagengestalten, Legenden und Märchen aus aller Welt
 
-Eine Karte zeigt eine überraschende, historisch oder sachlich geschlossene Liste. Quelle, Auswahlprinzip, Umfang und Reihenfolge werden angegeben. Die Einträge selbst bleiben sichtbar; die Erklärung zeigt, was erst durch ihre Zusammenstellung erkennbar wird.
+- Die Karte erzählt den notwendigen Handlungsablauf, nennt wichtige Varianten und ordnet die Überlieferung geografisch und historisch ein.
+- Die Detailansicht lädt die vollständige Wikipedia-Einleitung und bei Bedarf weitere zusammenhängende, gezielt ausgewählte Absätze. Dieses Verfahren wird im Kartentext nicht angekündigt.
 
-Gute einfache Cartoons
+### Literarische und filmische Tropen und Typenszenen
 
-Die Karte zeigt den vollständigen Cartoon und nennt Zeichner, Publikation und Datum. Bild und Wortlaut werden knapp erklärt. Verwendet werden gemeinfreie, offen lizenzierte oder ausdrücklich freigegebene Bilder. Das Nachladen durch die HTML-Datei ersetzt keine Nutzungserlaubnis; lizenzpflichtige Cartoons werden nur mit einer geeigneten Freigabe eingebunden.
+- Die Karte verfolgt eine Typenszene, Figur oder formale Konvention durch mehrere zeitlich geordnete Beispiele. Sie zeigt, was sich dabei verändert.
+- Ausgeschlossen bleiben die im Auftrag nur als Spannweite genannten Beispiele: Akiras Motorradstopp, Beichte am Totenbett, „Ich kann dir alles erklären“, Mexican Standoff sowie pauschale Renaissance- oder viktorianische Tropen.
 
-### Umfang dieser Erweiterung
+### Wichtige Akkorde und Akkordfolgen
 
-- Jede der zehn neuen Kategorien enthält fünf Karten.
-- Die Erweiterung umfasst fünfzig Karten; der Gesamtbestand umfasst 310 Karten in 22 Kategorien.
-- Jede neue Karte enthält mindestens ein passendes Onlinebild oder ein direkt eingebettetes, geprüftes Video und nennt die verwendeten Quellen.
-- Beim Scrollen lädt die Anwendung vor dem Seitenende automatisch weitere Karten. Der manuelle Ladebutton bleibt als barrierearme Rückfallebene erhalten.
-- Beim ersten Öffnen und beim Neuladen beginnt die Seite oben. Die Wiederherstellung einer alten Scrollposition wird vor dem Seitenaufbau deaktiviert; ein nachträgliches Hochscrollen ist ausgeschlossen.
+- Akkordtöne, Stimmführung und benannte Tonart werden an der Quelle und am Hörbeispiel geprüft. Enharmonische Schreibungen folgen ihrer harmonischen Funktion; E und Es werden nicht verwechselt.
+- Die Karte nennt Beispiele in Stücken oder Songs und erklärt den zu hörenden Vorgang. Tristan-Akkord, Four-Chord-Song und andalusische Kadenz bleiben ausgeschlossen.
 
-## Ergänzungen vom 2. September 2026 – zweite Erweiterung
+### Falsche Modelle mit großer Erklärungskraft
 
-### Archivierte, nicht angezeigte Kartengruppen
+- Die Karte behandelt ein überholtes Modell ohne Spott. Sie trennt: Was erklärte es? Wo scheiterte es? Welche Messung oder welches Argument ersetzte es? Welche Beweislage machte es damals plausibel?
 
-- „Gute Gags“ und „Seltene und geniale Lifehacks“ sind keine aktiven Kategorien mehr. Ihre vorhandenen Kartendaten bleiben im Projekt erhalten, werden aber weder angezeigt noch durchsucht oder gezählt.
-- Erste Sätze in einer anderen Sprache als Deutsch oder Englisch erscheinen außen in deutscher Übersetzung. Englische und deutsche Sätze bleiben unverändert.
+### Entzifferte Schriften
 
-### Neue Kategorien – Wortlaut der Vorgabe
+- Die Karte beginnt mit dem notwendigen Grundwissen; einzelne Zeichen und Forschernamen erscheinen erst, wenn Ort, Zeitraum und Ausgangsproblem verständlich sind.
+- Zuerst werden Ort, Zeitraum, wiedergegebene Sprache, erhaltene Textsorten und Schreiber erklärt. Danach folgen Zeichenwerte, Vergleichstexte und der tatsächliche Weg der Entzifferung.
+- Außen steht eine kurze Zeichenfolge mit einem Bild des Originals. Unsichere Zeichen bleiben als unsicher markiert. Die Karte endet mit einer vollständigen Übersetzung des gezeigten Ausschnitts.
 
-Grenzfälle
+### Etymologien und Begriffsgeschichten
 
-Dinge, bei denen eine scheinbar klare Kategorie versagt: ein Film fast ohne Handlung, eine Sprache fast ohne Verben, ein Tier zwischen zwei Verhaltensklassen, ein Bauwerk zwischen Gebäude und Maschine. Der Reiz läge jeweils darin, was der Grenzfall über die Kategorie verrät.
+- Die Karte verfolgt Form, Bedeutung und Gebrauch eines Wortes über datierbare Belege. Sie zeigt Entlehnung, Übersetzung, fachlichen Streit oder technischen Bedeutungswandel und dessen Ergebnis.
+- Die Auswahl reicht über indogermanische Stämme hinaus und verteilt sich auf Sprachfamilien, Wanderungswege und Arten des Bedeutungswandels. Lose Assoziationen und reine Wörterlisten entfallen. Der Stamm *srew wird nicht verwendet.
 
-UnsichtbareKonventionen
+### Rhetorische und poetische Verfahren
 
-Regeln, die man erst bemerkt, wenn jemand sie verletzt: Warum Filmschnitte normalerweise funktionieren, warum Türen bestimmte Formen haben, warum Gesprächspausen bestimmte Längen besitzen, warum Romane Figuren auf bestimmte Weise einführen.
+- Außen steht eine kurze Passage. Innen wird genau ein Verfahren markiert und seine Arbeit an dieser Stelle erklärt; historische Vergleichsbeispiele bleiben eng am Verfahren.
+- Nach Möglichkeit erscheint ein genauer Satz eines frühen Theoretikers oder Künstlers darüber, welche Wirkung man dem Verfahren zuschrieb. Historische Deutung und heutige Einordnung werden getrennt.
 
-VerloreneTechniken
+### Urban Legends
 
-Hochentwickelte Fähigkeiten, die einmal alltäglich waren und heute fast niemand mehr beherrscht: spezielle Hörfähigkeiten, Gedächtnistechniken, Handwerk, Navigation, historische Aufführungspraxis, mechanische Diagnoseverfahren.
+- Früheste auffindbare Berichte, spätere Varianten und historischer Kontext werden getrennt. Belegte Vorfälle werden von Ausschmückungen unterschieden.
+- Die Karte erklärt, über welche Medien und Orte die Erzählung verbreitet wurde und welche zeitgenössischen Ängste ihre Form beeinflussten.
 
-InternetArchäologie
+### Interessante Sprachen und Sprachmerkmale
 
-Großartige, bizarre oder extrem spezifische Webseiten, YouTube-Kanäle, alte Foren, Flash-Projekte und persönliche Homepages, die irgendwo seit 2004 unverändert herumliegen.
+- Jede Karte erklärt ein Merkmal, das im Deutschen anders organisiert ist oder keine unmittelbare grammatische Entsprechung besitzt.
+- Sprechergruppe, heutiges Land und Lage gegenüber einer bekannten Stadt oder Region werden genannt. Verlässliche Sprecherzahlen erhalten Erhebungsjahr und Quelle.
+- Mindestens zwei vollständige Originalbeispiele erscheinen mit idiomatischer deutscher Übersetzung. Morphemgrenzen, Glossen, Fettdruck, Kursivschrift, Tabellen oder kleine Diagramme machen die erklärte Form sichtbar. Exotisierende Kuriositätenlisten entfallen.
 
-SchlechtesWritingSeziert
+### Interessante Listen
 
-Keine allgemeinen Verrisse. Jeweils eine ganz konkrete Szene aus Film oder Serie und die Frage: Warum wirkt diese Pointe billig, diese Exposition künstlich oder diese Figur plötzlich dumm? Danach mehrere bessere Lösungen.
+- Die Liste ist historisch oder sachlich geschlossen. Quelle, Auswahlprinzip, Umfang und Reihenfolge werden angegeben; die Einträge bleiben sichtbar.
+- Die Erklärung zeigt, was erst durch die Zusammenstellung erkennbar wird.
 
-DasIstHierGanzInDerNähe
+### Gute einfache Cartoons
 
-Seltsame oder schöne Dinge im Umkreis von vielleicht 100 Kilometern: ein ungewöhnliches Kino, ein bemerkenswerter Bau, ein winziges Konzert, ein historischer Tunnel, ein absurd spezialisiertes Geschäft, ein kaum bekannter Aussichtspunkt. Wir befinden uns hier in Mannheim.
+- Die Karte zeigt den vollständigen Cartoon und nennt Zeichner, Publikation und Datum. Bild und Wortlaut werden knapp erklärt; der Witz wird nicht breit nacherzählt.
+- Verwendet werden gemeinfreie, offen lizenzierte oder ausdrücklich freigegebene Bilder. Technisches Nachladen ersetzt keine Nutzungserlaubnis.
 
-VisuelleIdeenDieIchKlauenWill
+### Grenzfälle
 
-Keine „schönen Bilder“, sondern ungewöhnliche Bildideen: Perspektiven, Räume, Lichtkonzepte, Bühnenbilder, Filmsets, Plattencover, alte Werbegrafik, Interfaces. Ein Feed, der ständig Lust macht, selbst etwas daraus zu bauen.
+- Die Karte behandelt einen Gegenstand, bei dem eine scheinbar klare Kategorie versagt. Sie erklärt den Grenzfall und anschließend, was er über die verwendete Kategorie zeigt.
 
-### Umfang und Regeln dieser Erweiterung
+### UnsichtbareKonventionen
 
-- Jede der sieben neuen Kategorien enthält fünf Karten.
-- Genannte Beispiele aus der Vorgabe werden nicht als Karten übernommen. Die Auswahl geht über naheliegende Standardbeispiele hinaus.
-- Jede Karte enthält ein passendes Onlinebild oder ein geprüftes, eingebettetes Video und nennt ihre Quellen.
-- „SchlechtesWritingSeziert“ benennt die konkrete Szene, untersucht den einzelnen Fehler und gibt mindestens drei eigenständige bessere Lösungen.
-- „DasIstHierGanzInDerNähe“ verwendet Mannheim als Mittelpunkt, nennt den Ort genau und berücksichtigt einen ungefähren Radius von 100 Kilometern.
+- Die Karte macht eine tatsächlich wirksame, meist unbemerkte Regel und einen verständlichen Fall ihrer Verletzung sichtbar.
+- Die bloße Gleichsetzung von Gis und As oder eine allgemeine Erklärung enharmonischer Verwechslung erfüllt die Kategorie nicht und wird nicht erneut verwendet.
 
-## Ergänzungen vom 3. September 2026
+### VerloreneTechniken
 
-### Umbenennung
+- Die Karte behandelt eine ehemals verbreitete, anspruchsvolle Fähigkeit. Arbeitsablauf, benötigte Wahrnehmung oder Werkzeuge, historischer Gebrauch und Grund des Verschwindens werden genau erklärt.
 
-Die aktive Kategorie heißt „Historische Anekdoten“. Die alte Bezeichnung „Historische Koinzidenzen“ wird in der Oberfläche nicht mehr verwendet.
+### InternetArchäologie
 
-### Neue Kategorie
+- Die Karte sagt ohne Rätselton, was die Seite ist, wann sie entstand und was beim Öffnen zu sehen oder zu benutzen ist.
+- Link, technische Voraussetzungen und ausgefallene Bestandteile werden geprüft und genannt.
 
-Eigene GIFs
+### SchlechtesWritingSeziert
 
-Fünf kurze, eigens erstellte abstrakte Animationen erscheinen als selbstständige Karten. Diese Kategorie bildet die einzige Ausnahme von der Regel, ausschließlich vorhandene Onlinebilder zu verwenden. Die GIF-Karten enthalten weder Erklärung noch Detailansicht.
+- Jede Karte untersucht eine konkrete Szene aus Film oder Serie. Sie benennt den einzelnen Fehler und zeigt, wie er innerhalb der Szene entsteht.
+- Danach folgen mindestens drei eigenständige bessere Lösungen. Allgemeine Verrisse entfallen.
 
-### Umfang und Bildregeln
+### DasIstHierGanzInDerNähe
 
-- Jede der zuvor aktiven 27 Kategorien erhält eine weitere Karte. Zusammen mit fünf GIF-Karten umfasst der aktive Bestand 367 Karten in 28 Kategorien.
-- Schlägt das Laden eines Bildes endgültig fehl, verschwindet das gesamte Bildelement samt Beschriftung. Es bleibt weder Fehlermeldung noch Platzhalter oder leere Bildzelle. Verbleibende Bilder füllen das Raster neu; ohne Bild verschwindet der Medienbereich.
-- Buchumschläge dienen nur dort als Bild, wo die Gestaltung des Umschlags selbst Gegenstand der Karte ist. Bei Romananfängen werden Autorenporträts, Schauplätze oder sachlich passende Abbildungen verwendet.
-- Screenshots von Webseiten mit Cookie-Fenstern, Navigation oder anderen überlagernden Seitenelementen werden nicht verwendet.
+- Mannheim ist der Mittelpunkt. Die Orte liegen ungefähr im Umkreis von 100 Kilometern und werden mit Adresse oder eindeutigem Standort, Entfernung und praktischer Zugänglichkeit angegeben.
+- Ausgewählt werden wenig bekannte, bemerkenswerte Orte, Bauten, Veranstaltungen, Tunnel, Geschäfte oder Aussichtspunkte.
 
-## Ergänzungen vom 3. September 2026 – dritte Erweiterung
+### VisuelleIdeenDieIchKlauenWill
 
-### Neue Kategorien – Wortlaut der Vorgabe
+- Die Karte zeigt eine übertragbare Bildidee: Perspektive, Raumordnung, Licht, Bühnenbild, Filmset, Plattencover, historische Werbegrafik oder Interface.
+- Der Text erklärt den sichtbaren Aufbau so genau, dass daraus eine eigene Arbeit entstehen könnte. Eine Sammlung bloß schöner Bilder erfüllt die Kategorie nicht.
 
-Trends in Art
+### Eigene GIFs
 
-Alle Kunstrichtungen, der neueste Scheiß. Das Allerbeste und Allerniceste, das auffindbar ist. Keine etablierten Künstler. Alle Kunstsparten werden berücksichtigt. Die Auswahl bleibt so frei wie möglich. Jede Arbeit erhält die mediale Ausstattung, die zu ihrer Kunstform passt. Die in der Vorgabe genannten Beispiele werden nicht übernommen.
+- Es gelten die Medienregeln dieses Dokuments. Jede Karte besteht aus Titel und GIF; weitere Erklärung entfällt.
 
-Writing Tipps
+### Trends in Art
 
-Good Writing für Spezialisten. Einfache Schemata wie Hero’s Journey oder Dreiaktstruktur entfallen. Jede Karte behandelt einen genauen handwerklichen Eingriff. Eine eigene Ladefunktion holt den exakt abgegrenzten Wortlaut der jeweils genannten öffentlichen Quellenseite in die Detailansicht.
+- Gezeigt werden konkrete aktuelle Arbeiten junger Künstler oder von Personen am Anfang ihrer Laufbahn, besonders aus Abschlussausstellungen und Nachwuchsprogrammen. Etablierte Namen und pauschale Trendbehauptungen entfallen.
+- Eine einzelne Arbeit wird genau beschrieben. Werkfotografie dient räumlichen und materiellen Arbeiten, bewegtes Bild oder Ton den zeitbasierten Arbeiten; mehrere Ansichten erscheinen nur bei wichtigen Einzelheiten.
 
-### Umfang und Regeln dieser Erweiterung
+### Writing Tipps
 
-- Beide neuen Kategorien erhalten zunächst fünf Karten.
-- Nach Abschluss dieser Erweiterung erhält jede der nun dreißig aktiven Kategorien eine weitere Karte. „Trends in Art“ und „Writing Tipps“ umfassen deshalb im fertigen Bestand jeweils sechs Karten.
-- Der aktive Bestand umfasst danach 407 Karten in 30 Kategorien.
-- „Trends in Art“ zeigt konkrete Arbeiten junger oder am Anfang ihrer Laufbahn stehender Künstler aus aktuellen Abschlussausstellungen und Nachwuchsprogrammen. Eine einzelne Arbeit wird genau beschrieben; pauschale Trendbehauptungen entfallen.
-- Die mediale Form folgt der Arbeit: Werkfotografie für räumliche und materielle Arbeiten, bewegtes Bild oder Ton für zeitbasierte Arbeiten, mehrere Ansichten bei Arbeiten mit wichtigen Details.
-- Die Schreibkarten trennen die knappe deutsche Arbeitsanweisung vom historischen Quellenwortlaut. Der Wortlaut wird erst beim Öffnen der Karte aus Wikisource oder Project Gutenberg geladen und zwischen ausdrücklich geprüften Anfangs- und Endmarken ausgeschnitten.
-- Die geladenen Schreibpassagen bleiben in der Sprache und Schreibweise der Quelle. Navigation, Kopfzeilen und fremde Kapitel werden nicht übernommen. Jede Karte verlinkt Digitalisat und geladene Transkription.
+- Jede Karte behandelt einen genauen handwerklichen Eingriff für erfahrene Schreibende. Hero’s Journey, Dreiaktstruktur und andere Einführungsschemata entfallen.
+- Eine knappe deutsche Arbeitsanweisung steht getrennt vom historischen Quellenwortlaut. Der Browser lädt den exakt abgegrenzten Wortlaut aus Wikisource oder Project Gutenberg. Sprache und Schreibweise der Quelle bleiben erhalten.
 
-## Ergänzungen vom 3. September 2026 – vierte Erweiterung
+### Englisch Vokabular
 
-### Neue Kategorien – Wortlaut der Vorgabe
+- Verwendet werden seltenere englische Wörter aus brauchbarem alltäglichem Sprachgebrauch. Aussprache, Register und eine genaue deutsche Übersetzung werden genannt.
+- Zwei oder drei kurze englische Beispielsätze mit deutscher Übersetzung zeigen unterschiedliche, zusammengehörige Verwendungen.
 
-Englisch Vokabular
+### Geo Atlas
 
-Seltene englische Wörter, vorzugsweise aus dem alltäglichen Gebrauch. Jede Karte gibt eine genaue deutsche Übersetzung und zwei oder drei kurze englische Beispielsätze mit deutscher Übersetzung. Die Beispiele zeigen unterschiedliche, aber zusammengehörige Verwendungen des Wortes. Register und Aussprache werden genannt.
+- Die Karte behandelt ein Land oder eine Region und wählt genau die historischen, politischen, strategischen oder kulturellen Gesichtspunkte, die diesen Raum verständlich machen.
+- Eine lesbare Lagekarte und sachlich wichtige Ansichten gehören dazu. Geografische Grundangaben stammen aus geeigneten Nachschlagewerken.
 
-Geo Atlas
+### Deutsche Sprichwörter in kyrillischen Buchstaben
 
-Eine Karte behandelt ein Land oder eine Region der Erde. Sie wählt aus Geschichte, Politik, strategischer Lage und Kultur genau die Gesichtspunkte aus, die diesen Raum verständlich machen. Lagekarten, Landschaftsbilder und sachlich wichtige Ansichten ergänzen den Text. Wikipedia und weitere geeignete Nachschlagewerke liefern die überprüfbaren Grundangaben.
+- Außen steht das deutsche Sprichwort zuerst in lateinischer, danach lautgetreu in kyrillischer Schrift. Die Standardaussprache des Deutschen ist maßgeblich.
+- Zeichen anderer kyrillisch geschriebener Sprachen dürfen fehlende Laute ergänzen. Die Detailansicht erklärt nur schwierige Zuordnungen.
+- Deutsches d steht einheitlich als д. Digraphen erscheinen nur, wenn kein geeignetes Einzelzeichen festgelegt ist.
 
-Deutsche Sprichwörter in kyrillischen Buchstaben
+### Deutsche Sprichwörter in griechischen Buchstaben
 
-Außen steht zuerst das deutsche Sprichwort in lateinischen Buchstaben, darunter dasselbe Deutsch nach dem Lautwert in kyrillischen Buchstaben. Die Umschrift folgt der deutschen Standardaussprache. Wo das Russische keinen passenden Laut besitzt, dürfen Zeichen anderer kyrillisch geschriebener Sprachen verwendet werden. Die Detailansicht erklärt nur die jeweils schwierigen Lautzuordnungen.
+- Außen steht das deutsche Sprichwort zuerst in lateinischer, danach lautgetreu in griechischer Schrift. Digraphen und Diakritika dürfen fehlende deutsche Laute annähern.
+- Für das Projekt gilt eine feste Buchstabenumschrift: Deutsches d steht als δ, nicht als ντ. Die Karte behauptet nicht, damit die heutige griechische Aussprache wiederzugeben.
+- Jede fertige Umschrift wird Wort für Wort mit dem deutschen Ausgangssatz verglichen.
 
-Deutsche Sprichwörter in griechischen Buchstaben
+### Finnegan Exegese
 
-Außen steht zuerst das deutsche Sprichwort in lateinischen Buchstaben, darunter dasselbe Deutsch nach dem Lautwert in griechischen Buchstaben. Digraphen und diakritische Zeichen dürfen deutsche Laute annähern, für die das moderne griechische Alphabet kein einzelnes Zeichen hat. Die Detailansicht nennt die zugrunde gelegte Standardaussprache und erklärt die nötigen Zuordnungen.
+- Die Karten laufen in fester Reihenfolge und enthalten jeweils genau vier nummerierte Untersuchungseinheiten aus *Finnegans Wake*. Beim Anklicken steht der unveränderte untersuchte Satz oben.
+- Darunter erscheinen drei Vergleichsfelder: sinngemäße Fassung in heutigem Englisch, sachliche Lesart sowie Wörter und Querverweise. Unsichere Wortspiele werden als Möglichkeit bezeichnet.
+- Pfeile führen zur unmittelbar vorigen oder nächsten Folge. Diese interne Reihenfolge bleibt fest, obwohl der allgemeine Kartenstrom gemischt wird.
+- Das Lesefenster übernimmt Farben, Typografie und Aufbau aus `finnegans-wake-seite1(1).html`.
+- Die nutzerseitig bereitgestellte erste Seite bleibt unverändert. Weitere Passagen werden beim Öffnen aus der öffentlichen Textquelle geladen und anhand geprüfter Anfangs- und Endmarken in Vierergruppen zerlegt.
+- Die Exegese wird gegen FWEET, Finwake und die verlinkten Stellen der *Annotated Finnegans Wake* geprüft.
 
-### Umfang dieser Erweiterung
+## Weitere Sachgebiete der Ausgangsdatei
 
-- Jede der vier neuen Kategorien enthält fünf Karten.
-- Die Erweiterung umfasst zwanzig Karten. Der aktive Bestand umfasst danach 427 Karten in 34 Kategorien.
-- Jede neue Karte hat einen eigens gewählten Google-Suchbegriff. Das Suchfeld steht am Ende der Detailansicht, bleibt editierbar und öffnet die Suche in einem neuen Tab.
+Biologie, Technikgeschichte, Musiktechnologie, Chemie, Botanik, Ozeanographie, Architektur, Zeitmessung, Paläontologie und Archäologie bleiben als mögliche Sachgebiete erhalten. Bei neuen Karten gelten dieselben Auswahl-, Quellen-, Sprach- und Medienregeln.
 
-### Wikipedia und andere nachgeladene Texte
+## Oberfläche und Datenarchitektur
 
-- „Wikipedia-Einleitung“ bezeichnet die vollständige Einleitung des Artikels: alle zusammengehörigen Absätze vor der ersten Abschnittsüberschrift. Eine Angabe wie `count: 1` darf diese Einleitung nicht mehr auf den ersten Absatz kürzen.
-- Wenn ein Begriff keinen eigenen deutschsprachigen Wikipedia-Artikel besitzt, wird zuerst nach einem erklärenden Abschnitt in einem übergeordneten deutschen Artikel gesucht. Als zweite Möglichkeit dient der passende englische Artikel. Eine eigene Kurzfassung ersetzt eine vorhandene brauchbare Erklärung nicht.
-- Extern übernommene Absätze bleiben als Quellenwortlaut erkennbar. Eigene Sätze werden davon getrennt und nicht als Zitat ausgegeben.
+- Alle aktiven Karten bilden einen gemeinsamen Datenbestand. Dateien mit künstlichen Monatsnamen, vorproduzierte Monatsblöcke oder getrennte zukünftige Pools werden nicht angelegt.
+- Bei jedem Laden werden Karten und Kategorien neu gemischt. Die erste Karte ist nicht festgelegt; längere Blöcke derselben Kategorie werden vermieden.
+- Beim ersten Laden beginnt die Seite oben. Eine frühere Scrollposition wird nicht wiederhergestellt. Beim Öffnen einer anderen Detailkarte steht deren Ansicht ebenfalls oben.
+- Vor dem Seitenende werden automatisch weitere Karten geladen. Der manuelle Ladebutton bleibt als barrierearme Rückfallebene erhalten.
+- Die Kategorieauswahl bleibt vollständig sichtbar. Änderungen an Datendateien erhalten einen neuen Versionsparameter, damit GitHub Pages keine alte Browserfassung zeigt.
+- Jede Detailkarte besitzt einen positiven und einen negativen Bewertungspfeil rechts neben der Kategorie. Der Satz „Diese Karte bewerten“ erscheint nicht.
+- Negatives Feedback bietet feste Gründe und ein freies Feld. Gespeichert werden Kartentitel, Kategorie, Zeitpunkt, Bewertung, Quellen und Kommentar.
+- Feedback liegt ohne Server nur im Browser. Es wird als Markdown kopiert, heruntergeladen oder über die systemeigene Teilen-Funktion weitergegeben. Die Anwendung behauptet nicht, es selbst an den Autor oder an ein Sprachmodell zu senden.
 
-### Regeln für deutsches Sachprosa
+## Arbeitsweise nach Unterbrechungen
 
-- Jeder Satz wird zunächst auf seinen wirklichen Gegenstand geprüft. Ein Material, eine Farbe oder ein Text steht nur dann als grammatisches Subjekt, wenn das Verb einen wirklichen Vorgang dieses Gegenstands bezeichnet. Farben „wandern“ nicht, Textilien „mischen“ nichts und Werke „erzählen“ nichts, wenn damit nur eine vage Wirkung gemeint ist.
-- Beschreibungen nennen die beobachtbare Anordnung, den Herstellungsvorgang, eine belegte Entscheidung oder eine Wirkung mit klarer Ursache. Der Name eines Künstlers wird nicht zum mechanischen Satzanfang für Handlungen, die lediglich im fertigen Werk sichtbar sind.
-- Artikel, Pronomen, Hilfsverben und Präpositionen bleiben erhalten, wenn die deutsche Grammatik sie verlangt. Kürze rechtfertigt weder Telegrammstil noch bloße Reihen von Substantiven.
-- Das Verb „verbinden“ und seine Ableitungen werden in selbst geschriebenen Erklärungen nicht als Deutungsformel verwendet. Statt eines Ersatzwortes wird der konkrete Sachverhalt beschrieben.
-- Neue Komposita und analytisch klingende Etiketten werden nicht erfunden. Wörter wie „Fallstapelung“ oder „Kreuzseen“ bleiben ausgeschlossen. Ein ungebräuchlicher Fachausdruck wird nur mit einer überprüfbaren Quelle und einer Erklärung verwendet.
-- Englische Wörter werden nicht automatisch durch ähnlich aussehende deutsche Wörter ersetzt. Vor der Verwendung eines seltenen Fremdworts wird geprüft, ob es in deutschem Sachtext dieselbe Bedeutung und denselben Gebrauch besitzt. „Transluzent“ steht nur dort, wo die technische Unterscheidung von transparent und opak erforderlich ist.
-- Dreierreihen sind nur erlaubt, wenn der Gegenstand tatsächlich aus drei Teilen besteht und diese drei vollständig gemeint sind. Aufzählungen erhalten einen erkennbaren Umfang; beiläufige Dreiergruppen als Rhythmusmittel entfallen.
-- Eine Überarbeitung darf die Sätze nicht zu einer Folge gleich kurzer Hauptsätze machen. Nebensätze, Rückbezüge und wechselnde Satzlängen bilden die tatsächlichen logischen Beziehungen ab.
-- Vor der Freigabe entstehen intern mindestens drei ernsthafte Formulierungen für jeden selbst geschriebenen Absatz. Gewählt wird die idiomatischste und genaueste Fassung. Anschließend folgt eine Leseprobe: Würde ein guter deutschsprachiger Sachbuchautor diesen Satz ohne Übersetzung aus dem Englischen schreiben?
-- Ausstellungssprache, Produkttexte und Werbung sind kein Vorbild. Allgemeine Aussagen über eine „Mischung“, „Verbindung“, „Spannung“, „Erfahrung“ oder „Transformation“ werden durch beobachtbare Einzelheiten ersetzt oder gestrichen.
-- Jede Zeitangabe und jeder Raumbegriff erhält den nötigen Maßstab. Völker, Reiche, Regionen und Techniken werden mit Zeitraum, heutigem Staat oder einem bekannten Nachbarort verortet, sobald der Name allein zu wenig erklärt.
-
-### Regeln für einzelne Kategorien
-
-- Karten über seltene Sprachen nennen die Sprechergruppe, das heutige Land und die Lage gegenüber einer bekannten Stadt oder Region. Wenn verlässliche Zahlen vorliegen, werden Sprecherzahl und Erhebungsjahr genannt. Beispiele erscheinen mit Hervorhebungen, Glossen, kleinen Tabellen oder einfachen Diagrammen, sobald dadurch die grammatische Beziehung deutlicher wird.
-- Karten über rhetorische und poetische Verfahren enthalten nach Möglichkeit einen genauen Satz eines frühen Theoretikers oder Künstlers. Die Karte erklärt, welche Wirkung man dem Verfahren damals zuschrieb und wie diese historische Deutung heute einzuordnen ist.
-- „UnsichtbareKonventionen“ verlangt eine tatsächlich wirksame, meist unbemerkte Regel und einen verständlichen Fall ihrer Verletzung. Die bloße Gleichsetzung von Gis und As oder eine allgemeine Erklärung der enharmonischen Verwechslung erfüllt diese Aufgabe nicht und wird nicht erneut verwendet.
-- Karten der „InternetArchäologie“ sagen ohne Rätselton, was die Seite ist, aus welcher Zeit sie stammt und was beim Öffnen zu sehen oder zu benutzen ist. Der Link wird geprüft; technische Voraussetzungen oder ausgefallene Bestandteile werden ausdrücklich genannt.
-
-### Bilder
-
-- Ein Buchumschlag ist nur brauchbar, wenn der Umschlag selbst Gegenstand der Karte ist. Die Bildsuche wird vor der Übernahme auf Umschläge, Titelblätter, gescannte Buchseiten und Webseiten-Screenshots geprüft.
-- Ein sachlich falsches oder bloß dekoratives Bild ist schlechter als eine Karte ohne Bild. Wenn kein geeignetes vorhandenes Bild auffindbar ist, bleibt der Medienbereich leer. Alternativ darf eine eigene Abbildung entstehen; ihr Stil richtet sich nach dem Gegenstand und vermeidet die naheliegendste Symbolidee. Eigene Bilder werden als solche gekennzeichnet.
-
-## Ergänzungen vom 4. September 2026
-
-- Jede Detailkarte besitzt eine positive und eine negative Bewertungsmöglichkeit.
-- Negatives Feedback erfasst feste Kritikgründe und einen freien Kommentar. Jeder Eintrag speichert Kartentitel, Kategorie, Zeitpunkt, Bewertung und Quellenadressen im Browser.
-- Die Anwendung stellt das gesammelte Feedback jederzeit als Markdown zum Kopieren, Herunterladen oder über die systemeigene Teilen-Funktion bereit. Sie behauptet nicht, Daten ohne einen eingerichteten Server an den Autor oder an ein Sprachmodell zu senden.
-- Die Kategorieauswahl ist zusätzlich als vollständiges Auswahlfeld sichtbar. Versionsparameter an den Datendateien verhindern, dass ein älterer Browsercache neu hochgeladene Karten verdeckt.
-
-## Ergänzungen vom 4. September 2026 – Finnegan Exegese
-
-### Neue Kategorie
-
-Finnegan Exegese
-
-Die fortlaufenden Karten erschließen die ersten beiden Druckseiten von James Joyces *Finnegans Wake*. Jede Karte enthält genau vier nummerierte Untersuchungseinheiten. Beim Anklicken einer Einheit steht der unveränderte Wortlaut oben; darunter erscheinen drei Vergleichsfenster für eine sinngemäße Übertragung ins heutige Englisch, die sachliche Lesart sowie Wörter und Querverweise.
-
-### Darstellung und Quellen
-
-- Die Kategorie umfasst acht fortlaufend benannte Karten von „Finnegans Wake 1“ bis „Finnegans Wake 8“.
-- Der aktive Bestand umfasst damit 435 Karten in 35 Kategorien.
-- Pfeile am Ende der Detailansicht führen zur unmittelbar vorigen oder nächsten Folge. Die Reihenfolge bleibt innerhalb der Exegese fest, auch wenn der allgemeine Kartenstrom gemischt wird.
-- Das besondere Lesefenster übernimmt Farben, Typografie und Kartenaufbau aus `finnegans-wake-seite1(1).html`.
-- Seite 1 beruht auf der vom Nutzer bereitgestellten Datei. Der Wortlaut von Seite 2 wird beim Öffnen aus einer öffentlichen Textquelle geladen, anhand geprüfter Anfangs- und Endmarken in zwanzig Einheiten zerlegt und niemals durch eine eigene Fassung ersetzt.
-- Die Exegese wird gegen FWEET, Finwake und die verlinkten Stellen der *Annotated Finnegans Wake* geprüft. Unsichere Wortspiele werden als Möglichkeit bezeichnet und nicht als einzige Auflösung ausgegeben.
-- In allen Karten steht die Kategorie in der bisherigen Bewertungszeile. Der positive und der negative Pfeil stehen rechts daneben; der Satz „Diese Karte bewerten“ entfällt.
-
-## Ergänzungen vom 4. September 2026 – Auswertung des Kartenfeedbacks
-
-Die folgenden Regeln gelten für alle künftig angelegten oder überarbeiteten Karten. Ein beanstandeter Einzelfall wird nicht nur ausgetauscht; die Ursache des Fehlers wird bei allen späteren Karten derselben Art geprüft.
-
-### Auswahl und Medienprüfung
-
-- Eine Karte wird erst freigegeben, nachdem ihre Medien in der tatsächlich gerenderten Anwendung geprüft wurden. Ein erreichbarer Link genügt nicht. Sichtbar kontrolliert werden Motiv, Bildausschnitt, Auflösung und sachliche Beziehung zum Text.
-- Buchumschläge, Titelseiten, PDF-Vorschaubilder und Bildschirmaufnahmen von Webseiten gelten als Fehler, sofern genau dieses Objekt nicht Gegenstand der Karte ist. Diese Prüfung gilt ausdrücklich auch für Karten über Literatur, Listen und Schreibkonventionen.
-- Das Bild muss eine Information liefern, die zum Gegenstand gehört. Fehlt eine geeignete vorhandene Abbildung, entsteht eine klar als eigene Darstellung bezeichnete Abbildung, Skizze oder Rekonstruktion. Ein allgemein passendes oder dekoratives Ersatzbild wird nicht verwendet.
-- Für geografische Karten ist eine lesbare Karte Pflicht. Sie zeigt die behandelte Region zusammen mit heutigen Staatsgrenzen, einem bekannten Nachbarraum und den im Text genannten Orten. Landschaftsbilder ergänzen diese Orientierung, ersetzen sie aber nicht.
-- Die Abbildung einer Liste bezieht sich auf ihren Urheber, ihre Überlieferung oder einen konkreten Eintrag. Ein beliebiger Buchumschlag erfüllt diese Aufgabe nicht.
-- Eigene GIFs brauchen jeweils eine erkennbare formale Idee, einen genau gesetzten zeitlichen Ablauf und eine von den übrigen GIFs verschiedene Bewegung. Eine bloße Folge wechselnder Farbflächen wird verworfen.
-- Für Werke, deren Originalbilder nicht zuverlässig verfügbar sind, wird vor der Veröffentlichung entschieden, ob eine eigene erklärende Darstellung sachlich sinnvoller ist. Das gilt besonders für Filmaufbauten, Montagen und räumliche Grenzfälle.
-- Ausgewählte Medien werden nach der Veröffentlichung erneut geprüft. Ein Bild, das nur lokal oder in der Vorschau funktionierte, gilt als defekt und wird bei der nächsten Bearbeitung ersetzt.
-
-### Fachliche Mindestangaben
-
-- Ethnografisch aufgezeichnete Erzählungen nennen vor dem Text die genaue Region, den heutigen Staat, die betreffende Gemeinschaft, deren gebräuchliche Eigen- oder Fremdbezeichnung sowie Aufzeichner und Erscheinungsjahr. Bei wenig bekannten Regionen kommt die Lage gegenüber einer bekannten Stadt, Insel oder Landschaft hinzu.
-- Karten über Sprachen enthalten mindestens zwei vollständige Originalbeispiele mit idiomatischer deutscher Übersetzung. Wo einzelne Formen erklärt werden, stehen Morphemgrenzen und Glossen in einer übersichtlichen Tabelle oder in klar getrennten Zeilen; Fettdruck und Kursivschrift markieren die gerade behandelte Form.
-- Karten über entzifferte Schriften erklären zuerst, wann und wo die Schrift gebraucht wurde, welche Sprache sie wiedergibt, welche Textsorten erhalten sind und wer sie schrieb. Erst danach folgen Zeichenwerte, Vergleichstexte und der Weg der Entzifferung.
-- Akkorde und Tonfolgen werden vor der Freigabe in der genannten Tonart und an der zitierten Stelle überprüft. Die Schreibweise der Töne folgt ihrer harmonischen Funktion; E und Es sowie andere enharmonisch verschiedene Schreibungen werden nicht vereinheitlicht. Die Karte zeigt die vollständigen Akkordtöne oder die genaue Stimmführung, sodass die Benennung kontrollierbar bleibt.
-- Bei seltenen Musikformen haben Einträge des UNESCO-Verzeichnisses des immateriellen Kulturerbes und Dokumentationen der jeweiligen Kulturinstitutionen Vorrang. Ein geprüftes Ton- oder Videobeispiel gehört dazu und beginnt bei 0:00.
-- Kurze Fachkarten beginnen mit dem notwendigen Grundwissen. Namen einzelner Verfahren, Zeichen oder Forscher erscheinen erst, nachdem Ort, Zeitraum, Gegenstand und Ausgangsproblem verständlich sind.
-
-### Umschrift deutscher Sprichwörter
-
-- Für jede Schrift gilt eine feste, innerhalb sämtlicher Karten einheitliche Lautzuordnung. Jede fertige Zeile wird Wort für Wort mit dem deutschen Ausgangssatz verglichen.
-- In den Karten mit griechischen Buchstaben steht deutsches /d/ nach der für dieses Projekt gewählten Buchstabenumschrift als δ. Die Folge ντ wird dafür nicht verwendet. Die Karte behauptet nicht, damit die heutige griechische Aussprache wiederzugeben.
-- In den Karten mit kyrillischen Buchstaben steht deutsches /d/ als д. Digraphen werden nur bei deutschen Lauten verwendet, für die kein einzelnes geeignetes Zeichen festgelegt ist.
-
-### Folgerung aus positivem Feedback
-
-- Die Karte über Ojkanje dient als Qualitätsmaßstab für neue Karten zu seltenen Musikstilen: genaue regionale Einordnung, zuständige Primärinstitution, verständliche Beschreibung der musikalischen Praxis und ein funktionierendes Beispiel. Das Thema selbst wird nicht wiederholt.
-
-## Ergänzung vom 4. September 2026 – fünfte Erweiterung
-
-- Jede der 35 aktiven Kategorien erhält genau eine weitere Karte. Der aktive Bestand umfasst danach 470 Karten.
-- Die neue Folge der Finnegan-Exegese setzt die durchlaufende Reihenfolge mit vier Sätzen von Druckseite 5 fort. Der Originalwortlaut wird weiterhin erst im Browser aus der öffentlichen Textquelle geladen.
-- Das neue eigene GIF heißt „Schattenzeiger“. Es bleibt ohne Erklärung und Detailtext.
-- Neue Musikkarten beginnen bei 0:00. Zeitparameter und automatische Sprünge bleiben ausgeschlossen.
-- Neue ethnografische Erzählungen nennen Aufzeichnungsort, heutige geografische Lage, Gewährsperson und Aufzeichnungsdatum, sofern die Quelle diese Angaben enthält. Der vollständige gemeinfreie Wortlaut wird zwischen geprüften Anfangs- und Endmarken geladen.
-
-## Arbeitsfortsetzung nach Compaction, Reconnect oder Content-Filter
-
-- Eine automatische Compaction oder eine unterbrochene Verbindung ändert den Auftrag nicht. Nach der Wiederaufnahme wird zuerst der tatsächliche Stand in den betroffenen Dateien und in `git status` geprüft. Danach geht die Arbeit am letzten noch offenen Punkt weiter; abgeschlossene Schritte werden weder neu begonnen noch als aktuelle Arbeit ausgegeben.
-- Eine Zusammenfassung des Arbeitsstands muss den letzten Nutzerauftrag, bereits ausgeführte Änderungen, noch offene Schritte und die Regeln der betroffenen Kategorien erhalten. Zeitangaben aus älteren Aufträgen werden nicht auf einen späteren Auftrag übertragen.
-- Beendet ein Content-Filter die Ausgabe, wird derselbe Inhalt nicht erneut durch den Chat oder durch umfangreiche Dateiausgaben geleitet. Die Wiederaufnahme erfolgt mit einem kleineren, sachlich begrenzten Arbeitsschritt.
-- Längere urheberrechtlich geschützte oder filteranfällige Originaltexte werden weder in Antworten noch in Werkzeugausgaben kopiert. Die Anwendung speichert dafür nur Quelle, Anfangsmarke, Endmarke und die nötigen Bereinigungsregeln; der Browser lädt den Wortlaut unmittelbar von der öffentlichen Quelle.
-- Liegt ein Originaltext bereits in einer vom Nutzer bereitgestellten Datei, bleiben Änderungen auf kleine, genau abgegrenzte Stellen außerhalb des Originalwortlauts beschränkt. Die ganze Datei wird nicht zur Kontrolle in die Unterhaltung ausgegeben.
-- Nach einer Wiederaufnahme wird ein Abschluss erst gemeldet, wenn Umfang, Kategorien, Syntax und die angeforderten Funktionen erneut geprüft sind. Eine Compaction, ein Reconnect oder eine Filtermeldung gilt niemals selbst als Abschluss der Aufgabe.
-
-## Ergänzung zur Auswertung von Kartenfeedback
-
-- Mehrfach gemeldete Kritik wird als ein gemeinsamer Fehler behandelt. Sie erzeugt keine immer neuen, anders formulierten Regeln; ergänzt werden nur bisher fehlende Folgerungen.
-- Eine beanstandete Abbildung wird nicht durch ein bloß thematisch ähnliches Bild ersetzt. Zuerst wird bestimmt, welche konkrete Information das Bild zeigen soll: bei einem Raum seine Lage, bei einer Filmszene ihren Aufbau, bei einer Liste ihre Überlieferung und bei einer Sprache das erklärte Verhältnis.
-- Bei Umschriften wird nicht von der heutigen Aussprache der Zielsprache ausgegangen, sondern von der für das Projekt festgelegten Buchstabenentsprechung. Daher steht in griechischer Schrift deutsches d einheitlich als δ und in kyrillischer Schrift als д.
+- Compaction, Reconnect oder Content-Filter ändern den aktuellen Auftrag nicht. Nach der Wiederaufnahme werden `git status` und die betroffenen Dateien geprüft; danach geht die Arbeit am letzten offenen Punkt weiter.
+- Eine Arbeitszusammenfassung bewahrt den letzten Nutzerauftrag, ausgeführte Änderungen, offene Schritte und die einschlägigen Kategorieregeln. Zeitvorgaben aus älteren Aufträgen werden nicht auf spätere Aufgaben übertragen.
+- Nach einem Content-Filter wird derselbe Inhalt nicht erneut ausgegeben. Die Arbeit wird in einem kleineren, sachlich begrenzten Schritt fortgesetzt; lange Originaltexte bleiben beim Nachladen im Browser.
+- Abgeschlossene Schritte werden nicht erneut begonnen oder als aktuelle Arbeit ausgegeben.
+- Abschluss wird erst gemeldet, nachdem Umfang, Kategorien, Syntax, Medien und angeforderte Funktionen erneut geprüft wurden. Eine Unterbrechung gilt niemals als Abschluss.
