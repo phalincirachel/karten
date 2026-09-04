@@ -149,3 +149,35 @@ frames[0].save(
     optimize=True,
     disposal=2,
 )
+
+# Neunte Karte: Fünf Pendel tauschen ihre Phase über schwache Kopplungen aus.
+frames = []
+size = 320
+count = 48
+for index in range(count):
+    phase = index / count * 2 * math.pi
+    frame = Image.new("RGB", (size, size), (239, 232, 214))
+    draw = ImageDraw.Draw(frame, "RGBA")
+    draw.line((34, 52, 286, 52), fill=(31, 47, 49, 230), width=5)
+    anchors = [60, 110, 160, 210, 260]
+    points = []
+    for number, anchor_x in enumerate(anchors):
+        angle = .48 * math.sin(phase + number * .72 + .20 * math.sin(phase * 2 - number))
+        length = 118 + (number % 2) * 12
+        bob_x = anchor_x + length * math.sin(angle)
+        bob_y = 52 + length * math.cos(angle)
+        points.append((bob_x, bob_y))
+        draw.line((anchor_x, 52, bob_x, bob_y), fill=(45, 57, 58, 215), width=3)
+        draw.ellipse((bob_x-11, bob_y-11, bob_x+11, bob_y+11), fill=(166, 62, 48, 255), outline=(70, 47, 43, 220), width=2)
+    draw.line(points, fill=(210, 146, 58, 120), width=2)
+    frames.append(frame.quantize(colors=56, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE))
+
+frames[0].save(
+    OUTPUT / "gekoppelte-pendel.gif",
+    save_all=True,
+    append_images=frames[1:],
+    duration=75,
+    loop=0,
+    optimize=True,
+    disposal=2,
+)

@@ -20,7 +20,8 @@
     rhyme:"https://fwannotated.blogspot.com/2014/09/p5c.html",
     question:"https://fwannotated.blogspot.com/2014/09/p5d.html",
     thunder:"https://fwannotated.blogspot.com/2014/09/p5e.html",
-    prayer:"https://fwannotated.blogspot.com/2014/09/p5f.html"
+    prayer:"https://fwannotated.blogspot.com/2014/09/p5f.html",
+    proverb:"https://fwannotated.blogspot.com/2014/09/p5g.html"
   };
 
   const P413="oystrygods gaggin fishygods! "+
@@ -187,6 +188,10 @@
     {page:5,text:"",en:"What agent-like cause produced that tragic Thursday thunder and this civic business of sin?",boxes:[["Worum geht’s","Nach der versprochenen Auferstehung fragt der Erzähler erstmals ausdrücklich nach der Ursache des Falls. Die Frage eröffnet jedoch keine eindeutige Untersuchung; jedes Wort bietet mehrere mögliche Anlässe an."],["Wörter","<em>agentlike</em> fragt nach dem Handelnden und klingt nach einem Ermittler. <em>tragoady</em> enthält tragedy sowie griechisch <em>tragos</em>, Ziegenbock, und <em>ōdē</em>, Gesang. <em>thundersday</em> ist Thursday, Thors Tag, und ein Tag des Donners."],["Querverweise","<em>municipal sin business</em> verschiebt den biblischen Sündenfall in eine städtische Angelegenheit Dublins. Später wird HCEs mögliches Vergehen im Phoenix Park ebenso durch Gerücht und Untersuchung erzeugt."]],source:A5.question},
     {page:5,text:"",en:"Our cubic house still shakes as an ear-witness to his Arafat thunder, while later ages repeat an unqualified muezzin-chorus about blackening the white stone hurled from heaven.",boxes:[["Worum geht’s","Der Fall bleibt vor allem als Geräusch erhalten. Haus, Stadt und nachfolgende Zeiten werden zu Ohrenzeugen eines Donners, dessen religiöse Herkunft bei jeder Wiederholung wechselt."],["Wörter","<em>cubehouse</em> bezeichnet ein würfelförmiges Haus und erinnert an die Kaaba. <em>earwitness</em> ersetzt den Augenzeugen. <em>arafatas</em> nennt den Berg Arafat; in <em>muzzlenimiissilehims</em> sind Muezzin, Muslim, Geschoss und das Vermissen hörbar."],["Querverweise","Schwarz und Weiß verweisen auf den Schwarzen Stein der Kaaba und auf Luzifer, den Lichtträger, der nach Miltons <em>Paradise Lost</em> aus dem Himmel geschleudert wird. Der Donner des ersten Falls erhält dadurch islamische, christliche und literarische Echos."]],source:A5.thunder},
     {page:5,text:"",en:"Sustain us in our search for righteousness when we rise, eat and lie down, through the night and until the stars fade.",boxes:[["Worum geht’s","Eine lange Bitte um Beistand umfasst den ganzen Tageslauf: Aufstehen, Essen, Schlafengehen, Nacht und Morgendämmerung."],["Wörter","<em>tighteousness</em> setzt tight in righteousness. <em>toothmick</em> enthält Zahnstocher, Zahnstoßen und <em>to make</em>; <em>lump down upown</em> lässt den Körper zugleich hinabfallen und aufstehen."],["Querverweise","Die Satzform erinnert an jüdische und christliche Gebete, die Gottes Gebote beim Niederlegen und Aufstehen gegenwärtig halten. Nach der Frage nach Schuld folgt keine Antwort, sondern die Bitte, während jedes neuen Falls und Aufstehens gehalten zu werden."]],source:A5.prayer},
+    {page:5,text:"",en:"A nod to the neighbour or nadir is better than a wink toward one who is absent.",boxes:[["Worum geht’s","Die Gebetsform endet in einem verdrehten Sprichwort. Eine kleine Verständigungsgeste soll genügen, doch der Empfänger bleibt sprachlich zwischen Nähe und Abwesenheit unbestimmt."],["Wörter","<em>nabir</em> enthält neighbour und nadir. <em>wabsanti</em> klingt nach absent; außerdem liegen Anklänge an Wermut und Heiligkeit im Wort."],["Querverweise","Die englische Redensart „A nod is as good as a wink to a blind horse“ setzt stillschweigendes Verstehen voraus. Joyce nimmt ihr gerade diese sichere Verständigung." ]],source:A5.proverb},
+    {page:5,text:"",en:"Otherwise our ways run westward, like a provost scoffing between the mountain and the Egyptian sea.",boxes:[["Worum geht’s","Der Satz schlägt einen anderen Weg ein und setzt eine Autoritätsfigur in eine nordafrikanische Landschaft. Richtung, Amt und Ort bleiben dabei absichtlich labil."],["Wörter","<em>Otherways wesways</em> lässt otherwise, westward ways und mehrere Wege zugleich hören. <em>bedoueen</em> enthält Beduine und „between“; arabisch <em>jebel</em> bedeutet Berg."],["Querverweise","<em>jpysian sea</em> ruft Egyptian, Gypsy und das Meer auf. Nach der islamisch gefärbten Bitte des vorigen Satzes wird auch der Schauplatz durch mehrsprachige Bruchstücke erzeugt." ]],source:A5.proverb},
+    {page:5,text:"",en:"A crop proverb, read in crushed bracken, will settle the question.",boxes:[["Worum geht’s","Statt einer theologischen Antwort wird ein ländliches Zeichen zum Orakel erklärt. Die Entscheidung soll aus geknickten Pflanzen gelesen werden."],["Wörter","<em>Cropherb</em> fasst crop, herb und proverb zusammen. <em>crunch-bracken</em> bezeichnet zerdrückten Adlerfarn und klingt nach einer handfesten Prüfung."],["Querverweise","Die Passage wechselt von Gebet und Sprichwort zu Zeichendeutung. Jede vermeintliche Auskunft erzeugt jedoch sofort ein neues Wortspiel, das die Entscheidung wieder offenhält." ]],source:A5.proverb},
+    {page:5,text:"",en:"Then we will know whether the day is a feast, a fast or merely a fly-day.",boxes:[["Worum geht’s","Das angekündigte Ergebnis betrifft den Kalender: Soll gegessen oder gefastet werden? Selbst diese einfache Unterscheidung bleibt im letzten Wort unentschieden."],["Wörter","<em>feast</em> und fast unterscheiden sich nur durch einen Buchstaben. <em>flyday</em> enthält Friday und einen Tag der Fliegen; auch ein vorübergehender, rasch verfliegender Tag klingt an."],["Querverweise","Religiöse Speisevorschriften führen zurück zum Essen, Trinken und Verdauen der vorigen Seiten. Der nächste Satz setzt die Suche nach einer zuverlässigen Deuterin fort." ]],source:A5.proverb},
   ];
 
   const page4Source="https://gist.githubusercontent.com/jl2/7fbf5c10f70a9b1bcd25e1fa2c34fee8/raw/finnegan.txt";
@@ -219,6 +224,10 @@
     ["What then agentlike","Our cubehouse still rocks"],
     ["Our cubehouse still rocks","Stay us wherefore"],
     ["Stay us wherefore","For a nod to the nabir"],
+    ["For a nod to the nabir","Otherways wesways"],
+    ["Otherways wesways","Cropherb the crunch-bracken"],
+    ["Cropherb the crunch-bracken","Then we'll know"],
+    ["Then we'll know","She has a gift of seek on site"],
   ];
   units.slice(12).forEach((unit,index)=>{
     unit.remoteRange=ranges[index];
@@ -236,7 +245,8 @@
     "James Joyce portrait photograph",
     "Tower of Babel Pieter Bruegel Vienna",
     "Coat of arms of Dublin.svg",
-    "Mount Arafat3.jpg"
+    "Mount Arafat3.jpg",
+    "Jebel Musa Sinai photograph"
   ];
   const pageSources={3:"https://www.fweet.org/sim.pl?003",4:"https://www.fweet.org/sim.pl?004",5:"https://www.fweet.org/sim.pl?005"};
   for(let index=0;index<units.length;index+=4){

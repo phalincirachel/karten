@@ -1423,6 +1423,361 @@ window.KARTEN.push(
 
 (() => {
   "use strict";
+  const src=(label,url)=>S(label,url);
+  const card=(category,title,detail,media,sources=[],extra={})=>({category,title,detail,media,sources,...extra});
+
+  window.KARTEN.push(
+    card("Aphorismen","Le silence éternel de ces espaces infinis m’effraie.",[],[
+      C("Blaise Pascal portrait Philippe de Champaigne","Blaise Pascal")
+    ],[
+      src("Wikisource: Pensées de Pascal","https://fr.wikisource.org/wiki/Pens%C3%A9es_de_Pascal_(Brunschvicg)/Section_III")
+    ],{kind:"quote",byline:"Blaise Pascal"}),
+
+    card("Historische Anekdoten","Kempton Bunton und der Goya",[
+      "Am 21. August 1961 verschwand Goyas Porträt des Herzogs von Wellington aus der National Gallery in London. Vier Jahre später lag das Bild unbeschädigt in der Gepäckaufbewahrung des Bahnhofs Birmingham New Street. Kurz darauf stellte sich der pensionierte Busfahrer Kempton Bunton der Polizei. Er hatte zuvor Lösegeld in Höhe des Kaufpreises verlangt, das für Fernsehgebühren bedürftiger Rentner bestimmt sein sollte.",
+      "Vor Gericht wurde Bunton vom Diebstahl des Gemäldes freigesprochen, weil die Anklage ihm keine dauerhafte Aneignungsabsicht nachweisen konnte. Verurteilt wurde er wegen des nicht zurückgegebenen Rahmens. Das Urteil machte eine Lücke im damaligen Recht sichtbar; der Theft Act von 1968 erfasste danach ausdrücklich die unbefugte Entnahme öffentlich ausgestellter Gegenstände. 1969 bekannte sich Buntons Sohn John zur eigentlichen Wegnahme des Bildes."
+    ],[
+      C("Goya Duke of Wellington National Gallery","Goyas Herzog von Wellington"),
+      C("Kempton Bunton National Gallery ransom note","Eine der Lösegeldmitteilungen")
+    ],[
+      src("National Gallery: Archiv zum Prozess","https://www.nationalgallery.org.uk/research/research-centre/archive/record/NGA26"),
+      src("National Gallery: Geschichte des Diebstahls","https://www.nationalgallery.org.uk/stories/jim-broadbent-meets-the-duke-of-wellington")
+    ],{summary:"Ein Rentner forderte für ein gestohlenes Staatsgemälde kostenlose Fernsehgebühren für Bedürftige.",searchTerm:"Kempton Bunton Goya theft trial frame Theft Act 1968"}),
+
+    card("Philosophische Begriffe","Duhem-Quine-These",[
+      "Eine einzelne wissenschaftliche Annahme wird nie für sich allein geprüft. Aus ihr folgt eine beobachtbare Vorhersage erst zusammen mit weiteren Annahmen über Messgeräte, Randbedingungen und bereits akzeptierte Theorien. Scheitert die Vorhersage, bestimmt das Ergebnis deshalb noch nicht, welcher Teil dieses Gefüges falsch ist."
+    ],[
+      C("Pierre Duhem portrait photograph","Pierre Duhem"),
+      C("Willard Van Orman Quine portrait","Willard Van Orman Quine")
+    ],[
+      src("Wikipedia: Duhem-Quine-These","https://de.wikipedia.org/wiki/Duhem-Quine-These"),
+      src("Stanford Encyclopedia: Underdetermination","https://plato.stanford.edu/entries/scientific-underdetermination/")
+    ],{summary:"Beobachtungen prüfen ein Gefüge von Annahmen, keine einzelne Hypothese.",wiki:{page:"Duhem-Quine-These",language:"de"},searchTerm:"Duhem Quine These Unterbestimmtheit Hilfshypothesen"}),
+
+    card("Künstler und drei Werke","Jakub Schikaneder",[
+      "„Mord im Hause“ zeigt eine Tote im Hof eines Prager Mietshauses. Die Zuschauer stehen dicht am Bildrand, während die helle Leiche als einzige waagerechte Form im engen Raum liegt. „Allerseelentag“ setzt eine einzelne Frau vor die Mauer eines Friedhofs; die wenigen Kränze und Lampen reichen aus, um den Ort zu bestimmen.",
+      "In „Abendstraße“ bleibt die Straße fast leer. Das Licht kommt aus einzelnen Fenstern und spiegelt sich schwach im Pflaster. Schikaneder benutzte gedämpfte Farben und große, wenig gegliederte Flächen, um die Prager Randbezirke als konkrete Wohnorte zu zeigen, ohne die Figuren zu bloßen Illustrationen von Armut zu machen."
+    ],[
+      F("Jakub Schikaneder - Murder in the House.JPG","Mord im Hause, 1890"),
+      C("Jakub Schikaneder All Souls Day 1888","Allerseelentag, 1888"),
+      C("Jakub Schikaneder Evening Street 1906","Abendstraße, 1906")
+    ],[
+      src("Nationalgalerie Prag: Jakub Schikaneder","https://www.ngprague.cz/en/about/collection-online?author=jakub-schikaneder"),
+      src("Wikimedia Commons: Mord im Hause","https://commons.wikimedia.org/wiki/File:Jakub_Schikaneder_-_Murder_in_the_House.JPG")
+    ],{summary:"Mord im Hause · Allerseelentag · Abendstraße",works:["Mord im Hause, 1890","Allerseelentag, 1888","Abendstraße, 1906"],searchTerm:"Jakub Schikaneder Murder in the House All Souls Day Evening Street"}),
+
+    card("Erste Sätze großer Romane","In the town there were two mutes, and they were always together.",[],[
+      C("Carson McCullers portrait photograph","Carson McCullers")
+    ],[
+      src("Wikipedia: The Heart Is a Lonely Hunter","https://en.wikipedia.org/wiki/The_Heart_Is_a_Lonely_Hunter")
+    ],{kind:"quote",wiki:{page:"The_Heart_Is_a_Lonely_Hunter",language:"en"},searchTerm:"The Heart Is a Lonely Hunter first sentence two mutes Carson McCullers"}),
+
+    card("Seltene Musikstile","Ganggangsullae · Südwestkorea",[
+      "Ganggangsullae ist ein nächtlicher Rundtanz mit Wechselgesang aus dem Südwesten Südkoreas. Eine Vorsängerin gibt die Verse vor; der Kreis antwortet mit dem gleichbleibenden Refrain. Das Tempo nimmt während der Aufführung zu. Instrumente sind nicht erforderlich.",
+      "Traditionell wurde der Tanz von Frauen bei Vollmond aufgeführt, besonders an Chuseok im achten Mondmonat. Zwischen den Rundtänzen erscheinen kleine Spielszenen aus dem Dorfleben. Im Video ist auf den Einsatz der Vorsängerin und den geschlossenen Refrain des Kreises zu hören."
+    ],[
+      Y("6D73WBzzEG4","Ganggangsullae · UNESCO")
+    ],[
+      src("UNESCO: Ganggangsullae","https://ich.unesco.org/en/RL/ganggangsullae-00188"),
+      src("UNESCO: Video","https://ich.unesco.org/en/video/1182")
+    ],{summary:"Nächtlicher Rundtanz mit Vorsängerin und gemeinsamem Refrain.",searchTerm:"Ganggangsullae southwest Korea call response Chuseok"}),
+
+    card("Vergessene Komponisten","Valborg Aulin · Streichquartett Nr. 1 F-Dur",[
+      "Valborg Aulin schrieb ihr erstes Streichquartett 1884; vier Jahre später erschien es im Druck. Im ersten Satz beantwortet ein kantiges Hauptthema die langen melodischen Bögen der Mittelstimmen. Die Übergänge entstehen häufig aus Motiven des Hauptthemas; das Stück wirkt deshalb geschlossen, obwohl die Tonarten weit auseinanderliegen.",
+      "Zu hören ist besonders der erste Satz, Allegro con brio. Aulin behandelt das Quartett nicht als Violine mit Begleitung: Bratsche und Violoncello tragen eigene Linien, die den harmonischen Verlauf bestimmen. Die beiden Quartette besitzen nach dem Werkverzeichnis der Königlich Schwedischen Musikakademie starke Formen und einen anspruchsvollen Quartettsatz. Nach Aulins Umzug nach Örebro im Jahr 1903 verschwanden ihre Werke weitgehend aus den Konzertprogrammen."
+    ],[
+      Y("uVeo7NpnMMY","Valborg Aulin · Streichquartett Nr. 1")
+    ],[
+      src("Corelia Project: String Quartet No. 1","https://www.coreliaproject.org/repertoire/f21b10fe-cd8d-446b-8e2c-0724f95813b2"),
+      src("Swedish Musical Heritage: Valborg Aulin","https://www.swedishmusicalheritage.com/composers/aulin-valborg/")
+    ],{summary:"Im ersten Satz erhalten Bratsche und Violoncello tragende melodische Aufgaben.",searchTerm:"Valborg Aulin string quartet 1 op 17 analysis"}),
+
+    card("Großartige Bilder und Design","Georges de Feure · Entwurf für einen Flur",[
+      "Der Aquarellentwurf von etwa 1925 zeigt einen schmalen Flur mit Treppe, Tisch und Schirmständer. De Feure zeichnet das Schmiedeeisen als wiederkehrende Folge aus engen Bögen. Die Treppenbrüstung, die Tischbeine und der Ständer gehören dadurch sichtbar zu einer Einrichtung, obwohl jedes Stück eine andere Aufgabe hat.",
+      "Der Fluchtpunkt liegt tief und weit rechts. Die schräge Decke drückt den Raum nach unten, während die dunkle Treppe den Blick nach hinten führt. Die Zeichnung ist kein allgemeines Stimmungsbild, sondern legt Material, Proportionen und die Stellung der Möbel so genau fest, dass sich der geplante Innenraum daraus bauen ließe."
+    ],[
+      C("Georges de Feure Design for a Hallway with Wrought-iron Details","Entwurf für einen Flur, um 1925")
+    ],[
+      src("Metropolitan Museum: Design for a Hallway","https://www.metmuseum.org/art/collection/search/342980")
+    ],{summary:"Ein Flurentwurf ordnet Treppe und Möbel durch dasselbe Schmiedeeisenmuster.",searchTerm:"Georges de Feure hallway wrought iron design 342980"}),
+
+    card("Märchen und Sagen in ethnografischen Quellen","Das verlorene Buch · Khasi",[
+      "Gott gibt einem Khasi und einem Fremden je ein Buch mit den Regeln des Gottesdienstes. Auf dem Rückweg müssen beide einen angeschwollenen Fluss durchschwimmen. Der Fremde bindet sein Buch in das lange Haar; der Khasi nimmt seines zwischen die Zähne. Im Wasser zerfällt es zu Brei.",
+      "Die Erzählung begründet, warum religiöses Wissen der Khasi mündlich überliefert werde, während andere Völker Bücher besäßen. K. U. Rafy veröffentlichte sie 1920 in Shillong. Die Khasi leben vor allem im heutigen indischen Bundesstaat Meghalaya; Shillong liegt im Zentrum ihres Hochlands. Die vollständige englische Fassung wird aus der gemeinfreien Ausgabe geladen."
+    ],[
+      C("Khasi sacred grove monoliths 1918","Khasi-Monolithen und heiliger Hain"),
+      C("Khasi people Meghalaya historical photograph","Khasi im Hochland von Meghalaya")
+    ],[
+      src("Project Gutenberg: Folk-Tales of the Khasis","https://www.gutenberg.org/ebooks/37884"),
+      src("Internet Archive: Folk-Tales of the Khasis","https://archive.org/details/folktalesofkhasi00rafy")
+    ],{summary:"Eine Khasi-Erzählung über den Verlust der Schrift beim Durchqueren eines Flusses.",original:{label:"Vollständiger Originaltext · K. U. Rafy, 1920",source:"https://www.gutenberg.org/ebooks/37884",remote:{url:"https://www.gutenberg.org/cache/epub/37884/pg37884.txt",start:"THE LOST BOOK",startLast:true,end:"THE BLESSING OF THE MENDICANT",reflow:true,fetchLabel:"Project-Gutenberg-Transkription"}},searchTerm:"Khasi The Lost Book K U Rafy oral tradition Meghalaya"}),
+
+    card("Sagengestalten, Legenden und Märchen weltweit","Glooscap · Wabanaki",[
+      "Glooscap ist eine Kulturfigur in den Erzählungen mehrerer Wabanaki-Völker im heutigen Maine und in den kanadischen Atlantikprovinzen. Zu diesen Völkern gehören Mi’kmaq, Wolastoqiyik, Passamaquoddy, Penobscot und Abenaki. Sein Name und die Einzelheiten der Geschichten unterscheiden sich zwischen ihren Sprachen.",
+      "In Mi’kmaq-Erzählungen formt Glooscap Landschaften, bezwingt übergroße Tiere und lehrt Menschen, wie sie in ihrer Umgebung leben. Seine Macht bleibt begrenzt: Der kleine Frosch hält alles Wasser zurück, und eine unscheinbare Erscheinung schlägt ihn im Wettstreit. Diese Episoden erklären Ortsformen und setzen körperliche Größe wiederholt von tatsächlicher Wirksamkeit ab."
+    ],[
+      C("Glooscap Mi'kmaq illustration","Glooscap in einer historischen Illustration"),
+      C("Mi'kmaq Bay of Fundy historical","Mi’kmaq an der Bay of Fundy")
+    ],[
+      src("The Canadian Encyclopedia: Glooscap","https://thecanadianencyclopedia.ca/en/article/glooscap"),
+      src("Wikipedia: Glooscap","https://en.wikipedia.org/wiki/Glooscap")
+    ],{summary:"Eine Kulturfigur der Wabanaki-Völker im Nordosten Nordamerikas.",wiki:{page:"Glooscap",language:"en"},searchTerm:"Glooscap Wabanaki Mi'kmaq stories geography"}),
+
+    card("Literarische und filmische Tropen und Typenszenen","Der maskierte Blick",[
+      "Eine schwarze Maske mit rundem oder schlüssellochförmigem Ausschnitt zeigt, dass das Bild den Blick einer Figur wiedergibt. Die Maske liefert dabei mehr Information als das Gesehene selbst: Fernglas, Fernrohr oder Schlüsselloch bestimmen heimliches Beobachten, Entfernung und eingeschränktes Wissen.",
+      "George Albert Smith schnitt in „Grandma’s Reading Glass“ von 1900 wiederholt vom Jungen zu runden Nahaufnahmen dessen, was er durch eine Lupe betrachtet. Spätere Filme gaben Fernglasbildern zwei überlappende Kreise, obwohl ein echtes Fernglas bei richtiger Einstellung meist ein einziges Gesichtsfeld erzeugt. Die Form blieb, weil sie den Wechsel der Blickinstanz augenblicklich lesbar macht."
+    ],[
+      C("Grandma's Reading Glass 1900 film still","Grandma’s Reading Glass, 1900"),
+      C("binocular point of view shot film","Die übliche Fernglasmaske")
+    ],[
+      src("BFI Replay: Grandma’s Reading Glass","https://replay.bfi.org.uk/video/187/bc4007f9-c8fa-5293-846a-de032dc142af"),
+      src("University of Bologna: Grandma’s Reading Glass","https://cris.unibo.it/handle/11585/962676")
+    ],{summary:"Eine Bildmaske kennzeichnet den Blick durch Lupe, Fernrohr oder Schlüsselloch.",searchTerm:"masked point of view shot binocular matte early cinema history"}),
+
+    card("Wichtige Akkorde und Akkordfolgen","Common-tone diminished seventh · CT°7",[
+      "Dieser vollständig verminderte Septakkord teilt einen Ton mit dem Durakkord, den er ausschmückt. Vor C-Dur lässt sich CT°7 als C–Dis–Fis–A schreiben: C bleibt liegen, Dis steigt zu E, während Fis und A nach G gehen. Anders als ein Leittonseptakkord treibt er die Harmonie nicht zu einem neuen Grundton; die chromatischen Nachbartöne kehren zum bereits geltenden Akkord zurück.",
+      "In Scott Joplins „The Sycamore“ ist der Akkord in den Takten 20 bis 27 zu hören. Schuberts Moment musical As-Dur D 780 Nr. 6 benutzt denselben Akkordtyp innerhalb der ausgedehnten Tonikaflächen. Entscheidend ist jeweils der gehaltene gemeinsame Ton: Der scharf gespannte Septakkord erscheint für einen Augenblick, ohne eine gewöhnliche Dominantkadenz auszulösen."
+    ],[
+      C("common tone diminished seventh chord notation","Stimmführung des CT°7"),
+      C("Scott Joplin The Sycamore sheet music","The Sycamore von Scott Joplin")
+    ],[
+      src("Open Music Theory: Common-Tone Chords","https://human.libretexts.org/Bookshelves/Music/Music_Theory/Open_Music_Theory_2e_(Gotham_et_al.)/05%3A_Chromaticism/5.04%3A_Common-Tone_Chords_(CT7_and_CT6)"),
+      src("Diverse Music Theory Examples: CT°7","https://diversemusictheoryexamples.com/common-tone-diminished-seventh-chords/")
+    ],{summary:"Ein gemeinsamer Ton bleibt liegen, während drei chromatische Nachbartöne zum Ausgangsakkord zurückkehren.",searchTerm:"common-tone diminished seventh CT°7 Joplin Sycamore Schubert D780"}),
+
+    card("Falsche Modelle mit großer Erklärungskraft","Der Planet Vulkan",[
+      "Urbain Le Verrier bestimmte 1859, dass sich Merkurs sonnennächster Bahnpunkt etwas schneller verschob, als die Störungen durch die bekannten Planeten nach Newtons Theorie erwarten ließen. Weil Le Verrier mit derselben Methode Neptuns Ort vorausgesagt hatte, war ein weiterer Planet innerhalb der Merkurbahn eine ernsthafte Erklärung. Der Name Vulkan setzte sich für ihn durch.",
+      "Beobachter meldeten dunkle Punkte vor der Sonne, doch keine Sichtung ließ sich zuverlässig wiederholen. Einsteins allgemeine Relativitätstheorie erklärte 1915 den fehlenden Anteil der Periheldrehung von rund 43 Bogensekunden pro Jahrhundert aus der Raumzeitkrümmung nahe der Sonne. Vulkan scheiterte nicht an einer einzelnen leeren Suche, sondern daran, dass eine neue Theorie den Messwert ohne zusätzlichen Himmelskörper genau traf."
+    ],[
+      C("Vulcan hypothetical planet 19th century illustration","Eine historische Darstellung des vermuteten Planeten"),
+      C("Mercury perihelion precession diagram","Die Drehung von Merkurs Bahnellipse")
+    ],[
+      src("NASA: Merkur und die Relativitätstheorie","https://www.grc.nasa.gov/www/k-12/Numbers/Math/Mathematical_Thinking/field_equations.htm"),
+      src("NASA: Periheldrehung des Merkur","https://pgda.gsfc.nasa.gov/products/66")
+    ],{summary:"Ein unentdeckter Planet sollte die unerklärte Drehung von Merkurs Bahn erklären.",searchTerm:"Le Verrier planet Vulcan Mercury perihelion 43 arcseconds Einstein"}),
+
+    card("Entzifferte Schriften","Die Bilingue von Karatepe",[
+      "Am Burgberg Karatepe-Arslantaş in der heutigen türkischen Provinz Osmaniye wurde 1946 eine Inschrift des späten 8. Jahrhunderts v. Chr. entdeckt. Derselbe Herrschertext steht dort in phönizischer Alphabetschrift und in hieroglyphenluwischen Zeichen. Das lesbare Phönizisch gab Inhalt und Eigennamen vor; wiederkehrende Zeichengruppen der luwischen Fassung ließen sich daran prüfen.",
+      "Franz Steinherr erkannte 1947 in der Zeichenfolge des luwischen Textes den Herrschernamen Azatiwada. Spätere Arbeit korrigierte zahlreiche ältere Lautwerte und zeigte, dass die sogenannten hethitischen Hieroglyphen eine luwische Sprache wiedergeben. Der Anfang lautet sinngemäß: „Ich bin Azatiwada, der von der Sonne Gesegnete.“ Die Entzifferung beruhte nicht auf einem einzigen Schlüssel, sondern auf der Wort-für-Wort-Kontrolle beider Fassungen."
+    ],[
+      C("Karatepe bilingual inscription hieroglyphic Luwian","Hieroglyphenluwischer Teil der Inschrift"),
+      C("Karatepe bilingual Phoenician inscription","Phönizischer Paralleltext")
+    ],[
+      src("Oxford: The Hieroglyphic Text of Karatepe","https://www.ling-phil.ox.ac.uk/files/hawkins-amd_karatepe._the_hieroglyphic_text_anatolian_studies_28_1978.pdf"),
+      src("Wikipedia: Bilingue von Karatepe","https://de.wikipedia.org/wiki/Bilingue_von_Karatepe")
+    ],{summary:"Ein Herrschertext in Phönizisch und Hieroglyphenluwisch ordnete Zeichen und Wörter einander zu.",searchTerm:"Karatepe bilingual Azatiwada Hieroglyphic Luwian decipherment"}),
+
+    card("Etymologien und Begriffsgeschichten","Horde",[
+      "Das Wort geht auf westtürkisch ordu beziehungsweise tatarisch urda zurück. Gemeint waren zunächst Lager, Heerlager und der Hof eines Herrschers. Aus demselben Wort entstand der Name der Sprache Urdu: zabān-e urdū war die „Sprache des Lagers“, die sich im mehrsprachigen Umfeld nordindischer Herrscher und Soldaten entwickelte.",
+      "Über polnisch horda und andere europäische Vermittlersprachen gelangte das Wort im 16. Jahrhundert nach West- und Mitteleuropa. Dort bezeichnete es zuerst nomadische politische Verbände wie die Goldene Horde. Die spätere Bedeutung „ungeordnete Menschenmenge“ löste das Wort von Lager und Herrschaft und übernahm zugleich die abwertende europäische Vorstellung vom Nomadischen."
+    ],[
+      C("Golden Horde camp medieval manuscript","Ein Heerlager der Goldenen Horde"),
+      C("Mughal military camp manuscript","Ein nordindisches Heerlager")
+    ],[
+      src("DWDS: Horde","https://www.dwds.de/wb/Horde"),
+      src("Online Etymology Dictionary: horde","https://www.etymonline.com/word/horde"),
+      src("Oxford Reference: Urdu","https://www.oxfordreference.com/display/10.1093/oi/authority.20110803114840390")
+    ],{summary:"Aus einem türkischen Wort für Lager und Herrscherhof wurde eine abwertende Bezeichnung für eine Menge.",searchTerm:"Horde Etymologie ordu Urdu Goldene Horde Bedeutungswandel"}),
+
+    card("Rhetorische und poetische Verfahren","Love is not love / Which alters when it alteration finds, / Or bends with the remover to remove.",[
+      "Shakespeare wiederholt in Sonett 116 denselben Wortstamm in wechselnder grammatischer Form: love steht als Substantiv und als Teil der Aussage „is not love“, alters als Verb neben alteration als Substantiv, remover neben remove. Dieses Verfahren heißt Polyptoton. Die Wiederkehr prüft hier die behauptete Beständigkeit der Liebe an Wörtern, die ihre eigene Form verändern.",
+      "Quintilian behandelt die Wiederholung eines Wortes in verschiedenen Kasus unter den Figuren, die aus einer kleinen Veränderung der Form entstehen. Seine Beispiele zeigen, dass die Flexion eine Beziehung hörbar macht, ohne dass der Wortstamm ausgetauscht wird. Im Sonett widerspricht die Form dem Inhalt nur scheinbar: Die Wörter verändern sich, der wiedererkennbare Stamm bleibt bestehen."
+    ],[
+      C("Shakespeare Sonnet 116 first quarto","Sonett 116 im Quarto von 1609"),
+      C("Quintilian manuscript Institutio Oratoria","Handschrift der Institutio oratoria")
+    ],[
+      src("Wikisource: Sonnet 116","https://en.wikisource.org/wiki/Shakespeare%27s_Sonnets_(1609)/Sonnet_116"),
+      src("Perseus: Quintilian, Institutio oratoria IX","https://www.perseus.tufts.edu/hopper/text?doc=Quint.%209.3")
+    ],{summary:"Polyptoton · Shakespeare, Sonett 116",searchTerm:"polyptoton Shakespeare alters alteration remover remove Quintilian"}),
+
+    card("Urban Legends","Mel’s Hole",[
+      "Am 21. Februar 1997 las Radiomoderator Art Bell in „Coast to Coast AM“ das Fax eines Mannes vor, der sich Mel Waters nannte. Auf seinem Grundstück westlich von Ellensburg im US-Bundesstaat Washington liege ein Loch, das Abfälle aufnehme, ohne sich zu füllen. Waters behauptete später, 80.000 Fuß Angelschnur hinabgelassen zu haben, ohne den Boden zu erreichen.",
+      "Weitere Sendungen ergänzten tote Tiere, staatliche Sperrgebiete und ein zweites Loch in Nevada. Jede neue Behauptung entstand im selben Medium: in langen nächtlichen Anrufen ohne überprüfbaren Ort. Recherchen fanden weder das Grundstück noch einen dort gemeldeten Mel Waters. Die Legende zeigt, wie das Call-in-Radio der 1990er Jahre eine Geschichte seriell fortschreiben ließ, noch bevor Foren und Podcasts diese Form übernahmen."
+    ],[
+      C("Ellensburg Washington landscape","Die Landschaft bei Ellensburg"),
+      C("Art Bell radio studio Coast to Coast AM","Art Bell im Radiostudio")
+    ],[
+      src("Coast to Coast AM: Sendung vom 21. Februar 1997","https://www.coasttocoastam.com/alternate/amp/show/ufo-disclosure-mels-hole/"),
+      src("Wikipedia: Mel’s Hole","https://en.wikipedia.org/wiki/Mel%27s_Hole")
+    ],{summary:"Eine angeblich bodenlose Grube wuchs in nächtlichen Radiosendungen zu einer fortlaufenden Legende.",searchTerm:"Mel's Hole 1997 Ellensburg Art Bell investigation"}),
+
+    card("Interessante Sprachen und Sprachmerkmale","Warlpiri: das Hilfswort an zweiter Stelle",[
+      "Warlpiri wird vor allem in Yuendumu, Lajamanu und weiteren Gemeinden im Northern Territory Australiens gesprochen. Yuendumu liegt etwa 290 Kilometer nordwestlich von Alice Springs. Die Sprache gehört zur ngumpin-yapa-Gruppe der pama-nyunganischen Sprachfamilie.",
+      "<strong>kapi-rna-ngku</strong> <em>nyanyi</em><br>FUT-1SG.SUBJ-2SG.OBJ sehen.NICHTVERG<br>„Ich werde dich sehen.“<br><br><em>nyangu</em><strong>-rna-ngku</strong><br>sehen.VERG-1SG.SUBJ-2SG.OBJ<br>„Ich sah dich.“<br><br>Im ersten Beispiel steht <strong>kapi</strong> für die Zukunft; die angehängten Formen nennen Subjekt und Objekt. Der gesamte Komplex besetzt gewöhnlich die zweite Position des Satzes. Fehlt das Hilfswort im Präteritum, heften sich dieselben Personenmarker an das erste geeignete Wort."
+    ],[
+      C("Yuendumu Northern Territory aerial","Yuendumu im Northern Territory"),
+      C("Warlpiri country map Australia","Siedlungsgebiet der Warlpiri")
+    ],[
+      src("AIATSIS: Warlpiri","https://collection.aiatsis.gov.au/austlang/language/c15"),
+      src("Warlpiri Grammar: Second-position clitics","https://www.ling.upenn.edu/~jlegate/nllt26.pdf"),
+      src("Wikipedia: Warlpiri language","https://en.wikipedia.org/wiki/Warlpiri_language")
+    ],{summary:"Tempus sowie Personen von Subjekt und Objekt stehen gewöhnlich im zweiten Satzglied.",searchTerm:"Warlpiri auxiliary second position kapirnangku nyanyi Yuendumu"}),
+
+    card("Interessante Listen","Henslowes Bühnenrequisiten · 1598",[
+      "Im Inventar der Admiral’s Men stehen unter anderem: eine Höllenöffnung, ein Felsstück, ein Käfig, ein Grab, eine goldene Weltkugel, ein Eberkopf, ein hölzernes Bein, ein goldenes Vlies, ein Lorbeerbaum und der Kessel aus „The Jew of Malta“. Hinzu kommen Kronen, Schilde und mehrere Waffen.",
+      "Der Theaterunternehmer Philip Henslowe schrieb das Inventar 1598 in sein Geschäftsbuch. Die Liste nennt keine abstrakten Bühnenbilder, sondern Dinge, die gelagert und in verschiedenen Stücken erneut benutzt wurden. Aus ihr wird sichtbar, wie das elisabethanische Theater Orte mit wenigen beweglichen Gegenständen erzeugte: Eine Höllenöffnung oder ein einzelner Baum genügte als räumliche Festlegung."
+    ],[
+      C("Philip Henslowe diary manuscript inventory 1598","Henslowes handschriftliches Geschäftsbuch"),
+      C("Elizabethan theatre stage drawing Swan 1596","Skizze des Swan Theatre, 1596")
+    ],[
+      src("Folger Lost Plays Database: Inventories","https://lostplays.folger.edu/Category:Inventories"),
+      src("Map of Early Modern London: Henslowe’s Diary","https://mapoflondon.uvic.ca/HENS2.htm")
+    ],{summary:"Ein Inventar zeigt, mit welchen wiederverwendbaren Dingen ein Londoner Theater seine Spielorte baute.",searchTerm:"Henslowe diary 1598 inventory stage properties hell mouth golden fleece"}),
+
+    card("Gute einfache Cartoons","Substance and Shadow · John Leech",[
+      "Vor der Westminster Hall betrachten zerlumpte Kinder die Entwürfe für neue Parlamentsfresken. Der Begleittext schlägt spöttisch vor, die Regierung solle lieber Kunst fördern als Arme ernähren. Leech richtet die Blickachse der Kinder auf Bilder einer idealisierten nationalen Vergangenheit, während ihre eigene Gegenwart außerhalb der Ausstellung bleibt.",
+      "Die Zeichnung erschien am 15. Juli 1843 in Punch unter der Überschrift „Cartoon No. 1“. Bis dahin bezeichnete cartoon vor allem einen großformatigen Vorentwurf für ein Fresko. Punch übertrug das Wort auf die satirische Zeichnung; aus diesem Gebrauch entstand die heutige Bedeutung."
+    ],[
+      F("SubstanceandShadow.jpg","Substance and Shadow, Punch, 15. Juli 1843")
+    ],[
+      src("Victorian Web: Substance and Shadow","https://victorianweb.org/art/illustration/leech/98.html"),
+      src("Wikimedia Commons: John Leech","https://commons.wikimedia.org/wiki/John_Leech")
+    ],{summary:"Arme Kinder sehen die staatlich bestellten Freskenentwürfe für das Parlament.",searchTerm:"John Leech Substance and Shadow Cartoon No 1 Punch 1843"}),
+
+    card("Grenzfälle","Xenophyophoren · eine Zelle von zwanzig Zentimetern",[
+      "Xenophyophoren leben auf dem Boden der Tiefsee und gehören zu den Foraminiferen. Einzelne Arten bauen aus Sedimentkörnern verzweigte Gehäuse von mehr als zwanzig Zentimetern Durchmesser. Im Inneren liegt eine einzige, vielfach verzweigte Zelle mit zahlreichen Zellkernen.",
+      "Ihre Größe legt zunächst ein vielzelliges Tier oder einen Schwamm nahe. Der Grenzfall zeigt, dass „einzellig“ keine Aussage über sichtbare Größe oder einfache Gestalt ist. Die Zelle verteilt ihr Plasma durch ein Röhrensystem im Gehäuse; zugleich schafft dieses Gehäuse festen Lebensraum für andere Tiefseetiere."
+    ],[
+      C("xenophyophore NOAA deep sea","Eine Xenophyophore auf dem Tiefseeboden"),
+      C("Syringammina fragilissima xenophyophore","Das verzweigte Gehäuse einer Xenophyophore")
+    ],[
+      src("NOAA Ocean Exploration: Xenophyophores","https://oceanexplorer.noaa.gov/edu/development/newsletters/newsletter_archive/education_newsletter_020117.pdf"),
+      src("NOAA: East Samoa Basin","https://oceanexplorer.noaa.gov/dive-04-ex2606/")
+    ],{summary:"Ein sichtbares Tiefseengebilde von bis zu zwanzig Zentimetern besteht aus einer einzigen Zelle.",searchTerm:"xenophyophore giant single cell multinucleate test deep sea"}),
+
+    card("UnsichtbareKonventionen","Warum Filmnummern mit 555 beginnen",[
+      "In nordamerikanischen Filmen beginnen Telefonnummern häufig mit 555. Reserviert ist jedoch nicht jede solche Nummer, sondern nur der Block 555-0100 bis 555-0199. Diese hundert Anschlüsse sind absichtlich nicht geschaltet und dürfen in Unterhaltung und Werbung erscheinen.",
+      "Die Regel verhindert, dass Zuschauer eine sichtbare Nummer anrufen und bei einer unbeteiligten Person landen. Wird irgendeine andere 555-Nummer benutzt, ist der Schutz bereits unsicher; 555-1212 dient beispielsweise der Telefonauskunft. Die Konvention fällt erst auf, wenn eine Produktion eine gewöhnliche Nummer zeigt und deren Besitzer danach Anrufe erhalten."
+    ],[
+      C("rotary dial telephone North America","Nordamerikanisches Wähltelefon"),
+      C("telephone dial movie prop","Telefon als Filmrequisite")
+    ],[
+      src("NANPA: 555 Line Numbers","https://nanpa.com/numbering/555-line-numbers"),
+      src("ATIS: 555 NXX Line Number Reference","https://www.nanpa.com/sites/default/files/2024-07/ATIS-0300115.pdf")
+    ],{summary:"Nur hundert nordamerikanische Telefonnummern sind ausdrücklich für fiktive Verwendungen reserviert.",searchTerm:"NANPA fictional telephone numbers 555-0100 0199 film convention"}),
+
+    card("VerloreneTechniken","Negativschnitt nach Randnummern",[
+      "Beim analogen Filmschnitt wurde zunächst eine Arbeitskopie zerschnitten. Nach dem endgültigen Schnitt erhielt der Negativcutter eine Schnittliste mit den Randnummern jedes verwendeten Bildabschnitts. Unter der Lupe suchte er dieselben Nummern im Kameranegativ, schnitt die verlangten Einzelbilder heraus und klebte sie in der festgelegten Reihenfolge zusammen.",
+      "Ein falscher Schnitt beschädigte das Original. Dunkle Einstellungen und sehr kurze Stücke verlangten deshalb genaue Kenntnis der Abstände zwischen Nummer, Perforation und Bildlinie. KEYKODE ergänzte später maschinenlesbare Strichcodes. Mit dem digitalen Zwischenpositiv verschwand der manuelle Negativschnitt aus der üblichen Postproduktion; erhalten blieb die Aufgabe des Conformings, nun als Abgleich von Dateien und Schnittliste."
+    ],[
+      C("motion picture film edge numbers keykode","Randnummern eines Kameranegativs"),
+      C("film negative cutter editing bench","Arbeitsplatz für den Negativschnitt")
+    ],[
+      src("Kodak: Glossary of Motion Picture Terms","https://www.kodak.com/en/motion/page/glossary-of-motion-picture-terms/"),
+      src("Kodak: Essential Reference Guide for Filmmakers","https://www.kodak.com/content/products-brochures/Film/kodak-essential-reference-guide-for-filmmakers.pdf")
+    ],{summary:"Ein Negativcutter übertrug den Schnitt der Arbeitskopie Bild für Bild auf das Kameranegativ.",searchTerm:"negative cutting edge numbers KEYKODE conform workprint craft"}),
+
+    card("InternetArchäologie","World Wide Web Virtual Library",[
+      "Die World Wide Web Virtual Library ist ein nach Fachgebieten geordnetes Verzeichnis von Webseiten. Tim Berners-Lee begann die Linkliste 1991 am CERN. Später übernahmen freiwillige Fachredaktionen einzelne Bereiche. Die Seite ist damit älter als große Suchmaschinen und folgt einer anderen Ordnung: Ein Mensch entscheidet, welche Links unter Geschichte, Ozeanographie oder Stadtplanung erscheinen.",
+      "Unter vlib.org öffnet sich weiterhin eine schlichte Liste der Fachgebiete. Die Unterseiten liegen auf den Servern der jeweiligen Redaktionen; einige werden gepflegt, andere bewahren Linkbestände aus früheren Jahrzehnten, und manche Ziele sind ausgefallen. Benutzbar ist das Verzeichnis ohne Anmeldung oder besondere Software."
+    ],[
+      C("World Wide Web NeXT computer CERN 1991","Der erste Webserver am CERN"),
+      C("Tim Berners-Lee 1994 photograph","Tim Berners-Lee")
+    ],[
+      src("World Wide Web Virtual Library","https://vlib.org/"),
+      src("Virtual Library: Geschichte","https://vlib.org/admin/history")
+    ],{summary:"Ein handgepflegtes Fachverzeichnis aus dem Jahr 1991 ist weiterhin online.",searchTerm:"World Wide Web Virtual Library 1991 Tim Berners-Lee history"}),
+
+    card("SchlechtesWritingSeziert","The Rise of Skywalker · der Sith-Dolch",[
+      "Auf Kef Bir hält Rey den Rand eines Dolches gegen das Wrack des zweiten Todessterns. Seine ausgeklappte Spitze zeigt aus genau dieser Blickposition auf den Raum mit dem Wegfinder. Die Szene macht einen Gegenstand zum Lageplan, ohne vorher festzulegen, wann und für wen er angefertigt wurde. Küstenerosion, die Lage des Wracks und der einzige brauchbare Standort müssen über Jahre unverändert bleiben. Dadurch wirkt die Lösung vom Drehbuch für diesen Augenblick hergestellt.",
+      "Drei tragfähigere Lösungen:<br><br><strong>1.</strong> Der Dolch trägt Koordinaten und ein Peilsignal; C-3PO übersetzt beides, das Wrack ist nur das Ziel.<br><strong>2.</strong> Ein jüngerer Anhänger Palpatines fertigte die Klinge nach dem Absturz an. Eine kurze Datierung macht ihre Silhouette plausibel.<br><strong>3.</strong> Rey erkennt wiederkehrende Bauteile in einer technischen Skizze. Ihr Wissen aus dem Ausschlachten von Wracks löst die Aufgabe, während der Dolch nur den Zugangscode liefert."
+    ],[
+      Y("8Qn_spdM5Zg","Star Wars: The Rise of Skywalker · offizieller Trailer")
+    ],[
+      src("Lucasfilm: The Rise of Skywalker","https://www.starwars.com/films/star-wars-episode-ix-the-rise-of-skywalker"),
+      src("GameSpot: Filmkritik","https://www.gamespot.com/reviews/star-wars-episode-9-the-rise-of-skywalker-review-a/1900-6417383/")
+    ],{summary:"Ein Dolch passt nur von einem einzigen Standort genau zur Silhouette eines Wracks.",searchTerm:"Rise of Skywalker Sith dagger wreckage scene writing criticism"}),
+
+    card("DasIstHierGanzInDerNähe","Deutsches Drachenmuseum · Lindenfels",[
+      "Das Museum befindet sich im Haus Baureneck, In der Stadt 2, 64678 Lindenfels, rund 35 Kilometer nordöstlich von Mannheim. Die Ausstellung verfolgt Drachenbilder aus Vorderasien, Ostasien und Europa. Zu sehen sind unter anderem Abdrücke assyrischer Rollsiegel, chinesische Dachreiter und Darstellungen des heiligen Georg.",
+      "Im benachbarten Bürgerturm hängen großformatige Drachenbilder; seine Plattform bietet einen Blick über den Odenwald. Museum: samstags, sonntags und an gesetzlichen Feiertagen 14 bis 17 Uhr. Der Drachengarten und der Bürgerturm sind täglich zugänglich. Vor der Fahrt sollten die aktuellen Zeiten auf der Museumsseite geprüft werden."
+    ],[
+      C("Deutsches Drachenmuseum Lindenfels","Das Drachenmuseum im Haus Baureneck"),
+      C("Bürgerturm Lindenfels","Der benachbarte Bürgerturm")
+    ],[
+      src("Deutsches Drachenmuseum","https://www.deutsches-drachenmuseum.de/?Itemid=20&id=32&option=com_content&view=article"),
+      src("Museen in Hessen: Drachenmuseum","https://museen-in-hessen.de/de/museen/deutsches_drachenmuseum")
+    ],{summary:"In der Stadt 2, 64678 Lindenfels · etwa 35 km von Mannheim.",searchTerm:"Deutsches Drachenmuseum Lindenfels In der Stadt 2 Öffnungszeiten"}),
+
+    card("VisuelleIdeenDieIchKlauenWill","Alexeieff und Parker · der Nadelschirm",[
+      "Ein Nadelschirm besteht aus einer weißen Platte mit vielen dicht gesetzten Stiften. Werden die Stifte verschieden weit herausgedrückt und von der Seite beleuchtet, werfen sie unterschiedlich lange Schatten. Die Kamera sieht keine Linienzeichnung, sondern ein Feld aus Lichtwerten, das wie eine Aquatinta oder Mezzotinto wirkt.",
+      "Alexandre Alexeieff und Claire Parker bauten für „Eine Nacht auf dem kahlen Berge“ von 1933 einen Schirm mit Hunderttausenden Stiften. Für jedes Einzelbild veränderten sie deren Höhen mit Rollen und kleinen Werkzeugen. Die brauchbare Bildidee liegt im indirekten Verfahren: Das Werkzeug setzt keine sichtbare Spur. Es formt eine Oberfläche, und erst das seitliche Licht zeichnet das Bild."
+    ],[
+      C("Alexandre Alexeieff Claire Parker pinscreen","Alexeieff und Parker am Nadelschirm"),
+      C("Night on Bald Mountain Alexeieff 1933 still","Eine Nacht auf dem kahlen Berge, 1933")
+    ],[
+      src("National Film Board of Canada: Pinscreen","https://collection.nfb.ca/film/pinscreen"),
+      src("Centre Pompidou: Une nuit sur le mont chauve","https://www.centrepompidou.fr/en/ressources/oeuvre/cezK8g")
+    ],{summary:"Seitliches Licht zeichnet die Höhenunterschiede Tausender beweglicher Stifte.",searchTerm:"Alexeieff Parker pinscreen 240000 pins Night on Bald Mountain"}),
+
+    card("Eigene GIFs","Fünf gekoppelte Pendel",[],[
+      {type:"image",src:"assets/gifs/gekoppelte-pendel.gif",href:"assets/gifs/gekoppelte-pendel.gif",caption:"Eigene Animation · fünf gekoppelte Pendel",credit:"eigene Animation"}
+    ],[],{kind:"gif"}),
+
+    card("Trends in Art","Benjamin Blanc · Dust Collectors",[
+      "„Dust Collectors“ entstand 2026 als Ölgemälde auf einer zwei Meter hohen Leinwand. Mehrere Körper liegen in einem Zimmer unterhalb eines hoch sitzenden Fensters. Ihre Gliedmaßen bilden keinen übersichtlichen Figurenverband; Ellbogen, Knie und Rücken stoßen aneinander und an die Grenzen des Raums. Über der Gruppe liegt ein Büschel Straußenfedern.",
+      "Blanc, Jahrgang 2000, schloss 2026 den MA Painting am Royal College of Art ab. Er arbeitet nach eigenen Angaben aus erinnerten Körperempfindungen statt nach einer zusammenhängenden Szene. In diesem Bild wird das an den verkürzten, geknickten Haltungen sichtbar: Die Figuren erscheinen weder als Porträtgruppe noch als erzählte Handlung. Das enge Zimmer gibt jeder Bewegung sofort ein Hindernis."
+    ],[
+      I("https://artplugged.co.uk/wp-content/uploads/2026/08/Dust-Collectors-dad5183595764674-1024x768.jpeg","https://artplugged.co.uk/benjamin-blancs-paintings-nothing-quite-settles/","Dust Collectors, 2026","© Benjamin Blanc, courtesy the artist")
+    ],[
+      src("Royal College of Art: Painting MA 2026","https://2026.rca.ac.uk/school/painting-ma/"),
+      src("Art Plugged: Benjamin Blanc","https://artplugged.co.uk/benjamin-blancs-paintings-nothing-quite-settles/")
+    ],{summary:"Benjamin Blanc, 2026 · Öl auf Leinwand · 200 × 180 cm.",searchTerm:"Benjamin Blanc Dust Collectors 2026 painting"}),
+
+    card("Writing Tipps","Szene und Panorama bewusst wechseln",[
+      "Prüfe bei jedem längeren Abschnitt, ob er eine Szene oder einen Überblick braucht. Eine Szene verfolgt Handlungen in annähernd erlebter Zeit und hält die Wahrnehmung an einen Ort. Ein Panorama fasst Monate, Reisen oder wiederholte Vorgänge zusammen. Der Wechsel ist sinnvoll, wenn sich der Maßstab der erzählten Zeit tatsächlich ändert.",
+      "Markiere im Entwurf jede Stelle, an der ein Überblick plötzlich einen einzelnen Blick, Satz oder Griff ausführlich wiedergibt. Dort beginnt bereits eine Szene. Umgekehrt verrät eine Szene ihren fehlenden Schwerpunkt, wenn mehrere Tage in erklärenden Nebensätzen abgehandelt werden. Entscheide an solchen Nähten, welcher Zeitraum das Gewicht des Abschnitts tragen soll."
+    ],[
+      C("Percy Lubbock portrait","Percy Lubbock"),
+      C("Vanity Fair manuscript Thackeray","Thackerays Manuskript zu Vanity Fair")
+    ],[
+      src("Project Gutenberg: The Craft of Fiction","https://www.gutenberg.org/ebooks/18961")
+    ],{summary:"Der Wechsel zwischen Szene und Überblick folgt dem Maßstab der erzählten Zeit.",writingSource:{label:"Wortlaut · Percy Lubbock, The Craft of Fiction, Kapitel VII",source:"https://archive.org/details/craftoffiction00lubb",remote:{url:"https://www.gutenberg.org/cache/epub/18961/pg18961.txt",start:"I start from that distinction between the \"panoramic\" and the \"scenic\" presentation of a story",end:"Becky's valiant struggle in the world of her ambition",flexibleMarkers:true,reflow:true,fetchLabel:"Project-Gutenberg-Transkription"}},searchTerm:"Percy Lubbock scenic panoramic presentation craft of fiction"}),
+
+    card("Englisch Vokabular","shirty",[],[
+      C("irritated man office conversation","Ein gereiztes Gespräch")
+    ],[
+      src("Cambridge Dictionary: shirty","https://dictionary.cambridge.org/dictionary/english/shirty"),
+      src("Collins Dictionary: shirty","https://www.collinsdictionary.com/dictionary/english/shirty")
+    ],{summary:"gereizt und unnötig schroff",searchTerm:"shirty British English meaning pronunciation examples",vocabulary:{pronunciation:"/ˈʃɜː.ti/",register:"britisch, informell",meaning:"Shirty beschreibt jemanden, der auf eine harmlose Frage gereizt oder schroff reagiert. Das Wort bezeichnet meist einen kurzen Anflug von Ärger, nicht dauerhafte Feindseligkeit.",examples:[
+      {english:"There’s no need to get shirty; I only asked for the receipt.",german:"Du musst nicht gleich so gereizt werden; ich habe nur nach dem Beleg gefragt."},
+      {english:"He was shirty with the waiter after waiting ten minutes.",german:"Nach zehn Minuten Wartezeit fuhr er den Kellner unnötig schroff an."},
+      {english:"Her email sounded shirty, though the problem was easy to fix.",german:"Ihre E-Mail klang gereizt, obwohl sich das Problem leicht beheben ließ."}
+    ]}}),
+
+    card("Geo Atlas","Cabinda",[
+      "Cabinda ist eine angolanische Provinz an der Atlantikküste, die durch einen schmalen Küstenstreifen der Demokratischen Republik Kongo vom übrigen Angola getrennt ist. Im Norden grenzt sie an die Republik Kongo. Die Provinzhauptstadt Cabinda liegt etwa 380 Kilometer nördlich von Luanda und knapp 60 Kilometer von Pointe-Noire entfernt.",
+      "Die heutige Grenze geht auf den Vertrag von Simulambuco von 1885 zurück, mit dem Portugal über das Gebiet ein Protektorat errichtete. Seit Angolas Unabhängigkeit 1975 bestreiten separatistische Gruppen die Zugehörigkeit der Provinz. Vor der Küste liegen große Erdölfelder; ihre Einnahmen geben dem kleinen Gebiet ein außerordentliches Gewicht für den angolanischen Staat. Der Hafen von Pointe-Noire und die Kongomündung bestimmen zugleich seine regionale Lage."
+    ],[
+      C("Cabinda map Angola exclave","Cabinda zwischen den beiden Kongostaaten"),
+      C("Cabinda Angola coast","Die Küste bei Cabinda")
+    ],[
+      src("Encyclopaedia Britannica: Cabinda","https://www.britannica.com/place/Cabinda-province-Angola"),
+      src("Wikipedia: Cabinda Province","https://en.wikipedia.org/wiki/Cabinda_Province")
+    ],{summary:"Die angolanische Exklave liegt zwischen der Republik Kongo und der Demokratischen Republik Kongo.",wiki:{page:"Cabinda_Province",language:"en"},searchTerm:"Cabinda Angola exclave Simulambuco oil map history"}),
+
+    card("Deutsche Sprichwörter in kyrillischen Buchstaben","Steter Tropfen höhlt den Stein.",[
+      "Lautwert: /ˈʃteːtɐ ˈtʁɔpfn̩ høːlt deːn ʃtaɪn/. Шт gibt das anlautende st wieder. Ё nähert den gerundeten ö-Laut an; й markiert den zweiten Teil des Diphthongs ei. Das deutsche d in den steht als д."
+    ],[
+      C("water drop eroded stone close up","Vom Wasser ausgehöhlter Stein")
+    ],[
+      src("Wikiquote: Deutsche Sprichwörter","https://de.wikiquote.org/wiki/Deutsche_Sprichw%C3%B6rter"),
+      src("Wikipedia: Kyrillisches Alphabet","https://de.wikipedia.org/wiki/Kyrillisches_Alphabet")
+    ],{summary:"Штетер Тропфен хёльт ден Штайн.",searchTerm:"Steter Tropfen höhlt den Stein Herkunft Lautschrift"}),
+
+    card("Deutsche Sprichwörter in griechischen Buchstaben","Der Ton macht die Musik.",[
+      "Lautwert: /deːɐ̯ toːn maxt diː muˈziːk/. Δ steht hier entsprechend der verlangten lautnahen Zuordnung für das deutsche d; im heutigen Griechisch hat der Buchstabe gewöhnlich den Lautwert /ð/. Χ gibt den ach-Laut in macht wieder."
+    ],[
+      C("conductor rehearsal orchestra gesture","Tonfall und musikalische Geste")
+    ],[
+      src("Wikiquote: Deutsche Sprichwörter","https://de.wikiquote.org/wiki/Deutsche_Sprichw%C3%B6rter"),
+      src("Wikipedia: Griechisches Alphabet","https://de.wikipedia.org/wiki/Griechisches_Alphabet")
+    ],{summary:"Δερ Τον μαχτ δι Μουζίκ.",searchTerm:"Der Ton macht die Musik Herkunft Lautschrift"})
+  );
+})();
+
+(() => {
+  "use strict";
   const card = (category, title, detail, media, sources = [], extra = {}) => ({category, title, detail, media, sources, ...extra});
   const source = (label, url) => S(label, url);
   const proverbSources = (term, alphabet) => [
