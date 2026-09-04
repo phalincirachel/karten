@@ -1,6 +1,8 @@
 from pathlib import Path
 from PIL import Image
 from PIL import ImageChops
+from PIL import ImageDraw
+import math
 
 SOURCE = Path(r"C:\Users\Stephan\.codex\generated_images\01a04d43-874f-70f1-a8c0-da4999e65644")
 WORK = Path(__file__).resolve().parent
@@ -72,3 +74,43 @@ with Image.open(membrane_source) as image:
         optimize=True,
         disposal=2,
     )
+
+# Siebte Karte: Die Spitzen unterschiedlich hoher Stäbe werfen bei einer
+# kreisenden Lichtquelle eine fortlaufend veränderte Schattenlinie.
+frames = []
+size = 320
+post_x = [48, 84, 120, 160, 200, 238, 274]
+post_h = [48, 88, 62, 112, 72, 96, 54]
+for index in range(32):
+    phase = index / 32 * 2 * math.pi
+    light_x = 160 + 118 * math.cos(phase)
+    light_y = 50 + 18 * math.sin(phase)
+    frame = Image.new("RGB", (size, size), (239, 232, 214))
+    draw = ImageDraw.Draw(frame, "RGBA")
+    for grid in range(32, 320, 32):
+        draw.line((grid, 28, grid, 292), fill=(49, 63, 65, 24), width=1)
+        draw.line((28, grid, 292, grid), fill=(49, 63, 65, 24), width=1)
+    draw.line((28, 224, 292, 224), fill=(35, 47, 49, 210), width=2)
+    tips = []
+    for x, height in zip(post_x, post_h):
+        top_y = 224 - height
+        denominator = max(18, top_y - light_y)
+        shadow_x = x + (x - light_x) * height / denominator
+        shadow_x = max(18, min(302, shadow_x))
+        tips.append((shadow_x, 224))
+        draw.polygon([(x - 3, 224), (x + 3, 224), (shadow_x + 4, 231), (shadow_x - 4, 231)], fill=(35, 47, 49, 70))
+        draw.line((x, 224, x, top_y), fill=(30, 47, 50, 255), width=5)
+        draw.ellipse((x - 5, top_y - 5, x + 5, top_y + 5), fill=(190, 70, 49, 255))
+    draw.line(tips, fill=(190, 70, 49, 210), width=3)
+    draw.ellipse((light_x - 9, light_y - 9, light_x + 9, light_y + 9), fill=(245, 178, 46, 255), outline=(133, 87, 22, 210), width=2)
+    frames.append(frame.quantize(colors=64, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE))
+
+frames[0].save(
+    OUTPUT / "schattenzeiger.gif",
+    save_all=True,
+    append_images=frames[1:],
+    duration=90,
+    loop=0,
+    optimize=True,
+    disposal=2,
+)

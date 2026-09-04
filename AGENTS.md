@@ -331,3 +331,11 @@ Die folgenden Regeln gelten für alle künftig angelegten oder überarbeiteten K
 ### Folgerung aus positivem Feedback
 
 - Die Karte über Ojkanje dient als Qualitätsmaßstab für neue Karten zu seltenen Musikstilen: genaue regionale Einordnung, zuständige Primärinstitution, verständliche Beschreibung der musikalischen Praxis und ein funktionierendes Beispiel. Das Thema selbst wird nicht wiederholt.
+
+## Ergänzung vom 4. September 2026 – fünfte Erweiterung
+
+- Jede der 35 aktiven Kategorien erhält genau eine weitere Karte. Der aktive Bestand umfasst danach 470 Karten.
+- Die neue Folge der Finnegan-Exegese setzt die durchlaufende Reihenfolge mit vier Sätzen von Druckseite 5 fort. Der Originalwortlaut wird weiterhin erst im Browser aus der öffentlichen Textquelle geladen.
+- Das neue eigene GIF heißt „Schattenzeiger“. Es bleibt ohne Erklärung und Detailtext.
+- Neue Musikkarten beginnen bei 0:00. Zeitparameter und automatische Sprünge bleiben ausgeschlossen.
+- Neue ethnografische Erzählungen nennen Aufzeichnungsort, heutige geografische Lage, Gewährsperson und Aufzeichnungsdatum, sofern die Quelle diese Angaben enthält. Der vollständige gemeinfreie Wortlaut wird zwischen geprüften Anfangs- und Endmarken geladen.

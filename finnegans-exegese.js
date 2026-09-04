@@ -15,6 +15,10 @@
     tower:"https://fwannotated.blogspot.com/2014/09/p4k.html",
     summit:"https://fwannotated.blogspot.com/2014/09/p5a.html"
   };
+  const A5={
+    crest:"https://fwannotated.blogspot.com/2014/09/p5b.html",
+    rhyme:"https://fwannotated.blogspot.com/2014/09/p5c.html"
+  };
 
   const P413="oystrygods gaggin fishygods! "+
     "Brékkek Kékkek Kékkek Kékkek! Kóax Kóax Kóax! "+
@@ -172,6 +176,10 @@
     {page:4,text:"",en:"His old round-headed steeple rose again in rough, undressed masonry.",boxes:[["Worum geht’s","Turm und Baumeister stehen auf; Bauvorgang und Auferstehung haben dieselbe Richtung."],["Wörter","<em>roundhead staple</em> enthält Rundkopf, Steeple und einen alten Stützpfeiler. <em>maisonry</em> setzt französisch <em>maison</em> in masonry."],["Querverweise","Dänisch <em>opstandelse</em> heißt Auferstehung und klingt in <em>upstanded</em> an."]],source:A4.tower},
     {page:4,text:"",en:"A vast skyline of a tower rose from almost nothing, climbing toward the heavens and the Himalayas.",boxes:[["Worum geht’s","Finnegans Bau wächst vom Mauerwerk zur Weltachse und füllt die ganze Landschaft."],["Wörter","<em>waalworth</em> enthält Mauer, Wal und Woolworth Building; <em>eyeful hoyth</em> nennt Eiffelturm, Höhe und Howth."],["Querverweise","<em>erigenating</em> erinnert an den irischen Philosophen Eriugena, für den die Schöpfung aus dem göttlichen Nichts hervorgeht."]],source:A4.summit},
     {page:4,text:"",en:"A burning bush crowns the tower while workers and buckets move up and down its sides.",boxes:[["Worum geht’s","Der Schluss zeigt den fertig werdenden Turm als Baustelle, Wirtshauszeichen und biblischen Berg."],["Wörter","Der Busch ist Richtkrone, Moses’ brennender Dornbusch und das alte Zeichen eines Wirtshauses."],["Querverweise","<em>larrons o’toolers</em> nennt Arbeiter, französische Diebe und den Dubliner Bischof Laurence O’Toole; Aufstieg und Fall laufen gleichzeitig."]],source:A4.summit},
+    {page:5,text:"",en:"He was the first to bear arms and a name: Wassaily Booslaeugh of the Giant Mountains.",boxes:[["Worum geht’s","Aus dem Baumeister wird ein sagenhafter Stammvater. Der Satz stattet ihn zugleich mit Namen, Waffen und einer Herkunft aus."],["Wörter","<em>Wassaily Booslaeugh</em> erinnert an Wassili Buslajew, den gewaltigen Helden aus Nowgoroder Bylinen. <em>Giant Mountains</em> bezeichnet das Riesengebirge und macht den Träger des Namens selbst zum Riesen."],["Querverweise","Der zuvor als Landschaft liegende Finnegan erhält eine heraldische Abstammung. Familiengeschichte, Heldensage und Staatsgeschichte beginnen mit derselben Figur."]],source:A5.crest},
+    {page:5,text:"",en:"His heraldic crest is green and silver, attended by maidservants, and bears a pursued, horrible, horned he-goat or oak.",boxes:[["Worum geht’s","Die Beschreibung wechselt in die Sprache eines Wappens. Farben, Begleitfiguren und Wappentier werden jedoch bei jedem Wort unsicher."],["Wörter","<em>huroldry</em> enthält heraldry, Harold und hurly-burly. <em>caputnaked</em> lässt Kopf, Nacktheit und eine heraldische Stellung zusammenklingen; <em>hegoak</em> schwankt zwischen Ziegenbock und Eiche."],["Querverweise","Grün und Silber gehören zu Irland. Die regelhafte Sprache der Heraldik soll eindeutige Merkmale festhalten, wird hier aber selbst zum Erzeuger mehrerer Bilder."]],source:A5.crest},
+    {page:5,text:"",en:"His shield is divided by a horizontal band, with strung archers and a sun or lion in the second colour.",boxes:[["Worum geht’s","Das erfundene Wappen wird weiter ausgemalt. Ein Querbalken teilt den Schild; Figuren und Farben bleiben beweglich, obwohl die Wappensprache Genauigkeit beansprucht."],["Wörter","<em>scutschum</em> enthält scutcheon, das Wappenschild, und schottische Anklänge. <em>fessed</em> nennt die waagerechte Fessel oder Fesse; <em>solsphere</em> schwankt zwischen Sonne, Kugel und Löwe."],["Querverweise","Das Wappen ordnet die vielen Namen HCEs wie eine Familiengenealogie. Joyce benutzt die feste heraldische Grammatik, um gerade keine feste Abstammung zuzulassen."]],source:A5.crest},
+    {page:5,text:"",en:"H is for the husbandman handling his hoe.",boxes:[["Worum geht’s","Der Text fällt aus der Wappenbeschreibung in den Ton einer Alphabetfibel. Der Buchstabe H führt zum Landarbeiter mit seiner Hacke."],["Wörter","<em>Hootch</em> klingt nach dem Buchstabennamen H, nach Schnaps und nach einem Ruf. <em>husbandman</em> bedeutet Landarbeiter, trägt aber zugleich husband, den Ehemann, in sich."],["Querverweise","H beginnt mehrere Namen der HCE-Figur. Die Fibel macht aus dem Anfangsbuchstaben eine Tätigkeit und leitet zum wiederkehrenden Ruf der folgenden Zeile über."]],source:A5.rhyme},
   ];
 
   const page4Source="https://gist.githubusercontent.com/jl2/7fbf5c10f70a9b1bcd25e1fa2c34fee8/raw/finnegan.txt";
@@ -196,6 +204,10 @@
     ["his roundhead staple","a waalworth"],
     ["a waalworth","with a burning bush"],
     ["with a burning bush","Of the first was he"],
+    ["Of the first was he","His crest of huroldry"],
+    ["His crest of huroldry","His scutschum fessed"],
+    ["His scutschum fessed","Hootch is for husbandman"],
+    ["Hootch is for husbandman","Hohohoho, Mister Finn"],
   ];
   units.slice(12).forEach((unit,index)=>{
     unit.remoteRange=ranges[index];
@@ -211,9 +223,10 @@
     "Rock of Cashel Ireland photograph",
     "Phoenix medieval bestiary manuscript",
     "James Joyce portrait photograph",
-    "Tower of Babel Pieter Bruegel Vienna"
+    "Tower of Babel Pieter Bruegel Vienna",
+    "Coat of arms of Dublin.svg"
   ];
-  const pageSources={3:"https://www.fweet.org/sim.pl?003",4:"https://www.fweet.org/sim.pl?004"};
+  const pageSources={3:"https://www.fweet.org/sim.pl?003",4:"https://www.fweet.org/sim.pl?004",5:"https://www.fweet.org/sim.pl?005"};
   for(let index=0;index<units.length;index+=4){
     const group=units.slice(index,index+4),number=index/4+1;
     const pages=[...new Set(group.map(unit=>unit.page))];

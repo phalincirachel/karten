@@ -1421,6 +1421,283 @@ window.KARTEN.push(
   );
 })();
 
+// Erweiterung vom 4. September 2026: je eine Karte für alle aktiven Kategorien.
+(() => {
+  "use strict";
+  const card=(category,title,detail,media,sources=[],extra={})=>({category,title,detail,media,sources,...extra});
+  const src=(label,url)=>S(label,url);
+
+  window.KARTEN.push(
+    card("Aphorismen", "„Die gefährlichsten Unwahrheiten sind Wahrheiten mäßig entstellt.“", [],
+      [F("Georg Christoph Lichtenberg Big.jpg", "Georg Christoph Lichtenberg")],
+      [src("Lichtenberg: Sudelbücher", "http://www.zeno.org/Literatur/M/Lichtenberg,+Georg+Christoph/Aphorismen/Sudelbücher")],
+      {kind:"quote",byline:"Georg Christoph Lichtenberg · Sudelbuch H 24",summary:""}),
+
+    card("DasIstHierGanzInDerNähe", "Eremitage Waghäusel", [
+      "Die Eremitage steht rund 30 Kilometer südlich von Mannheim. Für Damian Hugo von Schönborn, den Fürstbischof von Speyer, entstand ab 1724 ein Jagd- und Lustschloss. Im Mittelpunkt lag ein sechzehneckiger Bau; acht Wege liefen sternförmig darauf zu. Vier zweigeschossige Pavillons ergänzten die Anlage ab 1730.",
+      "Ab 1837 nutzte die Badische Gesellschaft für Zuckerfabrikation das Gelände. Fabrikbauten umgaben das Schloss, bis die Zuckerfabrik 1995 schloss. Heute stehen die restaurierte Eremitage und ein Teil der Industrieanlage nebeneinander."
+    ], [F("Eremitage Waghäusel - panoramio.jpg", "Die Eremitage in Waghäusel")], [
+      src("Stadt Waghäusel: Geschichte der Eremitage", "https://www.waghaeusel-eremitage.de/eremitage-waghaeusel/geschichte/1724-1747"),
+      src("Stadt Waghäusel: Ortsgeschichte", "https://www.waghaeusel.de/stadt-wirtschaft/geschichte-wappen/blick-in-die-ortsgeschichte")
+    ], {summary:"Ein fürstbischöfliches Jagdschloss steht mitten im Gelände einer früheren Zuckerfabrik.",searchTerm:"Eremitage Waghäusel Jagdschloss Zuckerfabrik Geschichte"}),
+
+    card("Deutsche Sprichwörter in griechischen Buchstaben", "Was du heute kannst besorgen, das verschiebe nicht auf morgen.", [
+      "β steht hier für das deutsche w mit dem Lautwert /v/, δ für d und φ für f. χ nähert die beiden deutschen ch-Laute an. Die Schreibweise gibt deutsche Laute wieder; sie ist kein griechischer Satz."
+    ], [F("Sunrise in germany.jpg", "Ein Morgen in Deutschland")], [
+      src("Wikiquote: Deutsche Sprichwörter", "https://de.wikiquote.org/wiki/Deutsche_Sprichw%C3%B6rter"),
+      src("Wikipedia: Griechisches Alphabet", "https://de.wikipedia.org/wiki/Griechisches_Alphabet")
+    ], {summary:"Βας δου χόϊτε κανστ μπεζόργκεν, δας φερσίμπε νιχτ αουφ μόργκεν.",searchTerm:"Was du heute kannst besorgen Sprichwort Herkunft"}),
+
+    card("Deutsche Sprichwörter in kyrillischen Buchstaben", "Aller Anfang ist schwer.", [
+      "ш gibt den deutschen sch-Laut wieder. Das w in schwer hat den Lautwert /v/ und erscheint deshalb als в. Die Folge нг nähert den einzelnen Nasallaut am Ende von Anfang an."
+    ], [F("Student Violin.jpg", "Eine erste Geigenübung")], [
+      src("Wikiquote: Deutsche Sprichwörter", "https://de.wikiquote.org/wiki/Deutsche_Sprichw%C3%B6rter"),
+      src("Wikipedia: Kyrillisches Alphabet", "https://de.wikipedia.org/wiki/Kyrillisches_Alphabet")
+    ], {summary:"Аллер Анфанг ист швер.",searchTerm:"Aller Anfang ist schwer Sprichwort Herkunft"}),
+
+    card("Eigene GIFs", "Schattenzeiger", [],
+      [I("assets/gifs/schattenzeiger.gif", "assets/gifs/schattenzeiger.gif", "Schattenzeiger", "Eigene Animation")], [],
+      {kind:"gif",summary:""}),
+
+    card("Englisch Vokabular", "naff", [],
+      [C("kitsch plastic gold ornament", "Eine goldfarbene Kunststoffverzierung")],
+      [src("Cambridge Dictionary: naff", "https://dictionary.cambridge.org/dictionary/english/naff")], {
+        summary:"geschmacklos; billig wirkend; misslungen",
+        vocabulary:{pronunciation:"/næf/",register:"britisch, informell",meaning:"Naff bezeichnet etwas Geschmackloses oder merklich Billiges. Das Wort fällt oft über Kleidung, Gestaltung oder eine misslungene Pointe.",examples:[
+          {english:"The fake-gold handles make the cabinet look naff.",german:"Die goldfarbenen Kunststoffgriffe lassen den Schrank billig aussehen."},
+          {english:"That ending was too naff for an otherwise sharp comedy.",german:"Dieses Ende war für eine sonst kluge Komödie zu abgeschmackt."},
+          {english:"The first logo felt naff, so they kept the plain wordmark.",german:"Das erste Logo wirkte geschmacklos; deshalb behielten sie die schlichte Wortmarke."}
+        ]},searchTerm:"naff British English meaning examples"
+      }),
+
+    card("Entzifferte Schriften", "Kyprische Silbenschrift · pa-si-le-wo-se", [
+      "Griechische Texte wurden auf Zypern vom 11. bis zum 4. Jahrhundert v. Chr. mit einer Silbenschrift geschrieben. Jedes Zeichen bezeichnete meist eine Folge aus Konsonant und Vokal. Die Sprache blieb Griechisch, obwohl die Zeichen anders aussahen als das griechische Alphabet.",
+      "Die zweisprachige Inschrift von Idalion gab denselben Text in Phönizisch und in kyprischen Zeichen wieder. George Smith erkannte 1871 darin griechische Namen und Flexionsformen. pa-si-le-wo-se gibt basilēwos wieder; das w bezeichnet einen Laut, der im späteren Griechisch verschwunden ist.",
+      "Vollständige Übersetzung des Ausschnitts: des Königs."
+    ], [F("Idalion bilingual and the decipherment of the the Cypriot syllabary.jpg", "Die zweisprachige Inschrift von Idalion")], [
+      src("Kyprios Character: Decipherment of the Cypriot syllabary", "https://kyprioscharacter.eie.gr/en/scientific-texts/details/inscriptions/the-decipherment-of-the-cypriot-syllabary"),
+      src("Wikipedia: Cypriot syllabary", "https://en.wikipedia.org/wiki/Cypriot_syllabary")
+    ], {summary:"pa-si-le-wo-se · des Königs",searchTerm:"Cypriot syllabary pa-si-le-wo-se Idalion bilingual"}),
+
+    card("Erste Sätze großer Romane", "Unter meinen Jugendbekannten war ein sonderbarer Mensch, dessen Geschichte wohl wert ist, der Vergessenheit entrissen zu werden.", [],
+      [F("Alfred Kubin (Zeitgenossen, 5) - Rudolf Großmann - G 58 004 e M f Neue Kunst Freiburg.png", "Alfred Kubin")], [
+        src("Project Gutenberg: Die andere Seite", "https://www.gutenberg.org/ebooks/75988"),
+        src("Wikipedia: Die andere Seite", "https://de.wikipedia.org/wiki/Die_andere_Seite_(Roman)")
+      ], {kind:"quote",byline:"Alfred Kubin · Die andere Seite",wiki:{page:"Die_andere_Seite_(Roman)",language:"de"},summary:""}),
+
+    card("Etymologien und Begriffsgeschichten", "Kiosk", [
+      "Das mittelpersische kōšk bezeichnete einen Palast oder einen freistehenden Prachtbau. Das Türkische übernahm das Wort als köşk für einen Gartenpavillon. Reisende und Architekten brachten es nach Westeuropa, wo Kiosk zunächst einen offenen Pavillon in einem Park meinte.",
+      "Im 19. Jahrhundert ging der Name auf kleine Verkaufsstände im Straßenraum über. Die Bauform schrumpfte, die öffentliche Zugänglichkeit blieb. Heute bezeichnet Kiosk außerdem selbstbediente Terminals; aus dem Gartenhaus wurde über den Verkaufsstand eine Bedienoberfläche."
+    ], [F("Marble Kiosk, Beylerbeyi Palace-exterior 2 (cropped).jpg", "Ein osmanischer Kiosk am Beylerbeyi-Palast"),C("newspaper kiosk street", "Ein Verkaufskiosk")], [
+      src("DWDS: Kiosk", "https://www.dwds.de/wb/Kiosk"),
+      src("Wikipedia: Kiosk", "https://de.wikipedia.org/wiki/Kiosk")
+    ], {summary:"Vom persischen Palast über den türkischen Gartenpavillon zum Verkaufsstand und zum Terminal.",searchTerm:"Kiosk Etymologie persisch köşk Bedeutungswandel"}),
+
+    card("Falsche Modelle mit großer Erklärungskraft", "Prouts Hypothese", [
+      "William Prout bemerkte 1815, dass viele gemessene Atomgewichte nahe bei ganzen Vielfachen des Wasserstoffgewichts lagen. Er vermutete deshalb einen gemeinsamen Urstoff, aus dessen Wasserstoffeinheiten alle Elemente aufgebaut seien. Das Modell gab den Atomgewichten eine einfache Ordnung und regte genauere Messungen an.",
+      "Chlor mit einem mittleren Atomgewicht von etwa 35,45 widersprach der strengen Ganzzahligkeit. Erst die Entdeckung der Isotope erklärte beides: Einzelne Nuklide besitzen annähernd ganzzahlige Massenzahlen, natürliche Elemente bestehen jedoch oft aus mehreren Isotopen. Der Name Proton erinnert an Prouts vermuteten Urbaustein."
+    ], [F("Henry Wyndham Phillips (1820-1868) - William Prout (1784–1850) - X269 - Royal College of Physicians.jpg", "William Prout")], [
+      src("Encyclopaedia Britannica: Prout's hypothesis", "https://www.britannica.com/science/Prouts-hypothesis"),
+      src("Wikipedia: Proutsche Hypothese", "https://de.wikipedia.org/wiki/Proutsche_Hypothese")
+    ], {summary:"Alle Atomgewichte sollten ganze Vielfache des Wasserstoffgewichts sein.",searchTerm:"Prout hypothesis atomic weights isotopes history"}),
+
+    card("Geo Atlas", "Qattara-Senke", [
+      "Die Qattara-Senke liegt in der Westlichen Wüste Ägyptens, südlich der Mittelmeerküste. Ihr tiefster Punkt befindet sich 133 Meter unter dem Meeresspiegel. Steile Ränder, Salzpfannen und weicher Untergrund erschweren eine Durchquerung.",
+      "Im Zweiten Weltkrieg sicherte die Senke bei El Alamein die südliche Flanke der Front, weil große motorisierte Verbände dort kaum passieren konnten. Seit dem frühen 20. Jahrhundert wurden Kanäle oder Tunnel vom Mittelmeer vorgeschlagen, um ein Gefälle für Wasserkraft zu nutzen. Keiner dieser Eingriffe wurde gebaut."
+    ], [F("Qattara depression map.png", "Lage und Höhenstufen der Qattara-Senke"),C("Qattara Depression Egypt landscape", "Die Qattara-Senke")], [
+      src("Encyclopaedia Britannica: Qattara Depression", "https://www.britannica.com/place/Qattara-Depression"),
+      src("Wikipedia: Qattara Depression", "https://en.wikipedia.org/wiki/Qattara_Depression")
+    ], {summary:"Eine Senke unter dem Meeresspiegel prägte 1942 die Front von El Alamein.",searchTerm:"Qattara Depression map El Alamein hydropower project"}),
+
+    card("Grenzfälle", "The Battle of the Somme · Dokument und Inszenierung", [
+      "Geoffrey Malins und John McDowell drehten 1916 einen langen offiziellen Film über die britische Somme-Offensive. Zu sehen sind Vorbereitungen, Artilleriefeuer, Verwundete und Gefangene. Ein Teil der Aufnahmen entstand nahe der Front und bewahrte Vorgänge, die sonst nur beschrieben worden wären.",
+      "Die berühmte Einstellung angreifender Soldaten wurde hinter den Linien inszeniert; eine Kamera hätte den wirklichen Sturmangriff kaum aus dieser Position filmen können. Der Film ist deshalb zugleich Quelle und Rekonstruktion. Gerade die Montage beider Arten von Bildern zeigt, weshalb historisches Filmmaterial nach seiner Entstehungssituation beurteilt werden muss."
+    ], [F("The Battle of the Somme film image2.jpg", "Eine Einstellung aus The Battle of the Somme")], [
+      src("Imperial War Museums: The Battle of the Somme", "https://film.iwmcollections.org.uk/record/1310/media_id/18914"),
+      src("UNESCO Memory of the World", "https://www.unesco.org/en/memory-world/battle-somme")
+    ], {summary:"Der Kriegsfilm von 1916 enthält Frontaufnahmen und eigens nachgestellte Szenen.",searchTerm:"Battle of the Somme 1916 film staged scenes Malins McDowell"}),
+
+    card("Großartige Bilder und Design", "E. McKnight Kauffer · The North Downs", [
+      "Das Plakat entstand 1915 für die Londoner U-Bahn. Kauffer zerlegte die Hügellandschaft südlich von London in große, scharf begrenzte Farbflächen. Die Staffelung der Flächen ersetzt die übliche atmosphärische Tiefe eines Landschaftsbildes.",
+      "Die Eisenbahn erscheint weder als Zug noch als Gleis. Das Plakat verkauft einen erreichbaren Landschaftsraum und lässt die Verkehrstechnik außerhalb des Bildes. Seine kantige Formensprache entstand kurz nach Kauffers Begegnung mit Kubismus und Vortizismus."
+    ], [F("Poster, The North Downs, London Underground, 1915 (CH 18447297-2).jpg", "E. McKnight Kauffer: The North Downs")], [
+      src("The Metropolitan Museum of Art", "https://www.metmuseum.org/art/collection/search/833917"),
+      src("Wikimedia Commons", "https://commons.wikimedia.org/wiki/File:Poster,_The_North_Downs,_London_Underground,_1915_(CH_18447297-2).jpg")
+    ], {summary:"E. McKnight Kauffer · Plakat für die Londoner U-Bahn · 1915",searchTerm:"E McKnight Kauffer The North Downs poster 1915"}),
+
+    card("Gute einfache Cartoons", "Caran d’Ache · Un dîner en famille · 14. Februar 1898", [
+      "Im ersten Bild ordnet der Gastgeber an: „Vor allem! Reden wir nicht über die Dreyfus-Affäre!“ Im zweiten liegt das Mobiliar umgestürzt, die Gäste prügeln sich, und darunter steht nur: „Sie haben darüber geredet.“",
+      "Der Cartoon erschien während der Dreyfus-Affäre in Le Figaro. Er zeigt keine politische Position im Streit, sondern dessen Wirkung auf eine bürgerliche Tischgesellschaft. Der Sprung zwischen den beiden Bildern erledigt die ganze Pointe."
+    ], [F("Caran-d-ache-dreyfus-supper.jpg", "Caran d’Ache: Un dîner en famille")], [
+      src("Wikimedia Commons: vollständiger Cartoon", "https://commons.wikimedia.org/wiki/File:Caran-d-ache-dreyfus-supper.jpg"),
+      src("BnF: Caran d’Ache", "https://data.bnf.fr/en/11941315/caran_d_ache/")
+    ], {summary:"„Surtout! ne parlons pas de l’affaire Dreyfus!“ — „Ils en ont parlé.“",searchTerm:"Caran d'Ache Un dîner en famille 1898 Dreyfus"}),
+
+    card("Historische Anekdoten", "New York–Paris-Rennen · 1908", [
+      "Am 12. Februar 1908 starteten sechs Automobile am verschneiten Times Square zu einem Rennen nach Paris. Die geplante Fahrt über das zugefrorene Beringmeer erwies sich als unmöglich; die Wagen wurden per Schiff von Alaska nach Wladiwostok gebracht. Danach führte die Strecke durch Sibirien und Europa.",
+      "Als der amerikanische Thomas Flyer am 30. Juli Paris erreichte, wollte ein Polizist ihn wegen eines fehlenden Scheinwerfers anhalten. Die Mannschaft befestigte das Fahrrad eines Passanten am Wagen und erklärte dessen Lampe zum zweiten Licht. Der Thomas Flyer gewann nach 169 Tagen; Zeitgutschriften und Strafen setzten das deutsche Protos-Team auf den zweiten Platz."
+    ], [F("1908 New York to Paris Race, grid.jpg", "Der Start des New-York–Paris-Rennens"),F("New York - Paris 1908, le 31 juillet l'arrivée de la Thomas Flyer à Paris.jpg", "Der Thomas Flyer in Paris")], [
+      src("Smithsonian Magazine: The Greatest Auto Race on Earth", "https://www.smithsonianmag.com/history/the-greatest-auto-race-on-earth-116923756/"),
+      src("Wikipedia: 1908 New York to Paris Race", "https://en.wikipedia.org/wiki/1908_New_York_to_Paris_Race")
+    ], {summary:"Sechs Automobile starteten im Winter von New York zu einer Fahrt über drei Kontinente.",searchTerm:"1908 New York Paris automobile race Thomas Flyer bicycle lamp"}),
+
+    card("Interessante Listen", "Die Zeitkapsel unter Kleopatras Nadel · London, 1878", [
+      "Bei der Aufstellung des ägyptischen Obelisken am Victoria Embankment wurde 1878 eine Zeitkapsel unter seinem Sockel versenkt. Die Liste ihres Inhalts hält fest, was die Beteiligten für ein knappes Bild des viktorianischen London hielten.",
+      "Enthalten sind: ein Satz britischer Münzen; eine Rupie; Ausgaben von zehn Tageszeitungen; eine Eisenbahnfahrkarte; ein Stadtplan; Fotografien von zwölf damals als schön geltenden Engländerinnen; Haarspangen und andere Toilettenartikel; eine Schachtel Zigarren; mehrere Tabakpfeifen; ein Babyfläschchen; Spielzeug; Werkzeuge; ein hydraulischer Wagenheber; Drahtseile; ein Modell des Obelisken; Bibeln in mehreren Sprachen; Bradshaws Eisenbahnfahrplan; Whitakers Almanack; ein Verzeichnis der Londoner Einwohner und eine kurze Geschichte des Transports des Obelisken."
+    ], [F("Cleopatra's Needle, London, UK - Diliff.jpg", "Kleopatras Nadel am Victoria Embankment")], [
+      src("Wikipedia: Cleopatra's Needle, London", "https://en.wikipedia.org/wiki/Cleopatra%27s_Needle,_London"),
+      src("Historic England: Cleopatra's Needle", "https://historicengland.org.uk/listing/the-list/list-entry/1357345")
+    ], {summary:"Eine Zeitkapsel von 1878 enthält den Stadtplan, Tageszeitungen und Gegenstände des Londoner Alltags.",searchTerm:"Cleopatra's Needle London time capsule contents 1878"}),
+
+    card("Interessante Sprachen und Sprachmerkmale", "Cusco-Quechua: -mi, -si, -chá", [
+      "Cusco-Quechua wird in den südlichen peruanischen Anden um Cusco gesprochen. Drei angehängte Partikeln zeigen, auf welcher Grundlage eine Aussage gemacht wird. Sie verändern weder die handelnde Person noch die Zeitform des Verbs.",
+      "Pay-mi hamun. — Er oder sie kommt; der Sprecher legt sich auf die Aussage fest.\nPay-si hamun. — Er oder sie kommt, heißt es; die Information stammt von anderen.\nPay-chá hamun. — Er oder sie kommt vermutlich; der Sprecher folgert oder vermutet es."
+    ], [C("Quechua people Cusco Peru", "Quechua-Sprecher im Raum Cusco"),C("Cusco Region Peru map", "Die Region Cusco in Peru")], [
+      src("Martina Faller: Semantics and Pragmatics of Evidentials in Cuzco Quechua", "https://personalpages.manchester.ac.uk/staff/martina.t.faller/documents/Thesis.pdf"),
+      src("Glottolog: Cusco Quechua", "https://glottolog.org/resource/languoid/id/cusc1236")
+    ], {summary:"Drei kurze Partikeln unterscheiden Festlegung, Hörensagen und Vermutung.",languageInfo:[
+      ["Ort","Südperu, besonders die Region Cusco"],
+      ["-mi","Pay-mi hamun · pay-ASSERT kommen.3 · Er oder sie kommt; dafür stehe ich ein."],
+      ["-si","Pay-si hamun · pay-REPORT kommen.3 · Er oder sie kommt, heißt es."],
+      ["-chá","Pay-chá hamun · pay-CONJECT kommen.3 · Er oder sie kommt vermutlich."]
+    ],searchTerm:"Cusco Quechua mi si cha evidential examples"}),
+
+    card("InternetArchäologie", "Mechanical Music Digest", [
+      "Mechanical Music Digest ist eine moderierte englischsprachige Mailingliste über selbstspielende Klaviere, Drehorgeln, Spieldosen und verwandte Mechanik. Sie begann am 17. April 1995 mit 51 Abonnenten.",
+      "Die Website enthält ein öffentliches Textarchiv, das nach Jahr, Monat, Betreff und Autor geordnet ist. Beim Öffnen sieht man schlichte HTML-Seiten mit Reparaturfragen, Ersatzteilhinweisen und Diskussionen über historische Instrumente. Bilder liegen häufig als verlinkte Dateien bei. Das Archiv wird weiterhin ergänzt."
+    ], [C("player piano pneumatic mechanism", "Die Mechanik eines selbstspielenden Klaviers")], [
+      src("Mechanical Music Digest", "https://www.mmdigest.com/"),
+      src("Mechanical Music Digest: 25 Jahre", "https://www.mmdigest.com/archives/Digests/202005/2020.05.15.01.html")
+    ], {summary:"Eine seit 1995 geführte Mailingliste bewahrt Reparaturwissen über mechanische Musikinstrumente.",searchTerm:"Mechanical Music Digest player piano archive 1995"}),
+
+    card("Künstler und drei Werke", "Ellen Thesleff", [
+      "Ellen Thesleff gehörte um 1900 zur ersten Generation finnischer Künstlerinnen mit einer internationalen Ausbildung. Die drei frühen Arbeiten zeigen, wie stark sie Gesichter und Landschaften über Tonwerte statt über erzählerische Einzelheiten aufbaute. Später arbeitete sie mit kräftigerer Farbe und entwickelte eine eigene Form des Farbholzschnitts."
+    ], [F("Echo Ellen Thesleff 1891.jpg", "Echo, 1891"),F("Thyra Elisabeth Ellen Thesleff 1892.jpg", "Thyra Elisabeth, 1892"),F("Omakuva Ellen Thesleff 1894-1895 Ateneum.webp", "Selbstbildnis, 1894–1895")], [
+      src("Finnish National Gallery: Ellen Thesleff", "https://www.kansallisgalleria.fi/en/search?authors[]=Ellen%20Thesleff"),
+      src("Ateneum: Modern Women", "https://ateneum.fi/en/touring-exhibitions-archive/modern-women-helene-schjerfbeck-elga-sesemann-sigrid-schauman-ellen-thesleff/")
+    ], {summary:"Ellen Thesleff · 1869–1954",works:["Echo · 1891","Thyra Elisabeth · 1892","Selbstbildnis · 1894–1895"],searchTerm:"Ellen Thesleff Echo Thyra Elisabeth self portrait Ateneum"}),
+
+    card("Literarische und filmische Tropen und Typenszenen", "Bildvergrößerung als Enthüllung", [
+      "Julio Cortázars Erzählung Las babas del diablo von 1959 lässt einen Fotografen seine Aufnahme wiederholt betrachten, bis die festgehaltene Szene eine andere Geschichte freigibt. Michelangelo Antonioni machte daraus 1966 in Blow-Up eine Folge immer größerer Abzüge. Eine Gestalt und möglicherweise eine Leiche werden sichtbar; zugleich zerfällt das Bild im Filmkorn.",
+      "Blade Runner verwandelte das Verfahren 1982 in eine technische Fantasie. Der Esper-Rechner gewinnt aus einem zweidimensionalen Foto seitliche Ansichten, die gar nicht aufgenommen wurden. Spätere Krimiserien übernahmen davon vor allem das Kommando „vergrößern“ und ließen fehlende Bildinformation als scharfe Einzelheit erscheinen. Aus dem zweifelhaften Beweisstück wurde ein allwissendes Bild."
+    ], [C("photographic enlarger darkroom", "Ein Fotovergrößerer in der Dunkelkammer")], [
+      src("Criterion: Blow-Up in the Details", "https://www.criterion.com/current/posts/4992-blow-up-in-the-details"),
+      src("Wikipedia: Esper machine", "https://en.wikipedia.org/wiki/Blade_Runner")
+    ], {summary:"Ein Foto wird so lange vergrößert, bis es einen verborgenen Vorgang zu zeigen scheint.",searchTerm:"photo enhancement trope Blow-Up Blade Runner Esper history"}),
+
+    card("Märchen und Sagen in ethnografischen Quellen", "Okikurumi, Samayunguru und der Hai · Ainu", [
+      "Die Erzählung stammt aus dem Saru-Gebiet in Hidaka, im Süden der japanischen Insel Hokkaidō. Basil Hall Chamberlain schrieb sie nach einer Wiedergabe seines Ainu-Gewährsmanns Ishanashte am 24. November 1886 aus dem Gedächtnis nieder. Okikurumi und Samayunguru erscheinen darin als benachbarte Kulturhelden mit sehr verschiedenem Urteil.",
+      "Samayunguru findet einen gestrandeten Hai und nimmt das Fleisch an sich. Okikurumi tadelt ihn, weil der Hai als Meeresgabe nach rituellem Brauch behandelt werden muss. Die Handlung erklärt eine Vorschrift durch den Fehler einer bekannten Gestalt."
+    ], [C("Ainu fishermen Hokkaido historical photograph", "Ainu-Fischer auf Hokkaidō"),C("Saru River Hokkaido", "Der Saru in Hidaka")], [
+      src("Digitalisat · The Folk-Lore Journal, Band 6", "https://archive.org/details/folklorejournal06folkuoft/page/42/mode/2up"),
+      src("Wikisource-Transkription", "https://en.wikisource.org/wiki/The_Folk-Lore_Journal/Volume_6/Aino_Folk-Tales")
+    ], {summary:"Eine 1886 im Saru-Gebiet auf Hokkaidō aufgezeichnete Ainu-Erzählung.",original:{label:"Vollständiger Originaltext · Basil Hall Chamberlain, 1888",source:"https://archive.org/details/folklorejournal06folkuoft/page/42/mode/2up",remote:{wikiPage:"The_Folk-Lore_Journal/Volume_6/Aino_Folk-Tales",wikiLanguage:"en",start:"xxvii.—Okikurumi, Samayunguru, and the Shark.",end:"III.— TALES OF THE PANAUMBE AND PENAUMBE CYCLE.",flexibleMarkers:true,reflow:true,fetchLabel:"Wikisource-Transkription"}},searchTerm:"Okikurumi Samayunguru shark Ainu Chamberlain Saru"}),
+
+    card("Philosophische Begriffe", "Supervenienz", [], [C("supervenience philosophy diagram", "Ein Schema der Supervenienz")], [
+      src("Wikipedia: Supervenienz", "https://de.wikipedia.org/wiki/Supervenienz"),
+      src("Stanford Encyclopedia of Philosophy", "https://plato.stanford.edu/entries/supervenience/")
+    ], {summary:"B-Eigenschaften supervenieren auf A-Eigenschaften, wenn zwei Gegenstände mit denselben A-Eigenschaften stets dieselben B-Eigenschaften besitzen.",wiki:{page:"Supervenienz",language:"de"},searchTerm:"Supervenienz Philosophie Definition Beispiele"}),
+
+    card("Rhetorische und poetische Verfahren", "„Quos ego—! Sed motos praestat componere fluctus.“", [
+      "Neptun beginnt im ersten Buch der Aeneis eine Drohung gegen die Winde: „Euch will ich —!“ Dann bricht er ab und wendet sich dem aufgewühlten Meer zu. Die ausgesparte Strafe bleibt verständlich, weil Satzanfang und Lage sie bereits erwarten lassen.",
+      "Die Figur heißt Aposiopesis. Quintilian beschreibt sie als abgebrochene Rede, bei der das Verschwiegene aus dem Vorausgehenden erkennbar wird. Bei Vergil zeigt der Abbruch zugleich Neptuns Rang: Er muss die Drohung nicht aussprechen und stellt zuerst die Ordnung des Meeres wieder her."
+    ], [F("Neptune calming the tempest which Aeolus raised against Aeneas' fleet from Book I of the Aeneid MET DP273857.jpg", "Neptun beruhigt den Sturm gegen die Flotte des Aeneas")], [
+      src("Perseus: Vergil, Aeneis 1", "https://www.perseus.tufts.edu/hopper/text?doc=Verg.%20A.%201.135"),
+      src("Quintilian, Institutio Oratoria 9.2", "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Quintilian/Institutio_Oratoria/9B*.html")
+    ], {summary:"Aposiopesis · Vergil, Aeneis 1,135",searchTerm:"Quos ego aposiopesis Quintilian Aeneid 1 135"}),
+
+    card("Sagengestalten, Legenden und Märchen weltweit", "Amirani · Georgien", [
+      "Amirani ist der Held einer georgischen Sagenfolge, die besonders ausführlich in Swanetien im Großen Kaukasus überliefert wurde. In vielen Fassungen ist er ein Sohn der Jagdgöttin Dali und wächst mit ungewöhnlicher Kraft auf. Er kämpft gegen Devis, riesenhafte Gegner, und befreit Menschen oder eine geraubte Frau aus ihrer Gewalt.",
+      "Schließlich fordert Amirani die höchste göttliche Macht heraus. Zur Strafe wird er in einer Höhle an einen Felsen oder an einen Pfahl geschmiedet. Sein Hund Q’ursha leckt die Kette dünn, bis sie beinahe reißt; regelmäßig wird sie erneuert. Manche örtlichen Fassungen verlegen seine Gefangenschaft unter den Kasbek. Der Berg macht den gefesselten Helden zu einer Gestalt, deren Befreiung immer bevorsteht und nie eintritt."
+    ], [C("Amirani monument Georgia", "Eine georgische Darstellung Amiranis"),F("Mount Kazbek, August 2019.jpg", "Der Kasbek im Großen Kaukasus")], [
+      src("Georgian Encyclopedia: Amirani", "https://georgianencyclopedia.ge/en/form_eng/244"),
+      src("Encyclopaedia Iranica: Amirani", "https://iranicaonline.org/articles/amirani")
+    ], {summary:"Der georgische Held wird nach seinem Aufstand gegen Gott im Kaukasus angekettet.",wiki:{page:"Amirani",language:"en"},searchTerm:"Amirani Georgian mythology Q'ursha Kazbek legend"}),
+
+    card("SchlechtesWritingSeziert", "Now You See Me · Dylan allein im Verhörraum", [
+      "Die Schlusspointe erklärt FBI-Agent Dylan Rhodes zum Leiter des Plans, den er den ganzen Film über verfolgt hat. Problematisch sind dabei Szenen, in denen er ohne eingeweihten Beobachter überrascht oder wütend auf Hinweise reagiert. Diese Reaktionen täuschen nicht eine Figur, sondern nur das Publikum; nach der Enthüllung besitzen sie keinen Grund innerhalb der Handlung."
+    ], [C("stage magician playing cards public domain", "Bühnenmagie mit Spielkarten")], [
+      src("Drehbuch · Now You See Me", "https://www.scriptslug.com/script/now-you-see-me-2013"),
+      src("Lionsgate: Now You See Me", "https://www.lionsgate.com/movies/now-you-see-me")
+    ], {summary:"Der spätere Drahtzieher spielt sein Unwissen auch dann, wenn niemand in der Szene getäuscht werden muss.",works:[
+      "Dylans private Reaktionen entfallen; allein bleibt sein Wissen offen, während er vor anderen glaubhaft ermittelt.",
+      "Alma Dray führt die Untersuchung. Dylan behindert sie nur dort, wo konkrete Beweise seinen Plan gefährden.",
+      "Dylan beginnt als ehrlicher Ermittler und entscheidet sich erst im Verlauf, den Plan der Horsemen zu übernehmen."
+    ],searchTerm:"Now You See Me Dylan Rhodes reveal plot hole interrogation scene"}),
+
+    card("Seltene Musikstile", "Ahellil · Gourara, Algerien", [
+      "Ahellil wird in den Oasen des Gourara um Timimoun im Südwesten Algeriens gepflegt, besonders von Zenati-sprachigen Gemeinschaften. Bei nächtlichen Festen steht ein Vorsänger mit dem Flötenspieler im Inneren eines Kreises. Der Chor antwortet, klatscht einen regelmäßigen Puls und bewegt sich langsam seitwärts.",
+      "Eine vollständige Aufführung gliedert sich tatsächlich in drei namentlich unterschiedene Abschnitte: lemserreh beginnt mit kurzen bekannten Gesängen, aougrout wird langsamer, tra dauert bis zum Morgengrauen und ist den erfahrensten Sängern vorbehalten. Im Video ist von Beginn an das Verhältnis zwischen Vorsänger, Flöte und Chor zu hören."
+    ], [Y("rFrgG2V4tx4", "Ahellil aus dem Gourara")], [
+      src("UNESCO: Ahellil of Gourara", "https://ich.unesco.org/en/RL/ahellil-of-gourara-00121"),
+      src("YouTube: Ahellil", "https://www.youtube.com/watch?v=rFrgG2V4tx4")
+    ], {summary:"Nächtlicher Wechselgesang aus den Oasen um Timimoun.",searchTerm:"Ahellil Gourara Timimoun Algeria UNESCO"}),
+
+    card("Trends in Art", "Isabella Lozano · I am a jug", [
+      "Isabella Lozano entwickelte die Arbeit 2026 im Masterstudiengang Print am Royal College of Art. Auf dem Bild nimmt ihr Körper die Haltung eines Saftkrugs an; Beschriftung und Warenästhetik machen aus der Figur ein Produkt. Die uneinheitlichen kulturellen Zeichen lassen keine eindeutige Herkunftsangabe zu.",
+      "Lozano bezieht sich auf Migration und auf die Sprache des Exports. Entscheidend ist der Maßstabswechsel: Ein alltäglicher Behälter wird zur Körperpose, während die Person wie eine Verpackung gelesen werden soll. Die Arbeit gehört zur RCA-Abschlussausstellung 2026 und nicht zu einer nachträglich behaupteten Stilrichtung."
+    ], [I("https://rca-media2.rca.ac.uk/images/Isabella_Lozano_MA_Print_I_am_a_jug_Mixed_Media.original.jpg", "https://www.rca.ac.uk/news-and-events/news/announcing-rca2026-school-of-arts-humanities-show/", "Isabella Lozano: I am a jug", "Royal College of Art")], [
+      src("Royal College of Art: RCA2026 School of Arts & Humanities", "https://www.rca.ac.uk/news-and-events/news/announcing-rca2026-school-of-arts-humanities-show/")
+    ], {summary:"Isabella Lozano · I am a jug · Mixed Media · RCA2026",searchTerm:"Isabella Lozano I am a jug RCA2026"}),
+
+    card("UnsichtbareKonventionen", "Warum Interviewte knapp an der Kamera vorbeisehen", [
+      "In vielen Dokumentarfilmen sitzt die fragende Person dicht neben der Kamera. Der Blick des Interviewten geht deshalb knapp am Objektiv vorbei. Im fertigen Bild bleibt ein Gespräch erkennbar, während der Zuschauer die Antwort beobachtet, ohne selbst direkt angesprochen zu werden.",
+      "Ein Blick genau in die Linse verändert dieses Verhältnis: Die Antwort richtet sich nun an den Zuschauer. Errol Morris entwickelte dafür den Interrotron. Ein halbdurchlässiger Spiegel legt das Livebild des Interviewers über das Objektiv. Der Interviewte sieht weiterhin sein Gegenüber an und blickt dabei zugleich gerade in die Kamera."
+    ], [C("documentary interview camera setup eyeline", "Kamera und Blickachse bei einem Interview")], [
+      src("Errol Morris: The Interrotron", "https://www.errolmorris.com/content/eyecontact/interrotron.html"),
+      src("Nieman Storyboard: Eye contact in documentary interviews", "https://niemanstoryboard.org/stories/errol-morris-interrotron-documentary-interviews/")
+    ], {summary:"Die Position des Interviewers entscheidet, ob ein Blick als Gespräch oder als direkte Ansprache erscheint.",searchTerm:"documentary interview eyeline off camera Interrotron Errol Morris"}),
+
+    card("Urban Legends", "Rudolph Fentz · der Zeitreisende am Times Square", [
+      "Die Geschichte berichtet von einem Mann in Kleidung des 19. Jahrhunderts, der 1950 am Times Square vor ein Auto tritt und stirbt. In seinen Taschen sollen alte Münzen, Geschäftsbriefe und eine Adresse gelegen haben. Ein Ermittler findet angeblich heraus, dass Rudolph Fentz 1876 spurlos verschwunden war.",
+      "Der Fall wurde lange als ungelöstes Ereignis oder Beleg für eine Zeitreise verbreitet. Der Stoff stammt jedoch aus Jack Finneys Kurzgeschichte I’m Scared von 1951. Ein Heft von Ralph M. Holland gab ihn 1953 ohne klare Kennzeichnung als wahre Begebenheit wieder; spätere Sammlungen übernahmen diese Fassung. Aus einer Erzählung wurde durch weggelassene Herkunft eine moderne Legende."
+    ], [C("Times Square New York 1950 photograph", "Der Times Square um 1950")], [
+      src("Snopes: The Strange Tale of Rudolph Fentz", "https://www.snopes.com/fact-check/time-travelers/"),
+      src("Wikipedia: Rudolph Fentz", "https://en.wikipedia.org/wiki/Rudolph_Fentz")
+    ], {summary:"Eine Zeitreisegeschichte wurde zur angeblich dokumentierten New Yorker Polizeiakte.",searchTerm:"Rudolph Fentz Jack Finney I'm Scared origin urban legend"}),
+
+    card("Vergessene Komponisten", "Adolf Wiklund · Klavierkonzert Nr. 1 e-Moll op. 10", [
+      "Adolf Wiklund schrieb sein erstes Klavierkonzert 1906 und 1907 für sich selbst als Solisten. Der erste Satz, Allegro energico, beginnt mit einem knappen Orchestergedanken, den das Klavier aufnimmt und in die weitere motivische Arbeit zieht. Solopart und Orchester wechseln nicht bloß zwischen Begleitung und Schaustück; beide führen das thematische Material fort.",
+      "Wiklunds Harmonik gehört zur schwedischen Spätromantik, doch die wiederkehrenden Motive halten den ausgedehnten Satz eng zusammen. Das Konzert verdient Aufmerksamkeit, weil sein anspruchsvoller Klavierpart aus der Form heraus entwickelt ist und nicht nachträglich über sie gelegt wirkt. Im Video erklingt das ganze Werk ab 0:00."
+    ], [Y("lbPvzVNGmtM", "Adolf Wiklund: Klavierkonzert Nr. 1 e-Moll op. 10")], [
+      src("Swedish Musical Heritage: Adolf Wiklund", "https://www.swedishmusicalheritage.com/composers/wiklund-adolf/"),
+      src("YouTube: Klavierkonzert Nr. 1", "https://www.youtube.com/watch?v=lbPvzVNGmtM")
+    ], {summary:"Klavierkonzert Nr. 1 e-Moll op. 10 · Allegro energico",searchTerm:"Adolf Wiklund piano concerto 1 op 10 score history"}),
+
+    card("VerloreneTechniken", "Flugzeuge vor dem Radar hören", [
+      "An der englischen Küste entstanden nach dem Ersten Weltkrieg große Betonspiegel, die das Motorengeräusch anfliegender Flugzeuge an einem Brennpunkt sammelten. Ein Beobachter bewegte dort ein Hörrohr oder ein Mikrofon und bestimmte aus der lautesten Richtung die ungefähre Peilung.",
+      "Die Spiegel konnten bei günstigem Wetter einige Minuten Vorwarnzeit liefern. Wind, Brandung und zunehmender Verkehr überdeckten jedoch schwache Motorengeräusche. Außerdem verriet die Richtung noch keine genaue Entfernung oder Flughöhe. Das britische Radarnetz ersetzte die akustische Ortung in den späten 1930er Jahren."
+    ], [F("Large acoustic mirror -Denge -Kent -England-19July2009.jpg", "Der große akustische Spiegel bei Denge in Kent")], [
+      src("RAF Museum: History of Radar", "https://www.rafmuseum.org.uk/research/online-exhibitions/history-of-radar/"),
+      src("Historic England: Sound mirrors at Denge", "https://historicengland.org.uk/listing/the-list/list-entry/1005140")
+    ], {summary:"Betonspiegel an der Küste bündelten das Motorengeräusch anfliegender Flugzeuge.",searchTerm:"Denge sound mirrors acoustic aircraft detection history"}),
+
+    card("VisuelleIdeenDieIchKlauenWill", "Mary Ellen Bute · Abstronic", [
+      "Mary Ellen Bute ließ 1952 die Leuchtspur eines Kathodenstrahl-Oszilloskops filmen. Die elektrische Kurve erscheint als bewegte Linie und als helle geometrische Figur. Bei der optischen Nachbearbeitung legte Bute diese Aufnahme über farbige Hintergründe.",
+      "Die brauchbare Bildidee liegt im Wechsel des Werkzeugs: Ein Messgerät zeichnet das Grundmaterial, die Kamera isoliert es aus seinem technischen Zusammenhang, und Farbe kommt erst in einem zweiten Arbeitsgang hinzu. Abstronic nutzt dazu Musik von Aaron Copland und Don Gillis."
+    ], [C("oscilloscope Lissajous figure photograph", "Eine Leuchtspur auf einem Oszilloskop")], [
+      src("Center for Visual Music: Mary Ellen Bute", "https://www.centerforvisualmusic.org/ButePhotography.htm"),
+      src("Center for Visual Music: Abstronic", "https://vimeo.com/1185349287")
+    ], {summary:"Oszilloskopspur, optische Kopie und nachträgliche Farbe · 1952",searchTerm:"Mary Ellen Bute Abstronic oscilloscope 1952"}),
+
+    card("Wichtige Akkorde und Akkordfolgen", "Barry Harris’ Sixth-Diminished-Folge", [
+      "In C lautet die Tonleiter C–D–E–F–G–As–A–H–C. Harmonisiert wird sie durch den Wechsel zwischen Umkehrungen von C6, also C–E–G–A, und dem verminderten Septakkord D–F–As–H. Jeder Ton erhält dadurch einen Akkord, ohne dass eine gewöhnliche diatonische Stufenfolge entsteht.",
+      "Barry Harris nutzte dieses Verfahren, um Bebop-Melodien mehrstimmig zu setzen und Akkordlagen schrittweise zu bewegen. Das Video beginnt mit der harmonisierten C-Tonleiter und zeigt anschließend die Anwendung in einem Standard. Es startet bei 0:00."
+    ], [Y("AF67azWnMvw", "Barry Harris erklärt die Sixth-Diminished Scale")], [
+      src("Open Studio: Barry Harris Sixth Diminished Scale", "https://www.openstudiojazz.com/the-barry-harris-sixth-diminished-scale/"),
+      src("YouTube: Barry Harris Workshop", "https://www.youtube.com/watch?v=AF67azWnMvw")
+    ], {summary:"C6 und D°7 wechseln sich durch eine achttönige Skala ab.",searchTerm:"Barry Harris sixth diminished scale C6 D diminished examples"}),
+
+    card("Writing Tipps", "Konsonanten als Gegenrhythmus setzen", [
+      "Lies den Absatz laut und markiere nur Konsonanten, die an betonten Stellen wiederkehren. Verfolge einen Laut bis zu seinem Verschwinden und späteren Wiedereinsetzen. Eine auffällige Häufung in benachbarten Wörtern wirkt leicht wie eine beabsichtigte Alliteration; größere Abstände tragen den Satz oft, ohne sich vorzudrängen.",
+      "Robert Louis Stevenson untersucht an Miltons Areopagitica, wie wiederkehrende Konsonanten unter Satzbau und Sprechrhythmus ein zweites hörbares Muster bilden. Die Prüfung gehört ans Ende der Überarbeitung, wenn Wortwahl und Syntax bereits feststehen."
+    ], [F("Robert Louis Stevenson by Sargent.jpg", "Robert Louis Stevenson, gemalt von John Singer Sargent")], [
+      src("Project Gutenberg: Essays in the Art of Writing", "https://www.gutenberg.org/ebooks/492"),
+      src("Internet Archive: Essays in the Art of Writing", "https://archive.org/details/essaysinartofwri00stev")
+    ], {summary:"Wiederkehrende Konsonanten bilden unter der Syntax einen zweiten Rhythmus.",writingSource:{label:"Wortlaut · Robert Louis Stevenson, On Some Technical Elements of Style in Literature",source:"https://archive.org/details/essaysinartofwri00stev",remote:{url:"https://www.gutenberg.org/cache/epub/492/pg492.txt",start:"There is then another element of comeliness hitherto overlooked in this analysis:",end:"I stop from weariness, for more might yet be said.",flexibleMarkers:true,reflow:true,fetchLabel:"Project-Gutenberg-Transkription"}},searchTerm:"Robert Louis Stevenson technical elements style consonants prose rhythm"})
+  );
+})();
+
 // Erweiterung vom 3. September 2026: je eine Karte pro aktiver Kategorie und fünf eigene GIFs.
 (() => {
   "use strict";
