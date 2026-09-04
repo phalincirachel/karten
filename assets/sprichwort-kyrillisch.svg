@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+  <rect width="960" height="600" fill="#eee7d6"/>
+  <text x="480" y="205" text-anchor="middle" fill="#263638" font-family="Georgia, serif" font-size="55">Ende gut, alles gut.</text>
+  <line x1="160" y1="280" x2="800" y2="280" stroke="#b64d38" stroke-width="4"/>
+  <path d="M780 266l20 14-20 14z" fill="#b64d38"/>
+  <text x="480" y="405" text-anchor="middle" fill="#263638" font-family="Georgia, serif" font-size="68">Энде гут, аллес гут.</text>
+  <g fill="#b64d38" font-family="Arial, sans-serif" font-size="23" text-anchor="middle">
+    <text x="291" y="466">д = d</text>
+    <text x="480" y="466">у = u</text>
+    <text x="669" y="466">э = offenes e</text>
+  </g>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+  <rect width="960" height="600" fill="#eee7d6"/>
+  <g transform="translate(70 115)">
+    <rect width="210" height="300" rx="5" fill="#fffdf7" stroke="#263638" stroke-width="4"/>
+    <path d="M105 54l16 34 38 5-28 26 8 38-34-18-34 18 7-38-27-26 38-5z" fill="#315985"/>
+    <rect x="42" y="188" width="126" height="8" fill="#263638" opacity=".75"/>
+    <rect x="27" y="215" width="156" height="7" fill="#263638" opacity=".5"/>
+    <rect x="38" y="241" width="134" height="7" fill="#263638" opacity=".5"/>
+  </g>
+  <g fill="none" stroke="#b64d38" stroke-width="5">
+    <path d="M310 265h105"/><path d="M395 251l20 14-20 14"/>
+    <path d="M625 265h105"/><path d="M710 251l20 14-20 14"/>
+  </g>
+  <g transform="translate(435 115)">
+    <rect width="170" height="300" rx="5" fill="#fffdf7" stroke="#263638" stroke-width="4"/>
+    <rect x="26" y="48" width="118" height="12" fill="#263638" opacity=".7"/>
+    <rect x="20" y="83" width="130" height="7" fill="#263638" opacity=".45"/>
+    <rect x="32" y="109" width="106" height="7" fill="#263638" opacity=".45"/>
+    <circle cx="85" cy="192" r="39" fill="none" stroke="#315985" stroke-width="10"/>
+    <path d="M66 192l13 14 27-31" fill="none" stroke="#b64d38" stroke-width="8"/>
+  </g>
+  <g transform="translate(750 115)">
+    <rect width="140" height="300" rx="5" fill="#fffdf7" stroke="#263638" stroke-width="4"/>
+    <rect x="24" y="48" width="92" height="9" fill="#263638" opacity=".7"/>
+    <rect x="18" y="78" width="104" height="6" fill="#263638" opacity=".45"/>
+    <rect x="28" y="101" width="84" height="6" fill="#263638" opacity=".45"/>
+    <path d="M70 158l13 27 30 4-22 21 6 30-27-14-27 14 5-30-21-21 30-4z" fill="#315985"/>
+  </g>
+  <text x="175" y="470" text-anchor="middle" fill="#263638" font-family="Arial, sans-serif" font-size="23">anonymer Warnzettel</text>
+  <text x="520" y="470" text-anchor="middle" fill="#263638" font-family="Arial, sans-serif" font-size="23">örtliche Bestätigung</text>
+  <text x="820" y="470" text-anchor="middle" fill="#263638" font-family="Arial, sans-serif" font-size="23">erneute Kopie</text>
+  <text x="480" y="548" text-anchor="middle" fill="#6d7773" font-family="Arial, sans-serif" font-size="25">Jede Kopie gab dem Gerücht eine neue angebliche Herkunft.</text>
+</svg>

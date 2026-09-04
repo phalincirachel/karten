@@ -115,8 +115,8 @@ frames[0].save(
     disposal=2,
 )
 
-# Achte Karte: Zwei gegeneinander laufende Schlitzscheiben erzeugen nur an
-# ihren Schnittpunkten kurze rote Lichtbögen.
+# Zwei gegeneinander laufende Schlitzscheiben erzeugen nur an ihren
+# Schnittpunkten kurze rote Lichtbögen.
 frames = []
 size = 320
 for index in range(36):

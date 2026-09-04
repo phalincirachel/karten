@@ -236,7 +236,7 @@
     "James Joyce portrait photograph",
     "Tower of Babel Pieter Bruegel Vienna",
     "Coat of arms of Dublin.svg",
-    "Mount Arafat historic photograph Kaaba"
+    "Mount Arafat3.jpg"
   ];
   const pageSources={3:"https://www.fweet.org/sim.pl?003",4:"https://www.fweet.org/sim.pl?004",5:"https://www.fweet.org/sim.pl?005"};
   for(let index=0;index<units.length;index+=4){
@@ -250,7 +250,7 @@
       title:`Finnegans Wake ${number}`,
       summary:`Sätze ${index+1}–${index+4} · Druckseite ${pages.join("/")}`,
       detail:[],
-      media:[{type:"commons",query:images[number-1],file:number===4?images[number-1]:undefined,caption:`Finnegans Wake · Folge ${number}`}],
+      media:[{type:"commons",query:images[number-1],file:[4,10].includes(number)?images[number-1]:undefined,caption:`Finnegans Wake · Folge ${number}`}],
       sources,
       searchTerm:`Finnegans Wake Seite ${pages.join(" ")} Sätze ${index+1} ${index+4} Exegese`,
       finnegansGroup:number-1
