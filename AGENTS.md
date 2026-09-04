@@ -339,3 +339,18 @@ Die folgenden Regeln gelten für alle künftig angelegten oder überarbeiteten K
 - Das neue eigene GIF heißt „Schattenzeiger“. Es bleibt ohne Erklärung und Detailtext.
 - Neue Musikkarten beginnen bei 0:00. Zeitparameter und automatische Sprünge bleiben ausgeschlossen.
 - Neue ethnografische Erzählungen nennen Aufzeichnungsort, heutige geografische Lage, Gewährsperson und Aufzeichnungsdatum, sofern die Quelle diese Angaben enthält. Der vollständige gemeinfreie Wortlaut wird zwischen geprüften Anfangs- und Endmarken geladen.
+
+## Arbeitsfortsetzung nach Compaction, Reconnect oder Content-Filter
+
+- Eine automatische Compaction oder eine unterbrochene Verbindung ändert den Auftrag nicht. Nach der Wiederaufnahme wird zuerst der tatsächliche Stand in den betroffenen Dateien und in `git status` geprüft. Danach geht die Arbeit am letzten noch offenen Punkt weiter; abgeschlossene Schritte werden weder neu begonnen noch als aktuelle Arbeit ausgegeben.
+- Eine Zusammenfassung des Arbeitsstands muss den letzten Nutzerauftrag, bereits ausgeführte Änderungen, noch offene Schritte und die Regeln der betroffenen Kategorien erhalten. Zeitangaben aus älteren Aufträgen werden nicht auf einen späteren Auftrag übertragen.
+- Beendet ein Content-Filter die Ausgabe, wird derselbe Inhalt nicht erneut durch den Chat oder durch umfangreiche Dateiausgaben geleitet. Die Wiederaufnahme erfolgt mit einem kleineren, sachlich begrenzten Arbeitsschritt.
+- Längere urheberrechtlich geschützte oder filteranfällige Originaltexte werden weder in Antworten noch in Werkzeugausgaben kopiert. Die Anwendung speichert dafür nur Quelle, Anfangsmarke, Endmarke und die nötigen Bereinigungsregeln; der Browser lädt den Wortlaut unmittelbar von der öffentlichen Quelle.
+- Liegt ein Originaltext bereits in einer vom Nutzer bereitgestellten Datei, bleiben Änderungen auf kleine, genau abgegrenzte Stellen außerhalb des Originalwortlauts beschränkt. Die ganze Datei wird nicht zur Kontrolle in die Unterhaltung ausgegeben.
+- Nach einer Wiederaufnahme wird ein Abschluss erst gemeldet, wenn Umfang, Kategorien, Syntax und die angeforderten Funktionen erneut geprüft sind. Eine Compaction, ein Reconnect oder eine Filtermeldung gilt niemals selbst als Abschluss der Aufgabe.
+
+## Ergänzung zur Auswertung von Kartenfeedback
+
+- Mehrfach gemeldete Kritik wird als ein gemeinsamer Fehler behandelt. Sie erzeugt keine immer neuen, anders formulierten Regeln; ergänzt werden nur bisher fehlende Folgerungen.
+- Eine beanstandete Abbildung wird nicht durch ein bloß thematisch ähnliches Bild ersetzt. Zuerst wird bestimmt, welche konkrete Information das Bild zeigen soll: bei einem Raum seine Lage, bei einer Filmszene ihren Aufbau, bei einer Liste ihre Überlieferung und bei einer Sprache das erklärte Verhältnis.
+- Bei Umschriften wird nicht von der heutigen Aussprache der Zielsprache ausgegangen, sondern von der für das Projekt festgelegten Buchstabenentsprechung. Daher steht in griechischer Schrift deutsches d einheitlich als δ und in kyrillischer Schrift als д.
