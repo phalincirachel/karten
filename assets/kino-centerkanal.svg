@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Centerkanal im Kinosaal</title>
+  <desc id="desc">Hinter der Leinwand stehen linke, mittlere und rechte Lautsprecher; der mittlere richtet Dialog auf alle Sitzreihen.</desc>
+  <rect width="1200" height="760" fill="#f1ece2"/>
+  <rect x="150" y="70" width="900" height="250" rx="6" fill="#faf8f2" stroke="#272b2c" stroke-width="8"/>
+  <g fill="#292d2e"><rect x="235" y="125" width="90" height="145" rx="8"/><rect x="555" y="105" width="90" height="185" rx="8"/><rect x="875" y="125" width="90" height="145" rx="8"/></g>
+  <g fill="#f1ece2"><circle cx="280" cy="170" r="20"/><circle cx="280" cy="225" r="28"/><circle cx="600" cy="155" r="23"/><circle cx="600" cy="230" r="34"/><circle cx="920" cy="170" r="20"/><circle cx="920" cy="225" r="28"/></g>
+  <g fill="#7a736b"><circle cx="340" cy="610" r="28"/><circle cx="470" cy="610" r="28"/><circle cx="600" cy="610" r="28"/><circle cx="730" cy="610" r="28"/><circle cx="860" cy="610" r="28"/><circle cx="410" cy="500" r="24"/><circle cx="535" cy="500" r="24"/><circle cx="665" cy="500" r="24"/><circle cx="790" cy="500" r="24"/></g>
+  <g stroke="#b64c35" stroke-width="7" fill="none" opacity=".82"><path d="M600 300 340 575"/><path d="M600 300 600 575"/><path d="M600 300 860 575"/></g>
+  <text x="600" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="35" fill="#b64c35">Dialog</text>
+</svg>

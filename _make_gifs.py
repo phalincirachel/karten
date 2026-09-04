@@ -114,3 +114,38 @@ frames[0].save(
     optimize=True,
     disposal=2,
 )
+
+# Achte Karte: Zwei gegeneinander laufende Schlitzscheiben erzeugen nur an
+# ihren Schnittpunkten kurze rote Lichtbögen.
+frames = []
+size = 320
+for index in range(36):
+    phase = index / 36 * 2 * math.pi
+    frame = Image.new("RGB", (size, size), (239, 232, 214))
+    draw = ImageDraw.Draw(frame, "RGBA")
+    center = (160, 160)
+    for radius, direction, color in [(112, 1, (31, 47, 49, 235)), (76, -1, (77, 90, 87, 210))]:
+        for slot in range(9):
+            angle = phase * direction + slot * 2 * math.pi / 9
+            start = math.degrees(angle) - 12
+            draw.arc((160-radius, 160-radius, 160+radius, 160+radius), start, start+24, fill=color, width=13)
+    for slot in range(9):
+        angle = phase + slot * 2 * math.pi / 9
+        angle2 = -phase + slot * 2 * math.pi / 9
+        delta = abs((angle-angle2+math.pi) % (2*math.pi)-math.pi)
+        if delta < .32:
+            x = 160 + 92 * math.cos((angle+angle2)/2)
+            y = 160 + 92 * math.sin((angle+angle2)/2)
+            draw.ellipse((x-9, y-9, x+9, y+9), fill=(182, 76, 53, 255))
+    draw.ellipse((143, 143, 177, 177), fill=(239, 232, 214), outline=(31, 47, 49, 235), width=5)
+    frames.append(frame.quantize(colors=48, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE))
+
+frames[0].save(
+    OUTPUT / "phasenschnitt.gif",
+    save_all=True,
+    append_images=frames[1:],
+    duration=85,
+    loop=0,
+    optimize=True,
+    disposal=2,
+)

@@ -1421,6 +1421,294 @@ window.KARTEN.push(
   );
 })();
 
+(() => {
+  "use strict";
+  const card = (category, title, detail, media, sources = [], extra = {}) => ({category, title, detail, media, sources, ...extra});
+  const source = (label, url) => S(label, url);
+  const proverbSources = (term, alphabet) => [
+    source("Wikiquote: Deutsche Sprichwörter", "https://de.wikiquote.org/wiki/Deutsche_Sprichw%C3%B6rter"),
+    source(`Wikipedia: ${alphabet}`, alphabet === "Kyrillisches Alphabet" ? "https://de.wikipedia.org/wiki/Kyrillisches_Alphabet" : "https://de.wikipedia.org/wiki/Griechisches_Alphabet"),
+    source(`Duden-Suche: ${term}`, `https://www.duden.de/suchen/dudenonline/${encodeURIComponent(term)}`)
+  ];
+
+  window.KARTEN.push(
+    {
+      category:"Aphorismen",
+      kind:"quote",
+      title:"„Im Kampf zwischen dir und der Welt sekundiere der Welt.“",
+      byline:"Franz Kafka · Zürauer Aphorismen, Nr. 52",
+      detail:[],
+      media:[C("Franz Kafka photograph 1923", "Franz Kafka")],
+      sources:[source("Franz Kafka: Zürauer Aphorismen · Wikisource", "https://de.wikisource.org/wiki/Betrachtungen_%C3%BCber_S%C3%BCnde,_Leid,_Hoffnung_und_den_wahren_Weg")]
+    },
+
+    card("Historische Anekdoten", "Die Übergabe der eingefrorenen Flotte · Den Helder 1795", [
+      "Am 23. Januar 1795 erreichten 128 französische Husaren und weitere Soldaten das Nieuwediep bei Den Helder. Dort lagen vierzehn niederländische Kriegsschiffe im Eis. Die Reiter näherten sich über die gefrorene Wasserfläche; die Schiffe blieben vor Anker und leisteten keinen Widerstand.",
+      "Aus dem Vorgang entstand die Geschichte einer Kavallerieattacke auf eine Flotte. Niederländische Akten zeigen einen anderen Ablauf: Die Besatzungen hatten bereits den Befehl erhalten, sich den Franzosen nicht zu widersetzen. Verhandelt wurde über das Verbleiben der Schiffe, nicht nach einem Angriff zwischen Pferden und Kanonen. Der ungewöhnliche Anblick war echt; die spätere Schlachtbeschreibung war es nicht."
+    ], [C("Surrender Dutch fleet French cavalry 1795 Mozin", "Die niederländische Flotte im Eis bei Den Helder")], [
+      source("F. de Bas: De overgave van de Bataafsche vloot, 1795", "https://www.dbnl.org/tekst/_bij005188401_01/_bij005188401_01_0003.php"),
+      source("George T. Denison: Berichtigung in A History of Cavalry", "https://brittlebooks.library.illinois.edu/brittlebooks_open/Books2012-09/denige0001hiscav/denige0001hiscav.pdf")
+    ], {summary:"Den Helder, 23. Januar 1795: Husaren erreichten vierzehn im Eis liegende Kriegsschiffe."}),
+
+    card("Philosophische Begriffe", "Überlegungsgleichgewicht", [
+      "Wohlüberlegte Einzelurteile und allgemeine Grundsätze werden so lange gegenseitig berichtigt, bis sie zusammenpassen. Weder ein erster Grundsatz noch eine spontane Überzeugung ist dabei von vornherein unangreifbar.",
+      "John Rawls übernahm das Verfahren von Nelson Goodmans Beschreibung wissenschaftlicher Rechtfertigung. Ein enges Überlegungsgleichgewicht prüft Urteile gegen wenige naheliegende Grundsätze. Ein weites bezieht konkurrierende Theorien und zusätzliche Gründe ein. Das Ergebnis bleibt vorläufig: Neue Gründe setzen die Prüfung erneut in Gang."
+    ], [C("John Rawls 1971 portrait", "John Rawls")], [
+      source("Wikipedia: A Theory of Justice · Abschnitt Überlegungsgleichgewicht", "https://de.wikipedia.org/wiki/A_Theory_of_Justice#%C3%9Cberlegungsgleichgewicht_(reflective_equilibrium)"),
+      source("Stanford Encyclopedia of Philosophy: Reflective Equilibrium", "https://plato.stanford.edu/entries/reflective-equilibrium/")
+    ], {summary:"Abgleich zwischen wohlüberlegten Einzelurteilen und allgemeinen Grundsätzen.", wiki:{page:"A_Theory_of_Justice",language:"de",section:"Überlegungsgleichgewicht (reflective equilibrium)"}}),
+
+    card("Künstler und drei Werke", "Marianne Stokes", [
+      "Marianne Stokes arbeitete zunächst in Öl und wechselte um 1900 häufig zu Tempera auf Gesso. Die matte Oberfläche, die flachen Räume und die klaren Konturen erinnern an Fresken und frühe italienische Tafelmalerei. Ihre Figuren bleiben dennoch genau beobachtete Menschen aus ihrer Gegenwart.",
+      "Die drei Werke zeigen verschiedene Seiten dieser Malerei: das nächtliche Gegenlicht in Lantern Light, eine mittelalterliche Liebeserzählung in Aucassin and Nicolette und die fast bildfüllende Figur in Melisande. Stokes gehört außerdem zu den Malerinnen, deren Bilder aus der Slowakei von 1905 Kleidung und Lebensumstände der Dörfer genau festhalten."
+    ], [
+      C("Marianne Stokes Lantern Light 1888", "Lantern Light, 1888"),
+      F("Marianne Stokes05.jpg", "Aucassin and Nicolette"),
+      C("Marianne Stokes Melisande painting", "Melisande, 1895–1898")
+    ], [
+      source("Penlee House: Lantern Light", "https://penleehouse.org.uk/product/lantern-light-by-marianne-stokes/"),
+      source("Victorian Web: Marianne Stokes", "https://victorianweb.org/victorian/painting/stokes/bio.html")
+    ], {works:["Lantern Light, 1888","Aucassin and Nicolette, um 1898","Melisande, 1895–1898"],summary:"Lantern Light · Aucassin and Nicolette · Melisande"}),
+
+    {
+      category:"Erste Sätze großer Romane",
+      kind:"quote",
+      title:"Das Mondlicht fällt auf das Fußende meines Bettes und liegt dort wie ein großer, heller, flacher Stein.",
+      detail:[],
+      media:[C("Gustav Meyrink portrait", "Gustav Meyrink")],
+      wiki:{page:"Der_Golem",language:"de"},
+      sources:[
+        source("Project Gutenberg: Gustav Meyrink, Der Golem", "https://www.gutenberg.org/ebooks/51476"),
+        source("Wikipedia: Der Golem", "https://de.wikipedia.org/wiki/Der_Golem")
+      ]
+    },
+
+    card("Seltene Musikstile", "Sankirtana · Manipur", [
+      "Sankirtana wird von den Meitei in der Ebene von Manipur im Nordosten Indiens gepflegt, besonders in und um Imphal. Sänger, Tänzer und Musiker führen Episoden aus dem Leben Krishnas auf. Die Pung-Trommel gibt dabei ein eigenes Bewegungsrepertoire vor; kleine Kartal-Zimbeln gliedern den Gesang.",
+      "Die Aufführungen gehören zu Tempelfesten und zu privaten Lebenszyklusriten. Im Video ist von Beginn an zu hören, wie der Chor kurze melodische Formeln wiederholt, während Trommelschläge und Schritte das Tempo verändern. Die Aufnahme stammt von der UNESCO und beginnt bei 0:00."
+    ], [Y("TaIr4jvY9vE", "Sankirtana · UNESCO")], [
+      source("UNESCO: Sankirtana, ritual singing, drumming and dancing of Manipur", "https://ich.unesco.org/en/RL/sankirtana-ritual-singing-drumming-and-dancing-of-manipur-00843"),
+      source("YouTube: UNESCO-Aufnahme", "https://www.youtube.com/watch?v=TaIr4jvY9vE")
+    ], {summary:"Ritueller Gesang, Pung-Trommeln und Tanz der Meitei in Manipur, Nordostindien."}),
+
+    card("Vergessene Komponisten", "Helena Munktell · Bränningar", [
+      "Helena Munktell schrieb die etwa zwölfminütige sinfonische Dichtung in den 1890er Jahren; die ersten Aufführungen fanden 1898 und 1902 in Monte Carlo unter dem französischen Titel Sur les brisants statt. Das Stück arbeitet mit wenig thematischem Material. Wellenbewegungen entstehen durch den unruhigen Sechsachteltakt, dicht gesetzte Streicher und rasche Wechsel der Orchesterfarbe.",
+      "Munktell hatte in Paris bei Benjamin Godard und Vincent d’Indy studiert. Bränningar zeigt, wie sicher sie ein großes Orchester behandelte: Harfe, tiefes Blech und drei Schlagzeuger verändern Gewicht und Oberfläche derselben Motive, anstatt nur ein Meeresbild zu illustrieren. Das Werk verdient neue Aufführungen, weil hier eine frühe schwedische sinfonische Dichtung mit eigener französisch geprägter Instrumentation vorliegt. Zu hören ist das vollständige einsätzige Werk von Beginn an."
+    ], [Y("av1Q6mpH39E", "Bränningar · Gävle Symphony Orchestra")], [
+      source("Swedish Musical Heritage: Bränningar, op. 19", "https://www.swedishmusicalheritage.com/composers/munktell-helena/SMH-W384-Breaking_Waves_Symphonic_Picture?action=composers&composer=munktell-helena&workid=384"),
+      source("YouTube: Gävle Symphony Orchestra", "https://www.youtube.com/watch?v=av1Q6mpH39E")
+    ], {summary:"Bränningar, sinfonische Dichtung op. 19 · Gävle Symphony Orchestra"}),
+
+    card("Großartige Bilder und Design", "Marion Mahony Griffin · Forest Portraits", [
+      "Zwischen 1918 und den 1920er Jahren entstanden vierundzwanzig großformatige Studien australischer Bäume. Marion Mahony Griffin druckte die Verästelungen als Gelatinedruck auf gefärbte Seide und ergänzte einzelne Partien mit Tinte oder Aquarell. Die Kronen erscheinen als dichte schwarze Gefüge; der freie Grund zwischen den Ästen bestimmt die Form ebenso stark wie der Baum selbst.",
+      "Eucalyptus urnigera, Tasmania/Scarlet Bark, Sunset nutzt rötliche Seide für die leuchtende Rinde. Tree Fern Gully legt mehrere Vegetationsschichten übereinander, ohne die Pflanzen in eine einheitliche Masse aufzulösen. Die Blätter sind botanische Beobachtungen und zugleich brauchbare Vorlagen für ein Designprinzip: Ein Gegenstand wird über seine Zwischenräume lesbar."
+    ], [
+      C("Marion Mahony Griffin Eucalyptus urnigera Forest Portrait 11", "Eucalyptus urnigera, Forest Portrait Nr. 11, 1918"),
+      C("Marion Mahony Griffin Tree Fern Gully Forest Portrait 9", "Tree Fern Gully, Forest Portrait Nr. 9, 1919")
+    ], [
+      source("Block Museum: Griffin Architectural Drawings", "https://blockmuseum.emuseum.com/collections/29422/griffin-architectural-drawings/objects"),
+      source("National Library of Australia: Marion Mahony Griffin", "https://www.nla.gov.au/sites/default/files/t_largeprintlabels_4_march.pdf")
+    ], {summary:"Vierundzwanzig Baumstudien auf Seide, Australien 1918–1920er Jahre."}),
+
+    card("Märchen und Sagen in ethnografischen Quellen", "Der Mann und die Alan · Itneg", [
+      "Ein Mann begegnet im Wald den Alan, menschenhohen Geistern, die kopfüber in einem Baum hängen. Aus Angst fällt er zu Boden. Die Alan halten ihn für tot, steigen herab und legen Gold und Perlen auf seinen Körper. Als er aufspringt, verlangen sie nur eine besondere Nagaba-Perle zurück. Er verweigert sie; darauf kündigen sie an, sein Haus zu verbrennen, und führen die Drohung aus.",
+      "Mabel Cook Cole veröffentlichte die Erzählung 1916 unter der damaligen Bezeichnung Tinguian. Gemeint sind die Itneg in der heutigen Provinz Abra im nördlichen Luzon auf den Philippinen. Die Ausgabe nennt für diese einzelne Erzählung keinen Erzähler. Der vollständige englische Text wird aus der gemeinfreien Transkription geladen."
+    ], [
+      C("Itneg people Abra Philippines historical photograph", "Itneg in der Provinz Abra, nördliches Luzon"),
+      C("Abra province Philippines location map", "Lage der Provinz Abra")
+    ], [source("Project Gutenberg: Philippine Folk Tales", "https://www.gutenberg.org/ebooks/12814")], {
+      summary:"Eine Itneg-Erzählung aus Abra im nördlichen Luzon, veröffentlicht 1916.",
+      original:{label:"Vollständiger Originaltext · Mabel Cook Cole, 1916",source:"https://archive.org/details/philippinefolkta00cole",remote:{url:"https://www.gutenberg.org/cache/epub/12814/pg12814.txt",start:"Man and the Alan\n\n_Tinguian_",startLast:true,end:"Sogsogot\n\n_Tinguian_",reflow:true,fetchLabel:"Project-Gutenberg-Transkription"}}
+    }),
+
+    card("Sagengestalten, Legenden und Märchen weltweit", "Curupira · Brasilien", [
+      "Der Curupira ist ein Waldwesen brasilianischer Erzähltraditionen. In weit verbreiteten Fassungen hat er rote Haare und nach hinten gedrehte Füße. Die falsche Richtung seiner Spuren bringt Jäger vom Weg ab. Wer Wild ohne Maß tötet oder den Wald beschädigt, hört Pfiffe, wird verwirrt oder findet den Rückweg nicht; respektvolle Jäger versuchen ihn mit Tabak oder kleinen Gaben zu besänftigen.",
+      "Die Gestalt besitzt je nach Region ein anderes Aussehen und überschneidet sich teilweise mit Caipora. José de Anchieta erwähnte den Namen 1560 in einem Brief aus São Vicente. Er deutete die Berichte seiner Zeit aus christlicher Sicht als dämonische Angriffe. Der frühe Text belegt deshalb den Namen, aber nicht eine für ganz Brasilien verbindliche Gestalt."
+    ], [C("Curupira Brazilian folklore illustration", "Curupira mit nach hinten gerichteten Füßen"),C("Brazil Atlantic forest trail", "Wald im brasilianischen Küstengebirge")], [
+      source("Biblioteca Brasiliana Guita e José Mindlin: Schriften José de Anchietas", "https://digital.bbm.usp.br/handle/bbm/8015?locale=pt_BR"),
+      source("Wikipedia: Curupira", "https://pt.wikipedia.org/wiki/Curupira")
+    ], {wiki:{page:"Curupira",language:"pt"},summary:"Waldwesen brasilianischer Überlieferungen; seine rückwärts gerichteten Füße legen falsche Spuren."}),
+
+    card("Literarische und filmische Tropen und Typenszenen", "Das Lid vor der Kamera", [
+      "Eine subjektive Kamera zeigt das Öffnen oder Schließen der Augen als schwarze Ränder im Bild. Der Effekt übersetzt einen körperlichen Vorgang in eine sichtbare Blende: Erwachen, Ohnmacht und Tod erhalten einen eindeutigen Übergang, obwohl ein Mensch seine eigenen Lider gewöhnlich nicht als scharf begrenzte Flächen sieht.",
+      "Lady in the Lake machte 1947 fast den ganzen Film zur Sicht des Detektivs; Spiegel zeigen den Körper, den die Kamera ersetzt. In The Diving Bell and the Butterfly von 2007 verengt ein gelähmtes Auge die Bildfläche, und Schnitte folgen dem Blinzeln. Enter the Void setzt 2009 sichtbare Lidschläge in lange subjektive Einstellungen. Die Typenszene blieb brauchbar, weil sie zugleich Blick, Schnitt und Bewusstseinszustand markiert."
+    ], [C("human eye blinking close up", "Ein sich schließendes Augenlid"),C("motion picture camera eyepiece", "Kamera und Sucher")], [
+      source("AFI Catalog: Lady in the Lake", "https://catalog.afi.com/Film/24847-LADY-IN-THE-LAKE"),
+      source("University of Edinburgh: First-person camera cinema", "https://www.research.ed.ac.uk/en/publications/seeing-oneself-speak-speech-and-thought-in-first-person-camera-ci/")
+    ], {summary:"Die Bildränder schließen sich wie Augenlider und markieren einen Wechsel des Bewusstseins."}),
+
+    card("Wichtige Akkorde und Akkordfolgen", "Bird-Blues-Folge", [
+      "Charlie Parkers Blues for Alice behält die zwölf Takte des Blues, ersetzt aber lange Flächen durch absteigende II–V-Verbindungen. In F lautet eine verbreitete Fassung: Fmaj7 | Em7♭5 A7♭9 | Dm7 G7 | Cm7 F7 | B♭7 | B♭m7 E♭7 | Am7 D7 | A♭m7 D♭7 | Gm7 | C7 | Fmaj7 D7 | Gm7 C7.",
+      "Die ersten vier Takte führen schrittweise von F nach B♭. In Takt 6 wird B♭-Dur zu B♭-Moll; E♭7 leitet danach nicht nach A♭, sondern einen Halbton weiter zu Am7. Die Folge A♭m7–D♭7 nähert sich Gm7 ebenfalls von oben. Zu hören ist Parkers Aufnahme von Beginn an: Die Melodie benennt die schnellen Zielakkorde, anstatt nur über einem unveränderten Bluesgerüst zu liegen."
+    ], [Y("G7USMqAH8qk", "Charlie Parker · Blues for Alice")], [
+      source("Chasing the Bird: Harmonik von Blues for Alice", "https://www.musiikkiarkisto.fi/oa/_tiedostot/julkaisut/chasing-the-bird.pdf"),
+      source("YouTube: Charlie Parker · Blues for Alice", "https://www.youtube.com/watch?v=G7USMqAH8qk")
+    ], {summary:"Zwölf Takte Blues mit absteigenden II–V-Verbindungen und chromatischen Zielpunkten."}),
+
+    card("Falsche Modelle mit großer Erklärungskraft", "Darwins Pangenesis", [
+      "Charles Darwin nahm 1868 an, dass sämtliche Körperteile winzige Keimchen, die gemmules, abgeben. Diese sollten sich in den Fortpflanzungsorganen sammeln. Damit ließ sich in einem einzigen Modell erklären, warum Nachkommen Merkmale beider Eltern tragen, warum lange verborgene Merkmale wiederauftreten und wie erworbene Veränderungen vererbt werden sollten.",
+      "Francis Galton übertrug zwischen 1869 und 1871 große Mengen Blut zwischen verschieden gefärbten Kaninchen. Die Nachkommen zeigten keine Merkmale der Blutspender. Darwin erwiderte zu Recht, dass seine Hypothese das Blut nicht ausdrücklich als einzigen Transportweg festgelegt hatte. Entscheidend scheiterte Pangenesis später an der Trennung von Körper- und Keimbahn sowie an der Chromosomentheorie der Vererbung: Veränderungen des Körpers schreiben die Erbinformation der Keimzellen nicht auf die vorausgesetzte Weise um."
+    ], [C("Charles Darwin pangenesis gemmules diagram", "Darwins hypothetische Gemmulae"),C("Francis Galton rabbit transfusion experiment", "Francis Galtons Kaninchenversuche")], [
+      source("Darwin Online: Pangenesis, 1871", "https://darwin-online.org.uk/converted/published/1871_pangenesis_F1751.html"),
+      source("Francis Galton: Experiments in Pangenesis", "https://galton.org/essays/1870-1879/galton-1871-annals-pangenesis.pdf")
+    ], {summary:"Alle Körperteile sollten Erbteilchen abgeben, die sich in den Keimzellen sammeln."}),
+
+    card("Entzifferte Schriften", "Brahmi · 𑀤𑁂𑀯𑀸𑀦𑀁𑀧𑀺𑀬 𑀧𑀺𑀬𑀤𑀲𑀺", [
+      "Brahmi ist seit dem 3. Jahrhundert v. Chr. in weiten Teilen Südasiens belegt. Die meisten großen Inschriften des Maurya-Herrschers Ashoka geben damit mittelindische Prakrit-Sprachen wieder. Das Zeicheninventar wurde zum Ausgangspunkt zahlreicher späterer Schriften Süd- und Südostasiens.",
+      "James Prinsep verglich 1837 kurze Stifterinschriften auf buddhistischen Monumenten. Ihre wiederkehrende Endung las er als dānaṃ, „Gabe“. Dadurch gewann er mehrere Konsonanten und Vokale. Längere Inschriften ergaben den Königstitel devānaṃpiya piyadasi. George Turnour erkannte Piyadasi in sri-lankischen Chroniken als Titel Ashokas; Inschriften mit dem Namen Ashoka bestätigten die Zuordnung später. Die gezeigte Folge lautet devānaṃpiya piyadasi: „der Göttergeliebte Piyadasi“."
+    ], [C("Ashoka edict Brahmi inscription close up", "Brahmi-Zeichen in einer Ashoka-Inschrift"),C("James Prinsep portrait", "James Prinsep")], [
+      source("British Library: Deciphering ancient Indian scripts", "https://www.bl.uk/stories/blogs/posts/how-the-brahmi-script-was-deciphered"),
+      source("Encyclopaedia Britannica: Brahmi", "https://www.britannica.com/topic/Brahmi")
+    ], {summary:"devānaṃpiya piyadasi · „der Göttergeliebte Piyadasi“"}),
+
+    card("Etymologien und Begriffsgeschichten", "Magazin", [
+      "Arabisch maḫzan bezeichnet einen Speicher oder ein Lager; maḫāzin ist der Plural. Über italienisch magazzino und französisch magasin gelangte das Wort in die europäischen Handels- und Militärsprachen. Im Deutschen blieb Magazin zunächst ein Vorratsraum, besonders für Waffen und Pulver.",
+      "Edward Cave nannte seine Londoner Monatsschrift 1731 The Gentleman’s Magazine: eine Sammlung als Wissensspeicher. Diese bildliche Verwendung wurde zur Bezeichnung periodischer Hefte. Im 19. Jahrhundert kam eine technische Abzweigung hinzu: Das Magazin eines Gewehrs hält Patronen bereit; später erhielten Kameras und Projektoren Film-Magazine. Speicher, Zeitschrift und Munitionsbehälter gehen damit auf denselben Weg zurück."
+    ], [C("historic gunpowder magazine interior", "Ein historisches Pulvermagazin"),C("Gentleman's Magazine 1731 page", "The Gentleman’s Magazine, 1731")], [
+      source("Etymonline: magazine", "https://www.etymonline.com/word/magazine"),
+      source("DWDS: Magazin", "https://www.dwds.de/wb/Magazin")
+    ], {summary:"maḫzan: Lagerraum → Wissensspeicher → Zeitschrift und technischer Vorratsbehälter."}),
+
+    card("Rhetorische und poetische Verfahren", "„Moriamur et in media arma ruamus.“", [
+      "Vergil lässt Aeneas sagen: „Lasst uns sterben und mitten in die Waffen stürzen.“ Der Tod steht im Satz vor dem Angriff, der ihn erst herbeiführen soll. Diese Umkehr der sachlichen Reihenfolge heißt hysteron proteron, wörtlich „das Spätere zuerst“.",
+      "Antike Grammatiker behandelten die Figur als absichtliche Verkehrung der natürlichen Abfolge. An dieser Stelle bildet sie keine bloße Zierde. Aeneas spricht nach dem Fall Trojas zu einer Gruppe, die den eigenen Tod bereits beschlossen hat. Die grammatische Reihenfolge macht das Ergebnis zur Voraussetzung des Handelns; der anschließende Sturm in die Waffen vollzieht nur noch den gefassten Entschluss."
+    ], [C("Aeneas fighting Troy medieval manuscript", "Aeneas im Kampf um Troja")], [
+      source("Perseus: Vergil, Aeneis 2,353", "https://www.perseus.tufts.edu/hopper/text?doc=Verg.%20A.%202.353"),
+      source("Treccani: Hysteron proteron", "https://www.treccani.it/enciclopedia/hysteron-proteron/")
+    ], {summary:"Hysteron proteron: Die Wirkung steht vor der Handlung, die sie verursacht."}),
+
+    card("Urban Legends", "Blue-Star-LSD-Tattoos", [
+      "Seit den späten 1970er Jahren warnten fotokopierte Zettel in Schulen vor abziehbaren Kinder-Tattoos, die angeblich mit LSD getränkt seien. Das Motiv wechselte: blauer Stern, Mickey Mouse, Superman oder später Bart Simpson. Meist berief sich der Zettel auf ein Krankenhaus, die Polizei oder einen nicht näher genannten Regierungsberater.",
+      "Ein belegter Fall, in dem Händler solche Bilder an Kinder verteilten, ist nicht bekannt. Die Geschichte übertrug zwei wirkliche Dinge aufeinander: LSD wurde auf bedrucktem Löschpapier verkauft, und Kinder sammelten Abziehbilder. Jede neue Kopie machte aus einem allgemeinen Gerücht eine örtliche Warnung. Gerade die amtlich wirkende Form des Zettels hielt die Legende am Leben."
+    ], [C("LSD blotter paper sheet", "Bedrucktes Löschpapier für LSD"),C("temporary transfer tattoos vintage", "Abziehbilder für Kinder")], [
+      source("Los Angeles Times: Flyer Says Drug Is in Rub-On Tattoos", "https://www.latimes.com/archives/la-xpm-1987-12-09-mn-18352-story.html"),
+      source("Snopes: LSD Tattoos", "https://www.snopes.com/fact-check/blue-star-acid/")
+    ], {summary:"Eine fotokopierte Schulwarnung machte aus Löschpapier und Abziehbildern eine langlebige Drogenlegende."}),
+
+    card("Interessante Sprachen und Sprachmerkmale", "Baskisch: Anrede im Verb", [
+      "Beim vertrauten hika kann ein baskisches Verb das Geschlecht der angesprochenen Person markieren, obwohl diese Person an dem beschriebenen Vorgang gar nicht beteiligt ist. Die neutrale Aussage Jon etorri da bedeutet „Jon ist gekommen“. Zu einem vertrauten Mann heißt derselbe Sachverhalt Jon etorri duk, zu einer vertrauten Frau Jon etorri dun.",
+      "Das Merkmal heißt allokutive Kongruenz. Es gehört zur sozialen Beziehung zwischen Sprecher und Hörer und darf nicht mit dem Geschlecht des Subjekts Jon verwechselt werden. Die Formen stehen vor allem in selbstständigen Hauptsätzen. Baskisch wird im Baskenland beiderseits der spanisch-französischen Grenze gesprochen; die hika-Formen leben regional und altersabhängig unterschiedlich stark fort."
+    ], [C("Basque language dialect map", "Das Baskenland an der Grenze zwischen Spanien und Frankreich")], [
+      source("University of Surrey: Deponency in Basque", "https://www.smg.surrey.ac.uk/deponency/Examples/Basque.htm"),
+      source("Journal of Memory and Language: Basque allocutive agreement", "https://pmc.ncbi.nlm.nih.gov/articles/PMC5591851/")
+    ], {summary:"Das Verb zeigt, ob eine vertraut angesprochene Person männlich oder weiblich ist.",languageInfo:[["neutral","Jon etorri da. — Jon ist gekommen."],["zu einem Mann","Jon etorri duk. — Jon ist gekommen."],["zu einer Frau","Jon etorri dun. — Jon ist gekommen."],["Region","Baskenland in Nordspanien und Südwestfrankreich"]]}),
+
+    card("Interessante Listen", "Die Einkaufsliste von Vindolanda · Tafel 302", [
+      "Die schmale Holztafel entstand um 85–92 n. Chr. am römischen Kastell Vindolanda, nahe der heutigen Stadt Hexham in Nordengland. Wahrscheinlich sollte ein Sklave des Präfekten Verecundus Lebensmittel für den Haushalt beschaffen. Erhalten ist nur ein Teil der Liste; unsichere Lesungen bleiben in der Edition gekennzeichnet.",
+      "Die Mengen zeigen keinen kargen Außenposten. Gewünscht waren gute Äpfel, Eier nur zu einem angemessenen Preis und importierte Würzmittel. Die Liste gibt damit zugleich Geschmack, Vorratshaltung und Preisbewusstsein eines Offiziershaushalts an der Nordgrenze des Römischen Reiches zu erkennen."
+    ], [C("Vindolanda tablet 302", "Tafel 302 aus Vindolanda"),C("Vindolanda Roman fort aerial", "Das Kastell Vindolanda in Northumberland")], [
+      source("Roman Inscriptions of Britain: Tab. Vindol. 302", "https://romaninscriptionsofbritain.org/inscriptions/TabVindol302"),
+      source("British Museum: The Vindolanda tablets", "https://www.britishmuseum.org/collection/galleries/roman-britain/vindolanda-tablets")
+    ], {summary:"Eine Lebensmittelbestellung aus einem römischen Kastell, um 85–92 n. Chr.",works:["zerstoßene Bohnen · zwei modii","zwanzig Hühner","einhundert gute Äpfel, sofern welche zu finden sind","einhundert oder zweihundert Eier, sofern der Preis angemessen ist","acht sextarii Fischsauce","ein modius Oliven"]}),
+
+    card("Gute einfache Cartoons", "Honoré Daumier · Nadar erhebt die Fotografie zur Kunst", [
+      "Nadar steht mit Kamera und Stativ in einem schwankenden Ballonkorb. Tief unter ihm füllt sich Paris mit kleinen fotografischen Ateliers. Die Bildunterschrift nimmt die Redewendung wörtlich: Nadar erhebt die Fotografie „zur Höhe der Kunst“.",
+      "Daumier veröffentlichte die Lithografie am 25. Mai 1862. Nadar war tatsächlich Ballonfahrer, Fotograf und Verfechter der Luftbildfotografie. Der Witz braucht deshalb nur eine räumliche Verschiebung: Ein abstrakter Anspruch wird zur riskanten Arbeit über den Dächern."
+    ], [C("Nadar elevant la Photographie a la hauteur de l'Art Daumier", "Honoré Daumier, 25. Mai 1862")], [
+      source("Metropolitan Museum of Art: Nadar Élevant la Photographie à la Hauteur de l’Art", "https://www.metmuseum.org/art/collection/search/364205"),
+      source("National Gallery of Art: Nadar Elevating Photography to Art", "https://www.nga.gov/artworks/42966-nadar-elevant-la-photographie-la-hauteur-de-lart-nadar-elevating-photography-art")
+    ], {summary:"Honoré Daumier · Lithografie · 25. Mai 1862"}),
+
+    card("Grenzfälle", "La Jetée · Film oder Fotoserie", [
+      "Chris Markers La Jetée von 1962 besteht fast vollständig aus schwarzweißen Fotografien. Schnittdauer, Off-Kommentar, Musik und Geräusch geben den unbewegten Bildern eine genaue zeitliche Ordnung. In einer kurzen Einstellung öffnet eine Frau die Augen; die erste sichtbare Bewegung trifft deshalb mit ungewöhnlicher Kraft.",
+      "Der Film bleibt auch ohne fortlaufend aufgenommene Bewegung Kino. Seine Zeit entsteht zwischen den Bildern: Ein Schnitt kann Jahre überspringen, zwei ähnliche Fotos bilden eine Bewegung, und der Ton hält getrennte Aufnahmen in derselben Szene. Der Grenzfall zeigt, dass Filmzeit nicht im einzelnen Bild liegen muss."
+    ], [I("assets/la-jetee-fotofilm.svg", "assets/la-jetee-fotofilm.svg", "Fotografien, Schnitt und eine kurze Bewegung", "Eigene Darstellung")], [
+      source("BFI: La Jetée", "https://www.bfi.org.uk/film/e6855ee9-c56d-5914-9f9b-69307cef5b18/la-jetee"),
+      source("BFI Player: La Jetée", "https://player.bfi.org.uk/subscription/film/watch-la-jetee-1962-online")
+    ], {summary:"Ein 28-minütiger Film aus fast ausschließlich unbewegten Fotografien."}),
+
+    card("UnsichtbareKonventionen", "Warum Kinodialog aus der Mitte kommt", [
+      "In einem Kinosaal steht der Centerlautsprecher hinter der Leinwand. Der größte Teil des Dialogs wird auf diesen Kanal gelegt, selbst wenn eine sprechende Figur links oder rechts im Bild steht. Das Gehirn ordnet die Stimme den sichtbaren Lippen zu; zugleich hören Plätze am Rand dieselbe feste Quelle.",
+      "Würde jede Stimme genau mit der Figur zwischen linkem und rechtem Lautsprecher verschoben, entstünde der gewünschte Ort nur für wenige Sitze. Seitlich sitzende Zuschauer hörten Sprünge und andere Lautstärken. Tonmischungen lösen die Regel deshalb meist erst bei einer hörbaren Bewegung, einer Stimme außerhalb des Bildes oder einer ausdrücklich räumlichen Wirkung."
+    ], [I("assets/kino-centerkanal.svg", "assets/kino-centerkanal.svg", "Centerkanal hinter der Leinwand", "Eigene Darstellung")], [
+      source("Dolby: Speaker setup guides", "https://www.dolby.com/about/support/guide/speaker-setup-guides/"),
+      source("Cinema Audio Society: Dialogue and the center channel", "https://cinemaaudiosociety.org/")
+    ], {summary:"Der Centerkanal hält Sprache für alle Sitzplätze an der Leinwand fest."}),
+
+    card("VerloreneTechniken", "Längengrad durch Monddistanzen", [
+      "Ein Navigator maß mit dem Sextanten den Winkel zwischen dem Mondrand und einem bekannten Stern oder der Sonne. Nach Korrekturen für Augenhöhe, Brechung und Mondparallaxe verglich er den Winkel mit den vorausberechneten Werten des Nautical Almanac. Daraus erhielt er die Uhrzeit in Greenwich. Der Unterschied zur örtlichen Sonnenzeit ergab den Längengrad.",
+      "Nevil Maskelyne ließ die nötigen Tabellen ab 1767 jährlich veröffentlichen. Eine sorgfältige Rechnung dauerte anfangs mehrere Stunden und verlangte genaue Winkelmessung auf einem bewegten Schiff. Bis zur Mitte des 19. Jahrhunderts nutzten Seeleute das Verfahren neben Chronometern; mit preiswerteren zuverlässigen Uhren verlor die aufwendige Rechnung ihren praktischen Vorteil."
+    ], [C("lunar distance navigation observation sextant", "Messung einer Monddistanz mit dem Sextanten"),C("Nautical Almanac 1767 lunar distances", "Monddistanzen im Nautical Almanac")], [
+      source("Royal Museums Greenwich: Nevil Maskelyne and the lunar method", "https://www.rmg.co.uk/stories/time/longitude-found-nevil-maskelyne-lunar-method"),
+      source("Royal Museums Greenwich: Workbook for clearing a lunar distance", "https://www.rmg.co.uk/collections/archive/rmgc-object-500336")
+    ], {summary:"Mondwinkel plus Tabellen lieferten die Greenwich-Zeit und damit den Längengrad."}),
+
+    card("InternetArchäologie", "The Medieval Bestiary · bestiary.ca", [
+      "Der unabhängige Forscher David Badke begann die Website 2002 in Victoria, Kanada. Sie erschließt mittelalterliche Tierbücher nach Tieren, Handschriften, Quellen, Bildmotiven und Forschungsliteratur. Beim Öffnen erscheint eine schlichte, überwiegend statische Website mit alphabetischen Registern und langen Querverweislisten.",
+      "Zu einem Tier findet man lateinische Namen, überlieferte Eigenschaften, moralische Deutungen und Abbildungen aus verschiedenen Handschriften. Das Handschriftenverzeichnis führt weiter zu Bibliothek, Signatur, Datierung und vorhandenen Digitalisaten. Die Seite funktioniert weiterhin ohne Konto; einzelne ältere externe Bildlinks können inzwischen ausfallen."
+    ], [C("medieval bestiary lion manuscript illumination", "Löwe in einer mittelalterlichen Bestiarienhandschrift"),C("medieval bestiary whale manuscript", "Wal in einem mittelalterlichen Bestiarium")], [
+      source("The Medieval Bestiary", "https://bestiary.ca/"),
+      source("The Medieval Bestiary: About", "https://bestiary.ca/about.htm")
+    ], {summary:"Seit 2002: ein durchsuchbares Verzeichnis mittelalterlicher Tiere, Handschriften und Bilder."}),
+
+    card("SchlechtesWritingSeziert", "Prometheus · Millburn und die Hammerpede", [
+      "Der Biologe Millburn erschrickt vor einem toten außerirdischen Körper und will das Bauwerk verlassen. Wenig später nähert er sich einer lebenden, zischenden Kreatur mit aufgerichtetem Kopf, spricht sie wie ein harmloses Tier an und streckt die Hand aus. Gleichzeitig verirrt sich der Geologe Fifield, obwohl gerade seine Kartierungssonden den Bau vermessen und das Schiff ihre Position sieht.",
+      "Beide Todesfälle brauchen, dass die Fachleute genau die Fähigkeit verlieren, mit der der Film sie vorgestellt hat. Das wirkt erzwungen, weil keine neue Information ihre Entscheidungen erklärt. Gefahr entsteht hier aus einem Wechsel der Figurenlogik, nicht aus einer stärkeren Lage."
+    ], [I("assets/prometheus-szenenlogik.svg", "assets/prometheus-szenenlogik.svg", "Fähigkeit und Handlung in der Hammerpede-Szene", "Eigene Darstellung")], [
+      source("Prometheus screenplay", "https://assets.scriptslug.com/live/pdf/scripts/prometheus-2012.pdf"),
+      source("20th Century Studios: Prometheus", "https://www.20thcenturystudios.com/movies/prometheus")
+    ], {summary:"Zwei Fachleute handeln plötzlich gegen die Fähigkeiten, mit denen der Film sie eingeführt hat.",works:["Die Kreatur liegt zunächst reglos und zeigt ihre Drohhaltung erst, als Millburn bereits zu nah ist.","Ein elektromagnetischer Ausfall löscht Fifields Karte und unterbricht die Positionsdaten zum Schiff.","Millburn erkennt ein vertrautes Beschwichtigungsverhalten, deutet jedoch ein entscheidendes anatomisches Zeichen falsch; sein Irrtum folgt dann aus Fachwissen statt aus dessen Verschwinden."]}),
+
+    card("DasIstHierGanzInDerNähe", "Deutsches Verpackungs-Museum · Heidelberg", [
+      "Das Museum liegt im Innenhof der Hauptstraße 22 in der Heidelberger Altstadt, rund zwanzig Kilometer von Mannheim entfernt. Es zeigt Verpackungen als Gebrauchs- und Werbegeschichte: Markenformen, Materialwechsel, Transportbehälter und alltägliche Packungen, die nach dem Öffnen gewöhnlich weggeworfen wurden.",
+      "Die Sammlung befindet sich in einer ehemaligen Notkirche. Dadurch stehen kleine Serien und Vitrinen in einem ungewöhnlich hohen Raum. Geöffnet ist Donnerstag bis Sonntag von 11 bis 17 Uhr; montags bis mittwochs und an Feiertagen bleibt das Museum geschlossen. Vor einer Fahrt empfiehlt sich ein Blick auf die aktuellen Hinweise der Museumsseite."
+    ], [C("Deutsches Verpackungsmuseum Heidelberg", "Deutsches Verpackungs-Museum in Heidelberg"),C("historical product packaging Germany museum", "Historische Verkaufsverpackungen")], [
+      source("Deutsches Verpackungs-Museum: Öffnungszeiten und Adresse", "https://www.verpackungsmuseum.de/oeffnungszeiten-adresse/"),
+      source("Deutsches Verpackungs-Museum", "https://www.verpackungsmuseum.de/")
+    ], {summary:"Heidelberg · Verpackungs- und Markengeschichte in einer ehemaligen Notkirche."}),
+
+    card("VisuelleIdeenDieIchKlauenWill", "Len Lye · Free Radicals", [
+      "Len Lye ritzte Linien direkt in schwarzen 16-mm-Film. Dentalinstrumente, Nadeln und eine Pfeilspitze entfernten die Emulsion; bei der Projektion erscheinen die Kratzer als weißes Licht auf schwarzem Grund. Free Radicals entstand 1958 und wurde 1979 überarbeitet.",
+      "Die brauchbare Bildidee liegt im Weglassen eines üblichen Zwischenschritts. Es gibt weder Kamera noch gezeichneten Hintergrund: Werkzeugbreite, Druck und Abstand der Ritzungen werden unmittelbar zu Form und Rhythmus. Die hellen Zeichen wechseln zwischen einzelnen Hieben, zitternden Bündeln und großen offenen Konturen. Im Video ist die Arbeit von Beginn an zu sehen."
+    ], [Y("nkcHVhMq6U0", "Len Lye · Free Radicals · SCHIRN")], [
+      source("Govett-Brewster: Free Radicals", "https://shop.govettbrewster.com/products/free-radicals-solo-journal"),
+      source("YouTube: SCHIRN Kunsthalle Frankfurt", "https://www.youtube.com/watch?v=nkcHVhMq6U0")
+    ], {summary:"Weiße Linien entstehen, indem Werkzeuge die schwarze Filmemulsion abtragen."}),
+
+    {category:"Eigene GIFs",kind:"gif",title:"Phasenschnitt",detail:[],media:[I("assets/gifs/phasenschnitt.gif","assets/gifs/phasenschnitt.gif","Phasenschnitt","Eigene Animation")],sources:[]},
+
+    card("Trends in Art", "Harriet Rutter · Symbiosis — beech tree, Wytham Woods", [
+      "Harriet Rutter fotografierte eine Buche im Forschungswald Wytham Woods bei Oxford auf analogem Film. Danach vergrub sie das belichtete Material im Boden am Aufnahmeort. Feuchtigkeit, Pilzgeflecht und Mikroorganismen griffen die Emulsion an, bevor das Bild ausgearbeitet wurde.",
+      "Das Werk von 2026 ist als sehr schmales, hochformatiges Baumporträt montiert. Stamm und Äste bleiben über viele zusammengesetzte Aufnahmen lesbar; Flecken, Ausbleichungen und beschädigte Ränder geben dagegen die Vorgänge im Boden wieder. Die chemische Veränderung ist hier Teil der Aufnahme und kein nachträglich gesetzter Filter."
+    ], [I("https://2026.rca.ac.uk/files/2026/06/H-Rutter-whole-tree-2be64c6231f99657.jpg", "https://2026.rca.ac.uk/school-of-arts-humanities/photography-ma/profile/harriet-rutter-ma-photography/", "Symbiosis — beech tree, Wytham Woods, 2026", "Harriet Rutter · RCA2026")], [
+      source("RCA2026: Harriet Rutter, MA Photography", "https://2026.rca.ac.uk/school-of-arts-humanities/photography-ma/profile/harriet-rutter-ma-photography/")
+    ], {summary:"Analoger Film wurde nach der Aufnahme unter derselben Buche vergraben."}),
+
+    card("Writing Tipps", "Eine kurze Erzählung auf eine Zeitspanne begrenzen", [
+      "Prüfe bei jeder längeren Vorgeschichte, ob ein einziger Rückblick die gegenwärtige Lage verständlich macht. Wenn sich Figuren oder Umstände während eines übersprungenen Zeitraums sichtbar verändern müssen, verlangt der Stoff eine längere Form. Die Kurzgeschichte setzt später ein: bei der Situation, in der frühere Entscheidungen gleichzeitig wirksam werden.",
+      "Edith Wharton trennt auf diese Weise die kurze Erzählung vom bloß zusammengedrückten Roman. Ein Zeitsprung ist für sie kein neutrales Kürzungsmittel. Sobald der ausgelassene Zeitraum eine eigene Entwicklung trägt, bleibt nach der Kürzung nur noch das Handlungsgerüst."
+    ], [C("Edith Wharton writing desk photograph", "Edith Wharton an ihrem Schreibtisch")], [
+      source("Project Gutenberg: Edith Wharton, The Writing of Fiction", "https://www.gutenberg.org/ebooks/72446"),
+      source("Internet Archive: The Writing of Fiction", "https://archive.org/details/writingoffiction00whar")
+    ], {summary:"Ein Zeitsprung darf keine Entwicklung verdecken, die eine eigene Szene oder längere Form braucht.",writingSource:{label:"Wortlaut · Edith Wharton, The Writing of Fiction, Kapitel II",source:"https://archive.org/details/writingoffiction00whar",remote:{url:"https://raw.githubusercontent.com/GITenberg/The-writing-of-fiction_72446/master/72446-0.txt",start:"There are cases, indeed, when the short story may make use",end:"In the third chapter, where an attempt will be made",flexibleMarkers:true,reflow:true,fetchLabel:"GITenberg-Transkription"}}}),
+
+    card("Englisch Vokabular", "scupper", [], [C("ship deck scupper drain", "Ein Speigatt im Deck eines Schiffs")], [
+      source("Cambridge Dictionary: scupper", "https://dictionary.cambridge.org/dictionary/english/scupper"),
+      source("Merriam-Webster: scupper", "https://www.merriam-webster.com/dictionary/scupper")
+    ], {summary:"einen Plan vereiteln; ein Schiff absichtlich versenken",vocabulary:{pronunciation:"UK /ˈskʌp.ə/, US /ˈskʌp.ɚ/",register:"informell; vor allem britisch",meaning:"Als Verb bedeutet scupper meist, einen Plan oder eine Aussicht vollständig scheitern zu lassen. In der älteren Seemannssprache heißt es außerdem, ein Schiff zu versenken. Das gleich geschriebene Substantiv bezeichnet einen Wasserablauf im Schiffsdeck.",examples:[
+      {english:"A missing permit scuppered the exhibition.",german:"Eine fehlende Genehmigung ließ die Ausstellung scheitern."},
+      {english:"One bad estimate could scupper the entire budget.",german:"Eine einzige falsche Schätzung könnte den gesamten Finanzplan zunichtemachen."},
+      {english:"The crew scuppered the captured vessel before dawn.",german:"Die Besatzung versenkte das erbeutete Schiff vor Tagesanbruch."}
+    ]}}),
+
+    card("Geo Atlas", "Sistan-Becken", [
+      "Das abflusslose Sistan-Becken liegt beiderseits der Grenze zwischen Südwestafghanistan und Südostiran. Der Helmand bringt Schmelzwasser aus dem Hindukusch in die flachen Hamun-Seen bei Zaranj und Zabol. In nassen Jahren laufen sie nach Süden in die salzige Senke Gowd-e Zereh über; in Dürrejahren zerfallen sie in trockene Schlammflächen.",
+      "Bewässerung trug hier seit mehr als sechs Jahrtausenden Städte und Landwirtschaft. Der Name Sistan geht auf Sakastan, „Land der Saken“, zurück. Seit Grenzkommissionen des 19. Jahrhunderts sind Flussarme, Staudämme und Wasserrechte zugleich politische Fragen zwischen Iran und Afghanistan. Von Mai bis Oktober treibt der „Wind der 120 Tage“ Staub durch das Becken; sinkt der Wasserstand, wird der ehemalige Seeboden selbst zur Staubquelle."
+    ], [C("Sistan Basin map Afghanistan Iran", "Das Sistan-Becken an der Grenze zwischen Afghanistan und Iran"),C("Hamun Lake dry wetland satellite", "Die Hamun-Seen im Sistan-Becken")], [
+      source("USGS: Geology, Water, and Wind in the Lower Helmand Basin", "https://pubs.usgs.gov/sir/2006/5182/index.html"),
+      source("Encyclopaedia Iranica: Helmand River · Geography", "https://www.iranicaonline.org/articles/helmand-river-i/")
+    ], {summary:"Endbecken des Helmand zwischen Zaranj und Zabol, an der afghanisch-iranischen Grenze."}),
+
+    card("Deutsche Sprichwörter in kyrillischen Buchstaben", "Ende gut, alles gut.", [
+      "Lautwert: /ˈɛndə ɡuːt ˈaləs ɡuːt/. Д steht für das deutsche d; im kyrillischen Alphabet ist dafür keine Ersatzfolge nötig. Э gibt das offene e am Wortanfang wieder, у das lange u."
+    ], [C("theatre curtain call applause", "Ein Schlussapplaus")], proverbSources("Ende gut alles gut", "Kyrillisches Alphabet"), {summary:"Энде гут, аллес гут."}),
+
+    card("Deutsche Sprichwörter in griechischen Buchstaben", "Geteiltes Leid ist halbes Leid.", [
+      "Lautwert: /ɡəˈtaɪ̯ltəs laɪ̯t ɪst ˈhalbəs laɪ̯t/. Γκ nähert das deutsche g an; άϊ steht für ei. Das d am Wortende wird als δ geschrieben. Für h dient hier ἁ: Der Spiritus asper bezeichnete im Altgriechischen einen anlautenden h-Laut, der im heutigen Griechisch verschwunden ist."
+    ], [C("two people sharing burden historical photograph", "Eine gemeinsam getragene Last")], proverbSources("Geteiltes Leid ist halbes Leid", "Griechisches Alphabet"), {summary:"Γκετάϊλτες Λάϊδ ιστ ἅλμπες Λάϊδ."})
+  );
+})();
+
 // Erweiterung vom 4. September 2026: je eine Karte für alle aktiven Kategorien.
 (() => {
   "use strict";

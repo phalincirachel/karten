@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Fotogrammfolge und einzelnes bewegtes Bild</title>
+  <desc id="desc">Eine Folge schwarzer Einzelbilder wird an einer Stelle durch mehrere leicht veränderte Augenbilder unterbrochen.</desc>
+  <rect width="1200" height="760" fill="#eee9df"/>
+  <g fill="#17191b">
+    <rect x="70" y="105" width="235" height="210"/><rect x="345" y="105" width="235" height="210"/><rect x="620" y="105" width="235" height="210"/><rect x="895" y="105" width="235" height="210"/>
+    <rect x="70" y="445" width="235" height="210"/><rect x="345" y="445" width="235" height="210"/><rect x="620" y="445" width="235" height="210"/><rect x="895" y="445" width="235" height="210"/>
+  </g>
+  <g fill="none" stroke="#f5f1e9" stroke-width="13" stroke-linecap="round">
+    <path d="M105 250Q188 168 270 250Q188 282 105 250"/><path d="M380 250Q463 191 545 250Q463 270 380 250"/>
+    <path d="M655 250Q738 215 820 250Q738 255 655 250"/><path d="M930 250Q1013 240 1095 250"/>
+    <path d="M105 590Q188 240 270 590"/><path d="M380 590Q463 410 545 590"/><path d="M655 590Q738 505 820 590"/><path d="M930 590Q1013 548 1095 590"/>
+  </g>
+  <g fill="#b64c35"><circle cx="188" cy="240" r="15"/><circle cx="463" cy="244" r="15"/><circle cx="738" cy="248" r="15"/></g>
+  <path d="M315 380H885" stroke="#b64c35" stroke-width="6"/><path d="m865 360 25 20-25 20" fill="none" stroke="#b64c35" stroke-width="6"/>
+</svg>

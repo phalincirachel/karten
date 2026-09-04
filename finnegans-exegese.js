@@ -17,7 +17,10 @@
   };
   const A5={
     crest:"https://fwannotated.blogspot.com/2014/09/p5b.html",
-    rhyme:"https://fwannotated.blogspot.com/2014/09/p5c.html"
+    rhyme:"https://fwannotated.blogspot.com/2014/09/p5c.html",
+    question:"https://fwannotated.blogspot.com/2014/09/p5d.html",
+    thunder:"https://fwannotated.blogspot.com/2014/09/p5e.html",
+    prayer:"https://fwannotated.blogspot.com/2014/09/p5f.html"
   };
 
   const P413="oystrygods gaggin fishygods! "+
@@ -180,6 +183,10 @@
     {page:5,text:"",en:"His heraldic crest is green and silver, attended by maidservants, and bears a pursued, horrible, horned he-goat or oak.",boxes:[["Worum geht’s","Die Beschreibung wechselt in die Sprache eines Wappens. Farben, Begleitfiguren und Wappentier werden jedoch bei jedem Wort unsicher."],["Wörter","<em>huroldry</em> enthält heraldry, Harold und hurly-burly. <em>caputnaked</em> lässt Kopf, Nacktheit und eine heraldische Stellung zusammenklingen; <em>hegoak</em> schwankt zwischen Ziegenbock und Eiche."],["Querverweise","Grün und Silber gehören zu Irland. Die regelhafte Sprache der Heraldik soll eindeutige Merkmale festhalten, wird hier aber selbst zum Erzeuger mehrerer Bilder."]],source:A5.crest},
     {page:5,text:"",en:"His shield is divided by a horizontal band, with strung archers and a sun or lion in the second colour.",boxes:[["Worum geht’s","Das erfundene Wappen wird weiter ausgemalt. Ein Querbalken teilt den Schild; Figuren und Farben bleiben beweglich, obwohl die Wappensprache Genauigkeit beansprucht."],["Wörter","<em>scutschum</em> enthält scutcheon, das Wappenschild, und schottische Anklänge. <em>fessed</em> nennt die waagerechte Fessel oder Fesse; <em>solsphere</em> schwankt zwischen Sonne, Kugel und Löwe."],["Querverweise","Das Wappen ordnet die vielen Namen HCEs wie eine Familiengenealogie. Joyce benutzt die feste heraldische Grammatik, um gerade keine feste Abstammung zuzulassen."]],source:A5.crest},
     {page:5,text:"",en:"H is for the husbandman handling his hoe.",boxes:[["Worum geht’s","Der Text fällt aus der Wappenbeschreibung in den Ton einer Alphabetfibel. Der Buchstabe H führt zum Landarbeiter mit seiner Hacke."],["Wörter","<em>Hootch</em> klingt nach dem Buchstabennamen H, nach Schnaps und nach einem Ruf. <em>husbandman</em> bedeutet Landarbeiter, trägt aber zugleich husband, den Ehemann, in sich."],["Querverweise","H beginnt mehrere Namen der HCE-Figur. Die Fibel macht aus dem Anfangsbuchstaben eine Tätigkeit und leitet zum wiederkehrenden Ruf der folgenden Zeile über."]],source:A5.rhyme},
+    {page:5,text:"",en:"Ho, Mister Finn: you will be Finn again; morning turns wine into vinegar and fun into another fine.",boxes:[["Worum geht’s","Vier Zurufe versprechen Finnegans Wiederkehr und lassen seinen Namen bei jeder Wiederholung anders klingen."],["Wörter","<em>Finnagain</em> ist Finn again und Finnegan. <em>morm</em> enthält morning und französisch <em>mort</em>; <em>vine</em> wird im nächsten Ruf zu vinegar. <em>Funn</em> und <em>fined again</em> führen Freude und Strafe in denselben Refrain."],["Querverweise","Die Ballade von Tim Finnegan endet mit der Auferstehung bei der Totenwache. Wein, Essig und Hefe setzen die bereits auf Seite 4 begonnene Reihe aus Gärung, Verfall und neuem Leben fort."]],source:A5.rhyme},
+    {page:5,text:"",en:"What agent-like cause produced that tragic Thursday thunder and this civic business of sin?",boxes:[["Worum geht’s","Nach der versprochenen Auferstehung fragt der Erzähler erstmals ausdrücklich nach der Ursache des Falls. Die Frage eröffnet jedoch keine eindeutige Untersuchung; jedes Wort bietet mehrere mögliche Anlässe an."],["Wörter","<em>agentlike</em> fragt nach dem Handelnden und klingt nach einem Ermittler. <em>tragoady</em> enthält tragedy sowie griechisch <em>tragos</em>, Ziegenbock, und <em>ōdē</em>, Gesang. <em>thundersday</em> ist Thursday, Thors Tag, und ein Tag des Donners."],["Querverweise","<em>municipal sin business</em> verschiebt den biblischen Sündenfall in eine städtische Angelegenheit Dublins. Später wird HCEs mögliches Vergehen im Phoenix Park ebenso durch Gerücht und Untersuchung erzeugt."]],source:A5.question},
+    {page:5,text:"",en:"Our cubic house still shakes as an ear-witness to his Arafat thunder, while later ages repeat an unqualified muezzin-chorus about blackening the white stone hurled from heaven.",boxes:[["Worum geht’s","Der Fall bleibt vor allem als Geräusch erhalten. Haus, Stadt und nachfolgende Zeiten werden zu Ohrenzeugen eines Donners, dessen religiöse Herkunft bei jeder Wiederholung wechselt."],["Wörter","<em>cubehouse</em> bezeichnet ein würfelförmiges Haus und erinnert an die Kaaba. <em>earwitness</em> ersetzt den Augenzeugen. <em>arafatas</em> nennt den Berg Arafat; in <em>muzzlenimiissilehims</em> sind Muezzin, Muslim, Geschoss und das Vermissen hörbar."],["Querverweise","Schwarz und Weiß verweisen auf den Schwarzen Stein der Kaaba und auf Luzifer, den Lichtträger, der nach Miltons <em>Paradise Lost</em> aus dem Himmel geschleudert wird. Der Donner des ersten Falls erhält dadurch islamische, christliche und literarische Echos."]],source:A5.thunder},
+    {page:5,text:"",en:"Sustain us in our search for righteousness when we rise, eat and lie down, through the night and until the stars fade.",boxes:[["Worum geht’s","Eine lange Bitte um Beistand umfasst den ganzen Tageslauf: Aufstehen, Essen, Schlafengehen, Nacht und Morgendämmerung."],["Wörter","<em>tighteousness</em> setzt tight in righteousness. <em>toothmick</em> enthält Zahnstocher, Zahnstoßen und <em>to make</em>; <em>lump down upown</em> lässt den Körper zugleich hinabfallen und aufstehen."],["Querverweise","Die Satzform erinnert an jüdische und christliche Gebete, die Gottes Gebote beim Niederlegen und Aufstehen gegenwärtig halten. Nach der Frage nach Schuld folgt keine Antwort, sondern die Bitte, während jedes neuen Falls und Aufstehens gehalten zu werden."]],source:A5.prayer},
   ];
 
   const page4Source="https://gist.githubusercontent.com/jl2/7fbf5c10f70a9b1bcd25e1fa2c34fee8/raw/finnegan.txt";
@@ -208,6 +215,10 @@
     ["His crest of huroldry","His scutschum fessed"],
     ["His scutschum fessed","Hootch is for husbandman"],
     ["Hootch is for husbandman","Hohohoho, Mister Finn"],
+    ["Hohohoho, Mister Finn","What then agentlike"],
+    ["What then agentlike","Our cubehouse still rocks"],
+    ["Our cubehouse still rocks","Stay us wherefore"],
+    ["Stay us wherefore","For a nod to the nabir"],
   ];
   units.slice(12).forEach((unit,index)=>{
     unit.remoteRange=ranges[index];
@@ -224,7 +235,8 @@
     "Phoenix medieval bestiary manuscript",
     "James Joyce portrait photograph",
     "Tower of Babel Pieter Bruegel Vienna",
-    "Coat of arms of Dublin.svg"
+    "Coat of arms of Dublin.svg",
+    "Mount Arafat historic photograph Kaaba"
   ];
   const pageSources={3:"https://www.fweet.org/sim.pl?003",4:"https://www.fweet.org/sim.pl?004",5:"https://www.fweet.org/sim.pl?005"};
   for(let index=0;index<units.length;index+=4){
