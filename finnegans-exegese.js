@@ -21,7 +21,9 @@
     question:"https://fwannotated.blogspot.com/2014/09/p5d.html",
     thunder:"https://fwannotated.blogspot.com/2014/09/p5e.html",
     prayer:"https://fwannotated.blogspot.com/2014/09/p5f.html",
-    proverb:"https://fwannotated.blogspot.com/2014/09/p5g.html"
+    proverb:"https://fwannotated.blogspot.com/2014/09/p5g.html",
+    camel:"https://fwannotated.blogspot.com/2014/09/p5f.html",
+    fall:"https://fwannotated.blogspot.com/2014/09/p5g.html"
   };
 
   const P413="oystrygods gaggin fishygods! "+
@@ -194,6 +196,13 @@
     {page:5,text:"",en:"Then we will know whether the day is a feast, a fast or merely a fly-day.",boxes:[["Worum geht’s","Das angekündigte Ergebnis betrifft den Kalender: Soll gegessen oder gefastet werden? Selbst diese einfache Unterscheidung bleibt im letzten Wort unentschieden."],["Wörter","<em>feast</em> und fast unterscheiden sich nur durch einen Buchstaben. <em>flyday</em> enthält Friday und einen Tag der Fliegen; auch ein vorübergehender, rasch verfliegender Tag klingt an."],["Querverweise","Religiöse Speisevorschriften führen zurück zum Essen, Trinken und Verdauen der vorigen Seiten. Der nächste Satz setzt die Suche nach einer zuverlässigen Deuterin fort." ]],source:A5.proverb},
   ];
 
+  units.push(
+    {page:5,text:"",en:"She has second sight and will answer our prayers: our dreamy dromedary.",boxes:[["Worum geht’s","Das weibliche Pronomen bezeichnet die Kamelstute aus der vorigen Passage. Gemeint ist al-Qaṣwāʾ, deren Niederknien nach islamischer Überlieferung den Ort für Mohammeds Aufenthalt in Medina bestimmte. Das Tier soll also eine Entscheidung treffen, die Menschen als Zeichen deuten."],["Wörter","<em>seek on site</em> klingt nach <em>second sight</em>, Hellsehen, und bezeichnet zugleich die Suche nach einem Ort. <em>ansars</em> enthält <em>answers</em> sowie das arabische Wort für die Helfer Mohammeds in Medina. <em>dreamydeary</em> erinnert an <em>dromedary</em>, Dromedar."],["Querverweise","Die Annotation weist auf Joyces Exzerpte aus einer Mohammed-Biografie hin. Dadurch ist der Bezug zur Kamelstute genauer belegt als eine allgemeine Deutung der Figur als Traumseherin."]],source:A5.camel},
+    {page:5,text:"",en:"Pay attention! Pay attention!",boxes:[["Worum geht’s","Zwei kurze Zurufe unterbrechen die ausschweifende Suche nach Auskunft. Sie verlangen Aufmerksamkeit, bevor der Text wieder nach der Ursache des Sturzes fragt."],["Wörter","<em>Heed</em> bedeutet hier: beachten, aufmerken. Der zweite Zuruf fügt keine Information hinzu; die Wiederholung macht den Wechsel im Ton hörbar."],["Querverweise","Zwischen den langen Sätzen steht eine fast mündliche Regieanweisung. Die folgende Erklärung beginnt trotzdem mit einer Vermutung. Der nachdrückliche Aufruf macht die Auskunft also keineswegs sicherer."]],source:A5.fall},
+    {page:5,text:"",en:"Perhaps it was a badly fired or misdirected brick; the back of the building may simply have given way.",boxes:[["Worum geht’s","Für Finnegans Sturz werden handfeste Ursachen erwogen: ein mangelhafter oder fehlgeleiteter Ziegel und ein Einsturz am hinteren Teil des Gebäudes. Der Erzähler legt sich auf keine davon fest."],["Wörter","<em>missfired</em> steht zwischen <em>misfired</em> und einem falsch gebrannten Ziegel. <em>back promises</em> erinnert an <em>back premises</em>, die hinteren Räume oder Gebäude; zugleich bleiben nicht eingelöste Versprechen im Wortlaut erhalten."],["Querverweise","Der Satz führt vom religiösen Zeichen zurück zum Bauunfall. Die Annotation vermerkt weitere Anklänge an geworfene Ziegel; die genaue Ursache des Falls wird dadurch nicht geklärt."]],source:A5.fall},
+    {page:5,text:"",en:"By now there are a thousand and one stories, after all of them have been told.",boxes:[["Worum geht’s","Der Einschub zählt die Erzählungen über den Fall. Nach den einstürzenden Gebäudeteilen bezeichnet dieselbe Lautfolge zugleich Geschichten und Stockwerke."],["Wörter","<em>stories</em> heißt Geschichten und im amerikanischen Englisch auch Stockwerke. <em>all told</em> bedeutet insgesamt, wörtlich außerdem: alles erzählt. In <em>extand</em> sind <em>extant</em>, noch vorhanden, und <em>stand</em> zu erkennen."],["Querverweise","Die Zahl tausendundeins verweist auf die Sammlung <em>Tausendundeine Nacht</em>. Das Erzählen geht über jede einzelne Erklärung hinaus: Nach einer Geschichte folgt die nächste. Im anschließenden Satz kehrt der Text zu Finnegans Körper und seinem Aufprall zurück."]],source:A5.fall}
+  );
+
   const page4Source="https://gist.githubusercontent.com/jl2/7fbf5c10f70a9b1bcd25e1fa2c34fee8/raw/finnegan.txt";
   const ranges=[
     ["What clashes here of wills","Where the Baddelaries"],
@@ -228,6 +237,10 @@
     ["Otherways wesways","Cropherb the crunch-bracken"],
     ["Cropherb the crunch-bracken","Then we'll know"],
     ["Then we'll know","She has a gift of seek on site"],
+    ["She has a gift of seek on site","Heed! Heed!"],
+    ["Heed! Heed!","It may half been a missfired brick"],
+    ["It may half been a missfired brick","(There extand by now"],
+    ["(There extand by now","But so sore did abe"],
   ];
   units.slice(12).forEach((unit,index)=>{
     unit.remoteRange=ranges[index];
@@ -246,7 +259,8 @@
     "Tower of Babel Pieter Bruegel Vienna",
     "Coat of arms of Dublin.svg",
     "Mount Arafat3.jpg",
-    "Jebel Musa Sinai photograph"
+    "Jebel Musa Sinai photograph",
+    "Camelus_dromedarius_in_Nuweiba.jpg"
   ];
   const pageSources={3:"https://www.fweet.org/sim.pl?003",4:"https://www.fweet.org/sim.pl?004",5:"https://www.fweet.org/sim.pl?005"};
   for(let index=0;index<units.length;index+=4){
@@ -260,7 +274,7 @@
       title:`Finnegans Wake ${number}`,
       summary:`Sätze ${index+1}–${index+4} · Druckseite ${pages.join("/")}`,
       detail:[],
-      media:[{type:"commons",query:images[number-1],file:[4,10].includes(number)?images[number-1]:undefined,caption:`Finnegans Wake · Folge ${number}`}],
+      media:number===12?[{type:"image",src:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Camelus_dromedarius_in_Nuweiba.jpg/1280px-Camelus_dromedarius_in_Nuweiba.jpg",href:"https://commons.wikimedia.org/wiki/File:Camelus_dromedarius_in_Nuweiba.jpg",caption:"Ein Dromedar in Nuweiba auf der Sinaihalbinsel",credit:"Wikimedia Commons"}]:[{type:"commons",query:images[number-1],file:[4,10].includes(number)?images[number-1]:undefined,caption:`Finnegans Wake · Folge ${number}`}],
       sources,
       searchTerm:`Finnegans Wake Seite ${pages.join(" ")} Sätze ${index+1} ${index+4} Exegese`,
       finnegansGroup:number-1
