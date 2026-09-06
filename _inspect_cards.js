@@ -1,7 +1,7 @@
 const fs=require("fs"),vm=require("vm");
 const context={window:{MEDIA_FILES:{}}};vm.createContext(context);
-for(const f of ["cards.js","remote-texts.js","wiki-details.js","cards-editorial.js"])vm.runInContext(fs.readFileSync(f,"utf8"),context,{filename:f});
-const archived=new Set(["Gute Gags","Seltene und geniale Lifehacks"]),cards=context.window.KARTEN.filter(c=>!archived.has(c.category));
+for(const f of ["cards.js","remote-texts.js","wiki-details.js","cards-editorial.js","finnegans-exegese.js"])vm.runInContext(fs.readFileSync(f,"utf8"),context,{filename:f});
+const archived=new Set(context.window.KARTEN_ARCHIVED_CATEGORIES),cards=context.window.KARTEN.filter(c=>!archived.has(c.category));
 const groups=new Map();for(const c of cards){if(!groups.has(c.category))groups.set(c.category,[]);groups.get(c.category).push(c.title)}
 console.log(`ACTIVE ${cards.length} CATEGORIES ${groups.size}`);
 for(const [category,titles] of groups)console.log(`${category}\t${titles.length}`);

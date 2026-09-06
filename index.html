@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#ede7dc">
-  <meta name="description" content="575 Karten zu Literatur, Philosophie, Geschichte, Kunst, Musik, Sprache und Alltagswissen.">
+  <meta name="description" content="548 Karten zu Literatur, Philosophie, Geschichte, Kunst, Musik, Sprache und Alltagswissen.">
   <title>Kartei</title>
   <script>if("scrollRestoration" in history)history.scrollRestoration="manual";</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,16 +38,16 @@
   <dialog id="detailDialog" aria-labelledby="detailTitle"><article class="sheet"><button class="close" type="button" aria-label="Schließen">×</button><div id="detail"></div></article><button class="dialog-feedback" id="detailFeedbackButton" type="button">Feedback <span id="detailFeedbackCount">0</span></button></dialog>
   <dialog id="ratingDialog" aria-labelledby="ratingTitle"><article class="feedback-sheet"><button class="close rating-close" type="button" aria-label="Schließen">×</button><h2 id="ratingTitle">Karte bewerten</h2><p class="feedback-card" id="ratingCard"></p><div class="feedback-reasons" id="negativeReasons"><label><input type="checkbox" value="Nicht kreativ genug">Nicht kreativ genug</label><label><input type="checkbox" value="Ungenau beschrieben">Ungenau beschrieben</label><label><input type="checkbox" value="Sprachlich schlecht beschrieben">Sprachlich schlecht beschrieben</label><label><input type="checkbox" value="Schlechtes Bild">Schlechtes Bild</label><label><input type="checkbox" value="Zu wenig Kontext">Zu wenig Kontext</label><label><input type="checkbox" value="Auswahl zu bekannt oder naheliegend">Auswahl zu bekannt oder naheliegend</label><label><input type="checkbox" value="Quelle, Link oder Medium funktioniert nicht">Quelle, Link oder Medium funktioniert nicht</label></div><label class="feedback-note"><span id="ratingNoteLabel">Weitere Kritik</span><textarea id="ratingNote"></textarea></label><div class="feedback-actions"><button class="primary" id="saveRating" type="button">Im Browser speichern</button><button class="cancel-rating" type="button">Abbrechen</button></div></article></dialog>
   <dialog id="feedbackDialog" aria-labelledby="feedbackTitle"><article class="feedback-sheet"><button class="close feedback-close" type="button" aria-label="Schließen">×</button><h2 id="feedbackTitle">Gespeichertes Feedback</h2><p class="feedback-explanation">Die Einträge liegen in diesem Browser. „Kopieren“ erzeugt ein Markdown-Dokument, das hier in den Chat eingefügt werden kann. „Teilen“ öffnet die Freigabeziele des Geräts; Google Keep erscheint dort nur, wenn das Gerät es anbietet.</p><ul class="feedback-list" id="feedbackList"></ul><div class="feedback-actions"><button class="primary" id="copyFeedback" type="button">Kopieren</button><button id="downloadFeedback" type="button">Markdown laden</button><button id="shareFeedback" type="button">Teilen</button><button id="clearFeedback" type="button">Einträge löschen</button></div><p class="feedback-explanation" id="feedbackStatus" aria-live="polite"></p></article></dialog>
-  <script src="media-map.js?v=20260905-1"></script>
-  <script src="cards.js?v=20260905-1"></script>
-  <script src="remote-texts.js?v=20260905-1"></script>
-  <script src="wiki-details.js?v=20260905-1"></script>
-  <script src="cards-editorial.js?v=20260905-1"></script>
-  <script src="finnegans-exegese.js?v=20260905-1"></script>
+  <script src="media-map.js?v=20260906-1"></script>
+  <script src="cards.js?v=20260906-1"></script>
+  <script src="remote-texts.js?v=20260906-1"></script>
+  <script src="wiki-details.js?v=20260906-1"></script>
+  <script src="cards-editorial.js?v=20260906-1"></script>
+  <script src="finnegans-exegese.js?v=20260906-1"></script>
   <script>
     (() => {
       "use strict";
-      const archivedCategories=new Set(["Gute Gags","Seltene und geniale Lifehacks"]);
+      const archivedCategories=new Set(window.KARTEN_ARCHIVED_CATEGORIES);
       const rawCards=(Array.isArray(window.KARTEN)?window.KARTEN:[]).filter(card=>!archivedCategories.has(card.category));
       function shuffled(source){const list=[...source];for(let i=list.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[list[i],list[j]]=[list[j],list[i]]}return list}
       function mixedCards(source){const names=shuffled([...new Set(source.map(card=>card.category))]),groups=new Map(names.map(name=>[name,shuffled(source.filter(card=>card.category===name))])),mixed=[];for(let row=0;mixed.length<source.length;row++)shuffled(names.filter(name=>groups.get(name)[row])).forEach(name=>mixed.push(groups.get(name)[row]));return mixed}
@@ -76,7 +76,25 @@
       function youtubeFigure(item){const figure=el("figure","youtube"),iframe=document.createElement("iframe");iframe.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(item.id)}?rel=0`;iframe.title=item.caption||"YouTube-Video";iframe.loading="lazy";iframe.referrerPolicy="strict-origin-when-cross-origin";iframe.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share";iframe.allowFullscreen=true;figure.append(iframe);const link=el("a","video-link",`${item.caption||"Video"} · YouTube öffnen`);link.href=`https://www.youtube.com/watch?v=${encodeURIComponent(item.id)}`;link.target="_blank";link.rel="noopener noreferrer";figure.append(link);return figure}
       function syncMediaGrid(wrap){const count=wrap.children.length;wrap.classList.toggle("single",count===1);wrap.classList.toggle("three",count===3);if(!count){const host=wrap.parentElement;if(host?.classList.contains("card-media")||host?.classList.contains("detail-media"))host.remove();else wrap.remove()}}
       function discardFigure(figure){const wrap=figure.parentElement;figure.remove();if(wrap?.classList.contains("media-grid"))syncMediaGrid(wrap)}
-      function imageFigure(item){const figure=document.createElement("figure");const link=el("a","image-link");link.target="_blank";link.rel="noopener noreferrer";link.setAttribute("aria-label",`${item.caption} – Bildquelle öffnen`);const status=el("span","image-status","Bild wird geladen");link.append(status);figure.append(link);const caption=el("figcaption","",item.caption);figure.append(caption);commonsInfo(item).then(info=>{const img=document.createElement("img");img.alt=item.alt||item.caption;img.loading="lazy";img.decoding="async";img.addEventListener("error",()=>discardFigure(figure),{once:true});link.href=info.href;link.replaceChildren(img);caption.textContent=`${item.caption} · ${info.credit||"Wikimedia Commons"}`;img.src=info.src}).catch(()=>discardFigure(figure));return figure}
+      function imageFigure(item){
+        const figure=document.createElement("figure"),link=el("a","image-link"),caption=el("figcaption","",item.caption);
+        link.target="_blank";link.rel="noopener noreferrer";figure.append(link,caption);
+        const candidates=[item,...(item.fallbacks||[]).slice(0,2).map(candidate=>({caption:item.caption,alt:item.alt,credit:item.credit,...candidate}))];
+        if(item.file&&item.remote)candidates.push({...item,remote:undefined,fallbacks:undefined});
+        const tried=new Set();let next=0;
+        async function attempt(){
+          if(next>=candidates.length){discardFigure(figure);return}
+          const candidate=candidates[next++];
+          try{
+            const info=await commonsInfo(candidate);if(tried.has(info.src)){attempt();return}tried.add(info.src);
+            const img=document.createElement("img");img.alt=candidate.alt||candidate.caption;img.loading="lazy";img.decoding="async";
+            img.addEventListener("error",()=>{img.remove();attempt()},{once:true});
+            link.href=info.href;link.setAttribute("aria-label",`${candidate.caption} – Bildquelle öffnen`);link.replaceChildren(img);
+            caption.textContent=`${candidate.caption} · ${info.credit||"Wikimedia Commons"}`;img.src=info.src;
+          }catch{attempt()}
+        }
+        attempt();return figure;
+      }
       function audioFigure(item){const figure=el("figure","audio-example"),player=document.createElement("audio");player.controls=true;player.preload="metadata";player.src=item.src;player.setAttribute("aria-label",item.caption);figure.append(player);const link=el("a","video-link",item.caption);link.href=item.href;link.target="_blank";link.rel="noopener noreferrer";figure.append(link);return figure}
       function mediaGrid(card,className=""){const items=card.media||[];const wrap=el("div",`media-grid ${className}`.trim());items.forEach(item=>{const figure=item.type==="youtube"?youtubeFigure(item):item.type==="audio"?audioFigure(item):imageFigure(item);if(item.fit==="contain")figure.dataset.fit="contain";wrap.append(figure)});syncMediaGrid(wrap);return wrap}
       function cardElement(card){const visualOnly=card.kind==="gif",article=el("article",`card${visualOnly?" gif-card":""}`);const media=el("div","card-media");media.append(mediaGrid(card));article.append(media);const aphorism=card.category==="Aphorismen",staticCard=aphorism||visualOnly,opener=el(staticCard?"div":"button",`card-open${aphorism?" aphorism-card":""}`);if(!staticCard)opener.type="button";opener.append(el("h2",card.kind==="quote"?"quote":"",card.title));if(card.summary)opener.append(el("p","summary",card.summary));if(card.byline)opener.append(el("span","byline",card.byline));if(!staticCard)opener.addEventListener("click",()=>openDetail(card));article.append(opener,ratingSection(card));return article}
@@ -87,7 +105,7 @@
       function markerPosition(text,marker,from,last,flexible){if(!flexible)return last?text.lastIndexOf(marker):text.indexOf(marker,from);const pattern=marker.trim().split(/\s+/).map(part=>part.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).join("\\s+");const matches=[...text.slice(from).matchAll(new RegExp(pattern,"g"))];const match=last?matches.at(-1):matches[0];return match?from+match.index:-1}
       function prepareOriginalText(text,remote){text=text.replace(/\r/g,"");if(remote.ocr)text=text.replace(/([A-Za-zÀ-ž])-\s*\n\s*([a-zà-ž])/g,"$1$2");if(remote.start){const start=markerPosition(text,remote.start,0,remote.startLast,remote.flexibleMarkers);if(start<0)throw new Error("Anfangsmarke fehlt");const end=remote.end?markerPosition(text,remote.end,start+1,false,remote.flexibleMarkers):text.length;if(end<0)throw new Error("Endmarke fehlt");text=text.slice(start,end)}for(const [from,to] of remote.replacements||[])text=text.split(from).join(to);if(remote.stripPageMarkers)text=text.replace(/\s*\[\d+\]\s*/g," ");text=text.replace(/^\s*(?:\*\s*){3,}$/gm,"").replace(/^\s*\[Illustration:[^\n]*\]\s*$/gm,"");if(remote.aozora)text=text.replace(/［＃[^］]*］/g,"").replace(/｜/g,"").replace(/《([^》]+)》/g,"（$1）");if(remote.reflow)text=text.replace(/([^\n])\n(?!\n)/g,"$1 ");return text.replace(/[ \t]+\n/g,"\n").replace(/\n{3,}/g,"\n\n").replace(/[ \t]{2,}/g," ").trim()}
       async function fetchOriginalText(remote){const key=JSON.stringify(remote);if(originalTextCache.has(key))return originalTextCache.get(key);const promise=(async()=>{let text;if(remote.wikiPage)text=await loadWikiPage(remote.wikiLanguage||"en",remote.wikiPage);else if(remote.wikiPages)text=(await Promise.all(remote.wikiPages.map(page=>loadWikiPage(remote.wikiLanguage||"en",page)))).join("\n\n");else{const response=await fetch(remote.url);if(!response.ok)throw new Error(String(response.status));text=new TextDecoder(remote.encoding||"utf-8").decode(await response.arrayBuffer())}text=prepareOriginalText(text,remote);if(text.length<250)throw new Error("Textausschnitt ist zu kurz");return text})();originalTextCache.set(key,promise);return promise}
-      function originalSection(original){const box=el("section","original");box.append(el("p","original-label",original.label));if(original.remote){const status=el("p","source-status",original.loadingText||"Der vollständige Originaltext wird aus der Onlinequelle geladen …");box.append(status);fetchOriginalText(original.remote).then(text=>{status.replaceWith(el("div","source-text",text))}).catch(error=>{status.textContent=`${original.errorLabel||"Originaltext"} konnte nicht geladen werden: ${error.message}. Die Quellenadresse steht darunter.`})}else if(original.text){box.append(el("blockquote","",original.text))}if(original.source){const link=el("a","original-source","Digitalisat der Quelle öffnen");link.href=original.source;link.target="_blank";link.rel="noopener noreferrer";box.append(link)}const remote=original.remote,fetchUrl=remote?.url||(remote?.wikiPage?`https://${remote.wikiLanguage||"en"}.wikisource.org/wiki/${encodeURIComponent(remote.wikiPage).replace(/%2F/g,"/")}`:remote?.wikiPages?.length?`https://${remote.wikiLanguage||"en"}.wikisource.org/wiki/${encodeURIComponent(remote.wikiPages[0]).replace(/%2F/g,"/")}`:null);if(fetchUrl){const link=el("a","original-source",`Geladene Transkription öffnen · ${remote.fetchLabel||"Textquelle"}`);link.href=fetchUrl;link.target="_blank";link.rel="noopener noreferrer";box.append(link)}return box}
+      function originalSection(original){const box=el("section","original");box.append(el("p","original-label",original.label));if(original.remote){const status=el("p","source-status",original.loadingText||"Text wird geladen …");box.append(status);fetchOriginalText(original.remote).then(text=>{status.replaceWith(el("div","source-text",text))}).catch(error=>{status.textContent=`${original.errorLabel||"Originaltext"} konnte nicht geladen werden: ${error.message}. Die Quellenadresse steht darunter.`})}else if(original.text){box.append(el("blockquote","",original.text))}if(original.source){const link=el("a","original-source","Digitalisat der Quelle öffnen");link.href=original.source;link.target="_blank";link.rel="noopener noreferrer";box.append(link)}const remote=original.remote,fetchUrl=remote?.url||(remote?.wikiPage?`https://${remote.wikiLanguage||"en"}.wikisource.org/wiki/${encodeURIComponent(remote.wikiPage).replace(/%2F/g,"/")}`:remote?.wikiPages?.length?`https://${remote.wikiLanguage||"en"}.wikisource.org/wiki/${encodeURIComponent(remote.wikiPages[0]).replace(/%2F/g,"/")}`:null);if(fetchUrl){const link=el("a","original-source",`Geladene Transkription öffnen · ${remote.fetchLabel||"Textquelle"}`);link.href=fetchUrl;link.target="_blank";link.rel="noopener noreferrer";box.append(link)}return box}
       function writingSourceSection(source){const section=originalSection({...source,loadingText:"Der Quellenwortlaut wird aus der Onlinequelle geladen …",errorLabel:"Quellenwortlaut"});section.classList.add("writing-source");return section}
       function vocabularySection(vocabulary){const section=el("section","vocabulary");section.append(el("p","vocab-meta",[vocabulary.pronunciation,vocabulary.register].filter(Boolean).join(" · ")));section.append(el("p","vocab-meaning",vocabulary.meaning));const examples=el("div","vocab-examples");vocabulary.examples.forEach(example=>{const item=el("div","vocab-example"),english=el("p","example-en",example.english),german=el("p","example-de",example.german);english.lang="en";item.append(english,german);examples.append(item)});section.append(examples);return section}
       function languageInfoSection(rows){const table=el("table","language-info"),body=document.createElement("tbody");for(const [label,value] of rows){const row=document.createElement("tr"),heading=el("th","",label),cell=el("td","",value);heading.scope="row";row.append(heading,cell);body.append(row)}table.append(body);return table}
@@ -106,11 +124,11 @@
       async function shareFeedback(){if(!navigator.share){await copyFeedback();document.querySelector("#feedbackStatus").textContent="Eine Teilen-Funktion ist hier nicht verfügbar. Das Feedback wurde kopiert.";return}try{await navigator.share({title:"Kartenfeedback",text:feedbackMarkdown()})}catch(error){if(error.name!=="AbortError")document.querySelector("#feedbackStatus").textContent="Das Teilen ist fehlgeschlagen."}}
       function openDetail(card){const sheet=dialog.querySelector(".sheet");dialog.scrollTop=0;sheet.scrollTop=0;detail.replaceChildren();detail.append(el("p","detail-category",card.category));const title=el("h2","",card.title);title.id="detailTitle";detail.append(title);if(card.summary)detail.append(el("p","detail-summary",card.summary));const media=el("div","detail-media");media.append(mediaGrid(card));detail.append(media);if(card.languageInfo)detail.append(languageInfoSection(card.languageInfo));if(card.original)detail.append(originalSection(card.original));if(card.detail?.length){const body=el("div","detail-text");card.detail.forEach(paragraph=>body.append(el("p","",paragraph)));detail.append(body)}if(card.vocabulary)detail.append(vocabularySection(card.vocabulary));if(card.wiki)detail.append(wikipediaSection(card.wiki));if(card.writingSource)detail.append(writingSourceSection(card.writingSource));if(card.works?.length){const list=el("ol","works");card.works.forEach(work=>list.append(el("li","",work)));detail.append(list)}if(card.sources?.length){const sources=el("section","sources");sources.append(el("h3","","Quellen"));const list=document.createElement("ul");card.sources.forEach(source=>{const li=document.createElement("li");const a=el("a","",source.label);a.href=source.url;a.target="_blank";a.rel="noopener noreferrer";li.append(a);list.append(li)});sources.append(list);detail.append(sources)}detail.append(googleSearchSection(card),ratingSection(card));dialog.showModal();requestAnimationFrame(()=>{dialog.scrollTop=0;sheet.scrollTop=0});document.body.classList.add("dialog-open")}
       async function loadFinnegansText(){
-        if(!finnegansTextPromise)finnegansTextPromise=fetch(window.FINNEGANS_EXEGESE.page4Source).then(response=>{if(!response.ok)throw new Error(String(response.status));return response.text()}).then(text=>text.replace(/\r/g,"").replace(/([A-Za-zÀ-ž])-[ \t]*\n[ \t]*([a-zà-ž])/g,"$1$2").replace(/\s+/g," "));
+        if(!finnegansTextPromise)finnegansTextPromise=fetch(window.FINNEGANS_EXEGESE.page4Source,{signal:AbortSignal.timeout(15000)}).then(response=>{if(!response.ok)throw new Error(String(response.status));return response.text()}).then(text=>text.replace(/\r/g,"").replace(/([A-Za-zÀ-ž])-[ \t]*\n[ \t]*([a-zà-ž])/g,"$1$2").replace(/\s+/g," ")).catch(error=>{finnegansTextPromise=null;throw error});
         return finnegansTextPromise;
       }
       function finnegansMarker(text,marker,from=0){
-        const variants=[marker,marker.replace("waz","was"),marker.replace("was","waz")];
+        const variants=[marker,marker.replace("waz","was"),marker.replace("was","waz"),marker.replace("crunch-bracken","crunchbracken")];
         for(const value of variants){const position=text.indexOf(value,from);if(position>=0)return position}
         return -1;
       }
@@ -120,14 +138,16 @@
         if(start<0)throw new Error(`Anfang fehlt: ${unit.remoteRange[0]}`);
         const end=finnegansMarker(text,unit.remoteRange[1],start+1);
         if(end<0)throw new Error(`Ende fehlt: ${unit.remoteRange[1]}`);
+        if(end<=start||end-start>6000)throw new Error("Ungültige Textgrenzen");
         return text.slice(start,end).trim();
       }
       function finnegansPanel(label,html){const panel=el("article","fw-panel"),heading=el("p","fw-label",label),body=el("div","fw-panel-body");body.innerHTML=html;panel.append(heading,body);return panel}
       function showFinnegansUnit(unit,textValue,buttons,analysis,selected,panels){
         buttons.forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.unit===String(unit.index))));
-        selected.textContent=textValue;
+        selected.textContent=unit.contextText||textValue;
         const further=unit.boxes.slice(1).map(box=>`<p>${box[1]}</p>`).join("");
-        panels.replaceChildren(finnegansPanel("Sinn-Übersetzung · heutiges Englisch",unit.en),finnegansPanel(unit.boxes[0][0],unit.boxes[0][1]),finnegansPanel("Wörter und Querverweise",further));
+        const reading=unit.contextReading?`<p>${unit.contextReading}</p><p>${unit.boxes[0][1]}</p>`:unit.boxes[0][1];
+        panels.replaceChildren(finnegansPanel("Sinngemäße Fassung · heutiges Englisch",unit.contextEnglish||unit.en),finnegansPanel("Zusammenhängende Lesart",reading),finnegansPanel("Wörter und Querverweise",further));
         const link=el("a","fw-source-link","Anmerkungen zu dieser Stelle");link.href=unit.source;link.target="_blank";link.rel="noopener noreferrer";panels.lastElementChild.append(link);
         analysis.hidden=false;
         requestAnimationFrame(()=>analysis.scrollIntoView({block:"start",behavior:"smooth"}));
@@ -137,13 +157,17 @@
         detail.replaceChildren(ratingSection(card,"detail-rating"));
         const header=el("header","fw-head");header.append(el("p","fw-work","James Joyce"));
         const title=el("h2","",card.title);title.id="detailTitle";header.append(title,el("p","fw-sub",card.summary));
-        header.append(el("p","fw-howto","Klicke einen Satz an. Der Wortlaut steht danach oben; darunter liegen die drei Vergleichsfenster."));detail.append(header);
+        header.append(el("p","fw-howto","Eine Einheit auswählen: Oben steht der zugehörige vollständige Satz, darunter seine Erklärung."));detail.append(header);
         const textHost=el("div","fw-text"),status=el("p","fw-loading","Originaltext wird geladen …");textHost.append(status);detail.append(textHost);
         const analysis=el("section","fw-analysis");analysis.hidden=true;const selected=el("blockquote","fw-selected"),panels=el("div","fw-panels");analysis.append(selected,panels);detail.append(analysis);
         try{
-          const texts=await Promise.all(group.map(finnegansUnitText)),buttons=[];textHost.replaceChildren();
-          group.forEach((unit,index)=>{const button=el("button","fw-unit");button.append(el("span","fw-unit-number",`Satz ${unit.index+1}`),document.createTextNode(texts[index]));button.type="button";button.dataset.unit=unit.index;button.setAttribute("aria-pressed","false");button.addEventListener("click",()=>showFinnegansUnit(unit,texts[index],buttons,analysis,selected,panels));buttons.push(button);textHost.append(button)});
+          const texts=await Promise.all(group.map(finnegansUnitText)),buttons=[];
+          await Promise.all(group.map(async unit=>{if(unit.contextUnits){const [from,to]=unit.contextUnits;unit.contextText=(await Promise.all(data.units.slice(from-1,to).map(finnegansUnitText))).join(" ")}}));
+          if(!textHost.isConnected)return;
+          textHost.replaceChildren();
+          group.forEach((unit,index)=>{const button=el("button","fw-unit");button.append(el("span","fw-unit-number",`Einheit ${unit.index+1}`),document.createTextNode(texts[index]));button.type="button";button.dataset.unit=unit.index;button.setAttribute("aria-pressed","false");button.addEventListener("click",()=>showFinnegansUnit(unit,texts[index],buttons,analysis,selected,panels));buttons.push(button);textHost.append(button)});
         }catch(error){status.textContent=`Originaltext konnte nicht geladen werden: ${error.message}`}
+        if(!textHost.isConnected)return;
         const nav=el("nav","fw-nav");nav.setAttribute("aria-label","Folgen der Finnegan-Exegese");
         const related=cards.filter(item=>Number.isInteger(item.finnegansGroup)).sort((a,b)=>a.finnegansGroup-b.finnegansGroup);
         if(card.finnegansGroup>0){const previous=el("button","previous",`← Finnegans Wake ${card.finnegansGroup}`);previous.type="button";previous.addEventListener("click",()=>openDetail(related[card.finnegansGroup-1]));nav.append(previous)}

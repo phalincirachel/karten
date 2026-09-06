@@ -2,6 +2,8 @@
 
 ## Kategorien
 
+Die nummerierte Liste bewahrt auch die Regeln deaktivierter Kategorien. Bei „eine Karte für jede Kategorie“ zählen ausschließlich aktive Kategorien. Deaktivierte Karten bleiben gespeichert, erscheinen aber weder im Feed noch in Suche, Auswahl oder Zählung.
+
 1. **Aphorismen**
    - Nur Aphorismen, die philologisch gesichert sind und in der Aphorismenforschung als bedeutend gelten.
    - Außen stehen ausschließlich der Aphorismus und die Zuschreibung, gegebenenfalls ein Bild. Erklärung, Deutung, Zusammenfassung und zusätzlicher Originaltext entfallen.
@@ -88,7 +90,7 @@
     - Die Liste ist historisch oder sachlich geschlossen. Quelle, Auswahlprinzip, Umfang und Reihenfolge werden angegeben; die Einträge bleiben sichtbar.
     - Die Erklärung zeigt, was erst durch die Zusammenstellung erkennbar wird.
 
-20. **Gute einfache Cartoons**
+20. **Gute einfache Cartoons** — deaktiviert
     - Die Karte zeigt den vollständigen Cartoon und nennt Zeichner, Publikation und Datum.
     - Bild und Wortlaut werden knapp erklärt; der Witz wird nicht breit nacherzählt.
     - Verwendet werden gemeinfreie, offen lizenzierte oder ausdrücklich freigegebene Bilder. Technisches Nachladen ersetzt keine Nutzungserlaubnis.
@@ -118,11 +120,11 @@
     - Adresse oder eindeutiger Standort, Entfernung und praktische Zugänglichkeit werden angegeben.
     - Ausgewählt werden wenig bekannte, bemerkenswerte Orte, Bauten, Veranstaltungen, Tunnel, Geschäfte oder Aussichtspunkte.
 
-27. **VisuelleIdeenDieIchKlauenWill**
+27. **VisuelleIdeenDieIchKlauenWill** — deaktiviert
     - Die Karte zeigt eine übertragbare Bildidee aus Perspektive, Raumordnung, Licht, Bühnenbild, Filmset, Plattencover, historischer Werbegrafik oder Interface.
     - Der sichtbare Aufbau wird so genau erklärt, dass daraus eine eigene Arbeit entstehen könnte. Eine Sammlung bloß schöner Bilder erfüllt die Kategorie nicht.
 
-28. **Eigene GIFs**
+28. **Eigene GIFs** — deaktiviert
     - Jedes GIF hat eine erkennbare formale Idee, einen genau gesetzten zeitlichen Ablauf und eine von den übrigen GIFs verschiedene Bewegung. Reine Farbwechsel werden verworfen.
     - Jede Karte besteht aus Titel und GIF; Erklärung und Detailtext entfallen.
 
@@ -158,10 +160,20 @@
 35. **Finnegan Exegese**
     - Die Karten laufen in fester Reihenfolge und enthalten jeweils genau vier nummerierte Untersuchungseinheiten aus *Finnegans Wake*. Beim Anklicken steht der unveränderte untersuchte Satz oben.
     - Darunter erscheinen drei Vergleichsfelder: sinngemäße Fassung in heutigem Englisch, sachliche Lesart sowie Wörter und Querverweise. Unsichere Wortspiele werden als Möglichkeit bezeichnet.
+    - Die Lesart erklärt den vollständigen Gedankengang: Wer handelt, was geschieht, worauf Pronomen und Vergleiche verweisen und wie Hauptsatz, Nebensätze und Einschübe zusammengehören. Worterklärungen ergänzen diese Darstellung und ersetzen sie nicht.
+    - Untersuchungseinheiten, die nur einen Satzteil enthalten, heißen „Einheiten“. Beim Anklicken erscheint auch der ganze zugehörige Satz samt zusammenhängender englischer Fassung und deutscher Lesart. Die Grenze einer Karte darf den Sinnzusammenhang nicht abschneiden.
+    - Belegte Anspielung, schlüssige Lesart und unsichere Vermutung werden auseinandergehalten. Kein Anspruch, sämtliche möglichen Bedeutungen abschließend aufzulösen.
     - Pfeile führen zur unmittelbar vorigen oder nächsten Folge. Diese interne Reihenfolge bleibt fest, obwohl der allgemeine Kartenstrom gemischt wird.
     - Das Lesefenster übernimmt Farben, Typografie und Aufbau aus `finnegans-wake-seite1(1).html`.
     - Die vom Nutzer bereitgestellte erste Seite bleibt unverändert. Weitere Passagen werden beim Öffnen aus der öffentlichen Textquelle geladen und anhand geprüfter Anfangs- und Endmarken in Vierergruppen zerlegt.
     - Die Exegese wird gegen FWEET, Finwake und die verlinkten Stellen der *Annotated Finnegans Wake* geprüft.
+
+36. **Geschichtsunterricht**
+    - Jede Karte behandelt ein wichtiges, klar abgegrenztes Ereignis eines Landes, einer Nation oder eines Reiches. Die Auswahl streut über Weltregionen und Epochen und reicht über die üblichen Schulbuchbeispiele hinaus.
+    - Ort, Zeitraum, Ausgangslage und Ablauf werden verständlich erklärt. Die Darstellung zeigt, welche Gruppen Macht hatten, welche Interessen sie verfolgten, über welche Mittel sie verfügten und weshalb ihre Strategie Erfolg hatte oder scheiterte.
+    - Wirtschaftliche Größen erhalten Bezugsjahr, Einheit und Quelle. Politische Institutionen, gesellschaftliche Verhältnisse und kulturelle Voraussetzungen werden dort erläutert, wo sie den Verlauf erklären; ein schematisches Abarbeiten aller Disziplinen entfällt.
+    - Entscheidungen einzelner Personen werden aus belegten Handlungen und Umständen erklärt. Erfundenes Innenleben und nachträgliche psychologische Gewissheiten entfallen. Unmittelbare Folgen und spätere Entwicklungen bleiben unterscheidbar.
+    - Geeignete Medien zeigen Beteiligte, Schauplätze, zeitgenössische Gegenstände oder lesbare Karten. Die nur als Beispiele genannten Napoleon-Episoden, südostasiatischen Könige und bronzezeitlichen Fälle werden für diese Auswahl nicht übernommen.
 
 ## Allgemeine Auswahl- und Rechercheregeln
 
@@ -188,6 +200,7 @@
 - Vage Vorsicht mit „kann“, „könnte“ oder „lässt sich“ wird durch eine genaue Aussage ersetzt. Unsicherheit bleibt nur bei tatsächlich unsicherer Forschung sichtbar und wird dann benannt.
 - Eigene Absätze werden in mindestens drei ernsthaften Fassungen durchdacht. Verwendet wird die idiomatischste und genaueste Fassung, nicht der erste Entwurf.
 - Zeit- und Raumangaben erhalten einen verständlichen Maßstab. Wenig bekannte Völker, Reiche, Regionen und Techniken werden mit Zeitraum, heutigem Staat oder bekanntem Nachbarort eingeordnet.
+- Kartentexte enthalten keine technischen Vorankündigungen des Nachladens. Herkunft, Ausgabe und Sprache stehen bei der Quelle; ein vorübergehender Ladezustand genügt in der Oberfläche.
 
 ## Medienregeln
 
@@ -199,7 +212,9 @@
 - Für geografische Karten ist eine lesbare Karte Pflicht. Sie zeigt die Region zusammen mit heutigen Staatsgrenzen, einem bekannten Nachbarraum und den im Text genannten Orten. Landschaftsbilder ergänzen die Karte.
 - Die Abbildung einer Liste bezieht sich auf den Urheber, die Überlieferung oder einen konkreten Eintrag der Liste.
 - Bei Filmaufbauten, Montagen und räumlichen Grenzfällen ist eine eigene erklärende Skizze oft geeigneter als ein beliebiges Standbild.
-- Vor der Freigabe wird jedes Medium in der tatsächlich gerenderten Anwendung angesehen. Geprüft werden Motiv, Ausschnitt, Auflösung, sachliche Beziehung, Erreichbarkeit und Einbettung.
+- Eigene Diagramme brauchen eine sachlich korrekte Konstruktion, lesbare Beschriftungen und einen erkennbaren Erklärungsgewinn. Eine hastige SVG ist kein Ersatz für eine brauchbare Abbildung. Bei unzureichender Ausführung wird ein geprüftes vorhandenes Medium verwendet oder die Abbildung weggelassen.
+- Neue oder geänderte Medien werden einmal gezielt in der gerenderten Anwendung angesehen. Unveränderte Bestände werden nicht bei jedem Auftrag vollständig neu geprüft. Geprüft werden Motiv, Ausschnitt, Auflösung, sachliche Beziehung, Erreichbarkeit und Einbettung.
+- Für bekannte Ausfallarten werden begrenzte Rückfallebenen vorgesehen: etwa eine zweite URL derselben Abbildung oder ausdrücklich ausgewählte Ersatzmedien. Quellenangabe und Beschriftung müssen zur tatsächlich gezeigten Alternative gehören. Beliebige Suchtreffer, endlose Wiederholungen und Fehlerplatzhalter entfallen.
 - Bereits veröffentlichte Medien werden bei späteren Arbeiten stichprobenartig erneut geprüft. Ein Bild, das nur lokal oder in einer Vorschau funktionierte, gilt als defekt.
 - Schlägt ein Bild endgültig fehl, verschwindet das vollständige Bildelement einschließlich Beschriftung. Übrige Bilder füllen das Raster neu; ohne verbleibendes Medium verschwindet der Medienbereich. Eine Fehlermeldung oder ein Platzhalter bleibt nicht stehen.
 - YouTube-Videos werden direkt eingebettet und vor der Übernahme auf Verfügbarkeit geprüft. Video und externer Link beginnen bei 0:00; Zeitparameter und automatische Sprünge sind ausgeschlossen.
@@ -218,7 +233,7 @@
 ## Oberfläche und Datenarchitektur
 
 - Alle aktiven Karten bilden einen gemeinsamen Datenbestand. Dateien mit künstlichen Monatsnamen, vorproduzierte Monatsblöcke oder getrennte zukünftige Pools werden nicht angelegt.
-- „Gute Gags“ und „Seltene und geniale Lifehacks“ bleiben archiviert. Ihre Daten werden weder angezeigt noch durchsucht oder gezählt.
+- „Gute Gags“, „Seltene und geniale Lifehacks“, „Eigene GIFs“, „Gute einfache Cartoons“ und „VisuelleIdeenDieIchKlauenWill“ bleiben deaktiviert. Ihre Daten werden weder angezeigt noch durchsucht oder gezählt; Aufträge für alle Kategorien lassen sie aus. Die Anwendung und Prüfskripte lesen dafür dieselbe zentrale Kategorienliste.
 - Bei jedem Laden werden Karten und Kategorien neu gemischt. Die erste Karte ist nicht festgelegt; längere Blöcke derselben Kategorie werden vermieden.
 - Beim ersten Laden beginnt die Seite oben. Eine frühere Scrollposition wird nicht wiederhergestellt. Beim Öffnen einer anderen Detailkarte steht deren Ansicht ebenfalls oben.
 - Vor dem Seitenende werden automatisch weitere Karten geladen. Der manuelle Ladebutton bleibt als barrierearme Rückfallebene erhalten.
@@ -234,3 +249,4 @@
 - Nach einem Content-Filter wird derselbe Inhalt nicht erneut ausgegeben. Die Arbeit wird in einem kleineren, sachlich begrenzten Schritt fortgesetzt; lange Originaltexte bleiben beim Nachladen im Browser.
 - Abgeschlossene Schritte werden nicht erneut begonnen oder als aktuelle Arbeit ausgegeben.
 - Abschluss wird erst gemeldet, nachdem Umfang, Kategorien, Syntax, Medien und angeforderte Funktionen erneut geprüft wurden. Eine Unterbrechung gilt niemals als Abschluss.
+- Geprüft wird risikoorientiert: lokale Syntax- und Datenprüfungen für den Bestand, gezielte Funktionsproben für geänderte Abläufe, eine Sichtprüfung neuer Medien. Wiederverwendbare Prüfungen und Schutzmechanismen ersetzen unnötig wiederholte Komplettdurchläufe; fachliche Recherche und sachliche Kontrolle bleiben erforderlich.

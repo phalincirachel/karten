@@ -409,7 +409,7 @@
     ["Die Schildkröte mit der schönen Tochter · Efik", {
       detail: [
         "Ein König droht allen Eltern mit dem Tod, deren Tochter schöner ist als die fünfzig Frauen seines Sohnes. Die Schildkröte hält deshalb ihre Tochter Adet verborgen. Der Prinz entdeckt sie zufällig bei der Jagd, verspricht ihr die Ehe und bezahlt den Brautpreis. Als er die Sache öffentlich macht, lässt der König Adet vor die Versammlung bringen.",
-        "Ihr Anblick bringt den König dazu, das eigene Gesetz zurückzunehmen. Die Hochzeit findet noch am selben Tag statt, und die Schildkröte wird reich belohnt. Elphinstone Dayrell veröffentlichte die Efik-Erzählung 1910 in Folk Stories from Southern Nigeria; der vollständige englische Text wird aus dieser Ausgabe geladen."
+        "Ihr Anblick bringt den König dazu, das eigene Gesetz zurückzunehmen. Die Hochzeit findet noch am selben Tag statt, und die Schildkröte wird reich belohnt. Elphinstone Dayrell veröffentlichte die Efik-Erzählung 1910 in Folk Stories from Southern Nigeria."
       ]
     }],
     ["Die Frau mit zwei Häuten · Efik", {
@@ -433,25 +433,25 @@
     ["Aponibolinayen und die Sonne · Tinguian", {
       detail: [
         "Aponibolinayen wird schwanger, nachdem sie eine Orange vom Baum gegessen hat, und bringt Kanag zur Welt. Die Sonne beansprucht das Kind und holt Mutter und Sohn in den Himmel. Kanag wächst dort auf, kehrt aber später auf die Erde zurück. Seine Reise macht aus der zunächst rätselhaften Schwangerschaft eine Verwandtschaft zwischen einer irdischen Familie und der Sonne.",
-        "Mabel Cook Cole veröffentlichte die Tinguian-Erzählung 1916 nach ethnologischer Feldarbeit im Norden der philippinischen Insel Luzon. Der vollständige englische Text wird beim Öffnen aus der gemeinfreien Transkription geladen."
+        "Mabel Cook Cole veröffentlichte die Tinguian-Erzählung 1916 nach ethnologischer Feldarbeit im Norden der philippinischen Insel Luzon."
       ]
     }],
     ["Wie die Sommervögel kamen · Zuni", {
       detail: [
         "Als die Vögel ausbleiben, folgt ihnen ein Junge bis zu einem Eingang in die unterirdische Welt. Dort bittet er ihre Bewohner um die Rückkehr. Die Vögel kommen schließlich mit ihm nach oben und bringen die warme Jahreszeit mit. Ihr Zug ist in der Erzählung daher zugleich Tierwanderung und geregelter Übergang zwischen den Jahreszeiten.",
-        "Frank Hamilton Cushing lebte ab 1879 in Zuni und veröffentlichte diese Fassung 1901. Die Karte lädt den vollständigen englischen Text seiner Ausgabe."
+        "Frank Hamilton Cushing lebte ab 1879 in Zuni und veröffentlichte diese Fassung 1901."
       ]
     }],
     ["Der wunderbare Vogel · Blackfoot", {
       detail: [
         "Old Man hört von einem außergewöhnlichen Vogel und macht sich auf die Suche. Er möchte dessen Kraft besitzen, handelt jedoch voreilig und versteht die Bedingungen der Begegnung falsch. Was als Jagd nach einem Vorteil beginnt, endet deshalb mit dem Verlust des erhofften Gewinns und mit einer Erklärung für eine bleibende Eigenheit der Welt.",
-        "George Bird Grinnell stellte die Fassung aus Gesprächen mit Blackfoot-Sprechern zusammen und veröffentlichte sie 1892 in Blackfoot Lodge Tales. Die Karte lädt das vollständige englische Kapitel; die historische Wortwahl der Ausgabe bleibt erhalten."
+        "George Bird Grinnell stellte die Fassung aus Gesprächen mit Blackfoot-Sprechern zusammen und veröffentlichte sie 1892 in Blackfoot Lodge Tales."
       ]
     }],
     ["Blitz und Donner · Efik", {
       detail: [
         "Blitz und Donner leben zunächst unter den Menschen. Donner gerät immer wieder in Zorn und richtet dabei schwere Schäden an; Blitz kündigt seinen Ausbruch laut an, hält ihn aber nicht auf. Nach zerstörten Häusern und Bäumen weist der König beide zuerst aus der Stadt und später ganz von der Erde fort.",
-        "Darum, so endet die Erzählung, wohnen beide am Himmel: Zuerst warnt der Blitz, danach ist der Donner zu hören. Elphinstone Dayrell veröffentlichte die Efik-Fassung 1910. Der vollständige englische Wortlaut wird aus seiner gemeinfreien Ausgabe geladen."
+        "Darum, so endet die Erzählung, wohnen beide am Himmel: Zuerst warnt der Blitz, danach ist der Donner zu hören. Elphinstone Dayrell veröffentlichte die Efik-Fassung 1910."
       ]
     }],
     ["Warum der Mond zu- und abnimmt · Efik", {
