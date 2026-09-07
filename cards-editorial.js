@@ -403,7 +403,7 @@
     ["Die Ermordung Tuwhakararos · Māori", {
       detail: [
         "Tuwhakararo wird beim Besuch einer fremden Siedlung getötet. Seine Mutter Apakura erfährt von der Tat und ruft in einem langen Klagegesang jeden Verwandten einzeln zur Vergeltung auf. Whakatau übernimmt die Führung. Er schließt die Täter während eines Festes in ihrem großen Haus ein und setzt es in Brand; wer zu fliehen versucht, wird draußen erwartet.",
-        "George Grey veröffentlichte die Māori-Erzählung 1855 in Polynesian Mythology. Die Karte lädt den vollständigen englischen Wortlaut dieser Ausgabe."
+        "George Grey veröffentlichte die Māori-Erzählung 1855 in Polynesian Mythology."
       ]
     }],
     ["Die Schildkröte mit der schönen Tochter · Efik", {
@@ -427,7 +427,7 @@
     ["Die Zaubertrommel · Efik", {
       detail: [
         "König Efriam Duke besitzt eine Trommel, die bei jedem Schlag ein Festmahl erscheinen lässt. Die Schildkröte erzwingt die Herausgabe als Entschädigung für eine einzige Palmfrucht. Der König verschweigt ihr die Bedingung: Wer mit der Trommel über einen Stock steigt, ruft statt des Essens dreihundert bewaffnete Egbo-Männer herbei.",
-        "Nach dem Regelbruch lädt die Schildkröte aus Rache zahlreiche Gäste ein und lässt sie schlagen. Sie tauscht die Trommel danach gegen einen Baum, der täglich Essen gibt; auch dessen Verbot wird von einem gierigen Sohn gebrochen. Dayrell veröffentlichte die lange Efik-Erzählung 1910. Die Karte lädt das vollständige Kapitel."
+        "Nach dem Regelbruch lädt die Schildkröte aus Rache zahlreiche Gäste ein und lässt sie schlagen. Sie tauscht die Trommel danach gegen einen Baum, der täglich Essen gibt; auch dessen Verbot wird von einem gierigen Sohn gebrochen. Dayrell veröffentlichte die lange Efik-Erzählung 1910."
       ]
     }],
     ["Aponibolinayen und die Sonne · Tinguian", {
@@ -457,7 +457,7 @@
     ["Warum der Mond zu- und abnimmt · Efik", {
       detail: [
         "Eine alte Frau erhält vom Mond Licht und Nahrung. Dafür muss sie eine genaue Anweisung befolgen. Als sie die Abmachung verletzt, verliert der Mond seine unveränderliche Gestalt. Sein regelmäßiges Wachsen und Schwinden wird so aus einer gestörten Beziehung zwischen der Frau und dem Himmelskörper erklärt.",
-        "Dayrell veröffentlichte die Efik-Erzählung 1910 in Folk Stories from Southern Nigeria. Die Karte lädt den vollständigen englischen Text direkt aus der gemeinfreien Transkription."
+        "Dayrell veröffentlichte die Efik-Erzählung 1910 in Folk Stories from Southern Nigeria."
       ]
     }]
   ]);
