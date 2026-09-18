@@ -665,3 +665,32 @@
     }
   }
 })();
+
+// Author collections are separate from the aphorism itself: no added interpretation.
+(() => {
+  const collections = [
+    ["Lichtenberg", "Georg Christoph Lichtenberg", "de", "Georg_Christoph_Lichtenberg"],
+    ["Rochefoucauld", "François de La Rochefoucauld", "de", "François_de_La_Rochefoucauld"],
+    ["Pascal", "Blaise Pascal", "de", "Blaise_Pascal"],
+    ["Nietzsche", "Friedrich Nietzsche", "de", "Friedrich_Nietzsche"],
+    ["Kraus", "Karl Kraus", "de", "Karl_Kraus"],
+    ["Chamfort", "Nicolas Chamfort", "de", "Nicolas-Sébastien_de_Chamfort"],
+    ["Novalis", "Novalis", "de", "Novalis"],
+    ["Gracián", "Baltasar Gracián", "en", "Baltasar_Gracián"],
+    ["Schopenhauer", "Arthur Schopenhauer", "de", "Arthur_Schopenhauer"],
+    ["Heraklit", "Heraklit", "de", "Heraklit"],
+    ["Kafka", "Franz Kafka", "de", "Franz_Kafka"],
+    ["Ebner-Eschenbach", "Marie von Ebner-Eschenbach", "de", "Marie_von_Ebner-Eschenbach"],
+    ["Joubert", "Joseph Joubert", "fr", "Joseph_Joubert"],
+    ["Bierce", "Ambrose Bierce", "en", "Ambrose_Bierce"],
+    ["Vauvenargues", "Vauvenargues", "fr", "Luc_de_Clapiers,_marquis_de_Vauvenargues"],
+    ["Bruyère", "Jean de La Bruyère", "fr", "Jean_de_La_Bruyère"]
+  ];
+  for (const card of window.KARTEN.filter(card => card.category === "Aphorismen")) {
+    const match = collections.find(([name]) => (card.byline || "").includes(name));
+    if (match) {
+      const [, author, language, page] = match;
+      card.aphorismCollection = {author, url: `https://${language}.wikiquote.org/wiki/${encodeURIComponent(page)}`};
+    }
+  }
+})();

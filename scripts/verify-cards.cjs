@@ -7,9 +7,10 @@ assert.equal(new Set(scriptRefs.map(x=>x[2])).size,1,'Script cache versions diff
 for(const [,file]of scriptRefs)vm.runInContext(fs.readFileSync(file,'utf8'),context,{filename:file});
 for(const [,body]of html.matchAll(/<script>([\s\S]*?)<\/script>/g))new vm.Script(body);
 const archived=new Set(context.window.KARTEN_ARCHIVED_CATEGORIES),all=context.window.KARTEN;
-assert.deepEqual([...archived].sort(),['Gute Gags','Seltene und geniale Lifehacks','Eigene GIFs','Gute einfache Cartoons','VisuelleIdeenDieIchKlauenWill'].sort());
+assert.equal(archived.size,context.window.KARTEN_ARCHIVED_CATEGORIES.length,'Duplicate archived category');
 const active=all.filter(c=>!archived.has(c.category)),categories=new Set(active.map(c=>c.category));
 const agents=fs.readFileSync('AGENTS.md','utf8'),instructions=[...agents.matchAll(/^\d+\. \*\*(.*?)\*\*([^\n]*)/gm)];
+for(const [,category,status]of instructions)assert.equal(archived.has(category),/deaktiviert/.test(status),`Category status differs from AGENTS: ${category}`);
 for(const category of categories)assert.ok(instructions.some(x=>x[1]===category&&!/deaktiviert/.test(x[2])),`Missing active instructions: ${category}`);
 for(const card of active){assert.ok(card.title&&Array.isArray(card.detail),`Malformed card: ${card.title}`);assert.ok(card.category);}
 assert.ok(html.includes(active.length+' Karten zu'),'Stale card count');

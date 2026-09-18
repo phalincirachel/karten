@@ -7,6 +7,7 @@ Die nummerierte Liste bewahrt auch die Regeln deaktivierter Kategorien. Bei „e
 1. **Aphorismen**
    - Nur Aphorismen, die philologisch gesichert sind und in der Aphorismenforschung als bedeutend gelten.
    - Außen stehen ausschließlich der Aphorismus und die Zuschreibung, gegebenenfalls ein Bild. Erklärung, Deutung, Zusammenfassung und zusätzlicher Originaltext entfallen.
+   - Ein Klick öffnet eine überprüfte Sammlung desselben Denkers mit mindestens zehn weiteren Aphorismen. Die Herkunft ist angegeben; Deutungen einzelner Aphorismen entfallen auch dort.
 
 2. **Historische Anekdoten**
    - Erstaunliche, aufschlussreiche oder besonders gut erzählbare historische Begebenheiten. Bloße Gleichzeitigkeit genügt nicht.
@@ -56,6 +57,7 @@ Die nummerierte Liste bewahrt auch die Regeln deaktivierter Kategorien. Bei „e
     - Akkordtöne, Stimmführung und Tonart werden an Quelle und Hörbeispiel geprüft. Enharmonische Schreibungen folgen ihrer harmonischen Funktion; E und Es werden nicht verwechselt.
     - Die Karte nennt Beispiele in Stücken oder Songs und erklärt den zu hörenden Vorgang.
     - Tristan-Akkord, Four-Chord-Song und andalusische Kadenz bleiben ausgeschlossen.
+    - Neue Karten richten sich an musikalisch Fortgeschrittene: konkrete mehrdeutige Harmonik, anspruchsvolle Stimmführung und Formzusammenhänge aus Jazz und klassischer Musik. Einfache Standards wie die Line Cliché genügen nicht. Zusätzliche Fachwörter ersetzen keine genauere Analyse.
 
 13. **Falsche Modelle mit großer Erklärungskraft**
     - Die Karte behandelt ein überholtes Modell ohne Spott.
@@ -86,7 +88,7 @@ Die nummerierte Liste bewahrt auch die Regeln deaktivierter Kategorien. Bei „e
     - Mindestens zwei vollständige Originalbeispiele erscheinen mit idiomatischer deutscher Übersetzung. Morphemgrenzen, Glossen, Hervorhebungen, Tabellen oder kleine Diagramme machen die erklärte Form sichtbar.
     - Exotisierende Kuriositätenlisten entfallen.
 
-19. **Interessante Listen**
+19. **Interessante Listen** — deaktiviert
     - Die Liste ist historisch oder sachlich geschlossen. Quelle, Auswahlprinzip, Umfang und Reihenfolge werden angegeben; die Einträge bleiben sichtbar.
     - Die Erklärung zeigt, was erst durch die Zusammenstellung erkennbar wird.
 
@@ -103,19 +105,19 @@ Die nummerierte Liste bewahrt auch die Regeln deaktivierter Kategorien. Bei „e
     - Die Karte macht eine tatsächlich wirksame, meist unbemerkte Regel und einen verständlichen Fall ihrer Verletzung sichtbar.
     - Die bloße Gleichsetzung von Gis und As oder eine allgemeine Erklärung enharmonischer Verwechslung erfüllt die Kategorie nicht und wird nicht erneut verwendet.
 
-23. **VerloreneTechniken**
+23. **VerloreneTechniken** — deaktiviert
     - Die Karte behandelt eine ehemals verbreitete, anspruchsvolle Fähigkeit.
     - Arbeitsablauf, benötigte Wahrnehmung oder Werkzeuge, historischer Gebrauch und Grund des Verschwindens werden genau erklärt.
 
-24. **InternetArchäologie**
+24. **InternetArchäologie** — deaktiviert
     - Die Karte sagt ohne Rätselton, was die Seite ist, wann sie entstand und was beim Öffnen zu sehen oder zu benutzen ist.
     - Link, technische Voraussetzungen und ausgefallene Bestandteile werden geprüft und genannt.
 
-25. **SchlechtesWritingSeziert**
+25. **SchlechtesWritingSeziert** — deaktiviert
     - Jede Karte untersucht eine konkrete Szene aus Film oder Serie. Sie benennt den einzelnen Fehler und zeigt, wie er innerhalb der Szene entsteht.
     - Danach folgen mindestens drei eigenständige bessere Lösungen. Allgemeine Verrisse entfallen.
 
-26. **DasIstHierGanzInDerNähe**
+26. **DasIstHierGanzInDerNähe** — deaktiviert
     - Mannheim ist der Mittelpunkt. Die Orte liegen ungefähr im Umkreis von 100 Kilometern.
     - Adresse oder eindeutiger Standort, Entfernung und praktische Zugänglichkeit werden angegeben.
     - Ausgewählt werden wenig bekannte, bemerkenswerte Orte, Bauten, Veranstaltungen, Tunnel, Geschäfte oder Aussichtspunkte.
@@ -161,7 +163,7 @@ Die nummerierte Liste bewahrt auch die Regeln deaktivierter Kategorien. Bei „e
     - Die Karten laufen in fester Reihenfolge und enthalten jeweils genau vier nummerierte Untersuchungseinheiten aus *Finnegans Wake*. Beim Anklicken steht der unveränderte untersuchte Satz oben.
     - Darunter erscheinen drei Vergleichsfelder: sinngemäße Fassung in heutigem Englisch, sachliche Lesart sowie Wörter und Querverweise. Unsichere Wortspiele werden als Möglichkeit bezeichnet.
     - Die Lesart erklärt den vollständigen Gedankengang: Wer handelt, was geschieht, worauf Pronomen und Vergleiche verweisen und wie Hauptsatz, Nebensätze und Einschübe zusammengehören. Worterklärungen ergänzen diese Darstellung und ersetzen sie nicht.
-    - Untersuchungseinheiten, die nur einen Satzteil enthalten, heißen „Einheiten“. Beim Anklicken erscheint auch der ganze zugehörige Satz samt zusammenhängender englischer Fassung und deutscher Lesart. Die Grenze einer Karte darf den Sinnzusammenhang nicht abschneiden.
+    - Untersuchungseinheiten, die nur einen Satzteil enthalten, heißen „Einheiten“. Die hervorgehobene Auswahl bleibt genau der angeklickte Wortlaut; auch die Vergleichsfelder beziehen sich auf diese Auswahl. Der ganze zugehörige Satz mit englischer Fassung und deutscher Lesart steht bei Bedarf in einem gesonderten, aufklappbaren Kontextbereich. Kontext darf die Auswahl weder ersetzen noch unbemerkt erweitern. Die Grenze einer Karte darf den Sinnzusammenhang nicht abschneiden.
     - Belegte Anspielung, schlüssige Lesart und unsichere Vermutung werden auseinandergehalten. Kein Anspruch, sämtliche möglichen Bedeutungen abschließend aufzulösen.
     - Pfeile führen zur unmittelbar vorigen oder nächsten Folge. Diese interne Reihenfolge bleibt fest, obwohl der allgemeine Kartenstrom gemischt wird.
     - Das Lesefenster übernimmt Farben, Typografie und Aufbau aus `finnegans-wake-seite1(1).html`.
@@ -175,6 +177,13 @@ Die nummerierte Liste bewahrt auch die Regeln deaktivierter Kategorien. Bei „e
     - Entscheidungen einzelner Personen werden aus belegten Handlungen und Umständen erklärt. Erfundenes Innenleben und nachträgliche psychologische Gewissheiten entfallen. Unmittelbare Folgen und spätere Entwicklungen bleiben unterscheidbar.
     - Geeignete Medien zeigen Beteiligte, Schauplätze, zeitgenössische Gegenstände oder lesbare Karten. Die nur als Beispiele genannten Napoleon-Episoden, südostasiatischen Könige und bronzezeitlichen Fälle werden für diese Auswahl nicht übernommen.
 
+37. **Pflanzenarten Europas**
+    - Häufige europäische Pflanzenarten, besonders Laub- und Nadelbäume, außerdem Gräser und andere verbreitete Pflanzen. Deutscher Name und wissenschaftlicher Artname werden angegeben.
+    - Baumkarten zeigen mindestens drei eindeutig bestimmte Ansichten derselben Art: den ganzen Baum mit Stamm und Krone, Blätter oder Nadeln sowie Früchte beziehungsweise Zapfen. Blüten, Knospen und verschiedene Jahreszeiten ergänzen die Bestimmung, wenn sie wichtige Merkmale zeigen.
+    - Der Text erklärt die sichtbaren Erkennungsmerkmale, ähnliche Arten und deren Unterschiede, den typischen Standort und die europäische Verbreitung. Zierformen werden von der natürlichen Art unterschieden.
+    - Rosskastanien, Eichen, Platanen und Birken sind von der Auswahl ausgeschlossen.
+    - Geprüfte Fotos und botanische Zeichnungen haben Vorrang. Eigene Abbildungen müssen botanisch korrekt und als solche gekennzeichnet sein; ein erzeugtes Bild ist kein Bestimmungsnachweis.
+
 ## Allgemeine Auswahl- und Rechercheregeln
 
 - Die Auswahl ist kenntnisreich, überraschend und abseits naheliegender Kanonbeispiele. Der erstbeste Einfall reicht nicht.
@@ -182,7 +191,7 @@ Die nummerierte Liste bewahrt auch die Regeln deaktivierter Kategorien. Bei „e
 - Jede Karte vermittelt einen klar bestimmten Gegenstand. Überschrift, Außentext, Detailtext und Medien behandeln denselben Gegenstand.
 - Namen, Daten, Orte, Übersetzungen, Noten, Zitate und Medien werden vor der Freigabe geprüft.
 - Primärquellen, historische Ausgaben, wissenschaftliche Nachschlagewerke, Museen und zuständige Kulturinstitutionen haben Vorrang.
-- Jede Karte nennt ihre Quellen und erhält einen eigens gewählten, editierbaren Google-Suchbegriff.
+- Jede Karte nennt ihre Quellen und erhält einen eigens gewählten, editierbaren Google-Suchbegriff. Kategorienamen werden nicht als Suchzusatz eingesetzt; die Vorgabe nennt den Gegenstand, gegebenenfalls Autor, Ort oder Werk.
 
 ## Schreibregeln
 
@@ -233,7 +242,7 @@ Die nummerierte Liste bewahrt auch die Regeln deaktivierter Kategorien. Bei „e
 ## Oberfläche und Datenarchitektur
 
 - Alle aktiven Karten bilden einen gemeinsamen Datenbestand. Dateien mit künstlichen Monatsnamen, vorproduzierte Monatsblöcke oder getrennte zukünftige Pools werden nicht angelegt.
-- „Gute Gags“, „Seltene und geniale Lifehacks“, „Eigene GIFs“, „Gute einfache Cartoons“ und „VisuelleIdeenDieIchKlauenWill“ bleiben deaktiviert. Ihre Daten werden weder angezeigt noch durchsucht oder gezählt; Aufträge für alle Kategorien lassen sie aus. Die Anwendung und Prüfskripte lesen dafür dieselbe zentrale Kategorienliste.
+- „Gute Gags“, „Seltene und geniale Lifehacks“, „Eigene GIFs“, „Gute einfache Cartoons“, „VisuelleIdeenDieIchKlauenWill“, „VerloreneTechniken“, „SchlechtesWritingSeziert“, „InternetArchäologie“, „DasIstHierGanzInDerNähe“ und „Interessante Listen“ sind deaktiviert. Ihre Daten werden weder angezeigt noch durchsucht oder gezählt; Aufträge für alle Kategorien lassen sie aus. Die Anwendung und Prüfskripte lesen dafür dieselbe zentrale Kategorienliste.
 - Bei jedem Laden werden Karten und Kategorien neu gemischt. Die erste Karte ist nicht festgelegt; längere Blöcke derselben Kategorie werden vermieden.
 - Beim ersten Laden beginnt die Seite oben. Eine frühere Scrollposition wird nicht wiederhergestellt. Beim Öffnen einer anderen Detailkarte steht deren Ansicht ebenfalls oben.
 - Vor dem Seitenende werden automatisch weitere Karten geladen. Der manuelle Ladebutton bleibt als barrierearme Rückfallebene erhalten.
