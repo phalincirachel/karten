@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#ede7dc">
-  <meta name="description" content="580 Karten zu Literatur, Philosophie, Geschichte, Kunst, Musik, Sprache und Alltagswissen.">
+  <meta name="description" content="651 Karten zu Literatur, Philosophie, Geschichte, Kunst, Musik, Sprache und Alltagswissen.">
   <title>Kartei</title>
   <script>if("scrollRestoration" in history)history.scrollRestoration="manual";</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,9 @@
   <link rel="preconnect" href="https://upload.wikimedia.org">
   <link rel="preconnect" href="https://www.youtube-nocookie.com">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=Source+Serif+4:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tangut&amp;text=%F0%98%93%BA%F0%98%85%9D%F0%98%8F%A8%F0%98%94%AD&amp;display=swap" rel="stylesheet">
   <style>
+    .summary,.detail-summary,#detail .language-info{font-family:"IBM Plex Sans","Noto Serif Tangut",sans-serif}
     :root{--paper:#f4f0e8;--card:#fffdf9;--ink:#191817;--muted:#69645d;--line:#d7d0c5;--accent:#8b2f28;--max:1240px}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;-webkit-font-smoothing:antialiased}body.dialog-open{overflow:hidden}button,input{font:inherit}
     header{max-width:var(--max);margin:auto;padding:45px 20px 26px}h1{margin:0;font:600 clamp(42px,8vw,72px)/1 "Source Serif 4",serif}.count{margin:8px 0 0;color:var(--muted);font:14px "IBM Plex Sans",sans-serif}
@@ -39,17 +41,16 @@
   <dialog id="detailDialog" aria-labelledby="detailTitle"><article class="sheet"><button class="close" type="button" aria-label="Schließen">×</button><div id="detail"></div></article><button class="dialog-feedback" id="detailFeedbackButton" type="button">Feedback <span id="detailFeedbackCount">0</span></button></dialog>
   <dialog id="ratingDialog" aria-labelledby="ratingTitle"><article class="feedback-sheet"><button class="close rating-close" type="button" aria-label="Schließen">×</button><h2 id="ratingTitle">Karte bewerten</h2><p class="feedback-card" id="ratingCard"></p><div class="feedback-reasons" id="negativeReasons"><label><input type="checkbox" value="Nicht kreativ genug">Nicht kreativ genug</label><label><input type="checkbox" value="Ungenau beschrieben">Ungenau beschrieben</label><label><input type="checkbox" value="Sprachlich schlecht beschrieben">Sprachlich schlecht beschrieben</label><label><input type="checkbox" value="Schlechtes Bild">Schlechtes Bild</label><label><input type="checkbox" value="Zu wenig Kontext">Zu wenig Kontext</label><label><input type="checkbox" value="Auswahl zu bekannt oder naheliegend">Auswahl zu bekannt oder naheliegend</label><label><input type="checkbox" value="Quelle, Link oder Medium funktioniert nicht">Quelle, Link oder Medium funktioniert nicht</label></div><label class="feedback-note"><span id="ratingNoteLabel">Weitere Kritik</span><textarea id="ratingNote"></textarea></label><div class="feedback-actions"><button class="primary" id="saveRating" type="button">Im Browser speichern</button><button class="cancel-rating" type="button">Abbrechen</button></div></article></dialog>
   <dialog id="feedbackDialog" aria-labelledby="feedbackTitle"><article class="feedback-sheet"><button class="close feedback-close" type="button" aria-label="Schließen">×</button><h2 id="feedbackTitle">Gespeichertes Feedback</h2><p class="feedback-explanation">Die Einträge liegen in diesem Browser. „Kopieren“ erzeugt ein Markdown-Dokument, das hier in den Chat eingefügt werden kann. „Teilen“ öffnet die Freigabeziele des Geräts; Google Keep erscheint dort nur, wenn das Gerät es anbietet.</p><ul class="feedback-list" id="feedbackList"></ul><div class="feedback-actions"><button class="primary" id="copyFeedback" type="button">Kopieren</button><button id="downloadFeedback" type="button">Markdown laden</button><button id="shareFeedback" type="button">Teilen</button><button id="clearFeedback" type="button">Einträge löschen</button></div><p class="feedback-explanation" id="feedbackStatus" aria-live="polite"></p></article></dialog>
-  <script src="media-map.js?v=20260911-1"></script>
-  <script src="cards.js?v=20260911-1"></script>
-  <script src="remote-texts.js?v=20260911-1"></script>
-  <script src="wiki-details.js?v=20260911-1"></script>
-  <script src="cards-editorial.js?v=20260911-1"></script>
-  <script src="finnegans-exegese.js?v=20260911-1"></script>
+  <script src="media-map.js?v=20260919-2"></script>
+  <script src="cards.js?v=20260919-2"></script>
+  <script src="remote-texts.js?v=20260919-2"></script>
+  <script src="wiki-details.js?v=20260919-2"></script>
+  <script src="cards-editorial.js?v=20260919-2"></script>
+  <script src="finnegans-exegese.js?v=20260919-2"></script>
   <script>
     (() => {
       "use strict";
-      const archivedCategories=new Set(window.KARTEN_ARCHIVED_CATEGORIES);
-      const rawCards=(Array.isArray(window.KARTEN)?window.KARTEN:[]).filter(card=>!archivedCategories.has(card.category));
+      const rawCards=Array.isArray(window.KARTEN)?window.KARTEN:[];
       function shuffled(source){const list=[...source];for(let i=list.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[list[i],list[j]]=[list[j],list[i]]}return list}
       function mixedCards(source){const names=shuffled([...new Set(source.map(card=>card.category))]),groups=new Map(names.map(name=>[name,shuffled(source.filter(card=>card.category===name))])),mixed=[];for(let row=0;mixed.length<source.length;row++)shuffled(names.filter(name=>groups.get(name)[row])).forEach(name=>mixed.push(groups.get(name)[row]));return mixed}
       const cards=mixedCards(rawCards);

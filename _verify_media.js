@@ -21,8 +21,7 @@ async function fetchTimed(url) {
 }
 
 (async () => {
-  const archived = new Set(window.KARTEN_ARCHIVED_CATEGORIES);
-  const media = window.KARTEN.filter(card => !archived.has(card.category)).flatMap(card => card.media || []);
+  const media = window.KARTEN.flatMap(card => card.media || []);
   const screenshots = media.filter(item => item.type === "image" && item.src.includes("image.thum.io"));
   const videos = media.filter(item => item.type === "youtube");
   async function verify(items, check, concurrency = 4) {

@@ -137,6 +137,13 @@
     {page:5,text:"",en:"All told, there were a thousand and one stories—and storeys—about it.",boxes:[["Zusammenhängende Lesart","Der Schlusssatz zählt die Erklärungen des Falls in grotesker Übertreibung. Das englische Wort für Geschichten klingt wie das für Stockwerke: Die vielen Berichte bilden dadurch noch einmal einen hohen Bau. Gleichzeitig verweist die Zahl auf „Tausendundeine Nacht“, also auf eine Erzählung, die durch immer weiteres Erzählen fortbesteht. Statt einer abschließenden Unfallursache erhalten wir eine Vielzahl von Fassungen, aus denen der Fall weiterlebt."],["Wörter und Querverweise","<b>Stories / storeys:</b> Erzählungen und Geschosse eines Gebäudes. <b>All told:</b> Insgesamt, zugleich alles erzählt. Die Zusammenrechnung schließt eine Untersuchung scheinbar ab und eröffnet im selben Moment weitere Geschichten."]],source:A5.fall}
   );
 
+  units.push(
+    {page:5,text:"",en:"As surely as Adam bit Eve's sacred red apples—",boxes:[["Zusammenhängende Lesart","Der Satz beginnt mit einer abgewandelten Redensart, die Gewissheit verspricht, und ruft dabei den biblischen Sündenfall auf. Die Namen lassen Adam und Eva erkennen, bleiben aber absichtlich verformt. Welche Behauptung dadurch bekräftigt werden soll, erfahren wir erst nach einem langen Einschub: Eines Morgens war der Baumeister betrunken. Der Biss in den Apfel stellt den bevorstehenden Sturz in eine ältere Geschichte menschlichen Fehlverhaltens. Er ist keine zusätzliche Unfallursache neben dem schadhaften Ziegel aus der vorherigen Einheit."],["Wörter und Querverweise","<b>Abe / Ivvy:</b> Adam und Eva bilden eine naheliegende Lesart; die Namen sind nicht auf diese eine Zuordnung beschränkt. <b>Holired apples:</b> Heilige beziehungsweise rote Äpfel; zugleich klingt <i>The Holly and the Ivy</i> an. Der Anfangssatz bleibt bis zum Ende der Einheiten 49–52 grammatisch offen."]],source:"https://fwannotated.blogspot.com/2014/09/p5g.html"},
+    {page:5,text:"",en:"—with all the street noise of motorcars, cabs, trams and horses, the traffic and the shouting around him—",boxes:[["Zusammenhängende Lesart","Mit der öffnenden Klammer wird der angefangene Satz unterbrochen. Der Einschub zählt auf, was den Baumeister umgibt und ablenkt: Straßenverkehr und dessen Lärm. Die Fahrzeugnamen enthalten zugleich Namen vorgeschichtlicher Steinbauten. Damit stehen die moderne Straße und eine viel ältere bebaute Landschaft im selben Wortlaut. Die Aufzählung lässt sich als weitere Erklärung seines unsicheren Zustands lesen; sie ist kein Bericht über einen gesonderten Unfall mit einem bestimmten Fahrzeug."],["Wörter und Querverweise","<b>Rollsrights:</b> Rolls-Royce und die Rollright Stones. <b>Carhacks:</b> Mietkutschen beziehungsweise Taxis und Carnac. <b>Stonengens:</b> Motoren und Stonehenge. <b>Autokinotons:</b> Das griechische Wort für Automobile. <b>Tournintaxes:</b> Wendende Taxis; außerdem klingt Thurn und Taxis an. Diese Namen gehören zur fortgesetzten Aufzählung innerhalb der Klammer."]],source:"https://fwannotated.blogspot.com/2014/09/p5h.html"},
+    {page:5,text:"",en:"—with the bustle, a policeman, voices at his ear, the barracks and courts, and the city's dark working masses—",boxes:[["Zusammenhängende Lesart","Die Aufzählung wechselt von den Fahrzeugen zu Menschen und Orten in Dublin. Ein Polizist steht neben unbestimmtem Stimmengewirr; danach erscheinen die Marlborough Barracks und die Four Courts in veränderter Schreibweise. Das Possessivpronomen ordnet diese Umgebung dem Baumeister und seiner Stadt zu. Die gedrängte Folge gibt zunächst das wieder, was auf ihn einwirkt. Einzelne Wortspiele öffnen zusätzliche Bezüge auf Lieder oder Landschaftsnamen; sie ergeben keine gesicherte Nebenhandlung mit neuen Hauptpersonen."],["Wörter und Querverweise","<b>Peeler:</b> Eine ältere Bezeichnung für einen Polizisten; auch der Liedtitel <i>The Peeler and the Goat</i> klingt an. <b>Mecklenburk:</b> Mecklenburg Street in Dublin. <b>Merlinburrow burrocks / fore old porecourts:</b> Marlborough Barracks und Four Courts. <b>Twelvepins:</b> Die Twelve Pins beziehungsweise Twelve Bens in Galway; zugleich klingt eine Preis- oder Mengenangabe an."]],source:"https://fwannotated.blogspot.com/2014/09/p5i.html"},
+    {page:6,text:"",en:"—with buses passing along Safetyfirst Street, airships overhead, the fumes and commotion of the city, its inhabitants and their different lodgings—one morning Finn felt thoroughly drunk.",boxes:[["Zusammenhängende Lesart","Der letzte Teil des Einschubs erweitert die Straßenszene nach oben und über die ganze Stadt: Busse und Luftschiffe gehören ebenso dazu wie Rauch, Rufe und die Bewohner mit ihren unterschiedlichen Unterkünften. Die Formulierungen über Hausbewohner und einen Schlafplatz unter einer Brücke lassen auch soziale Unterschiede erkennen. Erst mit der schließenden Klammer endet diese lange Unterbrechung. Nun folgt die Aussage, auf die der Satz seit seinem Anfang zuläuft: An einem Morgen ist Finn, hier Phill genannt, vom Trinken benommen. Damit kehrt die Erzählung vom ausgedehnten Stadtbild zum körperlichen Zustand des Arbeiters zurück und bereitet seinen Sturz vor."],["Wörter und Querverweise","<b>Noobibusses:</b> Omnibusse; zugleich italienisch <i>nubi basse</i>, tiefe Wolken. <b>Derryjellybies:</b> Luftschiffe und Mrs Jellyby aus Dickens’ <i>Bleak House</i>. <b>Fumes … hopes … strupithump:</b> Anspielung auf Horaz’ Beschreibung von Roms Rauch, Reichtum und Lärm. <b>Romekeepers:</b> Unter anderem Dublins Sick and Indigent Roomkeepers’ Society. <b>Butt … bridge:</b> Butt Bridge über die Liffey. <b>Wan warning … tippling full:</b> Der betrunkene Morgen aus dem Lied <i>Finnegan’s Wake</i>; Phill erinnert zusätzlich an <i>Phil the Fluter’s Ball</i>."]],source:"https://www.finwake.com/1024chapter1/prevod6.htm"}
+  );
+
   const page4Source="https://gist.githubusercontent.com/jl2/7fbf5c10f70a9b1bcd25e1fa2c34fee8/raw/finnegan.txt";
   const ranges=[
     ["What clashes here of wills","Where the Baddelaries"],
@@ -175,6 +182,10 @@
     ["Heed! Heed!","It may half been a missfired brick"],
     ["It may half been a missfired brick","(There extand by now"],
     ["(There extand by now","But so sore did abe"],
+    ["But so sore did abe","(what with the wallhall"],
+    ["(what with the wallhall","and the hoyse"],
+    ["and the hoyse","and the noobibusses"],
+    ["and the noobibusses","His howd feeled heavy"],
   ];
   units.slice(12).forEach((unit,index)=>{
     unit.remoteRange=ranges[index];
@@ -182,6 +193,11 @@
   });
 
   const sentenceContexts=[
+  {
+    range:[49,52],
+    en:"As surely as Adam bit Eve's sacred red apples, one morning Finn felt thoroughly drunk. Between that opening assurance and its conclusion, a long parenthesis sets him amid the city's overwhelming traffic and bustle: motorcars and older vehicles, policemen and noisy streets, barracks and courts, buses and airships, fumes and shouting, residents in their homes and someone under a bridge. The vehicle names also recall ancient stone monuments. This noisy urban setting supplies an extended account of what surrounds and distracts him; the sentence finally returns to his drunken condition.",
+    de:"Der vollständige Satz beginnt mit einer Gewissheitsformel über den biblischen Sündenfall und endet mit Finns Trunkenheit an einem Morgen. Dazwischen steht ein langer Klammerzusatz. Er führt vom Verkehr über Dubliner Gebäude und Stimmen bis zu den Bewohnern und ihren Schlafplätzen. Die Fahrzeuge tragen in ihren Namen zugleich vorgeschichtliche Steinbauten; der moderne Alltag erhält dadurch eine ältere geschichtliche Schicht. Der Rauch und Lärm rufen außerdem Horaz’ Rom auf. Grammatisch gehören alle Teile dieser Aufzählung zum Einschub über die belastende Umgebung. Die Hauptaussage wird erst nach der Klammer abgeschlossen: Der Arbeiter ist vom Alkohol benommen. Die Stadtbeschreibung verzögert diese Feststellung und liefert zugleich mögliche Ablenkungen vor seinem Sturz. Sie legt keine einzelne davon als erwiesene Unfallursache fest."
+  },
   {
     "range": [
       2,
@@ -235,7 +251,7 @@
     "Jebel Musa Sinai photograph",
     "Camelus_dromedarius_in_Nuweiba.jpg"
   ];
-  const pageSources={3:"https://www.fweet.org/sim.pl?003",4:"https://www.fweet.org/sim.pl?004",5:"https://www.fweet.org/sim.pl?005"};
+  const pageSources={3:"https://www.fweet.org/sim.pl?003",4:"https://www.fweet.org/sim.pl?004",5:"https://www.fweet.org/sim.pl?005",6:"https://www.fweet.org/sim.pl?006"};
   for(let index=0;index<units.length;index+=4){
     const group=units.slice(index,index+4),number=index/4+1;
     const pages=[...new Set(group.map(unit=>unit.page))];
@@ -247,9 +263,9 @@
       title:`Finnegans Wake ${number}`,
       summary:`Einheiten ${index+1}–${index+4} · Druckseite ${pages.join("/")}`,
       detail:[],
-      media:number===12?[{type:"image",src:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Camelus_dromedarius_in_Nuweiba.jpg/1280px-Camelus_dromedarius_in_Nuweiba.jpg",href:"https://commons.wikimedia.org/wiki/File:Camelus_dromedarius_in_Nuweiba.jpg",caption:"Ein Dromedar in Nuweiba auf der Sinaihalbinsel",credit:"Wikimedia Commons"}]:[{type:"commons",query:images[number-1],file:[4,10].includes(number)?images[number-1]:undefined,caption:`Finnegans Wake · Folge ${number}`}],
+      media:number===13?[]:number===12?[{type:"image",src:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Camelus_dromedarius_in_Nuweiba.jpg/1280px-Camelus_dromedarius_in_Nuweiba.jpg",href:"https://commons.wikimedia.org/wiki/File:Camelus_dromedarius_in_Nuweiba.jpg",caption:"Ein Dromedar in Nuweiba auf der Sinaihalbinsel",credit:"Wikimedia Commons"}]:[{type:"commons",query:images[number-1],file:[4,10].includes(number)?images[number-1]:undefined,caption:`Finnegans Wake · Folge ${number}`}],
       sources,
-      searchTerm:`Finnegans Wake Seite ${pages.join(" ")} Einheiten ${index+1} ${index+4} Exegese`,
+      searchTerm:`Finnegans Wake Seite ${pages.join(" ")} Einheiten ${index+1} ${index+4}`,
       finnegansGroup:number-1
     });
   }

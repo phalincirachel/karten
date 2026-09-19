@@ -2,7 +2,7 @@
 
 ## Kategorien
 
-Die nummerierte Liste bewahrt auch die Regeln deaktivierter Kategorien. Bei „eine Karte für jede Kategorie“ zählen ausschließlich aktive Kategorien. Deaktivierte Karten bleiben gespeichert, erscheinen aber weder im Feed noch in Suche, Auswahl oder Zählung.
+Die nummerierte Liste bewahrt auch die Regeln deaktivierter Kategorien. „Deaktiviert“ bedeutet ausschließlich: Für diese Kategorie werden keine neuen Karten erstellt. Bei „eine Karte für jede Kategorie“ zählen ausschließlich aktive Kategorien. Alle vorhandenen Karten bleiben unverändert im Feed, in der Suche, der Kategorieauswahl und der Zählung verfügbar.
 
 1. **Aphorismen**
    - Nur Aphorismen, die philologisch gesichert sind und in der Aphorismenforschung als bedeutend gelten.
@@ -242,7 +242,7 @@ Die nummerierte Liste bewahrt auch die Regeln deaktivierter Kategorien. Bei „e
 ## Oberfläche und Datenarchitektur
 
 - Alle aktiven Karten bilden einen gemeinsamen Datenbestand. Dateien mit künstlichen Monatsnamen, vorproduzierte Monatsblöcke oder getrennte zukünftige Pools werden nicht angelegt.
-- „Gute Gags“, „Seltene und geniale Lifehacks“, „Eigene GIFs“, „Gute einfache Cartoons“, „VisuelleIdeenDieIchKlauenWill“, „VerloreneTechniken“, „SchlechtesWritingSeziert“, „InternetArchäologie“, „DasIstHierGanzInDerNähe“ und „Interessante Listen“ sind deaktiviert. Ihre Daten werden weder angezeigt noch durchsucht oder gezählt; Aufträge für alle Kategorien lassen sie aus. Die Anwendung und Prüfskripte lesen dafür dieselbe zentrale Kategorienliste.
+- „Gute Gags“, „Seltene und geniale Lifehacks“, „Eigene GIFs“, „Gute einfache Cartoons“, „VisuelleIdeenDieIchKlauenWill“, „VerloreneTechniken“, „SchlechtesWritingSeziert“, „InternetArchäologie“, „DasIstHierGanzInDerNähe“ und „Interessante Listen“ sind für neue Karten deaktiviert. Die zentrale Liste `KARTEN_PAUSED_CATEGORIES` steuert ausschließlich, welche Kategorien bei der Erstellung neuer Karten ausgelassen werden. Vorhandene Karten dieser Kategorien werden weiterhin angezeigt, durchsucht und gezählt; die Kategorien bleiben als Filter auswählbar. Diese Liste darf niemals als Anzeigefilter verwendet werden.
 - Bei jedem Laden werden Karten und Kategorien neu gemischt. Die erste Karte ist nicht festgelegt; längere Blöcke derselben Kategorie werden vermieden.
 - Beim ersten Laden beginnt die Seite oben. Eine frühere Scrollposition wird nicht wiederhergestellt. Beim Öffnen einer anderen Detailkarte steht deren Ansicht ebenfalls oben.
 - Vor dem Seitenende werden automatisch weitere Karten geladen. Der manuelle Ladebutton bleibt als barrierearme Rückfallebene erhalten.
