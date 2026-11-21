@@ -1,42 +1,67 @@
-// Fast, offline regression checks. No network-wide media scan.
-const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');
-process.chdir(path.resolve(__dirname,'..'));
-const html=fs.readFileSync('index.html','utf8'),context={window:{MEDIA_FILES:{}}};vm.createContext(context);
-const scriptRefs=[...html.matchAll(/<script src="([^"?]+)\?v=([^"]+)"/g)];
-assert.equal(new Set(scriptRefs.map(x=>x[2])).size,1,'Script cache versions differ');
-for(const [,file]of scriptRefs)vm.runInContext(fs.readFileSync(file,'utf8'),context,{filename:file});
-for(const [,body]of html.matchAll(/<script>([\s\S]*?)<\/script>/g))new vm.Script(body);
-const paused=new Set(context.window.KARTEN_PAUSED_CATEGORIES),all=context.window.KARTEN;
-assert.equal(paused.size,context.window.KARTEN_PAUSED_CATEGORIES.length,'Duplicate paused category');
-const active=all.filter(c=>!paused.has(c.category)),categories=new Set(active.map(c=>c.category));
-const agents=fs.readFileSync('AGENTS.md','utf8'),instructions=[...agents.matchAll(/^\d+\. \*\*(.*?)\*\*([^\n]*)/gm)];
-for(const [,category,status]of instructions)assert.equal(paused.has(category),/deaktiviert/.test(status),`Category status differs from AGENTS: ${category}`);
-for(const category of categories)assert.ok(instructions.some(x=>x[1]===category&&!/deaktiviert/.test(x[2])),`Missing active instructions: ${category}`);
-for(const card of active){assert.ok(card.title&&Array.isArray(card.detail),`Malformed card: ${card.title}`);assert.ok(card.category);}
-for(const card of active.filter(c=>c.category==='Aphorismen')){
- assert.ok(card.aphorismCollection?.author,`Missing aphorism author: ${card.title}`);
- assert.match(card.aphorismCollection?.url||'',/^https:\/\/[a-z]+\.wikiquote\.org\/wiki\/.+/,`Missing author collection: ${card.title}`);
+// Offline data, script-order and feed regression checks.
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
+const assert = require('node:assert/strict');
+process.chdir(path.resolve(__dirname, '..'));
+
+const html = fs.readFileSync('index.html', 'utf8');
+for (const [, body] of html.matchAll(/<script>([\s\S]*?)<\/script>/g)) new vm.Script(body);
+const refs = [...html.matchAll(/<script src="([^"?]+)\?v=([^"]+)"/g)];
+assert.equal(new Set(refs.map(match => match[2])).size, 1);
+const storage = new Map();
+function load(hostname = 'localhost') {
+  const context = vm.createContext({location: {hostname}, window: {addEventListener() {}},
+    sessionStorage: {getItem: key => storage.get(key), setItem: (key, value) => storage.set(key, value)}});
+  for (const [, file] of refs) vm.runInContext(fs.readFileSync(file, 'utf8'), context, {filename: file});
+  return context.window;
 }
-for(const card of active.filter(c=>c.category==='Pflanzenarten Europas')){
- assert.ok(!/rosskastanie|\beiche\b|platane|birke/i.test(card.title),'Excluded tree');
- for(const view of ['whole','leaf','fruit'])assert.ok(card.media.some(m=>m.plantView===view&&m.src&&m.fallbacks?.length),`Missing plant view ${view}: ${card.title}`);
+const {KARTEN: cards, HARMONY_QUIZ: quiz, MUSIC_FEED: feed} = load();
+assert.equal(new Set(cards.map(card => card.category)).size, 2);
+for (let i = 1; i < cards.length; i++) assert.notEqual(cards[i - 1].kind, cards[i].kind);
+const videos = cards.filter(card => card.kind === 'unesco-video');
+assert.ok(videos.length > 200);
+assert.equal(new Set(videos.map(card => card.media[0].id)).size, videos.length);
+for (const card of videos) {
+  assert.equal(card.media.length, 1);
+  assert.match(card.media[0].id, /^[\w-]{11}$/);
+  assert.match(card.sources[0].url, /^https:\/\/ich\.unesco\.org\/en\//);
+  assert.equal(card.detail.length, 0);
+  assert.equal(card.summary, undefined);
 }
-assert.ok(html.includes('selected.textContent=textValue;'),'Finnegans selection must remain the selected unit');
-assert.ok(!html.includes('selected.textContent=unit.contextText'),'Sentence context replaced the selected unit');
-assert.ok(html.includes(all.length+' Karten zu'),'Stale card count');
-const history=active.filter(c=>c.category==='Geschichtsunterricht');assert.ok(history.length>=5);
-for(const card of history){assert.ok(card.summary&&card.searchTerm&&card.sources.length>=2);assert.ok(card.detail.join(' ').length>1300);assert.ok(card.media.length);for(const media of card.media){assert.ok(media.fallbacks?.length);assert.equal(media.fit,'contain');assert.ok(!/\.pdf|\.djvu|thum\.io/i.test(media.src));}}
-const fw=context.window.FINNEGANS_EXEGESE,groups=active.filter(c=>Number.isInteger(c.finnegansGroup));
-assert.equal(fw.units.length%4,0);assert.equal(groups.length,fw.units.length/4);
-groups.forEach((c,i)=>{assert.equal(c.finnegansGroup,i);assert.ok(c.summary.startsWith('Einheiten '));});
-fw.units.forEach((unit,i)=>{
- assert.ok(unit.en&&unit.boxes?.[0]?.[1],`Missing reading ${i+1}`);
- assert.ok(unit.boxes[0][1].length>200,`Reading too slight ${i+1}`);
- assert.ok(unit.boxes[1]?.[1]&&/^https:\/\//.test(unit.source));
- if(i>=12){assert.equal(unit.text,'','Unnecessary local original copy');assert.equal(unit.remoteRange.length,2);}
- if(unit.contextUnits){const[a,b]=unit.contextUnits;assert.ok(a<=i+1&&i+1<=b&&b<=fw.units.length);assert.ok(unit.contextReading&&unit.contextEnglish);}
-});
-assert.ok(html.includes('const rawCards=Array.isArray(window.KARTEN)?window.KARTEN:[];'),'Existing cards must remain visible, including paused categories');
-assert.ok(!/KARTEN_(?:ARCHIVED|PAUSED)_CATEGORIES/.test(html),'Creation pause must not filter the UI');
-assert.ok(!active.some(c=>/vollständige.{0,35}(?:wird|lädt).{0,80}geladen/i.test([c.summary,...c.detail].join(' '))),'Technical prose remains');
-console.log(JSON.stringify({visibleCards:all.length,visibleCategories:new Set(all.map(c=>c.category)).size,categoriesForNewCards:categories.size,historyCards:history.length,finnegansUnits:fw.units.length,finnegansCards:groups.length,syntax:'OK',rules:'OK'},null,2));
+const seen = new Set();
+let last;
+for (let i = 0; i < videos.length; i++) {
+  assert.equal(feed.nextRedditCard().kind, 'harmony-quiz');
+  last = feed.nextRedditCard().media[0].id;
+  seen.add(last);
+}
+assert.equal(seen.size, videos.length);
+feed.nextRedditCard();
+assert.notEqual(feed.nextRedditCard().media[0].id, last);
+
+const ids = new Set();
+let nextId = feed.nextQuizId;
+for (let i = 0; i < 4356; i++) {
+  if (i === 49) nextId = load().MUSIC_FEED.nextQuizId;
+  last = nextId();
+  ids.add(last);
+}
+assert.equal(ids.size, 4356);
+assert.notEqual(nextId(), last);
+const labels = new Set();
+for (let i = 0; i < 66; i++) {
+  const puzzle = quiz.createPuzzle(66 * i + (65 - i));
+  labels.add(puzzle.chords[1].label);
+  puzzle.chords.forEach((chord, index) => {
+    const voices = puzzle.voices[index];
+    assert.equal(voices.length, 4);
+    assert.equal(voices[0] % 12, chord.pcs[chord.inversion]);
+    assert.equal(new Set(voices.slice(1).map(note => note % 12)).size, 3);
+    assert.ok(voices.every(note => chord.pcs.includes(note % 12)));
+  });
+}
+assert.equal(labels.size, 66);
+assert.equal(load('www.reddit.com').MUSIC_FEED.isReddit, true);
+new vm.Script(fs.readFileSync('finnegans-exegese.js', 'utf8'));
+console.log(`${videos.length} UNESCO videos, 4356 distinct quizzes, alternating feed and tab reload verified.`);

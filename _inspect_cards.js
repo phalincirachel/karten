@@ -1,9 +1,9 @@
 const fs=require("fs"),vm=require("vm");
 const context={window:{MEDIA_FILES:{}}};vm.createContext(context);
-for(const f of ["cards.js","remote-texts.js","wiki-details.js","cards-editorial.js","finnegans-exegese.js"])vm.runInContext(fs.readFileSync(f,"utf8"),context,{filename:f});
+for(const f of ["archiv/media-map.js","archiv/cards.js","remote-texts.js","wiki-details.js","archiv/cards-editorial.js","archiv/finnegans-exegese.js"])vm.runInContext(fs.readFileSync(f,"utf8"),context,{filename:f});
 const cards=context.window.KARTEN;
 const groups=new Map();for(const c of cards){if(!groups.has(c.category))groups.set(c.category,[]);groups.get(c.category).push(c.title)}
-console.log(`VISIBLE ${cards.length} CATEGORIES ${groups.size}`);
+console.log(`ARCHIV ${cards.length} CATEGORIES ${groups.size}`);
 for(const [category,titles] of groups)console.log(`${category}\t${titles.length}`);
 console.log("\n## Karten ohne Medien");
 for(const c of cards)if(!(c.media||[]).length)console.log(`${c.category}\t${c.title}`);

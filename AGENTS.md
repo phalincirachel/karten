@@ -1,8 +1,15 @@
 # Projektanweisungen
 
-## Kategorien
+## Aktiver Musikfeed
 
-Die nummerierte Liste bewahrt auch die Regeln deaktivierter Kategorien. „Deaktiviert“ bedeutet ausschließlich: Für diese Kategorie werden keine neuen Karten erstellt. Bei „eine Karte für jede Kategorie“ zählen ausschließlich aktive Kategorien. Alle vorhandenen Karten bleiben unverändert im Feed, in der Suche, der Kategorieauswahl und der Zählung verfügbar.
+- Auf der Website, in der Suche, im Filter und auf Reddit sind ausschließlich **Akkord-Mystery** und **Volksmusikstile der Welt** aktiv. Die früheren Kartendaten liegen unter `archiv/`.
+- Auf Reddit folgt auf jeden dritten Beitrag abwechselnd eine einzelne Quizaufgabe oder ein UNESCO-Video. Das installierte Userscript 8.0.0 regelt Einfügeposition und Scrollschutz. Seine vier öffentlichen `@require`-Adressen sind Teil der Schnittstelle.
+- Jede Quizkarte hat eine eigene Akkordfolge. Auflösen, Abspielen und „Neue Karte“ betreffen die jeweilige Aufgabe. Alle 4356 Kombinationen kommen vor der nächsten Runde einmal vor.
+- Jede UNESCO-Videokarte enthält den offiziellen Titel, einen eingebetteten Film ab 0:00 und die Links zum Register und zum Film. Der Import übernimmt alle unterschiedlichen Video-IDs der musikalisch verschlagworteten oder im Titel als Musik erkennbaren Einträge. Die Auswahl und Playerprüfung stehen in `scripts/import-unesco.py`.
+
+## Kategorien des archivierten Bestands
+
+Die folgenden Nummern und Kennzeichnungen dokumentieren die frühere Redaktion. Sämtliche Kategorien dieser Liste sind im aktuellen Musikfeed deaktiviert.
 
 1. **Aphorismen**
    - Nur Aphorismen, die philologisch gesichert sind und in der Aphorismenforschung als bedeutend gelten.
@@ -242,8 +249,7 @@ Die nummerierte Liste bewahrt auch die Regeln deaktivierter Kategorien. „Deakt
 ## Oberfläche und Datenarchitektur
 
 - Alle aktiven Karten bilden einen gemeinsamen Datenbestand. Dateien mit künstlichen Monatsnamen, vorproduzierte Monatsblöcke oder getrennte zukünftige Pools werden nicht angelegt.
-- „Gute Gags“, „Seltene und geniale Lifehacks“, „Eigene GIFs“, „Gute einfache Cartoons“, „VisuelleIdeenDieIchKlauenWill“, „VerloreneTechniken“, „SchlechtesWritingSeziert“, „InternetArchäologie“, „DasIstHierGanzInDerNähe“ und „Interessante Listen“ sind für neue Karten deaktiviert. Die zentrale Liste `KARTEN_PAUSED_CATEGORIES` steuert ausschließlich, welche Kategorien bei der Erstellung neuer Karten ausgelassen werden. Vorhandene Karten dieser Kategorien werden weiterhin angezeigt, durchsucht und gezählt; die Kategorien bleiben als Filter auswählbar. Diese Liste darf niemals als Anzeigefilter verwendet werden.
-- Bei jedem Laden werden Karten und Kategorien neu gemischt. Die erste Karte ist nicht festgelegt; längere Blöcke derselben Kategorie werden vermieden.
+- Der Website-Feed beginnt zufällig mit einem der beiden Kartentypen und wechselt danach zwischen ihnen. Die Videos laufen in gemischter Reihenfolge.
 - Beim ersten Laden beginnt die Seite oben. Eine frühere Scrollposition wird nicht wiederhergestellt. Beim Öffnen einer anderen Detailkarte steht deren Ansicht ebenfalls oben.
 - Vor dem Seitenende werden automatisch weitere Karten geladen. Der manuelle Ladebutton bleibt als barrierearme Rückfallebene erhalten.
 - Die Kategorieauswahl bleibt vollständig sichtbar. Änderungen an Datendateien erhalten einen neuen Versionsparameter, damit GitHub Pages keine alte Browserfassung zeigt.
