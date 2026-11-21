@@ -1,0 +1,11 @@
+{
+  "name": "karten-musikfeed",
+  "private": true,
+  "scripts": {
+    "build:quiz": "node scripts/build-quiz.cjs",
+    "test": "node scripts/verify-cards.cjs"
+  },
+  "devDependencies": {
+    "vexflow": "4.2.5"
+  }
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="de">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Partiturprüfung</title>
+<output id="result">Prüfung läuft …</output>
+<div id="card"></div>
+<script src="../cards-editorial.js"></script>
+<script>
+  // Open directly in a browser. Exercise the same shadow boundary as Reddit,
+  // including a second view of an already revealed card, initially off the DOM.
+  const result = document.getElementById('result');
+  function check(value, message) {
+    if (!value) throw new Error(message);
+  }
+  function verify(player, width) {
+    const svg = player.querySelector('.hq-score-paper svg');
+    const notes = svg.querySelectorAll('.vf-stavenote');
+    check(notes.length === 8 && svg.querySelectorAll('.vf-notehead').length === 16, 'Stimmen fehlen');
+    check(svg.querySelectorAll('.vf-stem').length === 8, 'Notenhälse fehlen');
+    check(svg.querySelectorAll('.vf-clef').length === 2, 'Schlüssel fehlen');
+    const ink = svg.getBBox(), box = svg.viewBox.baseVal;
+    check(ink.x >= box.x + 1 && ink.y >= box.y + 1 &&
+      ink.x + ink.width <= box.x + box.width - 1 &&
+      ink.y + ink.height <= box.y + box.height - 1,
+      'Glyphengrenzen ' + [ink.x, ink.y, ink.width, ink.height] + ' liegen außerhalb von ' + svg.getAttribute('viewBox'));
+    const labels = [...svg.querySelectorAll(':scope > text')];
+    check(labels.length === 4, 'Akkordbeschriftung fehlt');
+    const bottom = Math.max(...[...notes].map(note => {
+      const box = note.getBBox();
+      return box.y + box.height;
+    }));
+    check(labels.every(label => label.getBBox().y > bottom + 3), 'Akkordname berührt die Noten');
+    for (let i = 0; i < 4; i++) {
+      // The group also contains its accidentals; compare the actual head outlines.
+      const x = n => n.querySelector('.vf-notehead path').getBBox().x;
+      check(Math.abs(x(notes[i]) - x(notes[i + 4])) < 1, 'Systeme nicht bündig');
+      if (i) {
+        const previous = labels[i - 1].getBBox();
+        check(previous.x + previous.width + 2 < labels[i].getBBox().x, 'Akkordsymbole überlappen');
+      }
+    }
+    const frame = svg.getBoundingClientRect();
+    check(frame.width > 0 && frame.width <= width && frame.height > 0, 'Falsche Darstellungsgröße');
+    for (let el = svg.parentElement; el; el = el.parentElement) {
+      check(el.scrollWidth <= el.clientWidth + 1, 'Horizontales Scrollen bei ' + width + ' px');
+    }
+  }
+  let puzzleId = 0;
+  try {
+    const host = document.getElementById('card');
+    const root = host.attachShadow({mode:'open'});
+    window.HARMONY_QUIZ.installStyles(root);
+    window.MUSIC_FEED = {nextQuizId: () => puzzleId};
+    const exhaustive = new URLSearchParams(location.search).has('all');
+    for (let id = 0; id < (exhaustive ? 4356 : 66); id++) {
+      puzzleId = exhaustive ? id : id * 66 + (65 - id);
+      const card = {}, panel = document.createElement('div');
+      root.querySelector('div')?.remove();
+      root.append(panel);
+      const player = window.HARMONY_QUIZ.mount(panel, card);
+      player.querySelector('.hq-reveal').click();
+      for (const width of exhaustive ? [240] : [240, 320, 390, 720]) {
+        host.style.width = width + 'px';
+        verify(player, width);
+      }
+      if (exhaustive) continue;
+      const detail = document.createElement('div');
+      const large = window.HARMONY_QUIZ.mount(detail, card, true);
+      panel.replaceChildren(detail);
+      verify(large, 720);
+    }
+    result.value = 'OK';
+  } catch (error) {
+    result.value = error.message + ' (Aufgabe ' + puzzleId + ')';
+    throw error;
+  }
+</script>
+</html>

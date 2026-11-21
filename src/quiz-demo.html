@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#ede7dc"><title>Akkord-Mystery · Kartei</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"><style>
+:root{--paper:#f4f0e8;--card:#fffdf9;--ink:#191817;--muted:#69645d;--line:#d7d0c5;--accent:#8b2f28;--max:1240px}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;-webkit-font-smoothing:antialiased}
+button,input,select{font:inherit}
+header{max-width:var(--max);margin:auto;padding:45px 20px 26px}
+h1{margin:0;font:600 clamp(42px,8vw,72px)/1 "Source Serif 4",serif}
+.count{margin:8px 0 0;color:var(--muted);font:14px "IBM Plex Sans",sans-serif}
+.controls{position:sticky;z-index:10;top:0;border-block:1px solid var(--line);background:rgba(244,240,232,.96);backdrop-filter:blur(12px)}
+.controls-inner{max-width:var(--max);margin:auto;padding:12px 20px}.search-row{display:flex;gap:8px}
+.category-select{height:42px;border:1px solid #aaa298;border-radius:2px;background:#fffdf9;padding:0 12px;color:var(--ink);font:14px "IBM Plex Sans",sans-serif}
+main{max-width:var(--max);margin:auto;padding:30px 20px 70px}
+.result{margin:0 0 18px;color:var(--muted);font:13px "IBM Plex Sans",sans-serif}
+.grid{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;max-width:960px}
+.card{overflow:hidden;border:1px solid var(--line);border-radius:3px;background:var(--card)}
+.card-open{display:block;width:100%;border:0;background:transparent;padding:18px 18px 20px;color:inherit;text-align:left;cursor:default}
+.category{display:block;margin-bottom:8px;color:var(--accent);font:600 11px/1.35 "IBM Plex Sans",sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.card h2{margin:0;font:600 clamp(23px,2.4vw,31px)/1.14 "Source Serif 4",serif}
+.summary{margin:10px 0 0;color:#494641;font-size:15px;line-height:1.52}
+@media(max-width:600px){header{padding-top:30px}.controls-inner,main,header{padding-inline:12px}.grid{grid-template-columns:1fr;gap:18px}}
+
+</style>
+</head><body><header><h1>Kartei</h1><p class="count">Vorschau der neuen Kategorie</p></header>
+<nav class="controls" aria-label="Kategorie"><div class="controls-inner"><div class="search-row"><select class="category-select" aria-label="Kategorie"><option>Akkord-Mystery</option></select></div></div></nav>
+<main><p class="result">1 dynamische Karte</p><section class="grid"><article class="card harmony-card"><div class="card-open"><span class="category">Akkord-Mystery</span><h2>Akkord-Mystery</h2><p class="summary">C – ? – ? – C. Vierstimmige Akkordfolge hören und die Zwischenakkorde samt Basslagen erraten.</p></div><div id="puzzle"></div></article></section></main>
+<script>
+  const unused = [];
+  window.MUSIC_FEED = {
+    nextQuizId() {
+      if (!unused.length) {
+        for (let i = 0; i < 4356; i++) unused.push(i);
+      }
+      const i = Math.floor(Math.random() * unused.length);
+      const id = unused[i];
+      unused[i] = unused[unused.length - 1];
+      unused.pop();
+      return id;
+    }
+  };
+</script>
+<script data-standalone>
+/* BUNDLED_QUIZ */
+</script>
+<script>
+  window.HARMONY_QUIZ.installStyles(document);
+  window.HARMONY_QUIZ.mount(document.getElementById("puzzle"), true);
+</script>
+</body></html>
