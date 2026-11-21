@@ -6,6 +6,7 @@ from pathlib import Path
 import re
 import sys
 import time
+import unicodedata
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import urlopen
@@ -23,6 +24,24 @@ MUSIC = {
 }
 # UNESCO sometimes indexes the ritual, the game or the guild as the main subject.
 MUSIC_TITLE = re.compile(r"\b(?:music\w*|singing|singers?|songs?|chants?|drumming|ballads?|lyre|bell ringing)\b", re.I)
+# Apply only to the erroneous pair. A corrected ID in a later export passes through.
+REPLACEMENTS = {
+    ("00005", "B3-IkdWzNBs"): "C8-Y6HdnQlk",  # Gbofe, not Oxherding in Costa Rica
+    ("00111", "IgZV9nR-m2o"): "4UtXF9uRB-s",  # El Güegüense, not Chopi Timbila
+}
+SHARED_FILMS = {"l6KtHuy5Lvg": {"02224", "02474"}}  # Hezhen Yimakan and its safeguarding programme
+TRANSLATED_TITLES = {
+    "xq6wYI0HXkg": "La danse rituelle au tambour royal",
+    "VyEidlsVqFA": "La Eshuva, cantos rezados Harákmbut de la etnia Huachipaire (Perú)",
+}
+
+
+def distinctive_words(title):
+    text = unicodedata.normalize("NFKD", title.casefold().replace("’", "").replace("'", ""))
+    text = "".join(c for c in text if not unicodedata.combining(c))
+    common = {"a", "of", "the", "and", "in", "de", "la", "le", "les", "du", "des",
+              "for", "to", "art", "on", "music", "traditional", "dance", "song", "tradition"}
+    return set(re.findall(r"\w+", text)) - common
 
 
 def catalogue(records):
@@ -37,23 +56,33 @@ def catalogue(records):
         if not items:
             print("Ohne Video-ID:", record["http_url_en"], name, file=sys.stderr)
         for item in items:
-            video = item["youtube_videoID"]
+            ref = str(record["ich_public_ref"]).zfill(5)
+            video = REPLACEMENTS.get((ref, item["youtube_videoID"]), item["youtube_videoID"])
             if not re.fullmatch(r"[A-Za-z0-9_-]{11}", video):
                 raise ValueError(f"Invalid video ID for {name}: {video!r}")
+            if video in videos:
+                previous = videos[video][2].rsplit("/", 1)[-1]
+                if previous != ref and {previous, ref} != SHARED_FILMS.get(video):
+                    raise ValueError(f"Review shared video {video}: {previous}, {ref}")
             videos.setdefault(video, [video, name, record["http_url_en"]])
     if not videos:
         raise ValueError("UNESCO returned no matching video records")
     return videos
 
 
-def available(video):
+def available(row):
+    video, name, _ = row
     url = "https://www.youtube.com/oembed?" + urlencode({
         "url": f"https://www.youtube.com/watch?v={video}", "format": "json"})
     for attempt in range(3):
         try:
             with urlopen(url, timeout=25) as response:
-                if "/embed/" + video not in json.load(response)["html"]:
+                player = json.load(response)
+                if "/embed/" + video not in player["html"]:
                     raise ValueError(f"Unexpected player for {video}")
+                expected = TRANSLATED_TITLES.get(video, name)
+                if not distinctive_words(expected).intersection(distinctive_words(player["title"])):
+                    raise ValueError(f"Review film title for {video}: {name} / {player['title']}")
             return True
         except HTTPError as error:
             if error.code in (401, 403, 404, 410):
@@ -78,7 +107,7 @@ if __name__ == "__main__":
             records = json.load(response)
     videos = catalogue(records)
     with ThreadPoolExecutor(max_workers=5) as pool:
-        rows = [row for row, ok in zip(videos.values(), pool.map(available, videos)) if ok]
+        rows = [row for row, ok in zip(videos.values(), pool.map(available, videos.values())) if ok]
     if len(rows) < len(videos) * .9:
         sys.exit("Too many unavailable videos. Existing catalogue preserved.")
     body = ",\n".join("  " + json.dumps(row, ensure_ascii=False) for row in rows)

@@ -22,6 +22,10 @@ for (let i = 1; i < cards.length; i++) assert.notEqual(cards[i - 1].kind, cards[
 const videos = cards.filter(card => card.kind === 'unesco-video');
 assert.ok(videos.length > 200);
 assert.equal(new Set(videos.map(card => card.media[0].id)).size, videos.length);
+for (const [ref, wrongId] of [['00005','B3-IkdWzNBs'], ['00111','IgZV9nR-m2o']]) {
+  const films = videos.filter(card => card.sources[0].url.endsWith('/' + ref));
+  assert.ok(films.length && films.every(card => card.media[0].id !== wrongId));
+}
 for (const card of videos) {
   assert.equal(card.media.length, 1);
   assert.match(card.media[0].id, /^[\w-]{11}$/);
