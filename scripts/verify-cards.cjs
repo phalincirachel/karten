@@ -66,14 +66,13 @@ for (let id = 0; id < 4356; id++) {
 
     if (index === 0) return;
     const previous = puzzle.voices[index - 1];
-    const directions = voices.map((note, voice) => Math.sign(note - previous[voice]));
     for (let lower = 0; lower < 4; lower++) {
       for (let upper = lower + 1; upper < 4; upper++) {
-        if (directions[lower] === 0 || directions[lower] !== directions[upper]) continue;
+        if (voices[lower] === previous[lower] || voices[upper] === previous[upper]) continue;
         const interval = (voices[upper] - voices[lower]) % 12;
         if (interval !== 0 && interval !== 7) continue;
         assert.notEqual((previous[upper] - previous[lower]) % 12, interval,
-          `Parallel ${interval === 0 ? 'octave' : 'fifth'} in quiz ${id}, chord ${index} to ${index + 1}, voices ${lower + 1} and ${upper + 1}`);
+          `Moving ${interval === 0 ? 'octaves' : 'fifths'} in quiz ${id}, chord ${index} to ${index + 1}, voices ${lower + 1} and ${upper + 1}`);
       }
     }
   });
@@ -81,4 +80,17 @@ for (let id = 0; id < 4356; id++) {
 assert.equal(labels.size, 66);
 assert.equal(load('www.reddit.com').MUSIC_FEED.isReddit, true);
 new vm.Script(fs.readFileSync('finnegans-exegese.js', 'utf8'));
-console.log(`${videos.length} UNESCO videos, 4356 distinct quizzes without parallel octaves or fifths, alternating feed and tab reload verified.`);
+
+const userscript = fs.readFileSync('kartei-reddit.user.js', 'utf8');
+new vm.Script(userscript);
+const header = userscript.split('// ==/UserScript==', 1)[0];
+const baseUrl = 'https://phalincirachel.github.io/karten/';
+const installUrl = baseUrl + 'kartei-reddit.user.js';
+assert.match(header, /^\/\/ @name\s+Kartei direkt im Reddit-Feed$/m);
+assert.equal(header.match(/^\/\/ @namespace\s+(\S+)$/m)?.[1], baseUrl);
+for (const field of ['downloadURL', 'updateURL']) {
+  assert.equal(header.match(new RegExp(`^// @${field}\\s+(\\S+)$`, 'm'))?.[1], installUrl);
+}
+assert.deepEqual([...header.matchAll(/^\/\/ @require\s+(\S+)$/gm)].map(match => match[1]),
+  ['media-map.js', 'cards.js', 'cards-editorial.js', 'finnegans-exegese.js'].map(file => baseUrl + file));
+console.log(`${videos.length} UNESCO videos, 4356 distinct quizzes without moving octaves or fifths, alternating feed, tab reload and userscript metadata verified.`);

@@ -8,7 +8,7 @@ Der Videokatalog verwendet die musikalischen Hauptschlagwörter des Registers un
 
 `python scripts/import-unesco.py` aktualisiert den Katalog. Nach Änderungen an den ausgelieferten Dateien den Versionsparameter in `index.html` erhöhen. `node scripts/verify-cards.cjs` prüft beide Kategorien und die Aufgabenfolge offline.
 
-Das Reddit-Userscript 8.0.0 lädt vier feste Dateinamen. `media-map.js` enthält die Videodaten, `cards.js` stellt die Karten zusammen, `cards-editorial.js` enthält den Quizspieler und `finnegans-exegese.js` setzt die Musikkarten in die vom Userscript angelegten Einschübe. Bei einer bestehenden Installation können die vier Abhängigkeiten noch im Cache des Userscript-Managers liegen.
+Das Reddit-Userscript lädt vier feste Dateinamen. `media-map.js` enthält die Videodaten, `cards.js` stellt die Karten zusammen, `cards-editorial.js` enthält den Quizspieler und `finnegans-exegese.js` setzt die Musikkarten in die vom Userscript angelegten Einschübe. Die Installation über den Link ersetzt Version 8.0.0 im Userscript-Manager. Bei Änderungen an den Reddit-Dateien wird die `@version` in `kartei-reddit.user.js` erhöht, damit die installierte Fassung das Update abrufen kann. [Reddit-Userscript installieren](https://phalincirachel.github.io/karten/kartei-reddit.user.js)
 
 Der Quizspieler und die eigenständig verwendbare HTML-Demo enthalten VexFlow 4.2.5 mit den Bravura-Glyphen. Änderungen an `src/quiz.js` und `src/quiz-demo.html` werden mit `npm ci` und `npm run build:quiz` für beide Ansichten gebaut. Die ursprüngliche Drive-Demo liegt im ZIP.
 

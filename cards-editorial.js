@@ -246,14 +246,14 @@ function installHarmonyQuiz(global, getVexFlow, standalone) {
     return v.reduce((sum,n,i)=>sum+Math.abs(n-centers[i])*weights[i],0);
   }
   function transition(prev,next) {
-    // Quinten und Oktaven zählen auch über mehrere Oktaven hinweg.
+    // Auch Gegenbewegung zwischen Quinten oder Oktaven verschiedener Lage sperren.
     for (let lower = 0; lower < 4; lower++) {
       for (let upper = lower + 1; upper < 4; upper++) {
         const before = pc(prev[upper] - prev[lower]);
         const after = pc(next[upper] - next[lower]);
         const lowerMotion = next[lower] - prev[lower];
         const upperMotion = next[upper] - prev[upper];
-        if ((before === 0 || before === 7) && before === after && lowerMotion * upperMotion > 0) {
+        if ((before === 0 || before === 7) && before === after && lowerMotion !== 0 && upperMotion !== 0) {
           return Infinity;
         }
       }
