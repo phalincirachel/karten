@@ -288,38 +288,48 @@ function installHarmonyQuiz(global, getVexFlow, standalone) {
     return v.reduce((sum,n,i)=>sum+Math.abs(n-centers[i])*weights[i],0);
   }
   function transition(prev,next) {
+    // Quinten und Oktaven zählen auch über mehrere Oktaven hinweg.
+    for (let lower = 0; lower < 4; lower++) {
+      for (let upper = lower + 1; upper < 4; upper++) {
+        const before = pc(prev[upper] - prev[lower]);
+        const after = pc(next[upper] - next[lower]);
+        const lowerMotion = next[lower] - prev[lower];
+        const upperMotion = next[upper] - prev[upper];
+        if ((before === 0 || before === 7) && before === after && lowerMotion * upperMotion > 0) {
+          return Infinity;
+        }
+      }
+    }
+
     let cost=0;
     const weights=[1.25,1.05,1.15,1.5];
     for(let i=0;i<4;i++) {
       const leap=Math.abs(next[i]-prev[i]);
       cost+=leap*weights[i]+Math.pow(Math.max(0,leap-(i===0?7:5)),2)*.36;
     }
-    // Gleichgerichtete parallele reine Quinten und Oktaven vermeiden.
-    for(let a=0;a<4;a++)for(let b=a+1;b<4;b++) {
-      const before=pc(prev[b]-prev[a]), after=pc(next[b]-next[a]);
-      const da=next[a]-prev[a],db=next[b]-prev[b];
-      if ((before===0||before===7) && before===after && da*db>0) cost+=11;
-    }
     return cost;
   }
   function voiceLead(chords) {
     const start=[48,55,60,64];
     const candidates=[[start],voicings(chords[1]),voicings(chords[2]),voicings(chords[3],true)];
-    if(candidates.some(group=>!group.length))throw new Error("Keine gültige Stimmenführung gefunden.");
     let scores=[0], paths=[];
     for(let step=1;step<4;step++) {
       const prev=candidates[step-1], next=candidates[step], newScores=[], links=[];
       for(let i=0;i<next.length;i++) {
-        let best=Infinity,bestJ=0;
+        let best=Infinity,bestJ=-1;
+        const positionCost = staticCost(next[i]);
         for(let j=0;j<prev.length;j++) {
-          const score=scores[j]+transition(prev[j],next[i])+staticCost(next[i]);
+          if (scores[j] === Infinity) continue;
+          const score=scores[j]+transition(prev[j],next[i])+positionCost;
           if(score<best) {best=score;bestJ=j;}
         }
         newScores.push(best);links.push(bestJ);
       }
       paths.push(links);scores=newScores;
     }
-    let index=scores.indexOf(Math.min(...scores)), result=new Array(4);
+    const bestScore = Math.min(...scores);
+    if (bestScore === Infinity) throw new Error("Keine gültige Stimmenführung gefunden.");
+    let index=scores.indexOf(bestScore), result=new Array(4);
     for(let step=3;step>=1;step--) {result[step]=candidates[step][index];index=paths[step-1][index];}
     result[0]=start;
     return result;

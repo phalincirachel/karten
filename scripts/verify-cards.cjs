@@ -54,8 +54,8 @@ for (let i = 0; i < 4356; i++) {
 assert.equal(ids.size, 4356);
 assert.notEqual(nextId(), last);
 const labels = new Set();
-for (let i = 0; i < 66; i++) {
-  const puzzle = quiz.createPuzzle(66 * i + (65 - i));
+for (let id = 0; id < 4356; id++) {
+  const puzzle = quiz.createPuzzle(id);
   labels.add(puzzle.chords[1].label);
   puzzle.chords.forEach((chord, index) => {
     const voices = puzzle.voices[index];
@@ -63,9 +63,22 @@ for (let i = 0; i < 66; i++) {
     assert.equal(voices[0] % 12, chord.pcs[chord.inversion]);
     assert.equal(new Set(voices.slice(1).map(note => note % 12)).size, 3);
     assert.ok(voices.every(note => chord.pcs.includes(note % 12)));
+
+    if (index === 0) return;
+    const previous = puzzle.voices[index - 1];
+    const directions = voices.map((note, voice) => Math.sign(note - previous[voice]));
+    for (let lower = 0; lower < 4; lower++) {
+      for (let upper = lower + 1; upper < 4; upper++) {
+        if (directions[lower] === 0 || directions[lower] !== directions[upper]) continue;
+        const interval = (voices[upper] - voices[lower]) % 12;
+        if (interval !== 0 && interval !== 7) continue;
+        assert.notEqual((previous[upper] - previous[lower]) % 12, interval,
+          `Parallel ${interval === 0 ? 'octave' : 'fifth'} in quiz ${id}, chord ${index} to ${index + 1}, voices ${lower + 1} and ${upper + 1}`);
+      }
+    }
   });
 }
 assert.equal(labels.size, 66);
 assert.equal(load('www.reddit.com').MUSIC_FEED.isReddit, true);
 new vm.Script(fs.readFileSync('finnegans-exegese.js', 'utf8'));
-console.log(`${videos.length} UNESCO videos, 4356 distinct quizzes, alternating feed and tab reload verified.`);
+console.log(`${videos.length} UNESCO videos, 4356 distinct quizzes without parallel octaves or fifths, alternating feed and tab reload verified.`);
